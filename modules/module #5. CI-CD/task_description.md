@@ -1,18 +1,36 @@
-# Task Name
+# CI/CD Introduction 
 
-Task description
+О модуле:  Данный модуль расскажет вам о непрерывной интеграции и её преимуществах, предоставит вам практический опыт построения конвейера CI / CD с использованием Jenkins.  А так же познакомит с метриками для оценки кода и научит мониторингу качества кода с использованием SonarQube 
 
-## Sub-module #1
+Структура модуля: 
+   - CI/CD Introduction 
+   - Jenkins 
+   - SonarQube 
 
-Sub-module description
+## Для успешного прохождения модуля необходимо изучить следующие ссылки: 
 
-### Task #1
+   - [Continuous Integration with Jenkins](https://courses.epam.com/courses/course-v1:EPAM+CIJ+0819/about)  
+   - [SonarQube] ()
+   
+## Также необходимо выполнить следующее задание: 
+   !!!TaskDescription!!!
 
-Task description & conditions
-
-### Materials (Videos & Links)
-
-* Some video link
-* Some other video link
-* Some link to external training
-* Some link to resource
+## Дополнительные рекомендованные источники: 
+### 1. CI/CD
+  - [Просто о CI/CD](https://www.youtube.com/watch?v=7S1ndRRht6M)
+  - [Что такое непрерывная интеграция?](https://aws.amazon.com/ru/devops/continuous-integration/)
+  - [Introduction to CI/CD with GitLab](https://docs.gitlab.com/ee/ci/introduction/#introduction-to-cicd-methodologies)
+  - [A Brief Introduction to CI/CD](https://dzone.com/articles/the-complete-introduction-to-cicd-1)
+### 2. Jenkins (https://www.jenkins.io/)
+  - [Jenkins Tutorial for Beginners: Learn in 3 Day](https://www.guru99.com/jenkins-tutorial.html)
+  - [Jenkins - Quick Guide](https://www.tutorialspoint.com/jenkins/jenkins_quick_guide.htm)
+  - [Jenkins Tips & Tricks](https://automationstepbystep.com/jenkins-tips-tricks/)
+  - [Jenkins. Documentation.](https://www.jenkins.io/doc/tutorials/)
+  - [JaCoCo](https://plugins.jenkins.io/jacoco/)
+  - [Youtube: Jenkins На Русском Языке](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a)
+### 3. SonarQube (https://www.sonarqube.org/)
+  - [SonarQube на "русском"](https://sonar-russian.silverbulleters.org/)
+  - [Introduction to SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
+  - [Agile Software Development: Code Quality](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
+  - [Generate Codecoverage Report with Jacoco and Sonarqube](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
+  - [SonarQube Integration with Jenkins for Code analysis](https://www.youtube.com/watch?v=jh7utASgKj4&list=PL6Q8rpu0AhEVFkU0JM6i935Q5LM8LSG-n)
