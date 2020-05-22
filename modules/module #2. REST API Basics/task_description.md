@@ -58,6 +58,26 @@ The system should expose REST API to perform the following operations:
 3. Any widely usedconnection pool could be used.
 4. *JDBC / Spring JDBC Template* should be used for data access.
 5. Java Code Convention is mandatory (exception: margin size –120 chars).
+6. *Build tool*: Apache Maven 3.5+. **Multi-module project**.
+7. *Web server*: Apache Tomcat.
+8. *Application container*: Spring IoC. Spring Framework4.+.
+9. *Database*: PostgreSQL 9.+ or 10.+.
+10. *Testing*: JUnit 4.+ or 5.+, Mockito.
+11. Service layer should be covered with unit tests not less than 80%.
+12. Repository layer should be tested using integration tests (create test database on your local machine).
+13. APIs should be demonstrated using Postman tool. **Prepare for demo Postman collections with APIs**.
+
+Please note that only GA versions of tools/frameworks/libs are allowed.
+
+##### App restrictions
+
+It is forbidden to use:
+1. Spring Boot.
+2. Spring Data Repositories.
+3. JPA.
+4. Powermock (your application should be testable).
+
+Mentee can use lombok when agreed with mentor.
   
 ### Materials (Videos & Links)
 
