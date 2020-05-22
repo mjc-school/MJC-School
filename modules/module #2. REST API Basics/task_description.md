@@ -1,6 +1,7 @@
-# Task Name
+# Rest API Basics
 
-Task description
+The goal of this task is to build simple REST service. You will learn modern web applications architecture
+and developing tools that are used to create them
 
 ## Sub-module #1
 
