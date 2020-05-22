@@ -41,6 +41,7 @@ The application should be extended to expose the following REST APIs:
 7. Sign up.
 8. Login.
 9. All read operations should support pagination. Please create a flexible and non-erroneous solution. Handle all exceptional cases.
+10. Support HATEOAS on REST endpoints.
 
 ### Materials (Videos & Links)
 * REST API Design: Filtering, Sorting, and Pagination- https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/
