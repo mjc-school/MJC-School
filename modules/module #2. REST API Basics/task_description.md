@@ -12,7 +12,20 @@ Sub-module description
 
 #### Business requirements
 
+General model requirements:
+* At least two entities.
+* Entities are in many-to-many relationship.
+* **Main entity** has at least 6 meaningful fields.
 
+Suggested model:
+
+* Gift Certificate:
+  * name
+  * description
+  * price
+  * date of creation
+  * date of modification
+  * duration in days <ins>(expiration period)</ins>
 
 The system should expose REST API to perform the following operations:
 * CRUD operations for **main entity**.
