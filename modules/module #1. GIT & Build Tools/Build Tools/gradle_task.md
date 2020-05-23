@@ -1,5 +1,6 @@
 ###Materials (Videos & Links)
 * [Gradle Getting Started](https://docs.gradle.org/current/userguide/getting_started.html)
+* [Gradle for Java Developers](https://learn.epam.com/detailsPage?id=994742a7-d4b2-463d-beb9-d400814f9353)
 
 ###Tasks
 1. Install Gradle
