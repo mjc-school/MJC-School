@@ -18,7 +18,7 @@
     Call `Utils.isAllPositiveNumbers("12", "79")` from the `main` method of `api` subproject.
 
 ###Questions
-1. What do you understand by gradle?
+1. What are build tools? Why are they used?
 1. Explain gradle build life cycle.
 1. How can you run build?
 1. How can you run tests?
