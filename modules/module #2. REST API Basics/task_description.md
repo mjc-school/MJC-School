@@ -167,11 +167,28 @@ Mentee can use lombok when agreed with mentor.
          REST – Chapter 16: Creating REST APIs with Spring
      * https://habr.com/ru/post/101342/
 
-7.	**Connection Pool**
+7. **Connection Pool**
     *	https://habr.com/ru/post/101342/
-8.	**Maven**
+8. **Maven**
     *	https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
     *	https://habr.com/ru/post/77382/
     *	https://www.baeldung.com/maven
+9. **Testing**
+   * **Well-known approaches**
+     * https://habr.com/ru/post/81226/
+     * https://habr.com/ru/post/358950/
+     * https://habr.com/ru/company/jugru/blog/323920/
+     * https://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-rest-api/
+   * **Junit**
+     * https://habr.com/ru/post/120101/   
+     * https://junit.org/junit4/
+   * **Mockito**
+     * https://www.journaldev.com/21816/mockito-tutorial
+     * https://habr.com/ru/post/444982/
+     * https://site.mockito.org/
+     * https://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-configuration/
+10. **Postman**
+     * https://habr.com/ru/company/kolesa/blog/351250/
+
 
 
