@@ -89,19 +89,14 @@ JSON Web Tokens are JSON objects used to send information between parties in a c
 User Permissions
 
 2.1. Guest:
-
-    * Read operations for main entity.
-    * Signup.
-    * Login.
-
+    * Read operations for main entity;
+    * Signup;
+    * Login;
 2.2. User:
-
-    * Make an order on main entity.
-    * All read operations.
-
+    * Make an order on main entity;
+    * All read operations;
 2.3. Administrator (can be added only via database call):
-
-    * All operations, including addition and modification of entities.
+    * All operations, including addition and modification of entities;
 
 3. Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
 Okta can be used as OpenId Connect provider.
