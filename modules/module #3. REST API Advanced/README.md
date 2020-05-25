@@ -104,14 +104,14 @@ Okta can be used as OpenId Connect provider.
 
 ### Materials (Videos & Links)
 
-Spring Security Architecture - https://spring.io/guides/topicals/spring-security-architecture
-Securing a Web Application - https://spring.io/guides/gs/securing-web/
-Иллюстрированное руководство по OAuth и OpenID Connect - https://habr.com/ru/company/flant/blog/475942/
-Spring Boot and OAuth2 - https://spring.io/guides/tutorials/spring-boot-oauth2/
-Introduction to JSON Web Tokens - https://jwt.io/introduction/
-Tutorial: Create and Verify JWTs in Java - https://developer.okta.com/blog/2018/10/31/jwts-with-java
-A Quick Guide to Spring Boot Login Options - https://developer.okta.com/blog/2019/05/15/spring-boot-login-options
-Simple Token Authentication for Java Apps - https://developer.okta.com/blog/2018/10/16/token-auth-for-java
+* [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture)
+* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
+* [Иллюстрированное руководство по OAuth и OpenID Connect](https://habr.com/ru/company/flant/blog/475942/)
+* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
+* [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
+* [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
+* [A Quick Guide to Spring Boot Login Options](https://developer.okta.com/blog/2019/05/15/spring-boot-login-options)
+* [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
 
 
 
