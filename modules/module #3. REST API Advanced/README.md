@@ -98,10 +98,10 @@ User Permissions
 2.3. Administrator (can be added only via database call):
     1. All operations, including addition and modification of entities.
 
-3.Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
+3. Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
 Okta can be used as OpenId Connect provider.
 
-4.Server should support only stateless user authentication and verify integrity of JWT token
+4. Server should support only stateless user authentication and verify integrity of JWT token
 
 ### Materials (Videos & Links)
 
