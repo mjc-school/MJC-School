@@ -4,11 +4,7 @@ The goal of this task is to build simple REST service.
 
 You will learn modern web applications architecture and technologies used to develop them.
 
-## Sub-module #1
-
-Sub-module description
-
-### Task #1
+### Task
 
 #### Business requirements
 
