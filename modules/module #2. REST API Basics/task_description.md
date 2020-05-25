@@ -126,14 +126,52 @@ Mentee can use lombok when agreed with mentor.
       *	https://dzone.com/articles/5-best-practices-commenting 
       *	https://javarevisited.blogspot.com/2011/08/code-comments-java-best-practices.html
 
+3. **Exception handling**
+   * **Overview**
+     *	https://oz.by/books/more10885929.html - Java SE 8 by Cay S. Horstmann (Book I) or Java SE 7 by Cay S. Horstmann (Book I), Chapter “Exception Handling”
+     *	https://www.amazon.com/OCP-Certified-Professional-Programmer-1Z0-809/dp/1119067901 - Chapter 5 “Dates, Strings, and Localization” (“Working with Dates And Times” section, Page 286) 
+     *	https://www.amazon.com/OCP-Certified-Professional-Programmer-1Z0-809/dp/1119067901 - Chapter 6 “Exceptions and Assertions”, Page 283;
+     *	https://learn.epam.com/detailsPage?id=be65b7d2-7fb0-45dc-9d1c-db8e2b84a37f – course on eLearning portal;
+   * **Checked vs. Runtime (Unchecked) Exceptions**
+     *	https://www.amazon.com/OCP-Certified-Professional-Programmer-1Z0-809/dp/1119067901 - Chapter 6 “Exceptions and Assertions”, Page 283 (“Categories of Exceptions” section, Page 285);
+     *	https://www.geeksforgeeks.org/checked-vs-unchecked-exceptions-in-java/
+     *	https://howtodoinjava.com/java/exception-handling/checked-vs-unchecked-exceptions-in-java/
+	  * **Exception handling best practices**
+     *	https://stackabuse.com/exception-handling-in-java-a-complete-guide-with-best-and-worst-practices/
+     *	https://dzone.com/articles/9-best-practices-to-handle-exceptions-in-java
+     *	https://howtodoinjava.com/best-practices/java-exception-handling-best-practices/
+4.	**Layered Architecture**
+     *	https://teams.microsoft.com/l/file/F2772F35-D74A-43EC-B9BA-2E72724C0550?tenantId=b41b72d0-4e9f-4c26-8a69-f949f367c91d&fileType=pptx&objectUrl=https%3A%2F%2Fepam.sharepoint.com%2Fsites%2FJavaEduPrograms%2FShared%20Documents%2FSchool%2FPilot%20run%2C%20May%202020%2FLayered_Arcitecture.pptx&baseUrl=https%3A%2F%2Fepam.sharepoint.com%2Fsites%2FJavaEduPrograms&serviceName=teams&threadId=19:a8c2e7c0a857429b9aafa5587f649beb@thread.skype&groupId=3cf270ee-6fd5-439c-9aa2-34c54596090d – Presentation about Layered Architecture;
+5.	**Spring Framework**
+   * **Overview:**
+     *	https://www.youtube.com/watch?v=BmBr5diz8WA - Spring-потрошитель, часть 1;
+     *	https://www.youtube.com/watch?v=cou_qomYLNU - Spring-потрошитель, часть 2;
+     *	https://www.youtube.com/watch?v=nGfeSo52_8A -  Spring – Глубоко и не очень;
+   * **Spring Core: Wiring beans**
+     *	https://www.manning.com/books/spring-in-action-fourth-edition 
+   * **Core concepts – Chapter 2: Wiring beans;**
+   * **Core concepts –Chapter 3: Advanced Wiring;**
+     *	https://www.tutorialspoint.com/spring/spring_beans_autowiring.htm
+   * **Building Spring web applications: Spring MVC**
+     *	https://www.manning.com/books/spring-in-action-fourth-edition
+	      MVC –  Chapter 5: Building Spring web applications ;
+	      MVC – Chapter 7: Advanced Spring MVC	;			
+6.	**REST API Fundamentals**
+     * **Overview:** 
+       *	https://bookauthority.org/books/best-rest-api-books - list of books for additional learning;
+     *	**RESTful Architecture**
+       *	https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+       *	https://dzone.com/refcardz/rest-foundations-restful?chapter=1
+     * **REST APIs with Spring**
+       *	https://www.manning.com/books/spring-in-action-fourth-edition
+         REST – Chapter 16: Creating REST APIs with Spring
+       *	https://habr.com/ru/post/101342/
 
- 
+7.	**Connection Pool**
+    *	https://habr.com/ru/post/101342/
+8.	**Maven**
+    *	https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+    *	https://habr.com/ru/post/77382/
+    *	https://www.baeldung.com/maven
 
 
- 
- 
-
-* Some video link
-* Some other video link
-* Some link to external training
-* Some link to resource
