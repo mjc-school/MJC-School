@@ -87,6 +87,7 @@ JSON Web Tokens are JSON objects used to send information between parties in a c
 1. Spring Security should be used as a security framework.
 2. Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
 User Permissions
+
 2.1. Guest:
     1. Read operations for main entity. 
     2. Signup.
