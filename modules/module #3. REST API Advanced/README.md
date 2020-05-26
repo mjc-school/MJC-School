@@ -56,14 +56,40 @@ The application should be extended to expose the following REST APIs:
 * [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 
-## Sub-module #3 - JPA
+## Sub-module #3 - ORM & JPA
 
-Sub-module description
+This sub-module covers following topics:
+1. ORM
+2. JPA & Hibernate
+3. Transactions
+
+ORM stands for Object Relational Mapping. It’s a bit of an abstract concept – but basically it’s a technique that allows us to query and change data from the database in an object oriented way. 
+ORMs provide a high-level abstraction upon a relational database that allows a developer to write Java code instead of SQL to create, read, update and delete data and schemas in their database. 
+Developers can use the programming language they are comfortable with to work with a database instead of writing SQL statements or stored procedures.
+
+A JPA (Java Persistence API) is a specification of Java which is used to access, manage, and persist data between Java object and relational database. It is considered as a standard approach for Object Relational Mapping.
+JPA can be seen as a bridge between object-oriented domain models and relational database systems. Being a specification, JPA doesn't perform any operation by itself. Thus, it requires implementation. So, ORM tools like Hibernate, TopLink, and iBatis implements JPA specifications for data persistence.
+
+A transaction usually means a sequence of information exchange and related work (such as database updating) that is treated as a unit for the purposes of satisfying a request and for ensuring database integrity. 
+For a transaction to be completed and database changes to made permanent, a transaction has to be completed in its entirety.
 
 ### Task #3
 
-Task description & conditions
+1. Hibernate should be used as a JPA implementation for data access.
+2. Spring Transaction should be used in all necessary areas of the application.
 
+Note: it is forbidden to use any Hibernate specific features.
+
+### Materials (Videos & Links)
+
+* [What is ORM](https://www.educba.com/what-is-orm/)
+* [ORM или SQL](https://youtu.be/bkDUIIho70o)
+* [Java persistence API](https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html)
+* [JPA](https://www.educba.com/java-persistence-api/)
+* [JPA vs Hibernate](https://www.javatpoint.com/jpa-vs-hibernate)
+* [Spring transaction management](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html)
+* [ACID Properties of transactions](https://www.geeksforgeeks.org/acid-properties-in-dbms/)
+* [Transaction Isolation Levels](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
 
 ## Sub-module #4 - Authentication
 
@@ -86,7 +112,7 @@ JSON Web Tokens are JSON objects used to send information between parties in a c
 ### Task #4
 1. Spring Security should be used as a security framework.
 2. Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
-User Permissions
+User Permissions.
 
 2.1. Guest:
 
