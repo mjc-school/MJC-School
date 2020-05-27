@@ -54,7 +54,7 @@ The system should expose REST API to perform the following operations:
 3. Any widely usedconnection pool could be used.
 4. *JDBC / Spring JDBC Template* should be used for data access.
 5. Java Code Convention is mandatory (exception: margin size –120 chars).
-6. *Build tool*: Apache Maven 3.5+. **Multi-module project**.
+6. *Build tool*: Apache Maven/Gradle. **Multi-module project**.
 7. *Web server*: Apache Tomcat.
 8. *Application container*: Spring IoC. Spring Framework4.+.
 9. *Database*: PostgreSQL 9.+ or 10.+.
