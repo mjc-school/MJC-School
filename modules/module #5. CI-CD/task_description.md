@@ -10,10 +10,31 @@
 ## Для успешного прохождения модуля необходимо изучить следующие ссылки: 
 
    - [Continuous Integration with Jenkins](https://courses.epam.com/courses/course-v1:EPAM+CIJ+0819/about)  
-   - [SonarQube] ()
+   - [SonarQube] (https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
    
 ## Также необходимо выполнить следующее задание: 
-   !!!TaskDescription!!!
+   **Main requirements:**
+    
+   - Jenkins have to build your project according to the Maven build script. 
+   - Project (application you have developed for Rest API module?) is deployed at your local Tomcat Server by Jenkins job. 
+   - Jenkins should be integrated with SonarQube. 
+
+   **Technology stack: **
+   
+   - Build tool: **Maven/Gradle**.
+   - **Tomcat Server** - should be installed as Service and start automatic.
+   - Unit testing framework: **JUnit** (version 4.x is preferred, but you can use 5.x).
+   - Database: **PostgreSQL** (version 9.x is preferred, but you can use 10.x). 
+   - Continuous Integration server: **Jenkins* LTS 
+   - Code analysis tool: **SonarQube**
+   
+   **Continuous Integration:**
+   
+   - Configure Jenkins security (install Role strategy plugin). Remove anonymous access. Create administrator user (all permissions) and     developer user (build job, cancel builds). Add Jenkins credentials to Readme file in your git repository. 
+   - Configure Jenkins build job (pool, run test, build) to checkout your repository, use pooling interval. 
+   - Install SonarQube. Configure Jenkins to use local SonarQube installation. Analyze your source code with SonarQube after Maven builds your project. Use JaCoCo for code coverage. 
+   - Jenkins should deploy your application (after passing SonarQube quality gate) under your local tomcat server. Please use Jenkins Tomcat Deploy plugin. 
+   
 
 ## Дополнительные рекомендованные источники: 
 ### 1. CI/CD
