@@ -10,7 +10,7 @@
 ## Для успешного прохождения модуля необходимо изучить следующие ссылки: 
 
    - [Continuous Integration with Jenkins](https://courses.epam.com/courses/course-v1:EPAM+CIJ+0819/about)  
-   - [SonarQube] (https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
+   - [SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
    
 ## Также необходимо выполнить следующее задание: 
    **Main requirements:**
