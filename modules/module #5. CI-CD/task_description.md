@@ -19,7 +19,7 @@
    - Project (application you have developed for Rest API module?) is deployed at your local Tomcat Server by Jenkins job. 
    - Jenkins should be integrated with SonarQube. 
 
-   **Technology stack: **
+   **Technology stack:**
    
    - Build tool: **Maven/Gradle**.
    - **Tomcat Server** - should be installed as Service and start automatic.
