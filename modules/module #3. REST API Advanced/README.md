@@ -93,7 +93,7 @@ Note: it is forbidden to use any Hibernate specific features.
 
 ## Sub-module #4 - Authentication
 
-This sub-module covers following topics:
+This sub-module is an extension of REST API Basic and covers following topics:
 1. Spring Security framework
 2. Oauth2 and OpenId Connect
 3. JWT token
@@ -110,29 +110,28 @@ OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds lo
 JSON Web Tokens are JSON objects used to send information between parties in a compact and secure manner.
 
 ### Task #4
-1. Spring Security should be used as a security framework.
-2. Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
-User Permissions.
+1.Spring Security should be used as a security framework.
+
+2.Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
+
+User Permissions:
 
 2.1. Guest:
-
-    1. Read operations for main entity.
-    2. Signup.
-    3. Login.
-
+   * Read operations for main entity:
+   * Signup.
+   * Login.
+   
 2.2. User:
-
-    1. Make an order on main entity.
-    2. All read operations.
+   * Make an order on main entity.
+   * All read operations.
 
 2.3. Administrator (can be added only via database call):
-
-    1. All operations, including addition and modification of entities.
-
-3. Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
+   * All operations, including addition and modification of entities.
+   
+3.Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
 Okta can be used as OpenId Connect provider.
 
-4. Server should support only stateless user authentication and verify integrity of JWT token
+4.Server should support only stateless user authentication and verify integrity of JWT token
 
 ### Materials (Videos & Links)
 
