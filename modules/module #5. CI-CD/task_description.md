@@ -1,6 +1,6 @@
-# CI/CD Introduction 
+# CI/CD Введение 
 
-О модуле:  Данный модуль расскажет вам о непрерывной интеграции и её преимуществах, предоставит вам практический опыт построения конвейера CI / CD с использованием Jenkins.  А так же познакомит с метриками для оценки кода и научит мониторингу качества кода с использованием SonarQube 
+О модуле:  Данный модуль расскажет вам о непрерывной интеграции и её преимуществах, предоставит вам практический опыт построения конвейера CI / CD с использованием Jenkins.  А так же познакомит с метриками для оценки кода и научит мониторингу качества кода с использованием SonarQube. 
 
 Структура модуля: 
    - CI/CD Introduction 
@@ -13,27 +13,27 @@
    - [SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
    
 ## Также необходимо выполнить следующее задание: 
-   **Main requirements:**
+   **Главные требования:**
     
-   - Jenkins have to build your project according to the Maven build script. 
-   - Project (application you have developed for Rest API module?) is deployed at your local Tomcat Server by Jenkins job. 
-   - Jenkins should be integrated with SonarQube. 
+   - Ваш проект должен билдиться в соответсвии с Maven build script. 
+   - Проект (ваше приложение разработанное в Rest API модуле) должен быть деплоиться на локальный Tomcat Server использую Jeknins. 
+   - Jenkins должен интегрироваться с SonarQube. 
 
-   **Technology stack:**
+   **Технологический стек:**
    
-   - Build tool: **Maven/Gradle**.
-   - **Tomcat Server** - should be installed as Service and start automatic.
-   - Unit testing framework: **JUnit** (version 4.x is preferred, but you can use 5.x).
-   - Database: **PostgreSQL** (version 9.x is preferred, but you can use 10.x). 
-   - Continuous Integration server: **Jenkins* LTS 
-   - Code analysis tool: **SonarQube**
+   - Инструмент для сборки: **Maven/Gradle**.
+   - **Tomcat Server** - должен быть установлен as Service и стартовать автоматически.
+   - Фреймворк юнит тестированя: **JUnit** (версия 4.x предпочтительнее, но можно использовать версию 5.x).
+   - База данныз: **PostgreSQL** (версия 9.x предпочтительне, но можно использовать версию 10.x). 
+   - Сервер непрерывной интеграции: **Jenkins* LTS 
+   - Инструмент анализа кода: **SonarQube**
    
-   **Continuous Integration:**
+   **Дополнительная требования:**
    
-   - Configure Jenkins security (install Role strategy plugin). Remove anonymous access. Create administrator user (all permissions) and     developer user (build job, cancel builds). Add Jenkins credentials to Readme file in your git repository. 
-   - Configure Jenkins build job (pool, run test, build) to checkout your repository, use pooling interval. 
-   - Install SonarQube. Configure Jenkins to use local SonarQube installation. Analyze your source code with SonarQube after Maven builds your project. Use JaCoCo for code coverage. 
-   - Jenkins should deploy your application (after passing SonarQube quality gate) under your local tomcat server. Please use Jenkins Tomcat Deploy plugin. 
+   - Сконфигурировать Jenkins security (установить Role strategy плагин). Анонимный доступ должен быть удалён. Создать administrator пользователя (включить все права доступа) и developer пользователь (build job, cancel builds). Добавить Jenkins учётные данные в Readme файл в ваш GIT репозиторий. 
+   - Сконфигурировать Jenkins build job (pool, run test, build) для работы с вашим репозиторием использую pooling interval. 
+   - Установить SonarQube. Сконфигурировать Jenkins для использования локально установленного SonarQube. Использовать JaCoCo для определния покрытия кода. 
+   - Jenkins должен загружать ваше приложение (SonarQube quality gate должен быть Зелёным) в локальный Tomcat Server. Использовать Jenkins Tomcat Deploy плагин. 
    
 
 ## Дополнительные рекомендованные источники: 
