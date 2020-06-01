@@ -1,5 +1,25 @@
 # REST API Advanced
-This task is an extension of the RESTful web-service from Module #2 REST API Basics.
+This module is an extension of the RESTful web-service from Module #2 REST API Basics.
+
+During your work on this module make sure you adhere to the next requirements:
+1. Code should be clean and should not contain any “developer-purpose” constructions.
+2. Application should be designed and written with respect to OOD and SOLID principles.
+3. Code should contain valuable comments where appropriate.
+4. Public APIs should be documented using Javadoc.
+5. A clear layered structure should be used: responsibilities of each application layer should be defined.
+6. JSON should be used as a format of client-server communication messages.
+7. Abstraction should be used to avoid code duplication.
+8. Convenient error/exception handling mechanism should be implemented: all errors should be meaningful.
+
+Application requirements are the following:
+1. JDK version: 8. Use Streams, java.time.*, an etc. where it is appropriate.
+2. Application packages root: com.epam.esm.
+3. Java Code Convention is mandatory (exception: margin size –120 characters).
+4. Apache Maven/Gradle. Multi-module project.
+5. Spring Framework 5.+.
+6. Database: PostgreSQL 9.+ or 10.+.
+7. Testing: JUnit 5.+. Mockito.
+8. Service layer should be covered with unit tests not less than 80%.
 
 ## Sub-module #1 - Spring Boot
 Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". 
@@ -143,8 +163,3 @@ Okta can be used as OpenId Connect provider.
 * [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
 * [A Quick Guide to Spring Boot Login Options](https://developer.okta.com/blog/2019/05/15/spring-boot-login-options)
 * [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
-
-
-
-
-
