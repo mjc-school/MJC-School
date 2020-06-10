@@ -132,12 +132,13 @@ JSON Web Tokens are JSON objects used to send information between parties in a c
 ### Task #4
 1.Spring Security should be used as a security framework.
 
-2.Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
+2.Application should support only stateless user authentication and verify integrity of JWT token.
+Users should be stored in a database with some basic information and a password.
 
 User Permissions:
 
 2.1. Guest:
-   * Read operations for main entity:
+   * Read operations for main entity.
    * Signup.
    * Login.
    
@@ -147,11 +148,13 @@ User Permissions:
 
 2.3. Administrator (can be added only via database call):
    * All operations, including addition and modification of entities.
-   
-3.Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
-Okta can be used as OpenId Connect provider.
 
-4.Server should support only stateless user authentication and verify integrity of JWT token
+3.Get acquainted with the concepts Oauth2 and OpenId Connect
+
+### Optional Task
+1. Use Oauth2 as an authorization protocol.
+    * OAuth2 scopes should be used to restrict data.
+    * Implicit grant and Resource owner credentials grant should be implemented.
 
 ### Materials (Videos & Links)
 
@@ -161,5 +164,4 @@ Okta can be used as OpenId Connect provider.
 * [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
 * [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
-* [A Quick Guide to Spring Boot Login Options](https://developer.okta.com/blog/2019/05/15/spring-boot-login-options)
 * [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
