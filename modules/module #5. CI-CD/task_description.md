@@ -1,18 +1,18 @@
 # CI/CD Introduction 
 
-О модуле:  Данный модуль расскажет вам о непрерывной интеграции и её преимуществах, предоставит вам практический опыт построения конвейера CI / CD с использованием Jenkins.  А так же познакомит с метриками для оценки кода и научит мониторингу качества кода с использованием SonarQube 
+This module will give you an idea about continuous integration and its advantages. You will gain knowledge in building a CI/CD pipeline using Jenkins during a practical task. Additionally, it will give you an overview of metrics for evaluating code and teach you how to monitor code quality using SonarQube.
 
-Структура модуля: 
+Module structure: 
    - CI/CD Introduction 
    - Jenkins 
    - SonarQube 
 
-## Для успешного прохождения модуля необходимо изучить следующие ссылки: 
+## Please study the following links in order to successfully pass the module.: 
 
    - [Continuous Integration with Jenkins](https://courses.epam.com/courses/course-v1:EPAM+CIJ+0819/about)  
    - [SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
    
-## Также необходимо выполнить следующее задание: 
+## Practial Task: 
    **Main requirements:**
     
    - Jenkins have to build your project according to the Maven build script. 
@@ -36,7 +36,7 @@
    - Jenkins should deploy your application (after passing SonarQube quality gate) under your local tomcat server. Please use Jenkins Tomcat Deploy plugin. 
    
 
-## Дополнительные рекомендованные источники: 
+## Additional resources: 
 ### 1. CI/CD
   - [Просто о CI/CD](https://www.youtube.com/watch?v=7S1ndRRht6M)
   - [Что такое непрерывная интеграция?](https://aws.amazon.com/ru/devops/continuous-integration/)
@@ -55,3 +55,21 @@
   - [Agile Software Development: Code Quality](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
   - [Generate Codecoverage Report with Jacoco and Sonarqube](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
   - [SonarQube Integration with Jenkins for Code analysis](https://www.youtube.com/watch?v=jh7utASgKj4&list=PL6Q8rpu0AhEVFkU0JM6i935Q5LM8LSG-n)
+
+## Questions:
+  - What is CI/CD? 
+  - Please describe the main goals of CI/CD. 
+  - Describe Continuous Integration process? 
+  - What is Jenkins? 
+  - Mention what are the advantages of Jenkins? 
+  - Mention some of the useful plugins in Jenkins? 
+  - Mention what are the commands you can use to start Jenkins manually. 
+  - What is the use of Pipelines in Jenkins? 
+  - What is the solution if you find a broken build for your project? 
+  - How is continuous integration achieved using Jenkins? 
+  - What is a job in Jenkins? 
+  - What syntax does Jenkins use to schedule build job or SVN/GIT polling? 
+  - What is the Git plugin? 
+  - What is SonarQube? 
+  - What are SonarQube's Quality Gates? 
+  - What is JaCoCo? 
