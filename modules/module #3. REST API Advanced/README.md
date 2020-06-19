@@ -1,5 +1,5 @@
 # REST API Advanced
-This module is an extension of the RESTful web-service from Module #2 REST API Basics.
+__This module is an extension of the RESTful web-service from Module #2 REST API Basics.__
 
 During your work on this module make sure you adhere to the next requirements:
 1. Code should be clean and should not contain any “developer-purpose” constructions.
@@ -35,6 +35,17 @@ In this module you will learn how to create RESTful web service using Spring Boo
 * [Spring Initializr](https://start.spring.io/)
 * [Spring Boot: от начала до продакшена](https://habr.com/ru/post/257223/)
 
+### Questions
+1. What is Spring Boot? Name advantages and disadvantages of Spring Boot.
+2. What Spring Boot features do you know?
+3. What are the differences between Spring Boot and Spring?
+4. What are the ways to create Spring Boot application do you know?
+5. What Spring Boot annotations do you know?
+6. What are the Spring Boot properties?
+7. What are the Spring Boot starters? Name some of them and their purpose.
+8. What is Spring Boot auto-configuration?
+9. What is Spring Boot Actuator used for?
+
 
 ## Sub-module #2 - REST API
 This sub-module is an extension of REST API Basic and it covers such topics as pagination, sorting, filtering and HATEOAS.
@@ -51,7 +62,7 @@ And this is what HATEOAS does.
 
 ### Task #2
 The application should be extended to expose the following REST APIs:
-1. Change single field of main entity.
+1. Change single field of main entity (using HTTP PATCH method).
 2. Make an order (or any relevant action) on main entity for a User.
 3. Get information about user’s orders.
 4. Get information about user’s order: cost and timestamp of a purchase.
@@ -74,6 +85,12 @@ The application should be extended to expose the following REST APIs:
 * [Что такое HATEOAS?](https://habr.com/ru/post/483328/)
 * [HATEOAS with Spring](https://spring.io/guides/gs/rest-hateoas/)
 * [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+
+### Questions
+1. Why we should support filtering, sorting, and pagination in RESTful APIs?
+2. What are filtering, sorting, and pagination best practices can you name?
+3. What is Richardson Maturity Model? Name the Levels of the Model and explain them.
+4. What is HATEOAS? Why do we need it?
 
 
 ## Sub-module #3 - ORM & JPA
