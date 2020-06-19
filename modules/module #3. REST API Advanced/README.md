@@ -1,4 +1,5 @@
 # REST API Advanced
+
 __This module is an extension of the RESTful web-service from Module #2 REST API Basics.__
 
 During your work on this module make sure you adhere to the next requirements:
@@ -62,8 +63,8 @@ And this is what HATEOAS does.
 
 ### Task #2
 The application should be extended to expose the following REST APIs:
-1. Change single field of main entity (using HTTP PATCH method).
-2. Make an order (or any relevant action) on main entity for a User.
+1. Change single field of main entity (e.g. if you are using suggested in the previous module model, you should implement the possibility to change only duration of a certificate or only price).
+2. Make an order (or any relevant action) on main entity for a user.
 3. Get information about user’s orders.
 4. Get information about user’s order: cost and timestamp of a purchase.
 5. Get the most widely used secondary entity of a user with the highest cost of all orders. 
