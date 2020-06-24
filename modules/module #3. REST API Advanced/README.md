@@ -1,5 +1,6 @@
 # REST API Advanced
-This module is an extension of the RESTful web-service from Module #2 REST API Basics.
+
+__This module is an extension of the RESTful web-service from Module #2 REST API Basics.__
 
 During your work on this module make sure you adhere to the next requirements:
 1. Code should be clean and should not contain any “developer-purpose” constructions.
@@ -35,6 +36,17 @@ In this module you will learn how to create RESTful web service using Spring Boo
 * [Spring Initializr](https://start.spring.io/)
 * [Spring Boot: от начала до продакшена](https://habr.com/ru/post/257223/)
 
+### Questions
+1. What is Spring Boot? Name advantages and disadvantages of Spring Boot.
+2. What Spring Boot features do you know?
+3. What are the differences between Spring Boot and Spring?
+4. What are the ways to create Spring Boot application do you know?
+5. What Spring Boot annotations do you know?
+6. What are the Spring Boot properties?
+7. What are the Spring Boot starters? Name some of them and their purpose.
+8. What is Spring Boot auto-configuration?
+9. What is Spring Boot Actuator used for?
+
 
 ## Sub-module #2 - REST API
 This sub-module is an extension of REST API Basic and it covers such topics as pagination, sorting, filtering and HATEOAS.
@@ -51,8 +63,8 @@ And this is what HATEOAS does.
 
 ### Task #2
 The application should be extended to expose the following REST APIs:
-1. Change single field of main entity.
-2. Make an order (or any relevant action) on main entity for a User.
+1. Change single field of main entity (e.g. if you are using suggested in the previous module model, you should implement the possibility to change only duration of a certificate or only price).
+2. Make an order (or any relevant action) on main entity for a user.
 3. Get information about user’s orders.
 4. Get information about user’s order: cost and timestamp of a purchase.
 5. Get the most widely used secondary entity of a user with the highest cost of all orders. 
@@ -74,6 +86,12 @@ The application should be extended to expose the following REST APIs:
 * [Что такое HATEOAS?](https://habr.com/ru/post/483328/)
 * [HATEOAS with Spring](https://spring.io/guides/gs/rest-hateoas/)
 * [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+
+### Questions
+1. Why we should support filtering, sorting, and pagination in RESTful APIs?
+2. What are filtering, sorting, and pagination best practices can you name?
+3. What is Richardson Maturity Model? Name the Levels of the Model and explain them.
+4. What is HATEOAS? Why do we need it?
 
 
 ## Sub-module #3 - ORM & JPA
@@ -132,12 +150,13 @@ JSON Web Tokens are JSON objects used to send information between parties in a c
 ### Task #4
 1.Spring Security should be used as a security framework.
 
-2.Application should support user-based authentication. This means a user is stored in a database with some basic information and a password.
+2.Application should support only stateless user authentication and verify integrity of JWT token.
+Users should be stored in a database with some basic information and a password.
 
 User Permissions:
 
 2.1. Guest:
-   * Read operations for main entity:
+   * Read operations for main entity.
    * Signup.
    * Login.
    
@@ -147,11 +166,13 @@ User Permissions:
 
 2.3. Administrator (can be added only via database call):
    * All operations, including addition and modification of entities.
-   
-3.Use OpenID Connect as an authentication protocol and Oauth2 as an authorization protocol.
-Okta can be used as OpenId Connect provider.
 
-4.Server should support only stateless user authentication and verify integrity of JWT token
+3.Get acquainted with the concepts Oauth2 and OpenId Connect
+
+### Optional Task
+1. Use Oauth2 as an authorization protocol.
+    * OAuth2 scopes should be used to restrict data.
+    * Implicit grant and Resource owner credentials grant should be implemented.
 
 ### Materials (Videos & Links)
 
@@ -161,5 +182,4 @@ Okta can be used as OpenId Connect provider.
 * [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
 * [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
-* [A Quick Guide to Spring Boot Login Options](https://developer.okta.com/blog/2019/05/15/spring-boot-login-options)
 * [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
