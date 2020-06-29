@@ -19,7 +19,7 @@ Application requirements are the following:
 4. Apache Maven/Gradle. Multi-module project.
 5. Spring Framework 5.+.
 6. Database: PostgreSQL 9.+ or 10.+.
-7. Testing: JUnit 5.+. Mockito.
+7. Testing: JUnit 4.+ or 5.+, Mockito.
 8. Service layer should be covered with unit tests not less than 80%.
 
 ## Sub-module #1 - Spring Boot
@@ -115,6 +115,7 @@ For a transaction to be completed and database changes to made permanent, a tran
 
 1. Hibernate should be used as a JPA implementation for data access.
 2. Spring Transaction should be used in all necessary areas of the application.
+3. Audit data should be populated using JPA features (an example can be found in materials).
 
 Note: it is forbidden to use any Hibernate specific features.
 
@@ -128,6 +129,7 @@ Note: it is forbidden to use any Hibernate specific features.
 * [Spring transaction management](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html)
 * [ACID Properties of transactions](https://www.geeksforgeeks.org/acid-properties-in-dbms/)
 * [Transaction Isolation Levels](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
+* [Auditing with JPA](https://www.baeldung.com/database-auditing-jpa#auditing)
 
 ## Sub-module #4 - Authentication
 
