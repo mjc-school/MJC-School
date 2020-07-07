@@ -1,18 +1,23 @@
-# Task Name
+# UI
 
-Task description
+During the next three weeks you will study the UI module.
 
-## Sub-module #1
+It is splitted into several submodules:
 
-Sub-module description
+- [ ] Html, css
+- [ ] Javascript
+- [ ] typescript
+- [ ] Angular
 
-### Task #1
+Each of them contains its own tasks with a strictly defined deadline.
 
-Task description & conditions
+Do not ignore them and try to do your application facade as perfect as possible.
 
-### Materials (Videos & Links)
 
-* Some video link
-* Some other video link
-* Some link to external training
-* Some link to resource
+### Quiz
+todo
+
+###### p.s. Please, don't forget to leave feedback. It will help us to improve this course.
+
+
+ 
