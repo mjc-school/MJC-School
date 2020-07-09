@@ -50,3 +50,18 @@ through Bucket Policy.
 aws cli command: aws s3 cp s3://BUCKET-NAME/FILENAME . 
 3. In security group settings open the port your application will be running on.
 4. Attach Elastic IP address to your EC2 instance.
+  
+## Questions
+1. What is IAM? Please describe shortly what you can do using IAM?
+2. What is an IAM User? What is User Group in IAM? What is an IAM Role? What are Policies?
+3. What is S3 service in AWS? What is S3 bucket?
+4. What is Region?  What is Availability Zone?
+5. What is EC2 service? 
+6. What is EC2 instance? What types of EC2 instances do you know?
+7. What is Private and Public Key during instance creation?
+8. What is EC2 instance lifecycle? If we stop and start the server what will happen? What will happen during reboot operation?
+9. What is instance user data? How can you make sure that your bootstrapping script completed without errors? 
+10. What is AWS RDS? What engines does it support?
+11. What is AWS VPC? What are the main components of AWS VPC?
+12. How do instances in a VPC access the Internet? What IP types do you know? What will happen with IP during reboot, stop, start?
+13. What is the range of IP addresses in VPC? What is CIDR block?
