@@ -185,3 +185,17 @@ User Permissions:
 * [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
 * [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
 * [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
+
+### Questions
+
+ 1. What is Spring Security?
+ 2. What does Authentication mean?
+ 3. What does Authorization mean?
+ 4. What is Oauth2?
+ 5. What is OpenId Connect?
+ 6. What is a Security context?
+ 7. What is Security principal?
+ 8. What is JWT? Describe JWT structure
+ 9. Why should you use JWT?
+
+
