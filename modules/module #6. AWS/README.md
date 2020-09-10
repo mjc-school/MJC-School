@@ -25,9 +25,9 @@ The goal of the module is to make you familiar with the Cloud computing concepts
 * [Elastic IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
 
 ## Disclaimer
-**Before starting the task please make sure you understand the principles of [AWS cloud pricing](https://aws.amazon.com/pricing/services).** 
-Pay attention to resources that you create, the task should be accomplished using [AWS Free Tier](https://aws.amazon.com/free). **It's your responsibility** to take care of the costs minimization. If you are not sure about the costs of some resource/service please contact your mentor.
-Please never commit your account credentials into the git. Do not keep EC2 instances running, stop or terminate instances if you don’t use them. Terminate or remove all created resources/services once you finished the task.
+**Before starting the module please make sure you understand the principles of [AWS cloud pricing](https://aws.amazon.com/pricing/services).** 
+Pay attention to resources that you create, the module should be accomplished using [AWS Free Tier](https://aws.amazon.com/free). **It's your responsibility** to take care of the costs minimization. If you are not sure about the costs of some resource/service please contact your mentor.
+Please never commit your account credentials into the git. Do not keep EC2 instances running, stop or terminate instances if you don’t use them. Terminate or remove all created resources/services once you finished the module.
 
 ## Tasks
 The goal of the exercise to make your familiar with AWS console, base components available in AWS such as Virtual Private Cloud (VPC), Security Group, EC2, RDS and S3. You also are expected to deploy you application within cloud facilities: web application on top of EC2 instance and static assets within S3 bucket. It also required to integrate with managed database instance (RDS). The deployment flow is not expected to be fully automated and most provision is to be done manually.
