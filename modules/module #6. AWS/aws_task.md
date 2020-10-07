@@ -1,4 +1,6 @@
-# READING
+# AWS
+
+## Materials
 
 1. [Cloud Computing Fundamentals](https://youtu.be/uroryFU78gM)
 2. [AWS Tutorial for Begginers](https://youtu.be/IT1X42D1KeA)
@@ -10,8 +12,12 @@
 8. [Running commands on your Linux instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
 9. [Getting started with Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html)
 
-# PRACTICE
-## Task
+## Practice
+
+### Recommended Timeline
+The recommended timeline for the whole module is 1 week.
+
+### Task
 
 The goal of the exercise to make your familiar with AWS console, base components available in AWS such as Virtual Private Cloud (VPC), Security Group, EC2, RDS and S3. You also are expected to deploy you application within cloud facilities: web application on top of EC2 instance and static assets within S3 bucket. It also required to integrate with managed database instance (RDS). The deployment flow is not expected to be fully automated and most provision is to be done manually.
 ![image info](media/vision.jpg)
@@ -49,20 +55,20 @@ The common approach is to assign a service role that we are to create beforehand
      - In security group settings open the port your application will be running on.
 *7. Terminate or remove all created resources/services once you finished the module and showed a demo.*
 
-### General requirements
+#### General requirements
 
 Before starting the module please make sure you understand the principles of AWS cloud pricing. Pay attention to resources that you create, the module should be accomplished using AWS Free Tier. It's your responsibility to take care of the costs minimization. If you are not sure about the costs of some resource/service please contact your mentor. Please never commit your account credentials into the git. Do not keep EC2 instances running, stop or terminate instances if you don’t use them.
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 [upd]
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.
 
-# ADDITIONAL MATERIALS
+## Extra Materials
 
 1. [AWS Official Documentation](https://docs.aws.amazon.com/index.html)
 2. [AWS Essentials](https://www.youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)

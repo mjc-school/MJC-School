@@ -1,4 +1,6 @@
-# READING
+# Authentication & Spring Security
+
+## Materials
 
 1. [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture)
 2. [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
@@ -8,8 +10,9 @@
 6. [Tutorial: Create and Verify JWTs in Java](https://developer.okta.com/blog/2018/10/31/jwts-with-java)
 7. [Simple Token Authentication for Java Apps](https://developer.okta.com/blog/2018/10/16/token-auth-for-java)
 
-# PRACTICE
-## Task
+## Practice
+
+### Task
 
 This module is an extension of REST API Advanced module and covers following topics:
 
@@ -19,7 +22,7 @@ This module is an extension of REST API Advanced module and covers following top
 
 Spring Security is a powerful and highly customizable authentication and access-control framework. It is the de-facto standard for securing Spring-based applications. OAuth 2.0 is a security standard where you give one application permission to access your data in another application. The steps to grant permission, or consent, are often referred to as authorization or even delegated authorization. You authorize one application to access your data, or use features in another application on your behalf, without giving them your password. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in. JSON Web Tokens are JSON objects used to send information between parties in a compact and secure manner.
 
-### Application requirements
+#### Application requirements
 
 1. Spring Security should be used as a security framework.
 2. Application should support only stateless user authentication and verify integrity of JWT token.
@@ -42,8 +45,8 @@ User Permissions:
     a. OAuth2 scopes should be used to restrict data.
     b. Implicit grant and Resource owner credentials grant should be implemented.
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 1. Generate for demo at least 
     a. 1000 users
@@ -53,6 +56,6 @@ All values should look like more -or-less meaningful: random words, but not rand
 2. Demonstrate API using Postman tool (prepare for demo Postman collection with APIs)  
 3. (Optional) Build & run application using command line
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.

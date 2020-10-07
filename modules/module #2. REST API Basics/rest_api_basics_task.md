@@ -1,4 +1,6 @@
-# READING
+# REST API Basics
+
+## READING
 
 1. [Getting started with Spring Core. Reading (30 mins)](https://www.manning.com/books/spring-in-action-fourth-edition) 
 2. [Getting started with Spring Core. Reading (25 mins)](https://www.tutorialspoint.com/spring/spring_beans_autowiring.htm) 
@@ -10,25 +12,27 @@
 8. [Testing. Well-known approaches (10 mins)](https://habr.com/ru/post/81226/) 
 9. [JUnit (overview guid)](https://junit.org/junit5/docs/current/user-guide/)
 
-# PRACTICE
-## Task
-### Business requirements
+## Practice
 
+### Task
+
+#### Recommended Timeline
+The recommended timeline for the whole module is 2 weeks.
+
+#### Business requirements
 1. Develop web service for Gift Certificates system with the following entities:
-
-![](./media/model.png)
-    
-    a. *CreateDate*, *LastUpdateDate* - format *ISO 8601* (https://en.wikipedia.org/wiki/ISO_8601). Example: 2018-08-29T06:12:15.156-07:00. More discussion here: https://stackoverflow.com/questions/3914404/how-to-get-current-moment-in-iso-8601-format-with-date-hour-and-minute 
-    b. *Duration* - in days (expiration period)
+![](./media/model.png)\
+    - *CreateDate*, *LastUpdateDate* - format *ISO 8601* (https://en.wikipedia.org/wiki/ISO_8601). Example: 2018-08-29T06:12:15.156-07:00. More discussion here: https://stackoverflow.com/questions/3914404/how-to-get-current-moment-in-iso-8601-format-with-date-hour-and-minute 
+    - *Duration* - in days (expiration period)
 2. The system should expose REST APIs to perform the following operations:
-   a. CRUD operations for GiftCertificate. If new tags are passed during creation/modification – they should be created in DB. For update operation - update only fields, that pass in request, others should not be updated. Batch insert is out of scope.
-   b. CRD operations for Tag.
-   c. Get certificates with tags (all params are optional and can be used in conjunction):
-     - by tag name (ONE tag)
-     - search by part of name/description (can be implemented, using DB function call)
-     - sort by date/name ASC/DESC
+    - CRUD operations for GiftCertificate. If new tags are passed during creation/modification – they should be created in DB. For update operation - update only fields, that pass in request, others should not be updated. Batch insert is out of scope.
+    - CRD operations for Tag.
+    - Get certificates with tags (all params are optional and can be used in conjunction):
+        - by tag name (ONE tag)
+        - search by part of name/description (can be implemented, using DB function call)
+        - sort by date/name ASC/DESC
 
-### Application requirements
+#### Application requirements
 
 1. JDK version: 8 – use Streams, java.time.*, etc. where it is possible. (the JDK version can be increased in agreement with the mentor/group coordinator/run coordinator) 
 2. Application packages root: com.epam.esm
@@ -44,7 +48,7 @@
 12. Service layer should be covered with unit tests not less than 80%. 
 13. Repository layer should be tested using integration tests with an in-memory embedded database (all operations with certificates).    
 
-### General requirements
+#### General requirements
 
 1. Code should be clean and should not contain any “developer-purpose” constructions.  
 2. App should be designed and written with respect to OOD and SOLID principles. 
@@ -64,7 +68,7 @@
 8. Abstraction should be used everywhere to avoid code duplication. 
 9. Several configurations should be implemented.
 
-### Application restrictions
+#### Application restrictions
 
 It is forbidden to use:
 1. Spring Boot.
@@ -74,17 +78,17 @@ It is forbidden to use:
 
 Mentee can use lombok when agreed with mentor.
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 1. Demonstrate API using Postman tool (prepare for demo Postman collection with APIs) 
 2. (Optional) Build & run application using command line
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.
 
-# ADDITIONAL MATERIALS
+## Extra Materials
 
 1. **Java 8**
    * **Overview**

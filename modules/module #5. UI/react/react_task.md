@@ -1,4 +1,6 @@
-# READING
+# React
+
+## Materials
 
 1. [Getting started with web. Reading (10 min)](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) 
 2. [Installing basic software. Reading (10 min)](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 
@@ -11,8 +13,9 @@
 9. [Publishing site. Reading (10 min)](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
 10. [Simplified view of webpage in the browser. Reading (5 min)](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
 
-# PRACTICE
-## Getting started
+## Practice
+
+### Getting started
 
 1. Read INSTALLATION and MAIN CONCEPTS guide: https://reactjs.org/docs/getting-started.html 
     
@@ -26,8 +29,8 @@ React application usually contains not only React dependencies. Some third party
      3. Site theme & UI components: Bootstrap (https://getbootstrap.com/) or React Versions (React Bootstrap https://github.com/react-bootstrap/react-bootstrap or Reactstrap  
      4. Data storage in UI application: redux(https://redux.js.org/)
 
-## Task
-### Application requirements
+### Task
+#### Application requirements
 
 1. EcmaScript, JSX (https://reactjs.org/docs/introducing-jsx.html)
 2. Development Environment: Visual Studio Code or any
@@ -37,7 +40,7 @@ React application usually contains not only React dependencies. Some third party
 6. HTML5
 7. The Latest version of CSS
 
-### General requirements
+#### General requirements
 
 1. Include UI in an executable jar. Running on local dev server only for development purposes. 
 2. Bootstrap can be used.
@@ -49,7 +52,7 @@ React application usually contains not only React dependencies. Some third party
 8. Screenshots of working application should be attached to a merge request. 
 9. In scope of this task backend may be changed a bit, but without rewriting significant amount of code 
 
-## Example
+### Example
 
 1. Login page (localhost:<port>/login)
 
@@ -106,11 +109,11 @@ Modal confirmation. If user click ‘Yes’, certificate must be deleted, modal 
 
 ![](media/delete_page.png)
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 Mentee should be able to demonstrate his test project.
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.

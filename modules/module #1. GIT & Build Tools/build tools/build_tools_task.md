@@ -1,10 +1,12 @@
-# READING
+# Build Tools
+
+## Materials
 
 1. [Gradle Getting Started](https://docs.gradle.org/current/userguide/getting_started.html)
 
-# PRACTICE
-## Task
+## Practice
 
+### Task
 1. Install Gradle
 2. Assemble custom jar `utils-1.3.5.jar`.
     It should be compatible with java 8.
@@ -18,11 +20,11 @@
     The `api` subproject should contain class `App` with the `main` method.
     Call `Utils.isAllPositiveNumbers("12", "79")` from the `main` method of `api` subproject.
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 [upd]
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.

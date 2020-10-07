@@ -1,4 +1,6 @@
-# READING
+# REST API Advanced
+
+## Materials
 
 1. [Spring Boot intro](https://videoportal.epam.com/video/6Rn164or) 
 2. [Spring Boot Init](https://start.spring.io/)
@@ -10,9 +12,13 @@
 8. [Spring transaction management](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html)
 9. [Auditing with JPA](https://www.baeldung.com/database-auditing-jpa#auditing)
 
-# PRACTICE
-## Task
-### General requirements
+## Practice
+
+#### Recommended Timeline
+The recommended timeline for the whole module is 2 weeks.
+
+### Task
+#### General requirements
 
 1. Code should be clean and should not contain any “developer-purpose” constructions.  
 2. App should be designed and written with respect to OOD and SOLID principles. 
@@ -32,11 +38,12 @@
 8. Abstraction should be used everywhere to avoid code duplication. 
 9. Several configurations should be implemented.
 
-#### Task 1
+#### Part 1
 
 Migrate your existing Spring application from a previous module to a Spring Boot application.
 
-#### Task 2
+#### Part 2
+
 ##### Business requirements
 
 This sub-module is an extension of REST API Basic and it covers such topics as pagination, sorting, filtering and HATEOAS. Please imagine that your application has a lot of data, so when you make a GET request it will return, for instance, 1 million records. This will take much time to process such request and return the result to the consumer of your API. That is exactly what pagination, sorting, and filtering can solve. The other topic is HATEOAS what stands for the phrase "Hypermedia As The Engine Of Application State". When you are viewing a web page, you see data on it and can perform some actions with this data. In REST when you request a resource you get the details of the resource in the response. Along with it you can send the operations that you can perform on the resource. And this is what HATEOAS does.
@@ -64,7 +71,7 @@ The system should be extended to expose the following REST APIs:
 7. Testing: JUnit, latest version, Mockito.
 8. Service layer should be covered with unit tests not less than 80%.
 
-#### Task 3
+#### Part 3
 
 This sub-module covers following topics:
 1. ORM
@@ -82,7 +89,7 @@ ORM stands for Object Relational Mapping. It’s a bit of an abstract concept �
 
 It is forbidden to use any Hibernate specific features.
 
-# DEMO
+# Demo
 ## Practical part
 
 1. Generate for demo at least 
@@ -97,7 +104,7 @@ All values should look like more -or-less meaningful: random words, but not rand
 
 Mentee should be able to answer questions during demo session.
 
-# ADDITIONAL MATERIALS
+## Extra Materials
 
 1. [Spring Boot reference](https://spring.io/projects/spring-boot/) 
 2. [Spring Boot tutorial](https://spring.io/guides/gs/rest-service/)

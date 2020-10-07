@@ -1,23 +1,29 @@
-# READING
+# CI & CD
+
+## Materials
 
 1. [Continuous Integration with Jenkins](https://courses.epam.com/courses/course-v1:EPAM+CIJ+0819/about)  
 2. [SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
 
-# PRACTICE
-## Task
+## Practice
+
+### Recommended Timeline
+The recommended timeline for the whole module is 1 week.
+
+### Task
 
 1. Configure Jenkins security (install Role strategy plugin). Remove anonymous access. Create administrator user (all permissions) and developer user (build job, cancel builds). Add Jenkins credentials to Readme file in your git repository. 
 2. Configure Jenkins build job (pool, run test, build) to checkout your repository, use pooling interval.
 3. Install SonarQube. Configure Jenkins to use local SonarQube installation. Analyze your source code with SonarQube after Maven builds your project. Use JaCoCo for code coverage. 
 4. Jenkins should deploy your application (after passing SonarQube quality gate) under your local tomcat server. Please use Jenkins Tomcat Deploy plugin.
 
-### General requirements
+#### General requirements
 
 1. Jenkins have to build your project according to the Maven build script.
 2. Project (application you have developed for Rest API module?) is deployed at your local Tomcat Server by Jenkins job. 
 3. Jenkins should be integrated with SonarQube.
 
-### Application requirements
+#### Application requirements
 
  - Build tool: **Maven/Gradle**.
  - **Tomcat Server** - should be installed as Service and start automatic.
@@ -26,16 +32,16 @@
  - Continuous Integration server: **Jenkins* LTS 
  - Code analysis tool: **SonarQube**   
 
-# DEMO
-## Practical part
+## Demo
+### Practical part
 
 [upd]
 
-## Theoretical part
+### Theoretical part
 
 Mentee should be able to answer questions during demo session.
 
-# ADDITIONAL MATERIALS
+## Extra Materials
  
 1. [Просто о CI/CD](https://www.youtube.com/watch?v=7S1ndRRht6M)
 2. [Что такое непрерывная интеграция?](https://aws.amazon.com/ru/devops/continuous-integration/)
