@@ -63,8 +63,8 @@ For this task you will create two separate branches ***git\_1*** and ***git\_2**
 4. ***git\_2*:** Update and commit any **two** lines in *secondFile.txt*.
 5. ***git\_1*:** Update and commit **the same** 2 lines with the different info in *secondFile.txt*
 6. Merge branch ***git\_2*** to ***git\_1*,** resolve conflict. Left **all** (4) modified lines. Commit.
-7. ***git\_1***: Update and commit 1.txt file, modify two lines.
-8. ***git\_1***: Update and commit 1.txt file, modify **another** two lines.
+7. ***git\_1***: Update and commit *firstFile.txt* file, modify two lines.
+8. ***git\_1***: Update and commit *firstFile.txt* file, modify **another** two lines.
 9. Transfer changes of commit from <span class="underline">Step 7 only</span> to ***git\_2*,** using **format patch**.
 10. Transfer changes of commit from <span class="underline">Step 8 only</span> to ***git\_2*,** using **cherrypick** command.
 11. ***git\_2*:** Concatenate the last two commits using ***reset** + **commit*** commands.
