@@ -75,7 +75,7 @@ For this task you will create two separate branches ***git\_1*** and ***git\_2**
 16. Synchronize ***git\_1*** and ***git\_2*** with a remote repository.
 17. Clone your project to another folder.
 18. **folder2: *git\_1*:** Change two lines in *firstFile.txt*. **Commit** + **Push**.
-19. **folder1: *git\_1*:** Change **another** two lines in *secondFile.txt*.
+19. **folder1: *git\_1*:** Change **another** two lines in *firstFile.txt*.
 20. **folder1: *git\_1*:*   
     a. Change **another** line in *firstFile.txt* (not the same as in 18, 19).
     b. **Merge** changes from Step 18 (pull) **without** committing changes from Step 19 and any additional commits.
