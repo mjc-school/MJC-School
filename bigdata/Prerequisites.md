@@ -1,6 +1,6 @@
-#Prerequisites 
+# Prerequisites 
 
-##Common rules and requirements
+## Common rules and requirements
 - Source code must be under VCS (git).
 - [GitLab](https://gitlab.com) must be used as git-repository hosting service.
 - Your gitlab account must be named as *{Name}_{Surname}*.
@@ -20,7 +20,7 @@
 - Git workflow for main tasks:  
     ![Git Workflow Image](git_workflow.png)
 
-##Task review
+## Task review
 After each task deadline you'll be assigned to the online session with one or several mentors to
 present your task and answer the implementation-specific/theoretical questions.
 - Presentation is performed using shared desktop.
@@ -31,7 +31,7 @@ present your task and answer the implementation-specific/theoretical questions.
 - **Answers like "I just copied this from tutorial" are not applicable** — if you're using something
  ensure that you're understand this.
 
-##Other rules:
+## Other rules:
 - Feel free to propose to use some additional (unmentioned) tools/frameworks/libs, in this case 
 approval from the mentors required.
 - Only GA versions of tools/frameworks/libs are allowed.
