@@ -59,7 +59,7 @@ __Links:__
 - [Issue with "not in" clause](http://daleburnett.com/2011/10/the-danger-of-not-in-or-you-keep-using-that-word-i-do-not-think-it-means-what-you-think-it-means/)
 - [Materialized view](https://oracle-base.com/articles/misc/materialized-views)
     
-##Task 1 (theoretic task)
+## Task 1 (theoretic task)
 
 Transaction table `t` is given:
 

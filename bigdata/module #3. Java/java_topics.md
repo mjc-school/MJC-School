@@ -51,7 +51,7 @@
 - [Java Concurrency and 29 related topics](https://datacadamia.com/lang/java/concurrency/concurrency)
 - [Java 8 Concurrency Tutorial: Threads and Executors](https://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/)
  
-##Task 1 (theoretic task)
+## Task 1 (theoretic task)
 
 1. Complete this task to harden knowledge in class loading and static/non-statics terms :
     
