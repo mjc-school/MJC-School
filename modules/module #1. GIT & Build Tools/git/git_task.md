@@ -70,17 +70,17 @@ For this task you will create two separate branches ***git\_1*** and ***git\_2**
 11. ***git\_2*:** Concatenate the last two commits using ***reset** + **commit*** commands.
 12. ***git\_2*:** Change date, author and message of the last commit and add non-empty *thirdFile.txt* file to it.
 13. ***git\_2***: Create a **new** commit that *reverts* changes of the last one.
-14. ***git\_2*:** Update and commit *thirdFile.txt* file.
+14. ***git\_2*:** Create and commit *thirdFile.txt* file.
 15. ***git\_2***: Run command that removes all changes of the last two commits.
 16. Synchronize ***git\_1*** and ***git\_2*** with a remote repository.
 17. Clone your project to another folder.
 18. **folder2: *git\_1*:** Change two lines in *firstFile.txt*. **Commit** + **Push**.
 19. **folder1: *git\_1*:** Change **another** two lines in *firstFile.txt*.
 20. **folder1: *git\_1*:*   
-    a. Change **another** line in *firstFile.txt* (not the same as in 18, 19).
-    b. **Merge** changes from Step 18 (pull) **without** committing changes from Step 19 and any additional commits.
-    c. **Push**.
-    d. Return local state of Step 19. (***stash***)
+    * Change **another** line in *firstFile.txt* (not the same as in 18, 19).
+    * **Merge** changes from Step 18 (pull) **without** committing changes from Step 19 and any additional commits.
+    * **Push**.
+    * Return local state of Step 19. (***stash***)
 
 #### Part 2
 For this task you should learn how to use **interactive rebase**, thus other ways of achieving the same are prohibited. Show the following steps to your mentor during the demo:
