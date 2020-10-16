@@ -5,6 +5,14 @@ To cover this topic please refer to the Git task of MJC-School first module (mas
 ```
 MJC-School/modules/module #1. GIT & Build Tools/git_task/
 ```
+Links: 
+- [Understanding Git — Data Model](https://medium.com/hackernoon/https-medium-com-zspajich-understanding-git-data-model-95eb16cc99f5)
+- [Understanding Git — Branching](https://medium.com/hackernoon/understanding-git-branching-2662f5882f9)
+- [Understanding Git — Index](https://medium.com/hackernoon/understanding-git-index-4821a0765cf)
+- [GitFlow, GitHubFlow and etc.](https://habr.com/ru/company/flant/blog/491320)
+- [git -add flags difference](https://stackoverflow.com/a/26039014)
+- [git -add flags difference (RU)](https://ru.stackoverflow.com/a/431840)
+
 ### Maven
 Topics: 
 - What are build tools? Why are they used?
