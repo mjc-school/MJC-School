@@ -2,16 +2,13 @@
 
 ## Common rules and requirements
 - Source code must be under VCS (git).
-- [GitLab](https://gitlab.com) must be used as git-repository hosting service.
-- Your gitlab account must be named as *{Name}_{Surname}*.
+- [GitHub](https://github.com) can be used as git-repository hosting service.
 - Source code must be in a private repository.
 - All tasks should be located in the same repository, repository itself should be named using the
  pattern *"{Name}_{Surname}_BigDataLab"*.
 - Each task should be located in the separate folder named *"Task{X}"*.
  In case the task depends on/extends previous one, source code can be copied into current task folder.
-- You must provide master/maintainer access level to the following accounts:
-  - [Elizabeth Matsiushonok](https://gitlab.com/elizabeth_m)
-  - [Bahdan Shpakouski](https://gitlab.com/shpakovskybv94)
+- Invite your mentors as collaborators to the repository.
 - It is forbidden to add any other members to your project except this was additionally requested by mentors.
 - Result of your work (commits) should appear every few days (ideally — every day).
 - Source code should be clean and should not contain any "developer-purpose" constructions.
@@ -34,7 +31,6 @@ present your task and answer the implementation-specific/theoretical questions.
 ## Other rules:
 - Feel free to propose to use some additional (unmentioned) tools/frameworks/libs, in this case 
 approval from the mentors required.
-- Only GA versions of tools/frameworks/libs are allowed.
 - JDK: Oracle JDK 8 or higher (use Java 8 features like new date time API, lambdas and streams, optional where possible).
 - Public APIs must be documented (Javadoc).
 - Questions are normal and show the process of your study, do not hesitate to ask, especially
