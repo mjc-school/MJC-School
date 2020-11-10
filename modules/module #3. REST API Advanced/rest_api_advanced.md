@@ -50,15 +50,15 @@ Migrate your existing Spring application from a previous module to a Spring Boot
 This sub-module is an extension of REST API Basics, and it covers such topics as pagination, sorting, filtering and HATEOAS. Please imagine that your application has a lot of data, so when you make a GET request it will return, for instance, 1 million records. This will take much time to process such request and return the result to the consumer of your API. That is exactly what pagination, sorting, and filtering can solve. The other topic is HATEOAS what stands for the phrase "Hypermedia As The Engine Of Application State". When you are viewing a web page, you see data on it and can perform some actions with this data. In REST when you request a resource you get the details of the resource in the response. Along with it you can send the operations that you can perform on the resource. And this is what HATEOAS does.
 
 The system should be extended to expose the following REST APIs: 
-1. Change single field of main entity (e.g. if you are using suggested in the previous module model, you should implement the possibility to change only duration of a certificate or only price). 
+1. Change single field of gift certificate (e.g. implement the possibility to change only duration of a certificate or only price). 
 2. Add new entity User.
    * implement only get operations for user entity.
-3. Make an order (or any relevant action) on gift certificate for a user (user should have an ability to buy a certificate). 
+3. Make an order on gift certificate for a user (user should have an ability to buy a certificate).
 4. Get information about user’s orders. 
 5. Get information about user’s order: cost and timestamp of a purchase. 
 6. Get the most widely used tag of a user with the highest cost of all orders. 
-   * Demonstrate SQL execution plan for this query. 
-7. Search for gift certificates by several secondary entities (“and” condition). 
+   * Demonstrate SQL execution plan for this query.
+7. Search for gift certificates by several tags (“and” condition).
 8. Pagination should be implemented for all GET endpoints. Please, create a flexible and non-erroneous solution. Handle all exceptional cases. 
 9. Support HATEOAS on REST endpoints.
 
