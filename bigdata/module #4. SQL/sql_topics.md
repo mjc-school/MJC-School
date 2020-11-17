@@ -78,8 +78,8 @@ Transaction table `t` is given:
 | ITEM        | 2018-01-02 | 3     |   1	| 3       |
 | ITEM        | 2018-01-03 | 3     |   2	| 3       |
 
-Complete the following tasks without using subqueries:
-1) Select records where one tr_id is related to more than 1 "HEADER" transaction.
+Complete the following tasks:
+1) Select records with the top 3 _amount_ for each customer's(_cust_id_) transaction (_tr_id_) 
 2) Select all "HEADER" transactions, in addition, for each transaction calculate the number of days that have passed since the previous transaction of the same customer (let's say there's a function *days_between(one_date, second_date)*)
-3) Calculate cumulative sum (sum of the transaction amount from the beginning to the current moment(tr_date)) and the total sum for each customer's(cust_id) transaction (tr_id). Output schema example: *, tr_cum_sum, total_sum
-4) Remove duplicate transactions by record_type, tr_id and amount for each customer. In several ways.
+3) Calculate cumulative sum (sum of the transaction amount from the beginning to the current moment(_tr_date_)) and the total sum for each customer's(_cust_id_) transaction (_tr_id_). Output schema example: " *, tr_cum_sum, total_sum "
+4) Select transaction data without duplicates by _record_type_, _tr_id_ and _amount_ for each customer. In several ways
