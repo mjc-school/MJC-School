@@ -2,9 +2,8 @@
 
 Topics: 
 - CI/CD
-    - Continuous Integration, Continuous Delivery, Continuous Deployment.
-    - Describe and name some example tools.
-    - Pros and Cons
+    - Continuous Integration, Continuous Delivery, Continuous Deployment. Difference. Pros and Cons.
+    - CI/CD tools
 - Jenkins
     - What is Jenkins?
     - What are the benefits of using Jenkins?
@@ -13,7 +12,12 @@ Topics:
     - Types of jobs or projects in Jenkins
     - Explain the terms Agent, post-section, Jenkinsfile
     - Environment variables in Jenkins job
-
+- SonarQube
+    - What is it and why?
+    - Quality Profiles, Quality Gates
+    - Sonar Scanner, Sonar Analyzer
+    
+    
 Links
 - [CI vs CD vs CD](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
 - [Просто о CI/CD](https://www.youtube.com/watch?v=7S1ndRRht6M)
@@ -24,6 +28,8 @@ Links
 - [Jenkins - Quick Guide](https://www.tutorialspoint.com/jenkins/jenkins_quick_guide.htm)
 - [Jenkins Tips & Tricks](https://automationstepbystep.com/jenkins-tips-tricks/)
 - [Jenkins. Documentation.](https://www.jenkins.io/doc/tutorials/)
+- [Youtube: Jenkins На Русском Языке](https://www.youtube.com/watch?v=cyb10iplv7U&list=PLg5SS_4L6LYvQbMrSuOjTL1HOiDhUE_5a)
+- [SonarQube на русском](https://sonar-russian.silverbulleters.org/)
 
 
 ### Task
