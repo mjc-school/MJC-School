@@ -12,6 +12,9 @@
 
 ## Practice
 
+#### Recommended Timeline
+The recommended timeline for the whole module is 2 weeks.
+
 ### Task
 
 This module is an extension of REST API Advanced module and covers following topics:
@@ -44,6 +47,7 @@ User Permissions:
 5. (Optional task) Use Oauth2 as an authorization protocol.
     a. OAuth2 scopes should be used to restrict data.
     b. Implicit grant and Resource owner credentials grant should be implemented.
+6. (Optional task) It's allowed to use Spring Data. Requirement for this task - all repository (and existing ones) should be migrated to Spring Data.
 
 ## Demo
 ### Practical part
