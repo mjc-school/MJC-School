@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit certificate</title>
+</head>
+<body>
+
+<h2>Update certificate</h2>
+<form th:method="patch" th:action="@{/certificates/{id}(id=${certificate.getId()})}" th:object="${certificate}">
+    <label for="name">Enter certificate name</label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="description">Enter certificate description</label>
+    <input type="text" th:field="*{description}" id="description" />
+    <br/>
+    <label for="price">Enter certificate price</label>
+    <input type="text" th:field="*{price}" id="price" />
+    <br/>
+    <label for="daysDuration">Enter certificate duration</label>
+    <input type="text" th:field="*{daysDuration}" id="daysDuration" />
+    <br/>
+    <label for="creationDay">Enter certificate creation date</label>
+    <input type="text" th:field="*{createDate}" id="creationDay" />
+    <br/>
+
+    <input type="submit" name="Update certificate">
+
+</form>
+
+
+</body>
+</html>>
