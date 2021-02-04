@@ -1,0 +1,16 @@
+
+# Ignore Gradle project-specific cache directory
+/.gradle/*
+/.idea/*
+
+# Ignore Gradle build output directory
+/gradle/*
+/gradlew/*
+gradlew.bat
+/.gitattributes/*
+/.sts4-cache/*
+/.settings/*
+.classpath
+.project
+/.run/*
+/build/*
