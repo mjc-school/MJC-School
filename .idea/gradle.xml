@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao" />
+        <option name="gradleHome" value="c:/Program Files/Gradle/gradle-6.7.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/controller" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity" />
+        <option name="gradleHome" value="c:/Program Files/Gradle/gradle-6.7.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/controller" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity" />
+            <option value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

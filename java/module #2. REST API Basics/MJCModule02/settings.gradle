@@ -1,2 +1,3 @@
-rootProject.name = 'Module02'
+rootProject.name = 'Module02Multy'
+include ('dao', 'entity', 'controller', 'service')
 

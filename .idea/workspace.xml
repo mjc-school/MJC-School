@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,11 +28,85 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1738cab-1b2e-457a-989e-975d8fa44220" name="Default Changelist" comment="" />
+    <list default="true" id="f1738cab-1b2e-457a-989e-975d8fa44220" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/entity.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/MJC-School-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/CertificateDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/CertificateTagDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/TagDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/CertificateDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/CertificateTagDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/TagDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/CertificateTagEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/GiftCertificate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/dto/CertificateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/dto/TagDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MJCModule02" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,19 +117,44 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="SOFT" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/frikki84/MJC-School" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1iYWfHzZk0yXu5zWxhG1eS47vaI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$PROJECT_DIR$/../../Dev Tools/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.6057471" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\JavaSpring\MJC-School" />
+      <recent name="D:\Java\JavaSpring\MJC-School\java\module #2. REST API Basics\MJCModule02\dao\src\main\java" />
+      <recent name="D:\Java\JavaSpring\MJC-School\java\module #2. REST API Basics\MJCModule02\entity\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.411">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -64,6 +166,27 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="dao [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -81,6 +204,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.411" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 9.0.411" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="29afc52e-cd3f-49cd-aed3-74c9d2e45445" />
+                    <id>29afc52e-cd3f-49cd-aed3-74c9d2e45445</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="29afc52e-cd3f-49cd-aed3-74c9d2e45445" />
+                    <id>29afc52e-cd3f-49cd-aed3-74c9d2e45445</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="4a9050ac-1242-4111-b4d4-d85d81619725" />
+                    <id>4a9050ac-1242-4111-b4d4-d85d81619725</id>
+                  </TransportTarget>
+                </option>
+                <staging-path />
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="4a9050ac-1242-4111-b4d4-d85d81619725" />
+                    <id>4a9050ac-1242-4111-b4d4-d85d81619725</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62894" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -90,7 +271,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.dao [dependencies]" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.411" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.dao [dependencies]" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,6 +292,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602085107809</updated>
+      <workItem from="1612193799400" duration="715000" />
+      <workItem from="1612291482260" duration="3616000" />
+      <workItem from="1612297562225" duration="1889000" />
+      <workItem from="1612342373833" duration="6629000" />
+      <workItem from="1612353718507" duration="5282000" />
+      <workItem from="1612371272310" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="Contribution described in more details">
       <created>1602085260655</created>
@@ -132,6 +329,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -170,22 +370,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Contribution described in more details" />
     <MESSAGE value="Change formatting + add recommended timelines" />
     <MESSAGE value="Rename contribution.md to contributing.md" />
     <MESSAGE value="Rework BigData Module" />
     <option name="LAST_COMMIT_MESSAGE" value="Rework BigData Module" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="910" y="269" key="CommitChangelistDialog2" timestamp="1602172808633">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="910" y="269" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1602172808633" />
-    <state x="873" y="433" key="Vcs.Push.Dialog.v2" timestamp="1602172821898">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="873" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1602172821898" />
   </component>
 </project>

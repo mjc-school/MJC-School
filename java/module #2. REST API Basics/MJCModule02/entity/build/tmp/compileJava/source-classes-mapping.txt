@@ -1,0 +1,12 @@
+com/epam/esm/GiftCertificate.java
+ com.epam.esm.GiftCertificate
+com/epam/esm/dto/TagDto.java
+ com.epam.esm.dto.TagDto
+com/epam/esm/dto/CertificateDto.java
+ com.epam.esm.dto.CertificateDto
+com/epam/esm/Tag.java
+ com.epam.esm.Tag
+com/epam/esm/util/CustomErrorCode.java
+ com.epam.esm.util.CustomErrorCode
+com/epam/esm/CertificateTagEntity.java
+ com.epam.esm.CertificateTagEntity

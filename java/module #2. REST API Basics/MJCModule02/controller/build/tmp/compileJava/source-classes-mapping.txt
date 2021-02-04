@@ -1,0 +1,18 @@
+com/epam/esm/config/MyServletDispatcher.java
+ com.epam.esm.config.MyServletDispatcher
+com/epam/esm/exception/NoSuchResourceException.java
+ com.epam.esm.exception.NoSuchResourceException
+com/epam/esm/exception/GeneralException.java
+ com.epam.esm.exception.GeneralException
+com/epam/esm/exception/ApplicationExceptionHandler.java
+ com.epam.esm.exception.ApplicationExceptionHandler
+com/epam/esm/exception/InvalidDataException.java
+ com.epam.esm.exception.InvalidDataException
+com/epam/esm/exception/ExceptionDetails.java
+ com.epam.esm.exception.ExceptionDetails
+com/epam/esm/config/ControllerConfig.java
+ com.epam.esm.config.ControllerConfig
+com/epam/esm/CertificatesController.java
+ com.epam.esm.CertificatesController
+com/epam/esm/TagController.java
+ com.epam.esm.TagController

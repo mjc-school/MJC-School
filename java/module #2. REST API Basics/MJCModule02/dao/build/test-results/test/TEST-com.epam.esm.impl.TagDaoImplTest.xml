@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.epam.esm.impl.TagDaoImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-02-03T16:22:14" hostname="DESKTOP-N99POAQ" time="1.506">
+  <properties/>
+  <testcase name="testFindTag()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.269"/>
+  <testcase name="testFindTag1()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.24"/>
+  <testcase name="testDeleteTag()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.237"/>
+  <testcase name="testAddNewTag()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.257"/>
+  <testcase name="testFindTagsByCertificateId()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.238"/>
+  <testcase name="testFindAllTagList()" classname="com.epam.esm.impl.TagDaoImplTest" time="0.256"/>
+  <system-out><![CDATA[com.epam.esm.impl.TagDaoImpl@7c7aebcd
+]]></system-out>
+  <system-err><![CDATA[февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:14 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory initDatabase
+INFO: Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+февр. 03, 2021 7:22:15 PM org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory shutdownDatabase
+INFO: Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+]]></system-err>
+</testsuite>

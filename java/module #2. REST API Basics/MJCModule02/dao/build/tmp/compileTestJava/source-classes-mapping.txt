@@ -1,0 +1,4 @@
+com/epam/esm/impl/TagDaoImplTest.java
+ com.epam.esm.impl.TagDaoImplTest
+com/epam/esm/impl/CertificateDaoImplTest.java
+ com.epam.esm.impl.CertificateDaoImplTest

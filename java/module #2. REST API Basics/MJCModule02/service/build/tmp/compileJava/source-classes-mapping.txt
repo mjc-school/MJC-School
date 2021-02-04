@@ -1,0 +1,22 @@
+com/epam/esm/exception/IllegalEntityId.java
+ com.epam.esm.exception.IllegalEntityId
+com/epam/esm/CertificateService.java
+ com.epam.esm.CertificateService
+com/epam/esm/mapper/impl/TagDtoMapperImpl.java
+ com.epam.esm.mapper.impl.TagDtoMapperImpl
+com/epam/esm/config/ServiceConfig.java
+ com.epam.esm.config.ServiceConfig
+com/epam/esm/mapper/impl/CertificateDtoMapperImpl.java
+ com.epam.esm.mapper.impl.CertificateDtoMapperImpl
+com/epam/esm/validation/CertificateDTOChecking.java
+ com.epam.esm.validation.CertificateDTOChecking
+com/epam/esm/mapper/TagDtoMapper.java
+ com.epam.esm.mapper.TagDtoMapper
+com/epam/esm/mapper/CertificateDtoMapper.java
+ com.epam.esm.mapper.CertificateDtoMapper
+com/epam/esm/exception/NoSuchResourceException.java
+ com.epam.esm.exception.NoSuchResourceException
+com/epam/esm/TagService.java
+ com.epam.esm.TagService
+com/epam/esm/CertificateTagService.java
+ com.epam.esm.CertificateTagService

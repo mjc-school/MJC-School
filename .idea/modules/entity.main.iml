@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+    <output url="file://$MODULE_DIR$/../../java/module #2. REST API Basics/MJCModule02/entity/build/classes/java/main" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../java/module #2. REST API Basics/MJCModule02/entity/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../java/module #2. REST API Basics/MJCModule02/entity/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../java/module #2. REST API Basics/MJCModule02/entity/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jdbc:5.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-web:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:5.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-dbcp2:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-pool2:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:8.0.22" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:5.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-tx:5.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-java:3.11.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.12.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.12.1" level="project" />
+  </component>
+</module>
