@@ -2,7 +2,10 @@ package com.epam.esm;
 
 import com.epam.esm.dto.TagDto;
 import com.epam.esm.exception.NoSuchResourceException;
+import com.epam.esm.exception.TagAlreadyExistsException;
+import com.epam.esm.exception.TagValidationException;
 import com.epam.esm.util.CustomErrorCode;
+import com.epam.esm.validation.TagDtoChecking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -41,7 +44,10 @@ public class TagController {
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
     public Tag createNewTag(@RequestBody TagDto tag) {
-        System.out.println("controller " + tag);
+        boolean checkTag = TagDtoChecking.checkTAgDto(tag);
+        if (!checkTag) {
+            throw new TagValidationException(CustomErrorCode.TAG);
+        }
         Tag createdTag = tagService.addNewTag(tag);
         return createdTag;
     }

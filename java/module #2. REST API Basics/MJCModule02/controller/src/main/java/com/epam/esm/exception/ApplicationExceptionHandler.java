@@ -21,8 +21,7 @@ public class ApplicationExceptionHandler {
     public static final String NO_SUCH_RESOURCE_MESSAGE = "no_resource";
     public static final String TAG_EXISTS_MESSAGE = "tag_exist";
     public static final String NO_CERTIFICATE = "no_certificate";
-
-
+    public static final String WRONG_TAG_NAME = "wrong_tag_name";
 
     private final ReloadableResourceBundleMessageSource resourceBundle;
 
@@ -38,12 +37,14 @@ public class ApplicationExceptionHandler {
         return new ResponseEntity<>(data, status);
     }
 
-    @ExceptionHandler({TagAlreadyExistsException.class, SQLException.class})
+    @ExceptionHandler({TagAlreadyExistsException.class})
     public ResponseEntity<ExceptionDetails> handleTagAlreadyExistsException(InvalidDataException exception) {
+        System.out.println("handleTagAlreadyExistsException");
         HttpStatus status = HttpStatus.CONFLICT;
         String message = getErrorResponse(TAG_EXISTS_MESSAGE);
         String errorCode = status.value() + exception.getCode();
         ExceptionDetails data = new ExceptionDetails(LocalDateTime.now(), status.value(), message, errorCode);
+        System.out.println(data);
         return new ResponseEntity<>(data, status);
     }
 
@@ -70,6 +71,17 @@ public class ApplicationExceptionHandler {
     public ResponseEntity<ExceptionDetails> handleIllegalEntityId(IllegalEntityId exception) {
         HttpStatus status = HttpStatus.BAD_REQUEST;
         String message = getErrorResponse(NO_CERTIFICATE);
+        String errorCode = status.value()+ exception.getCode();
+        ExceptionDetails data = new ExceptionDetails(LocalDateTime.now()
+                , status.value(), message, errorCode);
+
+        return new ResponseEntity<>(data, status);
+    }
+
+    @ExceptionHandler(TagValidationException.class)
+    public ResponseEntity<ExceptionDetails> handleTagValidationException(TagValidationException exception) {
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        String message = getErrorResponse(WRONG_TAG_NAME);
         String errorCode = status.value()+ exception.getCode();
         ExceptionDetails data = new ExceptionDetails(LocalDateTime.now()
                 , status.value(), message, errorCode);
