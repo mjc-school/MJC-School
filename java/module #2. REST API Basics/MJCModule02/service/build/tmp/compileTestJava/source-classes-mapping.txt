@@ -1,2 +1,14 @@
+com/epam/esm/validation/TagDtoCheckingTest.java
+ com.epam.esm.validation.TagDtoCheckingTest
+com/epam/esm/CertificateTagServiceTest.java
+ com.epam.esm.CertificateTagServiceTest
+com/epam/esm/TagServiceTest.java
+ com.epam.esm.TagServiceTest
 com/epam/esm/CertificateServiceTest.java
  com.epam.esm.CertificateServiceTest
+com/epam/esm/validation/CertificateDTOCheckingTest.java
+ com.epam.esm.validation.CertificateDTOCheckingTest
+com/epam/esm/mapper/impl/CertificateDtoMapperImplTest.java
+ com.epam.esm.mapper.impl.CertificateDtoMapperImplTest
+com/epam/esm/mapper/impl/TagDtoMapperImplTest.java
+ com.epam.esm.mapper.impl.TagDtoMapperImplTest

@@ -34,11 +34,8 @@ public class CertificateTagService {
     public Integer createNewCertificateWithTags(CertificateDto dto)  {
         GiftCertificate certificate = certificateMapper.changeDtoToCertificate(dto);
         long certificateId = certificateService.createNewCertificate(certificate);
-
         List<Tag> tagList = tagDtoMapper.changeCertificateDtoToTagList(dto);
-
         Integer resultField = 0;
-
         for (Tag tag : tagList) {
             long tagId = 0;
             if (tagService.findTag(tag.getNameTag()) == null) {
@@ -49,7 +46,6 @@ public class CertificateTagService {
             }
 
             resultField += certificateTagDao.createNewCertificateTagRelation(certificateId, tagId);
-
 
         }
         return resultField;

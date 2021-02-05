@@ -4,6 +4,7 @@ package com.epam.esm;
 import com.epam.esm.dto.TagDto;
 import com.epam.esm.exception.TagAlreadyExistsException;
 import com.epam.esm.mapper.TagDtoMapper;
+import com.epam.esm.util.CustomErrorCode;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,11 +47,12 @@ public class TagService {
         return  fieldsNumber;
     }
 
-    public Tag addNewTag(TagDto tagDto){
+    public Tag addNewTag(TagDto tagDto) throws TagAlreadyExistsException{
         System.out.println(tagDto);
         Tag tag = tagDtoMapper.changeTagDtoToTag(tagDto);
         System.out.println("Tag" + tag);
         Tag newTag = tagDao.addNewTag(tag);
+
         System.out.println("tag after adding " + newTag);
         return newTag;
     }

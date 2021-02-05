@@ -29,45 +29,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1738cab-1b2e-457a-989e-975d8fa44220" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/entity.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/MJC-School-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/CertificateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/CertificateTagDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/TagDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/CertificateDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/CertificateTagDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/impl/TagDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/CertificateTagEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/GiftCertificate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/dto/CertificateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/dto/TagDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/controller/src/main/java/com/epam/esm/CertificatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/controller/src/main/java/com/epam/esm/CertificatesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build/resources/main/localization/message_en_En.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build/resources/main/localization/message_en_En.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/com/epam/esm/impl/TagDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/java/com/epam/esm/impl/TagDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/resources/localization/message_en_En.properties" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/dao/src/main/resources/localization/message_en_En.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/classes/java/main/com/epam/esm/dto/CertificateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/classes/java/main/com/epam/esm/dto/CertificateDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/libs/entity.jar" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/libs/entity.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/com/epam/esm/dto/CertificateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/entity/src/main/java/com/epam/esm/dto/CertificateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/CertificateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/CertificateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/CertificateTagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/CertificateTagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/classes/java/main/com/epam/esm/TagService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/libs/service.jar" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/libs/service.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/CertificateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/CertificateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/CertificateTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/CertificateTagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/module #2. REST API Basics/MJCModule02/service/src/main/java/com/epam/esm/TagService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,6 +282,8 @@
       <workItem from="1612342373833" duration="6629000" />
       <workItem from="1612353718507" duration="5282000" />
       <workItem from="1612371272310" duration="104000" />
+      <workItem from="1612469022168" duration="142000" />
+      <workItem from="1612469203742" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="Contribution described in more details">
       <created>1602085260655</created>

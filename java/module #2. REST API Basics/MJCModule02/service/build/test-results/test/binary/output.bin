@@ -1,3 +1,0 @@
-deleteCertif1
-deleteCertif0
-ÊcertificateFromDb GiftCertificate{id=10, name='Twist', description='Twist Cource for 2 persons for a month', price=100, duration=40, createDate=2021-01-20T13:06:22, lastUpdateDate=2021-01-20T13:06:22}

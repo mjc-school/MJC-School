@@ -17,5 +17,3 @@ com/epam/esm/CertificateDao.java
  com.epam.esm.CertificateDao
 com/epam/esm/CertificateTagDao.java
  com.epam.esm.CertificateTagDao
-com/epam/esm/config/DevConfig.java
- com.epam.esm.config.DevConfig

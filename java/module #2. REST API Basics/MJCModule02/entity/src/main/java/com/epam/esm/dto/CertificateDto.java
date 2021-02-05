@@ -79,6 +79,14 @@ public class CertificateDto {
         this.tagList=tagList;
     }
 
+    public CertificateDto(String name, String description, BigDecimal price, Integer duration, List<Tag> tagList) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.duration = duration;
+        this.tagList = tagList;
+    }
+
     public long getId() {
         return id;
     }

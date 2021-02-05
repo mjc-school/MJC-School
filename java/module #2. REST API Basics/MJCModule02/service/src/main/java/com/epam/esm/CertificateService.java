@@ -50,7 +50,6 @@ public class CertificateService {
 
     public Integer updateCertificate(GiftCertificate certificate, long id) {
         GiftCertificate certificateFromDb = certificateDao.findCertificateById(id);
-        System.out.println("certificateFromDb " + certificateFromDb);
         if (certificateFromDb == null) {
             throw  new IllegalEntityId(CustomErrorCode.CERTIFICATE);
         }

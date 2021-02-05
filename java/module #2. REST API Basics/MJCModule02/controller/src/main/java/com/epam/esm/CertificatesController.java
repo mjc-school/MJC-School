@@ -21,7 +21,6 @@ public class CertificatesController {
 
     @Autowired
     public CertificatesController(CertificateService certificateService, CertificateTagService certificateTagService) {
-        System.out.println("controller constructor" );
         this.certificateService = certificateService;
         this.certificateTagService = certificateTagService;
     }

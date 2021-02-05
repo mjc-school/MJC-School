@@ -62,22 +62,26 @@ public class TagDaoImpl implements TagDao {
     @Override
     public Tag addNewTag(Tag tag){
         KeyHolder generatedKeyHolder = new GeneratedKeyHolder();
+        System.out.println("Im in dao");
+        try {
 
-        template.update(connection -> {
-           PreparedStatement ps = connection
-                    .prepareStatement(SQL_QUERY_INSERT_TAG, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, tag.getNameTag());
+            template.update(connection -> {
+                PreparedStatement ps = connection
+                        .prepareStatement(SQL_QUERY_INSERT_TAG, Statement.RETURN_GENERATED_KEYS);
+                ps.setString(1, tag.getNameTag());
+                System.out.println("in template");
+                return ps;
 
-            return ps;
-
-        }, generatedKeyHolder);
-
-        Long key = (generatedKeyHolder.getKey()).longValue();
-        System.out.println(key);
-        if (key == null || key == 0) {
+            }, generatedKeyHolder);
+        } catch (Exception e) {
+            System.out.println("In Exception");
             throw  new TagAlreadyExistsException(CustomErrorCode.TAG);
         }
-        tag.setId(key);
+
+            Long key = (generatedKeyHolder.getKey()).longValue();
+            tag.setId(key);
+
+
         return tag;
     }
 
