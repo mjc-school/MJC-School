@@ -38,22 +38,17 @@ The common approach is to assign a service role that we are to create beforehand
      - Make sure the bucket is available for the role created on the step above only. It might be achieved through Bucket Policy.
      - Upload your application jar file to the newly created bucket.
 
-4. Upload Application UI Files to AWS S3
-     - Create mjc-<yourname>-assets S3 bucket.
-     - Make sure the bucket is publicly available.
-     - Upload your application static content to the newly created bucket.
-
-5. Launch RDS instance
+4. Launch RDS instance
      - Start launching RDS instance available within Free Tier (MySQL or PostgreSQL).
      - Select default VPC, Subnet and Security Group. 
      - Make sure Security Group is configured to permit access by port your database is running on.
      - Configure your database with application specific data: schema, tables, data.
-6. Launch EC2 instance
+5. Launch EC2 instance
      - Start launching t2.micro EC2 instance based on Amazon Linux 2 image with default VPC settings. 
      - Assign the Role created in step 2.
      - Within User Data section add the script that downloads your application from S3 bucket and launchs it. Use aws cli command: aws s3 cp s3://BUCKET-NAME/FILENAME . 
      - In security group settings open the port your application will be running on.
-*7. Terminate or remove all created resources/services once you finished the module and showed a demo.*
+*6. Terminate or remove all created resources/services once you finished the module and showed a demo.*
 
 #### General requirements
 
