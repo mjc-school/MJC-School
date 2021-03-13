@@ -46,6 +46,7 @@ __Deadline:__ 4 working days.
 #### Application requirements
 
  - Build tool: **Maven**.
+ - There is no need to do the task on the previously installed virtual machine, any OS can be used.
  - **Tomcat Server** - should be installed as Service and start automatically.
  - Continuous Integration server: *Jenkins LTS*
  - Code analysis tool: **SonarQube**   
