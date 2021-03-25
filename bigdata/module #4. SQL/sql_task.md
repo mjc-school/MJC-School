@@ -23,7 +23,7 @@ Extend the application from the previous task with the new implementation - [Sto
 
 ### Database
 
-Download at least 5 months of data for each station and for each implementation (i.e. [Stops At Location](https://data.police.uk/docs/method/stops-street/) and [Street Level Crimes](https://data.police.uk/docs/method/crime-street/)) using the application from the previous task.
+Download at least 5 months of data for each station and for each implementation (i.e. [Stop and searches by force](https://data.police.uk/docs/method/stops-force/) and [Street Level Crimes](https://data.police.uk/docs/method/crime-street/)) using the application from the previous task.
 
 ### Queries
 
@@ -115,9 +115,9 @@ Various Stop and Search statistics by ethnicity (officer_defined_ethnicity) with
 
 * Officer-defined ethnicity.
 * Total number of stop and search for ethnicity.
-* Arrest rate.
-* No action rate.
-* Other outcome rate.
+* Arrest rate `%`.
+* No action rate `%`.
+* Other outcome rate `%`.
 * Most popular object of search.
 
 #### 5. Most probable Stop and Search snapshot on street level
