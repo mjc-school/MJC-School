@@ -1,23 +1,15 @@
-# Lesson Title
-
-Short description
+# Lesson Intro
 
 ## Contents
-+ Topic 1
-+ Topic 2
-+ Topic 3
+ + What is Java
+ + What is the main goal of the developer?
+ + Structural programming
+ + Object-oriented programming
+ + Design principles and patterns
+ + Best Practices 
 
-## Topic 1
-Lorem Ipsum bla-bla-bla
-
-## Topic 2
-Lorem Ipsum bla-bla-bla
-
-## Topic 3
-Lorem Ipsum bla-bla-bla
-
-### Task
-#### General requirements
-#### Business requirements
-#### Application requirements
-#### Application restrictions
+## Literature
+#### Code Complete, McConnell
+#### Effective Java, Bloch
+#### Building Maintainable Software (java edition), Visser
+#### Thinking in Java, Eckel
