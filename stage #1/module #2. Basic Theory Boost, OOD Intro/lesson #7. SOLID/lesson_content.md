@@ -10,9 +10,10 @@
 ## Task
 Write an application and tests for it according to the requirements given below. The application must implement the functionality defined by the individual task. 
 
-### Requirements
+#### Task example:
+**Circle**. Create the classes Point and Circle. Create methods and tests: calculating the area and perimeter of a circle; Is the shape a circle? (the radius cannot be <= 0); Does the figure intersects only one of the coordinate axes at a specified distance?
 
-Task for example: “Circle. Create the classes Point and Circle. Create methods and tests: calculating the area and perimeter of a circle; Is the shape a circle? (the radius cannot be <= 0); Does the figure intersects only one of the coordinate axes at a specified distance?"
+### Requirements
 
 + Create entity classes, for example: "Create Point and Circle classes"
 + Entity-classes should not be filled with methods which perform functional actions (business logic methods such as calculation, search, etc.).
@@ -34,14 +35,14 @@ Task for example: “Circle. Create the classes Point and Circle. Create methods
 
 ### Variants:
 
-1. Triangle. Create the classes Point and Triangle. Create methods and tests: calculate the area and perimeter of a triangle; Do the points form a triangle? (Do the points lie on the same straight line?); Is the triangle rectangular, isosceles, equilateral, acute/obtuse?
-2. Quadrangle. Create the classes Point and Quadrangle. Create methods and tests: calculate the area and perimeter of a figure; Do the points form a quadrangle? (Do three points lie on the same straight line?); is the quadrilateral convex; Is the quadrilateral a square, a rhombus, a trapezoid?
-3. Oval. Create the classes Point and Oval (form by two points of the circumscribed rectangle). Create methods and tests: calculate the area and perimeter of a figure; Do the points form an oval? (Do two points lie on the same straight line parallel to the coordinate axes?) Do the shape intersects only one of the coordinate axes at a specified distance? Is the figure an oval, a circle?
-4. Ball. Create the classes Point and Ball. Create methods and tests: calculating the surface area of the ball, the volume of the ball, the ratio of the volumes obtained as a result of cutting the ball by the coordinate plane; Is the object a ball? Do the ball touch any of the coordinate planes?
-5. Cube. Create the classes Point and Cube. Create methods and tests: calculating the surface area of a cube, the volume of a cube; the ratio of the volumes obtained as a result of the dissection of the cube by the coordinate plane, Is the object a cube? Is the base of the cube on one of the coordinate planes?
-6. Tetrahedron. Create the classes Point and Tetrahedron. Create methods and tests: calculating the surface area of a figure and its volume, and also the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a given shape? Is the base of the figure on one of the coordinate planes?
-7. Pyramid. Create the classes Point and Pyramid. Create methods and tests: calculating the surface area of a figure and its volume, and also the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a specified figure? Do the base of the figure lie on one of the coordinate planes?
-8. Cone. Create the classes Point and Cone. Create methods and tests: calculating the surface area of a figure and its volume, and the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a specified figure? Do the base of the figure lie on one of the coordinate planes?
+1. **Triangle**. Create the classes Point and Triangle. Create methods and tests: calculate the area and perimeter of a triangle; Do the points form a triangle? (Do the points lie on the same straight line?); Is the triangle rectangular, isosceles, equilateral, acute/obtuse?
+2. **Quadrangle**. Create the classes Point and Quadrangle. Create methods and tests: calculate the area and perimeter of a figure; Do the points form a quadrangle? (Do three points lie on the same straight line?); is the quadrilateral convex; Is the quadrilateral a square, a rhombus, a trapezoid?
+3. **Oval**. Create the classes Point and Oval (form by two points of the circumscribed rectangle). Create methods and tests: calculate the area and perimeter of a figure; Do the points form an oval? (Do two points lie on the same straight line parallel to the coordinate axes?) Do the shape intersects only one of the coordinate axes at a specified distance? Is the figure an oval, a circle?
+4. **Sphere**. Create the classes Point and Sphere. Create methods and tests: calculate the surface area of the sphere, the volume of the Sphere, the ratio of the volumes obtained as a result of cutting the Sphere by the coordinate plane; Is the object a ball? Do the Sphere touch any of the coordinate planes?
+5. **Cube**. Create the classes Point and Cube. Create methods and tests: calculate the surface area of a cube, the volume of a cube; the ratio of the volumes obtained as a result of the dissection of the cube by the coordinate plane, Is the object a cube? Is the base of the cube on one of the coordinate planes?
+6. **Tetrahedron**. Create the classes Point and Tetrahedron. Create methods and tests: calculate the surface area of a figure and its volume, and also the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a given shape? Is the base of the figure on one of the coordinate planes?
+7. **Pyramid**. Create the classes Point and Pyramid. Create methods and tests: calculate the surface area of a figure and its volume, and also the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a specified figure? Do the base of the figure lie on one of the coordinate planes?
+8. **Cone**. Create the classes Point and Cone. Create methods and tests: calculate the surface area of a figure and its volume, and the ratio of volumes obtained as a result of cutting a figure by a coordinate plane; Is the object a specified figure? Do the base of the figure lie on one of the coordinate planes?
 
 ####  Template repo: 
 
