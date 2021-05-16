@@ -9,25 +9,30 @@ import static org.junit.Assert.*;
 
 public class  DivisionLogicTest {
     @Test
-    public void calculateTotalWeightTest(){
-
-        Division division = new Division();
+    public void testCalculateTotalWeightShouldReturnZeroWhenDevisionIsEmpty(){
+        Division division = new Division(); //Given
         double totalWeight  = DivisionLogic.calculateTotalWeight(division);
-        assertTrue(0.0 == totalWeight);
+        assertTrue(0.0 == totalWeight);//Then
+    }
 
+    @Test
+    public void testCalculateTotalWeightShouldReturnWeaponWeigthWhenDevisionContainOneWeapon(){
+        Division division = new Division();
+        AbstractWeapon weapon = new Gun(2,4.0,"testGun",500);
+        division.add(weapon);//Given
+        double totalWeight  = DivisionLogic.calculateTotalWeight(division);
+        assertTrue(weapon.getWeight() == totalWeight);//Then
+    }
 
+    @Test
+    public void testCalculateTotalWeightShouldReturnWeaponWeightSumWhenDevisionContainManyWeapons(){
+        Division division = new Division();
         AbstractWeapon weapon = new Gun(2,4.0,"testGun",500);
         division.add(weapon);
-
-        totalWeight  = DivisionLogic.calculateTotalWeight(division);
-        assertTrue(weapon.getWeight() == totalWeight);
-
         AbstractWeapon weaponMachineGun = new MachineGun(2,3.4,6000,"testMachineGun",600);
-        division.add(weaponMachineGun);
-        totalWeight  = DivisionLogic.calculateTotalWeight(division);
-        assertTrue(weapon.getWeight() + weaponMachineGun.getWeight() == totalWeight);
-
-
+        division.add(weaponMachineGun);//Given
+        double totalWeight  = DivisionLogic.calculateTotalWeight(division);
+        assertTrue(weapon.getWeight() + weaponMachineGun.getWeight() == totalWeight);//Then
     }
 
 }
