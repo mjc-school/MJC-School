@@ -9,16 +9,19 @@ import static com.epam.training.weapons.model.Blade.HandCount.ONE_HAND;
 
 public class DivisionCreator {
 
+    private final int BLADE_COUNT = 100;
+    private final int MASHING_GAN_COUNT = 5;
+
     public Division create(){
         Division division = new Division();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < BLADE_COUNT; i++) {
             Gun gun = new Gun(1,7.62,"basic Gun",400);
             Blade blade = new Blade("basic Knife",200,15, ONE_HAND);
             division.add(gun);
             division.add(blade);
 
         }
-        for (int i = 0; i < 5 ; i++) {
+        for (int i = 0; i < MASHING_GAN_COUNT ; i++) {
             MachineGun machineGun = new MachineGun(1000,7.62,3000,"basic Machine Gun",600);
             division.add(machineGun);
         }

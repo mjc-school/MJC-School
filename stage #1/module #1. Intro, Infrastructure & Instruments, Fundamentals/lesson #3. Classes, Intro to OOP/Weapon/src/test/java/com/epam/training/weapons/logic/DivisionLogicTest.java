@@ -7,7 +7,7 @@ import com.epam.training.weapons.model.MachineGun;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class DivisionLogicTest {
+public class  DivisionLogicTest {
     @Test
     public void calculateTotalWeightTest(){
 

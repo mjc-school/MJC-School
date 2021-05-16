@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MainTest {
     @Test
@@ -24,5 +25,8 @@ public class MainTest {
         Main.main(args);
 
         assertEquals(expectedOutPut, out.toString());
+        String s1 = "string";
+        String s2 = new String("string");
+        assertTrue(s1.hashCode() == s2.hashCode());
     }
 }
