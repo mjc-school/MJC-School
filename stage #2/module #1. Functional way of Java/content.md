@@ -56,7 +56,9 @@ Let's take a look at them.
 
         System.out.println(convertRub.apply(9));
    
-BiFunction – takes two objects with types T and U as input and returns the type R.
+    BiFunction – takes two objects with types T and U as input and returns the type R.
+
+
 5. There are additional derived function shapes that extend the basic function shapes.
      UnaryOperator extends from Function – Takes T and returns T.
      BinaryOperator extends from BiFunction – takes two objects of type T as input and returns T. 
@@ -73,6 +75,7 @@ BiFunction – takes two objects with types T and U as input and returns the typ
    To specialize the return type for a type that has both generic return type and generic arguments, we prefix ToXxx, as in <i>ToIntFunction</i>. Otherwise, type arguments are specialized left-to-right, as in <i>DoubleConsumer</i> or <i>ObjIntConsumer</i>. (The type prefix Obj is used to indicate that we don't want to specialize this parameter, but want to move on to the next parameter, as in <i>ObjIntConsumer</i>.) These schemes can be combined, as in <i>IntToDoubleFunction</i>.
    
 The Functional Interface is one of the most important concepts of Java 8 which actually powers lambda expression. If you know what the functional interface is and how lambda is related to it, you can use powerful features of Java 8 like Lambda expression and Stream API. Without knowledge of the functional interface, you won't be able to understand where you can use a lambda in the code but also you will struggle to write a lambda expression the method is expecting, hence, it's important to have a good understanding of the functional interface.
+
 
 ### Lambda Expression
 
@@ -188,6 +191,7 @@ See example:
 
 Thus, we have covered the definition of lambda expressions, why they are better to use, and some rules for using them.
 
+
 ### Functional Composition
 
 Functional composition is a technique to combine multiple functions into a single function which uses the combined functions internally. You can compose individual functions (typically one or more <b>Java Lambda Expressions</b>) into a single function yourself, but Java also comes with built-in support for functional composition to make the job easier for you. In this chapter we will explain both how to compose functions from smaller functions yourself, and via Java's built-in features.
@@ -276,6 +280,7 @@ The Function interface also contains a few methods that can be used to compose n
    
    Note: As mentioned in the beginning, compose() works opposite of  andThen(). Therefore, calling a.andThen(b) is actually the same as calling b.compose(a).
 
+
 ### Method References
 
 In the previous chapters we learned lambda expressions in Java 8. Here we will discuss another new feature of java 8, method reference. Method reference is a shorthand notation of a lambda expression to call a method. For example:
@@ -359,6 +364,7 @@ Rewritten using method reference:
       System.out.println(function.apply("4"));
 
 Keep in mind that you can turn a lambda expression into a method reference to make the code clearer. The real power of lambda expressions and method references comes when they are combined with streams.
+
 
 ### Streams API
 
@@ -490,6 +496,7 @@ Example:
       employees.stream().mapToInt(Employee::getSalary).average();
 
 In addition, it’s important to mention that streams can be ordered or unordered, sequential or parallel, but it’s an extra material. It would be nice if you pay attention to these things on your own.
+
 
 ### Optional
 
