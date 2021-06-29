@@ -1,8 +1,16 @@
 # Functional way of Java
 
 ## Materials
+- Functional Interfaces
+- Lambda Expression
+- Functional Composition 
+- Method References
+- Stream API
+- Optional
 
-### Functional Interfaces
+
+
+## Functional Interfaces
 
 Functional interfaces are interfaces that have only ONE ABSTRACT method (you can create default and static methods, or private ones after Java 9). There is even a special <b>@FunctionalInterface</b> annotation for them, which blocks the creation of several abstract methods at the compiler level.
 
@@ -77,7 +85,7 @@ Let's take a look at them.
 The Functional Interface is one of the most important concepts of Java 8 which actually powers lambda expression. If you know what the functional interface is and how lambda is related to it, you can use powerful features of Java 8 like Lambda expression and Stream API. Without knowledge of the functional interface, you won't be able to understand where you can use a lambda in the code but also you will struggle to write a lambda expression the method is expecting, hence, it's important to have a good understanding of the functional interface.
 
 
-### Lambda Expression
+## Lambda Expression
 
 A lambda is a set of instructions that can be separated into a variable and then called multiple times in different places in the program.
 
@@ -192,7 +200,7 @@ See example:
 Thus, we have covered the definition of lambda expressions, why they are better to use, and some rules for using them.
 
 
-### Functional Composition
+## Functional Composition
 
 Functional composition is a technique to combine multiple functions into a single function which uses the combined functions internally. You can compose individual functions (typically one or more <b>Java Lambda Expressions</b>) into a single function yourself, but Java also comes with built-in support for functional composition to make the job easier for you. In this chapter we will explain both how to compose functions from smaller functions yourself, and via Java's built-in features.
 
@@ -281,7 +289,7 @@ The Function interface also contains a few methods that can be used to compose n
    Note: As mentioned in the beginning, compose() works opposite of  andThen(). Therefore, calling a.andThen(b) is actually the same as calling b.compose(a).
 
 
-### Method References
+## Method References
 
 In the previous chapters we learned lambda expressions in Java 8. Here we will discuss another new feature of java 8, method reference. Method reference is a shorthand notation of a lambda expression to call a method. For example:
 
@@ -366,7 +374,7 @@ Rewritten using method reference:
 Keep in mind that you can turn a lambda expression into a method reference to make the code clearer. The real power of lambda expressions and method references comes when they are combined with streams.
 
 
-### Stream API
+## Stream API
 
 The Stream API is a new way to work with data structures in a functional style.
 

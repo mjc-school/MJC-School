@@ -1,8 +1,12 @@
 # Structuring and encapsulation
 
 ## Materials
+- Modularity/Packaging
+- Records
+- Sealed classes
+- Hidden classes   //*<b>todo</b>*
 
-### Modularity/Packaging
+## Modularity/Packaging
 
 ([JSR 277: Java Module System](https://jcp.org/en/jsr/detail?id=277),  [JSR 376: Java Platform Module System](https://jcp.org/en/jsr/detail?id=376))
 
@@ -117,7 +121,7 @@ Module types:
 - Automated Modules - added to the module path jars
 - Unnamed Modules - added to the classpath jars and classes
 
-### Records
+## Records
 
 To reduce the amount of the code for the data bean the record type of Java class was introduced. For the declaration the word record should be used and the fields to be used for the constructor and getter-s creation are declared in the head.
 
@@ -146,7 +150,7 @@ Additional constructors should reference the generated one.
         }
     }
 
-### Sealed classes
+## Sealed classes
 
 These classes and interfaces restrict which other classes or interfaces may extend or implement them.
 
@@ -196,4 +200,3 @@ Moreover, the <b><i>records</i></b> can be used as the implementation of the sea
     }
 
 ## Hidden classes
-//todo
