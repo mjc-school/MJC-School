@@ -80,7 +80,7 @@ Let's take a look at them.
    
 6. Type parameters of functional interfaces can be specialized to primitives with additional type prefixes.
    
-   To specialize the return type for a type that has both generic return type and generic arguments, we prefix ToXxx, as in <i>ToIntFunction</i>. Otherwise, type arguments are specialized left-to-right, as in <i>DoubleConsumer</i> or <i>ObjIntConsumer</i>. (The type prefix Obj is used to indicate that we don't want to specialize this parameter, but want to move on to the next parameter, as in <i>ObjIntConsumer</i>.) These schemes can be combined, as in <i>IntToDoubleFunction</i>.
+   To specialize the return type for a type that has both generic return type and generic arguments, we prefix ToXxx, as in *ToIntFunction*. Otherwise, type arguments are specialized left-to-right, as in *DoubleConsumer* or *ObjIntConsumer*. (The type prefix Obj is used to indicate that we don't want to specialize this parameter, but want to move on to the next parameter, as in *ObjIntConsumer*.) These schemes can be combined, as in *IntToDoubleFunction*.
    
 The Functional Interface is one of the most important concepts of Java 8 which actually powers lambda expression. If you know what the functional interface is and how lambda is related to it, you can use powerful features of Java 8 like Lambda expression and Stream API. Without knowledge of the functional interface, you won't be able to understand where you can use a lambda in the code but also you will struggle to write a lambda expression the method is expecting, hence, it's important to have a good understanding of the functional interface.
 
@@ -114,7 +114,7 @@ Let's look at an example:
 
 The Operationable interface acts as a functional interface, in which one method is defined without implementation – the calculate method. This method takes two parameters – integers, and returns some integer.
 
-<b><i>Lambda Expression vs method in Java</i></b>
+<b>*Lambda Expression vs method in Java*</b>
 
 A method (or function) in Java has these main parts:
 1. Name
@@ -129,7 +129,7 @@ A lambda expression in Java has these main parts:
 3. Body – This is the main part of the function.
 4. <b>No</b> return type – The java 8 compiler is able to infer the return type by checking the code. you need not to mention it explicitly.
 
-<b><i>Lambda Expression design</i></b>
+<b>*Lambda Expression design*</b>
 The parameters of the lambda expression must match the type of the method parameters from the functional interface. When writing the lambda expression, it is <u>not necessary to write the type</u> of the parameters, although in principle this can be done, for example:
 
       operation = (int x, int y) -> { return x + y; };
@@ -147,7 +147,7 @@ Absolutely the same things:
 
       n -> { return n * n; };   and   n -> n * n;
 
-<b><i>Lambdas and local variables</i></b>
+<b>*Lambdas and local variables*</b>
 
 A lambda expression can use variables that are declared in a more general scope – at the class or method level in which the lambda expression is defined. However, depending on how and where variables are defined, the way they are used in lambdas can differ.
 
@@ -218,7 +218,7 @@ To get started, let’s take a look at an example of Java functional composition
 
 The previous example we showed how to compose a new function from two other functions. Several of the functional interfaces in Java already have support for functional composition built into them. The functional composition support comes in the shape of default and static methods in the functional interfaces.
 
-<b><i>Predicate Composition</i></b>
+<b>*Predicate Composition*</b>
 
 The Predicate interface contains a few methods that help you compose new Predicate instances from other Predicate instances. These methods are:
 
@@ -245,7 +245,7 @@ The Predicate interface contains a few methods that help you compose new Predica
          boolean result = composed.test(input);
          System.out.println(result);
 
-<b><i>Consumer Composition</i></b>
+<b>*Consumer Composition*</b>
 
 The Consumer interface also contains a few methods that can be used to compose new Consumer instances:
 
@@ -262,7 +262,7 @@ Result:
       mjc school
       MJC SCHOOL
 
-<b><i>Function Composition</i></b>
+<b>*Function Composition*</b>
 
 The Function interface also contains a few methods that can be used to compose new Function instances:
 
@@ -394,11 +394,11 @@ Stream have 3 types of operations:
 ![image info](media/streams.png)
 
 1. <b>Build operations</b>. There are many ways to create a stream. You may create stream from:
-   - static sequence of objects: <i>Stream.of(T… values)</i>
+   - static sequence of objects: *Stream.of(T… values)*
      
-      For example: <i>Stream.of(1,2,3,4)</i>
-   - collection: <i>someList.stream()</i>
-   - array: <i>Arrays.stream(someArray)</i>
+      For example: *Stream.of(1,2,3,4)*
+   - collection: *someList.stream()*
+   - array: *Arrays.stream(someArray)*
    - by computation. It dynamically generates every single object on the fly.
      
    There are 2 ways:
@@ -487,7 +487,7 @@ Stream have 3 types of operations:
   
       Stream.of(1,2,3,4).forEach(num -> { System.out.println(num); }
 
-<b><i>Streams of primitive types</i></b>
+<b>*Streams of primitive types*</b>
 
 IntStream, LongStream, DoubleStream.
 
@@ -512,31 +512,31 @@ Optional – it’s a final class java.util.Optional<T>.
 
 It’s a container object which may or may not contain a non-null value. The purpose of the class is to provide a type-level solution for representing optional values instead of null references.
 
-<b><i>Creation Optional</i></b>
+<b>*Creation Optional*</b>
 
-There are several ways of creating Optional objects. To create an empty Optional object, we simply need to use its <i>empty()</i> static method:
+There are several ways of creating Optional objects. To create an empty Optional object, we simply need to use its *empty()* static method:
 
       Optional<String> empty = Optional.empty();
 
-We can also create an Optional object with the static method <i>of()</i>:
+We can also create an Optional object with the static method *of()*:
    
       String name = "java";
       Optional<String> opt = Optional.of(name);
 
-However, the argument passed to the of() method can't be null. Otherwise, we'll get a NullPointerException. But in case we expect some null values, we can use the <i>ofNullable()</i> method:
+However, the argument passed to the of() method can't be null. Otherwise, we'll get a NullPointerException. But in case we expect some null values, we can use the *ofNullable()* method:
 
       String name = "java";
       Optional<String> opt = Optional.ofNullable(name);
 
 By doing this, if we pass in a null reference, it doesn't throw an exception but rather returns an empty Optional object.
 
-<b><i>Optional methods</i></b>
+<b>*Optional methods*</b>
 
 When we have an Optional object returned from a method or created by us, we can check if there is a value in it or not, receive value, define alternative value or method, or exception.
 
-The <i>get()</i> method of an object returns its value or throws a java.util.NoSuchElementException if there is no value.
+The *get()* method of an object returns its value or throws a java.util.NoSuchElementException if there is no value.
 
-The Optional class provides a number of methods to avoid getting this exception. The easiest way is a preliminary check for the presence of a value in Optional using the <i>isPresent()</i> method.
+The Optional class provides a number of methods to avoid getting this exception. The easiest way is a preliminary check for the presence of a value in Optional using the *isPresent()* method.
 
       ArrayList<Integer> numbers = new ArrayList<Integer>();
       Optional<Integer> min = numbers.stream().min(Integer::compare);
@@ -544,27 +544,27 @@ The Optional class provides a number of methods to avoid getting this exception.
          System.out.println(min.get());
       }
 
-The second way is the <i>orElse()</i> method. It allows you to define an alternative value that will be returned if the Optional doesn’t have any value:
+The second way is the *orElse()* method. It allows you to define an alternative value that will be returned if the Optional doesn’t have any value:
 
       Optional<Integer> min = numbers.stream().min(Integer::compare);
       System.out.println(min.orElse(-1));
 
-Another way is the <i>orElseGet()</i> method. It allows you to define a function that will return a default value:
+Another way is the *orElseGet()* method. It allows you to define a function that will return a default value:
 
       Optional<Integer> min = numbers.stream().min(Integer::compare);
       Random random = new Random();
       System.out.println(min.orElseGet(() -> random.nextInt(100)));
 
-Another method, <i>orElseThrow()</i>, allows you to throw an exception if the Optional does not contain a value:
+Another method, *orElseThrow()*, allows you to throw an exception if the Optional does not contain a value:
 
       System.out.println(min.orElseThrow(IllegalStateException::new));
 
-The <i>ifPresent()</i> method defines actions on the value in Optional, if the value is present:
+The *ifPresent()* method defines actions on the value in Optional, if the value is present:
 
       Optional<Integer> min = numbers.stream().min(Integer::compare);
       min.ifPresent(v -> System.out.println(v));
 
-The <i>ifPresentOrElse()</i> method allows you to define actions on the Optional's value if a value is present, and alternative logic in case the Optional's value is missing.
+The *ifPresentOrElse()* method allows you to define actions on the Optional's value if a value is present, and alternative logic in case the Optional's value is missing.
       
       Optional<Integer> min = numbers.stream().min(Integer::compare);
       min.ifPresentOrElse(
@@ -573,9 +573,3 @@ The <i>ifPresentOrElse()</i> method allows you to define actions on the Optional
       );
 
 Thus, Optional is a container object which helps to avoid using null, and provides a lot of methods to check the existence of a value and specify alternative behavior.
-
-
-
-
-         
-
