@@ -366,7 +366,7 @@ Rewritten using method reference:
 Keep in mind that you can turn a lambda expression into a method reference to make the code clearer. The real power of lambda expressions and method references comes when they are combined with streams.
 
 
-### Streams API
+### Stream API
 
 The Stream API is a new way to work with data structures in a functional style.
 
