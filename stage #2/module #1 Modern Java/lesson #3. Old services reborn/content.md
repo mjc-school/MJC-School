@@ -747,4 +747,4 @@ Next, let's use sendAsync method to handle this push promise:
 
 
 Thus, In this chapter we explored Java 9's HttpClient API which provides a lot of flexibility and powerful features.
-We also explored the new changed in Java 11 HttpClient, that standardized the incubating HttpClient introduced in Java 9 with more powerful changes.
+We also explored the new changes in HttpClient provided by JDK 11, that standardized the incubating HttpClient introduced in Java 9 with more powerful changes.
