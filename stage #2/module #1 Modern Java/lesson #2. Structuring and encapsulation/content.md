@@ -167,7 +167,7 @@ Additional constructors should reference the generated one.
 
 ## Sealed classes
 
-Sealed Classes were delivered and finalized in JDK 17.
+Sealed Classes were delivered and finalized in JDK 16.
 
 These classes and interfaces restrict which other classes or interfaces may extend or implement them.
 
