@@ -8,8 +8,6 @@
 - Stream API
 - Optional
 
-
-
 ## Functional Interfaces
 
 Functional interfaces are interfaces that have only ONE ABSTRACT method (you can create default and static methods, or private ones after Java 9). There is even a special <b>@FunctionalInterface</b> annotation for them, which blocks the creation of several abstract methods at the compiler level.

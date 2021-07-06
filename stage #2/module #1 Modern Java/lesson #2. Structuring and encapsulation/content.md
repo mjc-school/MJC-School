@@ -2,9 +2,9 @@
 
 ## Materials
 - Modularity/Packaging
+- Hidden classes
 - Records
 - Sealed classes
-- Hidden classes   //*<b>todo</b>*
 
 ## Modularity/Packaging
 
@@ -121,9 +121,24 @@ Module types:
 - Automated Modules - added to the module path jars
 - Unnamed Modules - added to the classpath jars and classes
 
+## Hidden classes
+
+Hidden classes is a feature of JDK 15 that’s most interesting to framework developers.
+
+It allows them to create classes that cannot be used directly by the bytecode of other classes, they are intended for use by the framework itself that generate classes at runtime and use them indirectly, via reflection.
+
+Standard APIs that define a class *ClassLoader::defineClass* and *Lookup::defineClass* are indifferent to whether the bytecodes of the class were generated dynamically (at runtime) or statically (at compile time). 
+These APIs always <b>*define a visible class that will be used every time when another class in the same loader hierarchy tries to link a class of that name*</b>.
+
+So, if a standard API could define *hidden* classes that are not discoverable and have a limited lifecycle, then frameworks both inside and outside of the JDK that generate classes dynamically could instead define hidden classes, that have way lower visibility and overhead, which would improve the efficiency of all language implementations built on the JVM.
+
+Adding this feature also allows deprecation of non-standard API sun.misc.Unsafe::defineAnonymousClass . Hidden classes will not support every functionality that defineAnonymousClass does, and that’s not the goal here, but the goal is to deprecate that API and to fully remove it in upcoming releases.
+
+We will not go any deeper into hidden classes, since this is mostly applicable for framework developers working on low level internal stuff, all other info on this can be found in [official JEP](https://openjdk.java.net/jeps/371).
+
 ## Records
 
-To reduce the amount of the code for the data bean the record type of Java class was introduced. For the declaration the word record should be used and the fields to be used for the constructor and getter-s creation are declared in the head.
+To reduce the amount of the code for the data bean the record type of Java class was introduced in JDK 16. For the declaration the word record should be used and the fields to be used for the constructor and getter-s creation are declared in the head.
 
 There is an example of the record with two fields:
 
@@ -151,6 +166,8 @@ Additional constructors should reference the generated one.
     }
 
 ## Sealed classes
+
+Sealed Classes were delivered and finalized in JDK 16.
 
 These classes and interfaces restrict which other classes or interfaces may extend or implement them.
 
@@ -194,9 +211,8 @@ And the implementation
     public final class FirstChild implements Childable {
     }
 
-Moreover, the <b><i>records</i></b> can be used as the implementation of the sealed interface
+Moreover, the <b>*records*</b> can be used as the implementation of the sealed interface
 
     public record SecondChild(int a, int b) implements Childable {
     }
 
-## Hidden classes
