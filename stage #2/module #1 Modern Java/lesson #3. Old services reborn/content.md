@@ -723,8 +723,7 @@ Let's first create a PushPromiseHandler:
     private static PushPromiseHandler<String> pushPromiseHandler() {
         return (HttpRequest initiatingRequest,
         HttpRequest pushPromiseRequest,
-        Function<HttpResponse.BodyHandler<String>,
-        CompletableFuture<HttpResponse<String>>> acceptor) -> {
+        Function<HttpResponse.BodyHandler<String>, CompletableFuture<HttpResponse<String>>> acceptor) -> {
             acceptor.apply(BodyHandlers.ofString())
                 .thenAccept(resp -> {
                     System.out.println(" Pushed response: " + resp.uri() + ", headers: " + resp.headers());

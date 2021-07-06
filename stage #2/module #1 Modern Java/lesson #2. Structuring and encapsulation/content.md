@@ -125,12 +125,12 @@ Module types:
 
 Hidden classes is a feature of JDK 15 that’s most interesting to framework developers.
 
-It allows them to create classes that cannot be used directly by the bytecode of other classes, they are intended for use by the framework itself that generate classes at run time and use them indirectly, via reflection.
+It allows them to create classes that cannot be used directly by the bytecode of other classes, they are intended for use by the framework itself that generate classes at runtime and use them indirectly, via reflection.
 
-Standard APIs that define a class *ClassLoader::defineClass* and *Lookup::defineClass* are indifferent to whether the bytecodes of the class were generated dynamically (at run time) or statically (at compile time). 
-These APIs always <b>*define a visible class that will be used every time another class in the same loader hierarchy tries to link a class of that name*</b>.
+Standard APIs that define a class *ClassLoader::defineClass* and *Lookup::defineClass* are indifferent to whether the bytecodes of the class were generated dynamically (at runtime) or statically (at compile time). 
+These APIs always <b>*define a visible class that will be used every time when another class in the same loader hierarchy tries to link a class of that name*</b>.
 
-So, If a standard API could define *hidden* classes that are not discoverable and have a limited lifecycle, then frameworks both inside and outside of the JDK that generate classes dynamically could instead define hidden classes, that have way lower visibility and overhead, which would improve the efficiency of all language implementations built on the JVM.
+So, if a standard API could define *hidden* classes that are not discoverable and have a limited lifecycle, then frameworks both inside and outside of the JDK that generate classes dynamically could instead define hidden classes, that have way lower visibility and overhead, which would improve the efficiency of all language implementations built on the JVM.
 
 Adding this feature also allows deprecation of non-standard API sun.misc.Unsafe::defineAnonymousClass . Hidden classes will not support every functionality that defineAnonymousClass does, and that’s not the goal here, but the goal is to deprecate that API and to fully remove it in upcoming releases.
 
