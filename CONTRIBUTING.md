@@ -35,7 +35,7 @@ Since our program has so many stages, we have various expectations to contributo
 For each content creators group we do organize a kick-off session to provide some information on the module and answer any questions. 
 
 ### Syllabus
-To understand what gaps do we have now and what is the plan for the school you may use the link to [syllabus](https://en.wikipedia.org/wiki/Syllabus). You may join or contribute to any module or topic. 
+To understand what gaps do we have now and what is the plan for the school you may use [this link](https://epam.sharepoint.com/:x:/s/JavaEduPrograms/EUqGQEgBOEFBsCJ0JNaHxukBN_PhmlwiLCWAfYFQsVraag?e=XPykHE) to [syllabus](https://en.wikipedia.org/wiki/Syllabus). You may join or contribute to any module or topic. 
 
 ### Direct Commit Path
 1. Ask repository owners (@lemm-leto) for write access
