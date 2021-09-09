@@ -9,7 +9,7 @@ An ordered collection (also known as a sequence).
 In addition to the methods defined by Collection, List defines some of its own, which are summarized in the following table.
 
 | Method                                               | Description                 | 
-| -----------------------------------------------------|:-----------------------------------------------------------------------------------------------------:| 
+| -----------------------------------------------------|-------------------------------------------------------------------------------------------------------| 
 |  boolean add(E e)                                    | Appends the specified element at the end of a list.                                                   |
 | void add(int index, E element)                       | Inserts the specified element at the specified position in a list.                                    |
 | boolean addAll(Collection<? extends E> c)            | Appends all of the elements in the specified collection to the end of a list.                         |
@@ -61,7 +61,7 @@ It inherits the AbstractList class and implements List interface.
 Constructors of ArrayList:
 
 | Constructor                          | Description                                                                                   | 
-| -------------------------------------|:---------------------------------------------------------------------------------------------:| 
+| -------------------------------------|-----------------------------------------------------------------------------------------------| 
 | ArrayList()                          | It is used to build an empty array list.                                                      |
 | ArrayList(Collection<? extends E> c) | It is used to build an array list that is initialized with the elements of the collection c.  |
 | ArrayList(int capacity)              | It is used to build an array list that has the specified initial capacity.                    |
@@ -69,7 +69,7 @@ Constructors of ArrayList:
 Additional methods of ArrayList:
 
 | Method                                    | Description                                                                                   | 
-| ------------------------------------------|:---------------------------------------------------------------------------------------------:| 
+| ------------------------------------------|-----------------------------------------------------------------------------------------------| 
 |  void trimToSize()                        | Trim the capacity of this ArrayList instance to be the list's current size.                   |
 | void ensureCapacity(int requiredCapacity) | Increase the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the argument.|
 
@@ -86,14 +86,14 @@ Java LinkedList class uses a doubly linked list to store the elements. It provid
 Constructors of LinkedList:
 
 | Constructor                          | Description                                                                                   | 
-| -------------------------------------|:---------------------------------------------------------------------------------------------:| 
+| -------------------------------------|-----------------------------------------------------------------------------------------------| 
 | LinkedList()                         | It is used to build an empty list.                                                            |
 | LinkedList(Collection<? extends E> c)| It is used to construct a list containing the elements of the specified collection, in the order, they are returned by the collection's iterator.  |
 
 Additional methods of LinkedList:
 
 | Method                                | Description                                                                                   | 
-| --------------------------------------|:---------------------------------------------------------------------------------------------:| 
+| --------------------------------------|-----------------------------------------------------------------------------------------------| 
 |  void addFirst(E e)                   | Inserts the given element at the beginning of a list.                                         |
 |  void addLast(E e)                    | Appends the given element to the end of a list.                                               |
 |  E removeFirst()                      | Removes and returns the first element from a list.                                            |
@@ -104,11 +104,22 @@ Additional methods of LinkedList:
 ## ArrayList vs LinkedList
 
 | ArrayList                             | LinkedList                                                                    | 
-| --------------------------------------|:-----------------------------------------------------------------------------:| 
+| --------------------------------------|-------------------------------------------------------------------------------| 
 |  Stores elements as an array          | Stores elements as a doubly-linked list                                       |
 |  Whenever we remove an element, internally, the array is traversed, and the memory bits are shifted   | There is no concept of shifting the memory bits. The list is traversed and the reference link is changed.                                              |
 |  Less memory                          | More memory as it stores next/previous references                             |
-|  List                                  | List + Deque                                                                  |
+|  List                                 | List + Deque                                                                  |
+
+| Operation              | ArrayList      | LinkedList             |
+| -----------------------|:--------------:|:----------------------:| 
+| get(int index)         | O(1)           | O(n)                   |
+| add(E el)              | O(1) -> O(n)   | O(1)                   |
+| add(int index, E el)   | O(n/2)         | O(n/4)                 |
+| remove(int index)      | O(n/2)         | O(n/4)                 |
+| Iterator.remove()      | O(n/2)         | O(1)                   |
+
+ArrayList is better for storing and accessing data.
+LinkedList is better for manipulating data.
 
 ## CopyOnWriteArrayList 
 CopyOnWriteArrayList class is an enhanced version of ArrayList created to be used in a concurrent environment, implements the CopyOnWrite algorithm.
