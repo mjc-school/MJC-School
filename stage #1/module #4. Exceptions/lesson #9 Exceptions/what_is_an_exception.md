@@ -20,7 +20,7 @@
 ![image](./media/image2.png)
 
 ### A stack trace
-A Stack trace is an information on the execution history of the current thread and lists the names of the classes and methods that were called at the point when the exception occurred. 
+**A Stack trace** is an information on the execution history of the current thread and lists the names of the classes and methods that were called at the point when the exception occurred. 
 
 ![image](./media/image3.png)
 
