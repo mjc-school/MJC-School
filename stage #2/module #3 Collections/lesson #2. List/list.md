@@ -1,10 +1,20 @@
 # List Interface (java.util.List)
 An ordered collection (also known as a sequence).
+
+![image info](media/Collections.png)
 ## The important points about Java List are:
 - Elements can be inserted or accessed by their position in the list, using a zero-based index.
 - Elements have a specific order.
 - May contain duplicate elements.
 - Elements can be searched for within the list.
+
+```
+  List<String> list = new ArrayList<>();
+
+  list.add("String1");
+  list.add("String2");
+  list.add("String3");
+```
 
 In addition to the methods defined by Collection, List defines some of its own, which are summarized in the following table.
 
@@ -47,6 +57,8 @@ The AbstractList class provides a partial implementation of the List interface (
 ## AbstractSequentialList
 The AbstractSequentialList class extends AbstractList to provide support for linked lists.
 
+![image info](media/AbstractList.png)
+
 ## ArrayList
 The ArrayList class is a resizable array, which can be found in the java.util package. Java ArrayList class uses a dynamic array for storing the elements, has no size limit.
 It inherits the AbstractList class and implements List interface.
@@ -57,6 +69,25 @@ It inherits the AbstractList class and implements List interface.
 - Is non-synchronized.
 - Allows random access because array works at the index basis.
 - The size is increased automatically if the collection grows or shrinks if the objects are removed from the collection.
+
+```
+  public class ArrayList<E> extends AbstractList<E>
+        implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+```
+
+```
+
+    public ArrayList(int initialCapacity) {
+        if (initialCapacity > 0) {
+            this.elementData = new Object[initialCapacity];
+        } else if (initialCapacity == 0) {
+            this.elementData = EMPTY_ELEMENTDATA;
+        } else {
+            throw new IllegalArgumentException("Illegal Capacity: "+
+                                               initialCapacity);
+        }
+    }
+```
 
 Constructors of ArrayList:
 
@@ -74,6 +105,9 @@ Additional methods of ArrayList:
 | void ensureCapacity(int requiredCapacity) | Increase the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the argument.|
 
 ## LinkedList
+
+![image info](media/LinkedList.png)
+
 Java LinkedList class uses a doubly linked list to store the elements. It provides a linked-list data structure. It inherits the AbstractList class and implements List and Deque interfaces.
 
 ## The important points about Java LinkedList class are:
@@ -82,6 +116,41 @@ Java LinkedList class uses a doubly linked list to store the elements. It provid
 - Is non-synchronized.
 - Manipulation is fast because no shifting needs to occur.
 - Can be used as a list, stack or queue.
+
+![image info](media/LinkedList1.png)
+
+```
+public class LinkedList<E>
+    extends AbstractSequentialList<E>
+    implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+{
+    transient int size = 0;
+    transient Node<E> first;
+    transient Node<E> last;
+
+    public LinkedList() {
+    }
+
+    public LinkedList(Collection<? extends E> c) {
+        this();
+        addAll(c);
+    }
+}
+```
+
+```
+private static class Node<E> {
+        E item;
+        Node<E> next;
+        Node<E> prev;
+
+        Node(Node<E> prev, E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
+```
 
 Constructors of LinkedList:
 
@@ -123,6 +192,22 @@ LinkedList is better for manipulating data.
 
 ## CopyOnWriteArrayList 
 CopyOnWriteArrayList class is an enhanced version of ArrayList created to be used in a concurrent environment, implements the CopyOnWrite algorithm.
+
+```
+     CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+
+     list.add("one");
+     list.add("two");
+     list.add("three");
+
+     list.addIfAbsent("four");
+     list.addIfAbsent("one");
+
+     ListIterator<String> it = list.listIterator(list.size());
+     while(it.hasPrevious()) {
+      System.out.println(it.previous());
+     }
+``` 
 
 Constructors of CopyOnWriteArrayList:
 
