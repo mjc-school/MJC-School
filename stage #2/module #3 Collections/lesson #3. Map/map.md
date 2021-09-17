@@ -9,7 +9,7 @@ Interface Map<K,V>
 ## Overview
 The Map interface present in java.util package represents a mapping between a key and a value. The Map interface is not a subtype of the Collection interface. Therefore it behaves a bit differently from the rest of the collection types. A map contains unique keys.
 
-![](../../../Downloads/Selection_030.png)
+![](./media/Selection_030.png)
 
 ### Characteristics of a Map Interface
 
@@ -117,7 +117,7 @@ A LinkedHashMap is an extension of the HashMap class and it implements the Map i
 public class LinkedHashMap<K,​V> extends HashMap<K,​V> implements Map<K,​V>
 ```
 In this class, the data is stored in the form of nodes. The implementation of the LinkedHashMap is very similar to a doubly-linked list. Therefore, each node of the LinkedHashMap is represented as:
-![](../../../Downloads/LinkedHashMap-Node-in-Java.png)
+![](./media/LinkedHashMap-Node-in-Java.png)
 
 * Hash: All the input keys are converted into a hash which is a shorter form of the key so that the search and insertion are faster.
 * Key: Since this class extends HashMap, the data is stored in the form of a key-value pair. Therefore, this parameter is the key to the data.
@@ -199,7 +199,7 @@ The methods in a TreeMap while getting keyset and values, return an Iterator tha
 
 * 3 Variables (K key=Key, V value=Value, boolean color=Color)
 * 3 References (Entry left = Left, Entry right = Right, Entry parent = Parent)
-  ![](../../../Downloads/Treemap3-5.png)
+  ![](./media/Treemap3-5.png)
 
 ### Synchronized TreeMap:
 The implementation of a TreeMap is not synchronized. This means that if multiple threads access a tree set concurrently, and at least one of the threads modifies the set, it must be synchronized externally. This is typically accomplished by using the Collections.synchronizedSortedSet method. This is best done at the creation time, to prevent accidental unsynchronized access to the set. This can be done as:
