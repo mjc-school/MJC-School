@@ -5,6 +5,7 @@ Interface Map<K,V>
 * HashMap
 * LinkedHashMap
 * TreeMap
+* Materials
 
 ## Overview
 The Map interface present in java.util package represents a mapping between a key and a value. The Map interface is not a subtype of the Collection interface. Therefore it behaves a bit differently from the rest of the collection types. A map contains unique keys.
@@ -206,4 +207,12 @@ The implementation of a TreeMap is not synchronized. This means that if multiple
 ```
 SortedMap m = Collections.synchronizedSortedMap(new TreeMap(…));
 ```
+## Materials
+<https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>
+
+<https://www.geeksforgeeks.org/map-interface-java-examples/>
+
+<https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html>
+
+<https://www.baeldung.com/java-hashmap>
 ### 
