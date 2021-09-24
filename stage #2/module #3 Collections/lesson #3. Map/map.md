@@ -5,6 +5,7 @@ Interface Map<K,V>
 * HashMap
 * LinkedHashMap
 * TreeMap
+* WeakHashMap
 * Materials
 
 ## Overview
@@ -16,7 +17,7 @@ The Map interface present in java.util package represents a mapping between a ke
 
 * A Map cannot contain duplicate keys and each key can map to at most one value. Some implementations allow null key and null value like the HashMap and LinkedHashMap, but some do not like the TreeMap.
 * The order of a map depends on the specific implementations. For example, TreeMap and LinkedHashMap have predictable order, while HashMap does not.
-* There are two interfaces for implementing Map in java. They are, Map and SortedMap, and three classes: HashMap, TreeMap and LinkedHashMap.
+* There are three interfaces for implementing Map in java. They are, Map, SortedMap and NavigableMap, and four classes: HashMap, WeakHashMap, TreeMap and LinkedHashMap.
 ### Why and When to use Maps?
 Maps are perfect to use for key-value association mapping such as dictionaries. The maps are used to perform lookups by keys or when someone wants to retrieve and update elements by keys. Some examples are:
 
@@ -29,9 +30,7 @@ Maps are perfect to use for key-value association mapping such as dictionaries. 
 Since Map is an interface, objects cannot be created of the type map. We always need a class which extends this map in order to create an object. And also, after the introduction of Generics in Java 1.5, it is possible to restrict the type of object that can be stored in the Map. This type-safe map can be defined as:
 
 ```
-// Obj is the type of the object to be stored in Map
-
-Map hm = new HashMap ();
+Map<Integer, String> map = new HashMap<>();
 ```
 
 
@@ -77,7 +76,7 @@ When the number of hash map entries exceeds the product of LF and capacity, then
 
 A low initial capacity reduces space cost but increases the frequency of rehashing. Rehashing is obviously a very expensive process. So as a rule, if you anticipate many entries, you should set a considerably high initial capacity.
 
-On the flip side, if you set the initial capacity too high, you will pay the cost in iteration time. As we saw in the previous section.
+On the flip side, if you set the initial capacity too high, you will pay the cost in iteration time.
 
 So a high initial capacity is good for a large number of entries coupled with little to no iteration.
 
@@ -207,6 +206,23 @@ The implementation of a TreeMap is not synchronized. This means that if multiple
 ```
 SortedMap m = Collections.synchronizedSortedMap(new TreeMap(…));
 ```
+
+## WeakHashMap
+### Overview
+Hash table based implementation of the Map interface, with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. More precisely, the presence of a mapping for a given key will not prevent the key from being discarded by the garbage collector, that is, made finalizable, finalized, and then reclaimed. When a key has been discarded its entry is effectively removed from the map, so this class behaves somewhat differently from other Map implementations.
+Both null values and the null key are supported. This class has performance characteristics similar to those of the HashMap class, and has the same efficiency parameters of initial capacity and load factor.
+Like most collection classes, this class is not synchronized. A synchronized WeakHashMap may be constructed using the Collections.synchronizedMap method.
+
+This class is intended primarily for use with key objects whose equals methods test for object identity using the == operator. Once such a key is discarded it can never be recreated, so it is impossible to do a lookup of that key in a WeakHashMap at some later time and be surprised that its entry has been removed. This class will work perfectly well with key objects whose equals methods are not based upon object identity, such as String instances. With such recreatable key objects, however, the automatic removal of WeakHashMap entries whose keys have been discarded may prove to be confusing.
+The behavior of the WeakHashMap class depends in part upon the actions of the garbage collector, so several familiar (though not required) Map invariants do not hold for this class. Because the garbage collector may discard keys at any time, a WeakHashMap may behave as though an unknown thread is silently removing entries. In particular, even if you synchronize on a WeakHashMap instance and invoke none of its mutator methods, it is possible for the size method to return smaller values over time, for the isEmpty method to return false and then true, for the containsKey method to return true and later false for a given key, for the get method to return a value for a given key but later return null, for the put method to return null and the remove method to return false for a key that previously appeared to be in the map, and for successive examinations of the key set, the value collection, and the entry set to yield successively smaller numbers of elements.
+
+Each key object in a WeakHashMap is stored indirectly as the referent of a weak reference. Therefore a key will automatically be removed only after the weak references to it, both inside and outside of the map, have been cleared by the garbage collector.
+### Implementation note:
+The value objects in a WeakHashMap are held by ordinary strong references. Thus care should be taken to ensure that value objects do not strongly refer to their own keys, either directly or indirectly, since that will prevent the keys from being discarded. Note that a value object may refer indirectly to its key via the WeakHashMap itself; that is, a value object may strongly refer to some other key object whose associated value object, in turn, strongly refers to the key of the first value object. If the values in the map do not rely on the map holding strong references to them, one way to deal with this is to wrap values themselves within WeakReferences before inserting, as in: m.put(key, new WeakReference(value)), and then unwrapping upon each get.
+
+The iterators returned by the iterator method of the collections returned by all of this class's "collection view methods" are fail-fast: if the map is structurally modified at any time after the iterator is created, in any way except through the iterator's own remove method, the iterator will throw a ConcurrentModificationException. Thus, in the face of concurrent modification, the iterator fails quickly and cleanly, rather than risking arbitrary, non-deterministic behavior at an undetermined time in the future.
+
+Note that the fail-fast behavior of an iterator cannot be guaranteed as it is, generally speaking, impossible to make any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw ConcurrentModificationException on a best-effort basis. Therefore, it would be wrong to write a program that depended on this exception for its correctness: the fail-fast behavior of iterators should be used only to detect bugs.
 ## Materials
 <https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>
 
@@ -215,4 +231,8 @@ SortedMap m = Collections.synchronizedSortedMap(new TreeMap(…));
 <https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html>
 
 <https://www.baeldung.com/java-hashmap>
+
+<https://www.geeksforgeeks.org/navigablemap-interface-in-java-with-example/#:~:text=The%20NavigableMap%20interface%20is%20a,with%20this%20popular%20navigation%20method.>
+
+<https://docs.oracle.com/javase/8/docs/api/java/util/WeakHashMap.html>
 ### 
