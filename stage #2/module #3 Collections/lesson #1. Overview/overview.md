@@ -69,27 +69,143 @@ public interface MyInterface {
 ![](./media/hierarchy.png)
 
 ##Iterable interface
-Each collection now returns an Iterator, an improved type of Enumeration that allows element operations such as insertion and deletion. The Iterator is "fail-fast," which means you get an exception if the list you're iterating is changed by another user.
+The **Iterable** interface was introduced in JDK 1.5. It belongs to java.lang package. In general, an object Implementing Iterable allows it to be iterated. An iterable interface allows an object to be the target of enhanced for loop(**for-each loop**).
 
 **Iterable** interface is the root interface for all the collection classes
 
+```
+public interface Iterable<T>{
+  Iterator<T>    iterator();
+  
+  Spliterator<T> spliterator();
+
+  void forEach(Consumer<? super T> action);
+}
+
+```
 Method | Second Description
 ------------ | -------------
 **Iterator T > iterator()** | Returns the iterator
 
-**Iterator** interface provides the facility of iterating the elements in a forward direction only
+There are three ways in which objects of Iterable can be iterated:
+* Using enhanced for loop(for-each loop)
+``` 
+List<String> list = new ArrayList><();
+
+list.add("one");
+list.add("two");
+list.add("three");
+
+for( String element : list ){
+    System.out.println( element.toString() );
+}
+```
+* Using Iterable forEach loop
+```
+List<String> list = new ArrayList><();
+
+list.add("one");
+list.add("two");
+list.add("three");
+
+list.forEach( (element) -> {
+    System.out.println( element );
+});
+```
+* Using Iterator<T> interface
+```
+List<String> list = new ArrayList><();
+
+list.add("one");
+list.add("two");
+list.add("three");
+
+Iterator<String> iterator = list.iterator();
+
+while(iterator.hasNext()) {
+    String element = iterator.next();
+    System.out.println(element);
+}
+```
+
+**Iterator** interface represents an object capable of iterating through a collection of Java objects, one object at a time.
 
 Method | Second Description
 ------------ | -------------
 **boolean hasNext()** | Returns true if the iterator has more elements otherwise it returns false
 **Object next()** | Returns the element and moves the cursor pointer to the next element. (throws NoSuchElementException)
 **void remove()** | Removes the last elements returned by the iterator
+**forEachRemaining()** | Iterates over all remaining elements in the Iterator and calls a Java Lambda Expression passing each remaining element as parameter to the lambda expression.
 
+####Obtaining an Iterator
+Most often that is how you will interact with an Iterator by obtaining it from some Java object that contains multiple nested objects.
+You can also obtain an Iterator from many of the Java Collection data structures, e.g. a List, Set, Map, Queue, Deque or Map.
 ```
-MORE CODE EXAMPLE
+List<String> list = new ArrayList<>();
+list.add("one");
+list.add("two");
+list.add("three");
 
+Iterator<String> iterator = list.iterator();
+
+Set<String> set = new HashSet<>();
+set.add("one");
+set.add("two");
+set.add("three");
+
+Iterator<String> iterator2 = set.iterator();
 ```
 
+####Iterating an Iterator
+You iterate the objects in an _Iterator_ using a while loop.
+```
+Iterator iterator = list.iterator();
+
+while(iterator.hasNext()) {
+    Object nextObject = iterator.next();
+
+}
+```
+
+####Modification During Iteration
+Some collections do not allow you to modify the collection while you are iterating it via an _Iterator_. In that case you will get a _ConcurrentModificationException_ the next time you call the _Iterator next()_ method. The following example results in a _ConcurrentModificationException_ when executed.
+```
+List<String> list = new ArrayList<>();
+
+list.add("123");
+list.add("456");
+list.add("789");
+
+Iterator<String> iterator = list.iterator();
+
+while(iterator.hasNext()) {
+    String value = iterator.next();
+
+    if(value.equals("456")){
+        list.add("999");
+    }
+}
+```
+
+####Remove Elements During Iteration
+The Java Iterator interface has a _remove()_ method which lets you remove the element just returned by _next()_ from the underlying collection. Calling _remove()_ does not cause a _ConcurrentModificationException_ to be thrown.
+```
+List<String> list = new ArrayList<>();
+
+list.add("123");
+list.add("456");
+list.add("789");
+
+Iterator<String> iterator = list.iterator();
+
+while(iterator.hasNext()) {
+    String value = iterator.next();
+
+    if(value.equals("456")){
+        iterator.remove();
+    }
+}
+```
 
 ##Collection interface
 The **Collection** interface represents a group of objects (elements)
@@ -109,10 +225,92 @@ Method | Second Description
 **boolean retainAll (Collection<?>)** | Retains only given objects
 
 
-###Collections
+##Collections
+The Java _Collections_ class ( _java.util.Collections_ package), contains a long list of utility methods for working with collections in Java. 
+* **addAll()**
+The Java Collections _addAll()_ method can add a variable number of elements to a Collection
 ```
-MORE CODE EXAMPLEs
+List<String> list = new ArrayList<>();
+Collections.addAll(list, "element 1", "element 2", "element 3");
 ```
+* **binarySearch()**
+The Collections _binarySearch()_ method can search for an element using a binary search algorithm. The _List_ must be sorted in ascending order before you search it _using binarySearch()_.
+```
+List<String> list = new ArrayList<>();
+list.add("one");
+list.add("two");
+list.add("three");
+list.add("four");
+list.add("five");
+
+Collections.sort(list);
+int index = Collections.binarySearch(list, "four");
+System.out.println(index);
+```
+* **copy()**
+The Collections _copy()_ method can copy all elements of a _List_ into another _List_.
+```
+List<String> source = new ArrayList<>();
+Collections.addAll(source, "e1", "e2", "e3");
+
+List<String> destination = new ArrayList<>();
+Collections.copy(destination, source);
+```
+* **reverse()**
+The Collections _reverse()_ method can reverse the elements in a Java List.
+```
+List>String< list = new ArrayList<String>();
+
+list.add("one");
+list.add("two");
+list.add("three");
+
+Collections.reverse(list);
+```
+After executing the above code, the sequence of the elements in the List will be three, two, one .
+* **shuffle()**
+The Collections _shuffle()_ method can shuffle the elements of a List.
+```
+List>String< list = new ArrayList<String>();
+
+list.add("one");
+list.add("two");
+list.add("three");
+
+Collections.shuffle(list);
+```
+* **sort()**
+The Collections _sort()_ method can sort a Java List.
+```
+List>String< list = new ArrayList<String>();
+
+list.add("one");
+list.add("two");
+list.add("three");
+list.add("four");
+
+Collections.sort(list);
+```
+After running this code the order of the elements in the _List_ will be four, one, three, four, as the _String_ elements will be sorted alphabetically.
+
+* **min()/max()**
+  The Collections _max()/min()_ method can find the maximum/minimum element in a _List_ according to the _natural order_ of the elements.
+```
+List source = new ArrayList();
+source.add("1");
+source.add("2");
+source.add("3");
+
+String max = (String) Collections.max(source);
+
+List source = new ArrayList();
+source.add("1");
+source.add("2");
+source.add("3");
+
+String min = (String) Collections.min(source);
+```
+
 ##Materials
 
 Java , Head First book
@@ -124,3 +322,5 @@ https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
 https://www.javatpoint.com/collections-in-java
 
 https://www.geeksforgeeks.org/collections-class-in-java
+
+http://tutorials.jenkov.com/java-collections/
