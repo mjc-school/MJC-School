@@ -1,8 +1,14 @@
 
 ## Agenda
-* Overview, Before Collections
+* Before Collections
+* Java Collections Framework
+* Revision
+* Hierarchy
+* Iterable interface
 * Iterator
 * Collections
+* Collection interface
+* Materials
 
 
 ## Overview
@@ -127,7 +133,7 @@ while(iterator.hasNext()) {
     System.out.println(element);
 }
 ```
-
+##Iterator
 **Iterator** interface represents an object capable of iterating through a collection of Java objects, one object at a time.
 
 Method | Second Description
