@@ -1,11 +1,16 @@
 
-## Agenda
-* Overview, Before Collections
-* Iterator
-* Collections
+### Table of Contents
+**[Before Collections](#before-collections)**<br>
+**[Java Collections Framework](#java-collections-framework)**<br>
+**[Hierarchy](#hierarchy)**<br>
+**[Iterable interface](#iterable-interface)**<br>
+**[Iterator](#iterator)**<br>
+**[Collection interface](#collection-interface)**<br>
+**[Collections](#collections)**<br>
+**[Materials](#materials)**<br>
 
 
-## Overview
+## Before Collections
 Before Collections made its most welcome debut, the standard methods for grouping Java objects were via the **arrays**, the **Vector**, and the **Hashtable**
 
 All three of these collections have different methods and syntax for accessing members: 
@@ -128,6 +133,7 @@ while(iterator.hasNext()) {
 }
 ```
 
+##Iterator
 **Iterator** interface represents an object capable of iterating through a collection of Java objects, one object at a time.
 
 Method | Second Description
