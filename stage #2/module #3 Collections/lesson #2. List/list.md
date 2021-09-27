@@ -1,4 +1,6 @@
 # List Interface (java.util.List)
+
+## Overview
 An ordered collection (also known as a sequence).
 
 ![image info](media/Collections.png)
@@ -60,6 +62,9 @@ The AbstractSequentialList class extends AbstractList to provide support for lin
 ![image info](media/AbstractList.png)
 
 ## ArrayList
+
+### Overview
+
 The ArrayList class is a resizable array, which can be found in the java.util package. Java ArrayList class uses a dynamic array for storing the elements, has no size limit.
 It inherits the AbstractList class and implements List interface.
 
@@ -105,6 +110,8 @@ Additional methods of ArrayList:
 | void ensureCapacity(int requiredCapacity) | Increase the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the argument.|
 
 ## LinkedList
+
+### Overview
 
 ![image info](media/LinkedList.png)
 
@@ -191,6 +198,9 @@ ArrayList is better for storing and accessing data.
 LinkedList is better for manipulating data.
 
 ## CopyOnWriteArrayList 
+
+### Overview
+
 CopyOnWriteArrayList class is an enhanced version of ArrayList created to be used in a concurrent environment, implements the CopyOnWrite algorithm.
 
 ```
@@ -223,3 +233,18 @@ Additional methods of CopyOnWriteArrayList:
 | int lastIndexOf(E e, int index)           |Returns the index of the last occurrence of the specified element in this list, searching backwards from index, or returns -1 if the element is not found.   |
 | boolean addIfAbsent(E e)                  | Appends the element, if not present.                                                          |
 | int addAllAbsent(Collection<? extends E>  |Appends all of the elements in the specified collection that are not already contained in this list, to the end of this list, in the order that they are returned by the specified collection’s iterator. |
+
+
+## Materials
+<https://docs.oracle.com/javase/8/docs/api/java/util/List.html>
+
+<https://www.geeksforgeeks.org/list-interface-java-examples/>
+
+<https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html>
+
+<https://www.geeksforgeeks.org/arraylist-in-java/>
+
+<https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html>
+
+<https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CopyOnWriteArrayList.html>
+### 
