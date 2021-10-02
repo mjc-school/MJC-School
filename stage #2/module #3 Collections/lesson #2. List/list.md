@@ -66,6 +66,14 @@ The AbstractSequentialList class extends AbstractList to provide support for lin
 ### Overview
 
 The ArrayList class is a resizable array, which can be found in the java.util package. Java ArrayList class uses a dynamic array for storing the elements, has no size limit.
+
+```
+  List<Integer> list = new ArrayList<>();
+  list.add(1);
+  list.add(2);
+  list.add(3);
+```
+
 It inherits the AbstractList class and implements List interface.
 
 ## The important points about Java ArrayList class are:
