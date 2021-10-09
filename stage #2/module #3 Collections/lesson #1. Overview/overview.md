@@ -30,7 +30,7 @@ Finally, none of the collections (array, Vector or Hashtable) implements a stand
 JDK 1.2 introduced a new framework for collections of objects, called the **Java Collections Framework**, offers developers a common way to implement and access collections.
 
 The Collections framework will benefit your programming in many ways:
-* **Reduces programming effort.** A lgorithms and data structures are already implemented, developer can focus on
+* **Reduces programming effort.** Algorithms and data structures are already implemented, developer can focus on
 other important parts of application.
 
 * **Increases program speed and quality.** Programmer does not need to think of the best implementation of a
@@ -44,13 +44,13 @@ creating an API that relies on collections; instead, just use standard collectio
 interfaces.
 
 * **Fosters software reuse.** Collections interfaces and implementations are flexible
-enough to be reused given that there is a c ontract of interface.
+enough to be reused given that there is a contract of interface.
 
 ##Revision
 * **Class** - A class is a user
   defined blueprint or prototype from which objects are created. It represents
   the set of properties or methods that are common to all objects of one type.
-  Like
+
 * **Interface** - Like a class, an interface can have methods and variables, but the methods declared in an
   interface are by default abstract ( only method signature, no body ). Interfaces specify what a
   class must do and not how. It is the blueprint of the class.
