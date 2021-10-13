@@ -72,7 +72,7 @@ Actually the value we insert in HashSet acts as a key to the map Object and for 
 Before storing an Object, HashSet checks whether there is an existing entry using hashCode() and equals() methods. In the above example, two lists are considered equal if they have the same elements in the same order. When you invoke the hashCode()  method on the two lists, they both would give the same hash since they are equal.
 HashSet does not store duplicate items,  if you give two Objects that are equal then it stores only the first one.
 
-##LinkedHashSet
+## LinkedHashSet
 ### Overview
 The LinkedHashSet is an ordered version of HashSet that maintains a doubly-linked List across all elements. When the iteration order is needed to be maintained this class is used. When iterating through a HashSet the order is unpredictable, while a LinkedHashSet lets us iterate through the elements in the order in which they were inserted. When cycling through LinkedHashSet using an iterator, the elements will be returned in the order in which they were inserted.
 Declaration: 
