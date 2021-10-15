@@ -1,8 +1,8 @@
-# Minsk Java Community School
+# MJC School
 
 ## Who we are?
 
-We are EPAM employees who drive Minsk Java community school initiative. We don’t build our initiative from scratch: it is based on the EPAM Training Center experience and production people collaboration.
+We are EPAM employees who drive MJC School initiative. We don’t build our initiative from scratch: it is based on the EPAM Training Center experience and production people collaboration.
 
 ## What we do?
 
