@@ -149,7 +149,7 @@ If the key is already associated with a value, then the old value is replaced by
 <b>_setAttribute()_</b> method to update value in the session.
 <br><br>
 
-#### 2.2.Read value from session in Java Servlet
+#### 2.2. Read value from session in Java Servlet
 * <b>_Object getAttribute(String name)_</b> - Returns the object bound with the specified name in this session, or null
   if no object is bound under the name. For example:
 
@@ -159,7 +159,7 @@ If the key is already associated with a value, then the old value is replaced by
   all the objects bound to this session.
   <br><br>
 
-#### 2.3.Remove value from session
+#### 2.3. Remove value from session
 * <b>_void removeAttribute(String name)_</b> Removes the object bound with the specified name from this session. For example:
 
 
@@ -212,7 +212,7 @@ You can also specify additional information for a cookie using the following met
 + <b>setPath(String)</b>: use this method if you want to restrict the cookie to be available for a certain path (and its subpaths) on the server.
 + <b>setSecure(boolean)</b>: if set to true, the cookie is sent from the browser to the server only when using secure protocol (HTTPS or SSL). Default value is false.
 
-### 2.Read cookies
+### 2. Read cookies
 To read cookies sent from the browser to the server, call getCookies() method on a HttpServletRequest object in a Java servlet class. This method returns an array of Cookie objects that are visible to the current request. To read a specific cookie, you need to check the cookie’s name in the loop. For example:
 
 
@@ -225,7 +225,7 @@ To read cookies sent from the browser to the server, call getCookies() method on
         }
     }
 
-### 3.Update a cookie
+### 3. Update a cookie
 To update an existing cookie, you need to create a new cookie with the same name and add it to the response. For example:
 
 
@@ -368,14 +368,14 @@ The Servlet API provides a number of listener interfaces we can implement in ord
 
 | Listener Interface                               | Methods                                                                                                                                             | Description
 |:------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------
-| 1.ServletContextListener                         | contextInitialized(ServletContextEvent e), contextDestroyed(ServletContextEvent e)                                                                  |Contains methods for handling context initialization and destruction events.|         
-| 2.ServletContextAttributeListener                | attributeAdded(ServletContextAttributeEvent e), attributeRemoved(ServletContextAttributeEvent e), attributeReplaced(ServletContextAttributeEvent e) | Contains methods for reacting to any attributes added, removed, or replaced in the servlet context (application scope).
-| 3.ServletRequestListener                         | requestDestroyed(ServletRequestEvent e), requestInitialized(ServletRequestEvent e)                                                                  | Contains methods for handling request initialization and destruction events.|
-| 4.ServletRequestAttributeListener                | attributeAdded(ServletRequestAttributeEvent e, attributeRemoved(ServletRequestAttributeEvent e), attributeReplaced(ServletRequestAttributeEvent e)  | Contains methods for reacting to any attributes added, removed, or replaced in the request.|
-| 5.HttpSessionListener                            | sessionCreated(HttpSessionEvent e), sessionDestroyed(HttpSessionEvent e)                                                                            |Contains methods for handling HTTP session initialization and destruction events.|
-| 6.HttpSessionAttributeListener                   | attributeAdded(HttpSessionBindingEvent e), attributeRemoved(HttpSessionBindingEvent e), attributeReplaced(HttpSessionBindingEvent e)                | Contains methods for reacting to any attributes added, removed, or replaced in the HTTP session.|
-| 7.HttpSessionBindingListener                     | valueBound(HttpSessionBindingEvent e), valueUnbound(HttpSessionBindingEvent e                                                                       | Causes an object to be notified when it is bound to or unbound from a session. This may be as a result of a servlet programmer explicitly unbinding an attribute from a session, due to a session being invalidated, or due to a session timing out.|
-| 8.HttpSessionActivationListener                  | sessionWillPassivate(HttpSessionEvent e), sessionDidActivate(HttpSessionEvent e)                                                                    | Objects that are bound to a session may listen to container events notifying them that sessions will be passivated and that session will be activated.|
+| 1. ServletContextListener                         | contextInitialized(ServletContextEvent e), contextDestroyed(ServletContextEvent e)                                                                  |Contains methods for handling context initialization and destruction events.|         
+| 2. ServletContextAttributeListener                | attributeAdded(ServletContextAttributeEvent e), attributeRemoved(ServletContextAttributeEvent e), attributeReplaced(ServletContextAttributeEvent e) | Contains methods for reacting to any attributes added, removed, or replaced in the servlet context (application scope).
+| 3. ServletRequestListener                         | requestDestroyed(ServletRequestEvent e), requestInitialized(ServletRequestEvent e)                                                                  | Contains methods for handling request initialization and destruction events.|
+| 4. ServletRequestAttributeListener                | attributeAdded(ServletRequestAttributeEvent e, attributeRemoved(ServletRequestAttributeEvent e), attributeReplaced(ServletRequestAttributeEvent e)  | Contains methods for reacting to any attributes added, removed, or replaced in the request.|
+| 5. HttpSessionListener                            | sessionCreated(HttpSessionEvent e), sessionDestroyed(HttpSessionEvent e)                                                                            |Contains methods for handling HTTP session initialization and destruction events.|
+| 6. HttpSessionAttributeListener                   | attributeAdded(HttpSessionBindingEvent e), attributeRemoved(HttpSessionBindingEvent e), attributeReplaced(HttpSessionBindingEvent e)                | Contains methods for reacting to any attributes added, removed, or replaced in the HTTP session.|
+| 7. HttpSessionBindingListener                     | valueBound(HttpSessionBindingEvent e), valueUnbound(HttpSessionBindingEvent e                                                                       | Causes an object to be notified when it is bound to or unbound from a session. This may be as a result of a servlet programmer explicitly unbinding an attribute from a session, due to a session being invalidated, or due to a session timing out.|
+| 8. HttpSessionActivationListener                  | sessionWillPassivate(HttpSessionEvent e), sessionDidActivate(HttpSessionEvent e)                                                                    | Objects that are bound to a session may listen to container events notifying them that sessions will be passivated and that session will be activated.|
 
 All we need to do is to implement one or more of these interfaces and then:
 annotate the implemented class(es) with the **@WebListener()** annotation or
