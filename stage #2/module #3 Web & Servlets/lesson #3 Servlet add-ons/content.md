@@ -115,7 +115,7 @@ that can be retrieved in future requests. Table of content:
 3. Configure session timeout
 4. Invalidate a session
 
-###1. Getting or creating a session
+### 1. Getting or creating a session
 
 + <b>_HttpSession getSession()_</b> – This method always returns a HttpSession object. It returns the session object attached with the request, if the request has no session attached, then it creates a new session and return it. For example:
 
@@ -136,8 +136,8 @@ that can be retrieved in future requests. Table of content:
 + <b>_boolean isNew()_</b> – Returns true if the client does not yet know about the session or if the client chooses not to join the session.
 + <b>_ServletContext getServletContext()_</b> - Returns the ServletContext to which this session belongs.
 
-###2. Binding data to a session
-####2.1. Store value in session
+### 2. Binding data to a session
+#### 2.1. Store value in session
 * <b>_void setAttribute(String name, Object value)_</b> - Binds an object to this session, using the name specified. For example:
 
     session.setAttribute("username", "Ivan");
@@ -149,7 +149,7 @@ If the key is already associated with a value, then the old value is replaced by
 <b>_setAttribute()_</b> method to update value in the session.
 <br><br>
 
-####2.2.Read value from session in Java Servlet
+#### 2.2.Read value from session in Java Servlet
 * <b>_Object getAttribute(String name)_</b> - Returns the object bound with the specified name in this session, or null
   if no object is bound under the name. For example:
 
@@ -158,12 +158,13 @@ If the key is already associated with a value, then the old value is replaced by
 * <b>_Enumeration \<String> getAttributeNames()_</b> - Returns an Enumeration of String objects containing the names of
   all the objects bound to this session.
   <br><br>
-####2.3.Remove value from session
+
+#### 2.3.Remove value from session
 * <b>_void removeAttribute(String name)_</b> Removes the object bound with the specified name from this session. For example:
 
 
     session.removeAttribute("username");
-###3. Configure session timeout
+### 3. Configure session timeout
 * <b>_void setMaxInactiveInterval(int interval)_</b> - Specifies the time, in seconds, between client requests before
   the servlet container will invalidate this session. For example:
 
@@ -176,7 +177,7 @@ If the key is already associated with a value, then the old value is replaced by
   request.
 * <b>_int getMaxInactiveInterval()_</b> - Returns the maximum time interval, in seconds, that the servlet container will
   keep this session open between client accesses.
-###4. Invalidate a session
+### 4. Invalidate a session
 * <b>_void invalidate()_</b> - Invalidates this session then unbinds any objects bound to it. For example:
 
 
@@ -193,7 +194,7 @@ Table of content:
 3. Update a cookie
 4. Delete a cookie
 
-###1. Create a cookie.
+### 1. Create a cookie.
 To store a cookie in the web browser, first create a new Cookie object. Then call the addCookie() method of the HttpServletResponse object in a Servlet class.
 This will send appropriate HTTP headers to the client, and the browser stores the cookie on user’s computer.
 
@@ -211,7 +212,7 @@ You can also specify additional information for a cookie using the following met
 + <b>setPath(String)</b>: use this method if you want to restrict the cookie to be available for a certain path (and its subpaths) on the server.
 + <b>setSecure(boolean)</b>: if set to true, the cookie is sent from the browser to the server only when using secure protocol (HTTPS or SSL). Default value is false.
 
-###2.Read cookies
+### 2.Read cookies
 To read cookies sent from the browser to the server, call getCookies() method on a HttpServletRequest object in a Java servlet class. This method returns an array of Cookie objects that are visible to the current request. To read a specific cookie, you need to check the cookie’s name in the loop. For example:
 
 
@@ -224,7 +225,7 @@ To read cookies sent from the browser to the server, call getCookies() method on
         }
     }
 
-###3.Update a cookie
+### 3.Update a cookie
 To update an existing cookie, you need to create a new cookie with the same name and add it to the response. For example:
 
 
@@ -233,7 +234,7 @@ To update an existing cookie, you need to create a new cookie with the same name
     Cookie cookie = new Cookie(name, value);
     response.addCookie(cookie);
 
-###4. Delete a cookie
+### 4. Delete a cookie
 To remove a cookie from the browser’s cache, you need to create a new cookie with the same name, set its max age to zero and add it to the response. For example:
 
 
