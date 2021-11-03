@@ -10,7 +10,7 @@ Interface Set<E>
 ## Overview
 The Set interface is present in java.util package and extends the Collection interface is an unordered collection of objects in which duplicate values cannot be stored. It is an interface that implements the mathematical set. This interface contains the methods inherited from the Collection interface and adds a feature that restricts the insertion of the duplicate elements. There are two interfaces that extend the set implementation namely SortedSet and NavigableSet.
 
-![](./media/unnamed.png)
+![](media/set_hierarchy.png)
 
 Since a set doesn’t retain the insertion order, the navigable set interface provides the implementation to navigate through the Set. The class which implements the navigable set is a TreeSet which is an implementation of a self-balancing tree. Therefore, this interface provides us with a way to navigate through this tree.
 ### Creating Set Objects
@@ -18,6 +18,24 @@ Since Set is an interface, objects cannot be created of the typeset. We always n
 ```
 Set<T> set = new HashSet<>();
 ```
+
+Method | Description
+------------ | -------------
+**boolean add(E e)** | Adds the specified element to this set if it is not already present (optional operation)
+**boolean	addAll(Collection<? extends E> c)** | Adds all of the elements in the specified collection to this set if they're not already present (optional operation)
+**void	clear()**| Removes all of the elements from this set (optional operation)
+**boolean	contains(Object o)** | Returns true if this set contains the specified element
+**boolean	containsAll(Collection<?> c)** | Returns true if this set contains all of the elements of the specified collection
+**boolean	equals(Object o)** | Compares the specified object with this set for equality
+**int	hashCode()** | Returns the hash code value for this set
+**boolean	isEmpty()** | Returns true if this set contains no elements
+**Iterator<E>	iterator()** | Returns an iterator over the elements in this set
+**boolean	remove(Object o)** | Removes the specified element from this set if it is present (optional operation)
+**boolean	removeAll(Collection<?> c)** | Removes from this set all of its elements that are contained in the specified collection (optional operation)
+**boolean	retainAll(Collection<?> c)** | Retains only the elements in this set that are contained in the specified collection (optional operation)
+**int	size()** | Returns the number of elements in this set (its cardinality)
+**default Spliterator<E>	spliterator()** | Creates a Spliterator over the elements in this set
+**Object[]	toArray()** | Returns an array containing all of the elements in this set
 ## HashSet
 ### Overview
 The HashSet class implements the Set interface, backed by a hash table which is actually a HashMap instance. No guarantee is made as to the iteration order of the set which means that the class does not guarantee the constant order of elements over time. This class permits the null element. The class also offers constant time performance for the basic operations like add, remove, contains, and size assuming the hash function disperses the elements properly among the buckets.
@@ -30,23 +48,34 @@ where E is the type of elements stored in a HashSet.
 
 Let's see a simple example of HashSet.
 ```
-import java.util.*;  
+import java.util.HashSet;
+import java.util.Iterator;
+ 
 class HashSet1{  
  public static void main(String args[]){  
   //Creating HashSet and adding elements  
-    HashSet<String> set=new HashSet();  
-           set.add("One");    
-           set.add("Two");    
-           set.add("Three");   
-           set.add("Four");  
-           set.add("Five");  
-           Iterator<String> i=set.iterator();  
-           while(i.hasNext())  
-           {  
-           System.out.println(i.next());  
-           }  
- }  
+        public static void main(String args[]) {
+            //Creating HashSet and adding elements
+            HashSet<String> set = new HashSet();
+            set.add("One");
+            set.add("Two");
+            set.add("Two");
+            set.add("Three");
+            set.add("Four");
+            set.add("Five");
+            Iterator<String> i = set.iterator();
+            while (i.hasNext()) {
+                System.out.println(i.next());
+            }
+        }
 }  
+
+Output:
+Five
+One
+Four
+Two
+Three
 ```
 ### HashSet Performance
 
@@ -87,27 +116,36 @@ public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, S
 
 Let's see a simple example of Java LinkedHashSet class.
 ```
-import java.util.*;  
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
 class LinkedHashSet1{  
- public static void main(String args[]){  
- //Creating HashSet and adding elements  
-        LinkedHashSet<String> set=new LinkedHashSet();  
-               set.add("One");    
-               set.add("Two");    
-               set.add("Three");   
-               set.add("Four");  
-               set.add("Five");  
-               Iterator<String> i=set.iterator();  
-               while(i.hasNext())  
-               {  
-               System.out.println(i.next());  
-               }  
- }  
+    public static void main(String args[]) {
+        //Creating HashSet and adding elements
+        LinkedHashSet<String> set = new LinkedHashSet();
+        set.add("One");
+        set.add("Two");
+        set.add("Three");
+        set.add("Three");
+        set.add("Four");
+        set.add("Five");
+        Iterator<String> i = set.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+    }
 }  
+
+Output:
+One
+Two
+Three
+Four
+Five
 ```
 Following is the difference between LinkedHashMap and LinkedHashSet:
 
-![](./media/Capture-70.jpg)
+![](media/LinkedHashMapVsLinkedHashSetDiff.jpg)
 
 #### Note:
 Keeping the insertion order in both LinkedHashmap and LinkedHashset have additional associated costs, both in terms of spending additional CPU cycles and needing more memory. If you do not need the insertion order maintained, it is recommended to use the lighter-weight HashSet and HashMap instead.
@@ -120,22 +158,29 @@ Navigable set extends the sorted set interface. Since a set doesn’t retain the
 
 Let's see a simple example of Java TreeSet.
 ```
-import java.util.*;  
+import java.util.Iterator;
+import java.util.TreeSet;
+ 
 class TreeSet1{  
- public static void main(String args[]){  
-  //Creating and adding elements  
-  TreeSet<String> al=new TreeSet<String>();  
-  al.add("Ravi");  
-  al.add("Vijay");  
-  al.add("Ravi");  
-  al.add("Ajay");  
-  //Traversing elements  
-  Iterator<String> itr=al.iterator();  
-  while(itr.hasNext()){  
-   System.out.println(itr.next());  
-  }  
- }  
+ public static void main(String args[]) {
+         //Creating and adding elements
+         TreeSet<String> al = new TreeSet<String>();
+         al.add("Ravi");
+         al.add("Vijay");
+         al.add("Ravi");
+         al.add("Ajay");
+         //Traversing elements
+         Iterator<String> itr = al.iterator();
+         while (itr.hasNext()) {
+             System.out.println(itr.next());
+         }
+     }  
 }  
+
+Output:
+Ajay
+Ravi
+Vijay
 ```
 #### Note:
 * An object is said to be comparable if and only if the corresponding class implements a Comparable interface.
