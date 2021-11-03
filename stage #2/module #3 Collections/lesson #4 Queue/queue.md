@@ -11,7 +11,7 @@
 ## Hierarchy. Queue.
 ![](./media/queue_hierarchy.png)
 
-The Java **Queue** interface, _java.util.Queue_ represents a data structure designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue. it follows the FIFO or the First-In-First-Out principle.
+The Java **Queue** interface, _java.util.Queue_ represents a data structure designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue. It follows the FIFO or the First-In-First-Out principle.
 (**FIFO** - First In, First out)
 ```
 public interface Queue<E> extends Collection<E>  
@@ -26,7 +26,7 @@ Method | Second Description
 **Object element()** | Retrieves, but does not remove, the head of this queue
 **Object peek()** | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
 
-##PriorityQueue
+## PriorityQueue
 Java **PriorityQueue** class is a queue data structure implementation in which objects are processed based on their **priority**. It is different from standard queues where FIFO (First-In-First-Out) algorithm is followed.
 By default, the priority is determined by objects’ natural ordering. Default priority can be overridden by a _Comparator_ provided at queue construction time.
 
@@ -67,7 +67,7 @@ By default, the priority is determined by objects’ natural ordering. Default p
         Valery
 ```
 
-###Features
+### Features
 * PriorityQueue is an unbounded queue and grows dynamically. The default initial capacity is **11** which can be overridden using **initialCapacity** parameter in appropriate constructor
 * It does not allow NULL objects
 * Objects added to _PriorityQueue_ MUST be comparable
@@ -79,7 +79,7 @@ By default, the priority is determined by objects’ natural ordering. Default p
 * It provides **O(log(n))** time for add and poll methods
 
 
-##Deque
+## Deque
 The **Deque** interface present in _java.util_ package is a subtype of the **Queue** interface. The **Deque** is related to the _double-ended_ queue that supports addition or removal of elements from either end of the data structure. **Deque** is the acronym for _Double Ended Queue_.
 
 The Java **Deque** interface extends the Java Queue interface. That means that you can use all the Java **Queue** methods when working with a **Deque**.
@@ -88,13 +88,13 @@ Since Java **Deque** is an interface you need to instantiate a concrete implemen
 * java.util.LinkedList
 * java.util.ArrayDeque
 
-###Features
+### Features
 * **Deque** interface supports resizable arrays that can grow as required
 * Array deques _do not allow the use of NULL values_
 * **Deque** does not support concurrent access by more than one thread
 * **Deque** _is not thread-safe_ unless an external synchronization is provided
 
-##LinkedList
+## LinkedList
 The **LinkedList** class is a pretty standard _Deque_ and _Queue_ implementation. It uses a linked list internally to model a _queue_ or a _deque_.
 
 It is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses. Each element is known as a node. Due to the dynamicity and ease of insertions and deletions, they are preferred over the arrays or queues.
@@ -128,7 +128,7 @@ It is a linear data structure where the elements are not stored in contiguous lo
         Deque after removing first and last: [Element 4 (Head), Element 2 (Head), Element 1 (Tail), Element 3 (Tail)]                   
 ```
 
-##ArrayDeque
+## ArrayDeque
 **ArrayDeque** belongs to _java.util_ package. It implements both _Queue_ and _Deque_ interfaces. Internally, the **ArrayDeque** class makes use of a dynamically resizable array that grows as the number of elements is increased.
 
 ```
@@ -158,7 +158,7 @@ It is a linear data structure where the elements are not stored in contiguous lo
     Aleh
     Valery
 ```
-##Materials
+## Materials
 
 Java , Head First book
 
@@ -166,4 +166,4 @@ Thinking in Java, Eckel book
 
 https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
 
-https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
+https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html
