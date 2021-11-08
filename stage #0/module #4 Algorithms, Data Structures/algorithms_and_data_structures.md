@@ -223,6 +223,38 @@ System.arraycopy(src, 0, dest, 2, 5)
 #### Multidimensional Arrays
 Arrays we have mentioned till now are called one-dimensional arrays. However, we can declare multidimensional arrays in Java. A multidimensional array in Java is an array of arrays, that is, each element of a multidimensional array is an array itself.
 
+A two-dimensional array is the simplest form of multi-dimensional arrays, in other words, it is an array of one-dimensional arrays. it is stored in the form of rows and columns.
+```
+int[][] arr;                 // defines a two-dimensional array
+arr = new int[2][5];         // creates a two-dimensional array definition with "2" rows and "5" columns
+```
+![Two-dimensional array №1](img/two_dimensional_array.png)
+```
+int[][] arr = new int[][] {  // creates a two-dimensional array definition with "2" rows and "5" columns and initializes it with values
+  {1, 2, 3, 4, 5},     // the first row 
+  {11, 12, 13, 14, 15} // the second row
+}                                  
+```
+![Two-dimensional array №2](img/two_dimensional_array_2.png)
+
+#### Ragged Arrays
+An array will be called as "ragged", when it doesn't have a form of "rectangular" and the number of columns may not be fixed. In this case during its definition we specify only the 1st "dimension" and another "dimensions" are left unknown. 
+```
+int[][] arr = new int[3][]; // creates a two-dimensional "ragged" array
+arr[0] = new int[3];        // initializes the first row
+arr[1] = new int[2];        // initializes the second row
+arr[2] = new int[1];        // initializes the third row
+```
+![Ragged two-dimensional array №1](img/ragged_two_dimensional_array.png)
+
+```
+int[][] arr = new int[3][];  // creats a two-dimensional "ragged" array
+arr[0] = new int[]{1};       // initializes the first row
+arr[1] = new int[]{1, 2};    // initializes the second row
+arr[2] = new int[]{1, 2, 3}; // initializes the third row
+```
+![Ragged two-dimensional array №2](img/ragged_two_dimensional_array_2.png)
+
 ### Summary
 - Data structures should be treated as a method to store information;
 - !!!To be filled in the future
