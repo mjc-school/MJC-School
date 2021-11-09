@@ -158,6 +158,18 @@ Now, with the help of the below table, let’s understand the difference between
 | 3. It is not secured                            | It is completely secured                   |
 | 4. It can be bookmarked                         | It cannot be bookmarked                    |
 
+###  Idempotent Methods
+
+The term idempotent is used to describe an operation that will produce the same results if executed once or multiple times.
+
+Idempotence is a handy property in many situations, as it means that an operation can be repeated or retried as often as necessary without causing unintended effects.
+
+With non-idempotent operations, the algorithm may have to keep track of whether the operation was already performed or not.
+
+In HTTP specification, The methods GET, HEAD, PUT and DELETE are declared idempotent methods.
+
+Other methods OPTIONS and TRACE SHOULD NOT have side effects, so both are also inherently idempotent.
+
 
 ## HTTP Response codes
 
@@ -230,3 +242,12 @@ This error response means that the server, while working as a gateway to get a r
 
 <b>503 : Server Unavailable</b>
 The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded.
+
+### Summary of HTTP Methods and Response codes
+
+| HTTP Method  | CRUD           | Collection Resource (e.g. /users)                                                                      | Single Resource (e.g. /users/123)                                                |
+| -------------|:--------------:| -------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|
+| <b>POST</b>  | Create         | 201 (Created), ‘Location’ header with link to /users/{id} containing new ID                            | Avoid using POST on a single resource                                            |
+| <b>GET</b>   | Read           | 200 (OK), list of users. Use pagination, sorting, and filtering to navigate big lists                  | 200 (OK), single user. 404 (Not Found), if ID not found or invalid               |
+| <b>PUT</b>   | Update/Replace | 405 (Method not allowed), unless you want to update every resource in the entire collection of resource| 200 (OK) or 204 (No Content). Use 404 (Not Found), if ID is not found or invalid |
+| <b>DELETE</b>| Delete         | 405 (Method not allowed), unless you want to delete the whole collection — use with caution            | 200 (OK). 404 (Not Found), if ID not found or invalid                            |

@@ -77,6 +77,7 @@ The architecture shows the communication interface, protocol used, requirements 
 + Finally, it also sends the implicit HTTP response to the clients (browsers). This includes telling the browsers or other clients what type of document is being returned.
 
 ## Servlet interfaces
+
 Sun defines two java packages that contain all the interfaces and classes required by Servlet API. These packages are:
 
 1. <b>javax.servlet</b> – This package contains generic classes and interfaces (protocol less). 
@@ -97,6 +98,8 @@ Generic Servlet implements Servlet interface whereas Http Servlet extends Generi
 
 ### Servlet Config
 
+([Oracle Docs: ServletConfig](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletConfig.html))
+
 Servlet Container creates ServletConfig object for each Servlet during initialization, to pass information to the Servlet. 
 
 This object can be used to get configuration information such as parameter name and values from deployment descriptor file(web.xml).
@@ -113,6 +116,8 @@ The following example shows an init servlet's method that prints the name and su
 To get the Servlet Config object in a servlet, we just need to call getServletConfig() method.
 
 ### Servlet Context
+
+([Oracle Docs: ServletContext](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html))
 
 The main difference between ServletConfig and ServletContext is that unlike ServletConfig, the ServletContext is being created once per web application, i.e. ServletContext object is common to all the servlets in web application.
 
@@ -136,6 +141,8 @@ The purpose of these methods is to transfer different objects between unrelated 
 
 ### Servlet Request
 
+([Oracle Docs: ServletRequest](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html))
+
 When a client sends a request to the web server, the servlet container creates HttpServletRequest & HttpServletResponse objects and passes them as an argument to the servlet’s service() method.
 
 HttpServletRequest & HttpServletResponse are extended from ServletRequest & ServletResponse and allow you to get additional information about the servlet and the details of the HTTP request protocol.
@@ -152,6 +159,8 @@ Following, various segments of a request received by the Servlet:
 
 ### Servlet Response
 
+([Oracle Docs: ServletResponse](https://docs.oracle.com/javaee/7/api/javax/servlet/ServletResponse.html))
+
 The servlet container is connected to the web server that receives Http Requests from client on a certain port. When client sends a request to web server, the servlet container creates HttpServletRequest and HttpServletResponse objects and passes them as an argument to the servlet service() method.
 
 The response object allows you to format and send the response back to the client. 
@@ -166,6 +175,8 @@ Various components of a response in Servlets:
 
 ## Request Dispatcher
 
+([Oracle Docs: RequestDispatcher](https://docs.oracle.com/javaee/7/api/javax/servlet/RequestDispatcher.html))
+
 The RequestDispatcher is used to work with additional resources such as another servlet, JSP page, or HTML document. Typically, this interface is used for internal communication between servlets in the same context. The RequestDispatcher can be accessed using the getRequestDispatcher (String url) method of the ServletContext interface. 
 
 RequestDispatcher implements two methods:
@@ -174,15 +185,12 @@ RequestDispatcher implements two methods:
 2. void <b>include</b>(ServletRequest request, ServletResponse response) - including the content of an additional resource in the response. 
 
 ### forward() vs sendRedirect()
-
-The forward() method of the RequestDispatcher interface is used to forward the request to another resource within the servlet. 
-That is, the action is performed in one step. 
-
-The sendRedirect() method of the ServletResponse interface is a two-step process. 
-In this method, the WEB application returns a response to the client with a 302 (redirect) code status and a link to send the request. 
-The browser sends a completely new request to the received link. 
-
-That is, forward() is handled inside the container, and sendRedirect() is handled in the browser. 
-
-When using the forward() method, the URL in the string remains the same, since the browser is unaware of the actual resource being processed. 
-In the sendRedirect() method, the URL is changed to the resource being forwarded.
+| Forward       | SendRedirect   | 
+| --------------|:--------------:|
+| Executed on the server side | Executed on the client side |
+| The request is redirected to another resource within the same server | A 302 (redirect) response is returned to the client and the request is redirected to another server |
+| Does not depend on the client's request protocol, as provided by the servlet container | Can only be used with HTTP clients |
+| Cannot be used to inject a servlet into another context | Can be used to inject a servlet into a different context |
+| The client is unaware of the actual resource being processed and the URL in the string remains the same  | The URL is changed to the address of the new resource |
+| Faster than sendRedirect() method  | Slower than forward() because requires the creation of a new request |
+| Defined in the RequestDispatcher interface  | Defined in the HttpServletResponse interface |
