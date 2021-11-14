@@ -21,7 +21,7 @@ The time complexity is commonly expressed using "Big O notation" (Landau's symbo
 As regards an origin of "Big O notation", it is used in complexity theory, computer science, and mathematics to describe the asymptotic behavior of functions, and it tells you how fast a function grows or declines (you are not supposed to know it, just for your information). Letter "O" is used because the rate of growth of a function is called its ***O***rder.
 
 #### Big O Complexity Chart
-![](img/big_o_complexity_chart.jpeg "Big O Complexity Chart")
+![Big O Complexity Chart](img/big_o_complexity_chart.jpeg "Big O Complexity Chart")
 
 "Big O notation" tells us a number of operations, which an algorithm will perform.
 There are the following most common types of complexities (from fastest to slowest):
@@ -255,9 +255,96 @@ arr[2] = new int[]{1, 2, 3}; // initializes the third row
 ```
 ![Ragged two-dimensional array №2](img/ragged_two_dimensional_array_2.png)
 
+### Linked List
+#### Overview
+A linked list is a linear data structure, which that includes a sequence of connected nodes: each node has the data and the address (reference/link) of the next node in the linked list. Such an address is called a "next pointer". Linked lists have a special member called "Head", which gives the address of the first node. If a linked list is empty, a value of "head" will point at "nowhere", e.g. "null". The last node is always points at "null" (as we already discussed at "nowhere"). In other works, a linked list is a bunch of randomly organized memory addresses, which are linked together. Linked list is the second most-used data structure after an array.
+
+![Linked List Overview](img/linked_list_overview.png)
+
+### Need of Linked Lists
+With linked lists, you never have to move your items: linked lists have the ability to break the chain and rejoin it. In other words, if you wanted to put a new element between Node №1 and Node №2, the steps would be:
+- Create a new Node and allocate memory to it;
+
+![Linked List Need №1](img/linked_list_need_1.png)
+
+- Add a new "data" value;
+
+![Linked List Need №2](img/linked_list_need_2.png)
+
+- Point its "next" pointer to Node №2;
+
+![Linked List Need №3](img/linked_list_need_3.png)
+
+- Change the "next" pointer of Node №1 to a newly created Node.
+
+![Linked List Need №4](img/linked_list_need_4.png)
+
+Doing something similar in an array would have required shifting the positions of all the subsequent elements.
+
+### Pros and Cons of Arrays and Linked Lists
+Which data structure should we use: arrays or linked lists? It depends only on a particular use case and goals, which we intend to resolve. In order to make a balanced decision, we should know pros and cons of these data structures.
+
+#### Situation №1: Read of the last element
+A read operation is heavily tied to type of access. There are two types of access to elements of a data structure: random access and sequential access.
+Sequential access means reading all elements one by one starting from the 1st element. Random access means that we can reach a needed element directly. Linked lists can only perform sequential access, when arrays can do both sequential and random types of access.
+
+Reading of the last element may be a quite heavy operation for a linked list: we can't just read it, because you don't know what address it has. We have to go to Node №1 to get the address for Node №2, then until we get to the last Node. Thus, linked lists are great if we are going to read all the Nodes one at a time, and they are terrible, if we are planning to jump around its Nodes: first, access the last element, then the 3rd element, then the last once again.
+
+Regarding arrays, we know the address for each element, therefore arrays are great if we want to read random elements, because you can look up any element in your array instantly.
+
+#### Situation №2: Insert a new element
+Let's suppose a situation when we should insert a new element in a collection. As concerns linked lists, this operation will be very cheap, because we should just make a previous node point at a newly created node. An example of insertion can be found [here](#need-of-linked-lists).
+
+Regarding arrays, while inserting an element into an array, we have to shift the rest of elements one step down. It means that if there are other elements after an element, which is to be inserted, we have to place each of these elements to an array's cell on the right. 
+
+![Inserting a new element in array №1](img/insertion_in_array_1.png)
+![Inserting a new element in array №2](img/insertion_in_array_2.png)
+![Inserting a new element in array №3](img/insertion_in_array_3.png)
+![Inserting a new element in array №4](img/insertion_in_array_4.png)
+
+If there are no vacant cells in an array, besides "shifting elements down", we will also have to copy contents of an initial array to another location. An example of copying an array can be found [here](#copying-an-array).
+
+![Inserting a new element in non-vacant array №1](img/insert_in_non_vacant_array_1.png)
+![Inserting a new element in non-vacant array №2](img/insert_in_non_vacant_array_2.png)
+![Inserting a new element in non-vacant array №3](img/insert_in_non_vacant_array_3.png)
+![Inserting a new element in non-vacant array №4](img/insert_in_non_vacant_array_4.png)
+
+Thus, linked lists are better than arrays if we want to insert elements into the middle. 
+
+#### Situation №3: Delete an element
+As concerns deleting an element for linked lists, we should just make the previous node point at the next node, and we should delete a pointer from a node, which is being deleted.
+
+![Deleting an element in linked list №1](img/deletion_in_linked_list_1.png)
+![Deleting an element in linked list №2](img/deletion_in_linked_list_2.png)
+![Deleting an element in linked list №3](img/deletion_in_linked_list_3.png)
+
+While speaking about arrays, we should wipe an element by shifting all elements on the right one step up. It means that if there are other elements after an element, which is to be deleted, we have to place each of these elements to an array's cell on the left.
+
+![Deleting an element in array №1](img/deletion_in_array_1.png)
+![Deleting an element in array №2](img/deletion_in_array_2.png)
+![Deleting an element in array №3](img/deletion_in_array_3.png)
+![Deleting an element in array №4](img/deletion_in_array_4.png)
+
+Thus, linked lists are also better than arrays if we want to delete elements from the middle.
+
+#### Arrays and Linked Lists Time Complexity
+Summarizing the aforementioned situations, here is provided "Time Complexity Chart" for main operations with arrays and linked lists. It can be used while choosing between arrays and linked lists depending on a task, which is being solved.  
+https://www.programiz.com/dsa/linked-list
+
+| Operation | Arrays | Linked Lists |
+| --- | --- | --- |
+| Reading | O(1) | O(n) |
+| Insertion | O(n) | O(1) |
+| Deletion | O(n) | O(1) |
+
 ### Summary
 - Data structures should be treated as a method to store information;
-- !!!To be filled in the future
+- Arrays and linked lists are used, when it is necessary to store multiple elements; 
+- Arrays and linked lists are basic data structures and are used to implement other data structures too;
+- Elements of arrays are stored next to each other in memory;
+- Elements of linked lists are allocated in memory with no order and contain only a reference to a next element;
+- Arrays provide fast read operations;
+- Linked Lists provide fast insert and delete operations.
 
 ## References
 1. [[BOOK] Grokking Algorithms An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms?gclid=EAIaIQobChMIiMvGzdvU8wIVjbWyCh3XkgpuEAAYASAAEgKvDfD_BwE)
