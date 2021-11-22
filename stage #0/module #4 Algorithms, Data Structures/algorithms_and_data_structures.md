@@ -346,6 +346,78 @@ https://www.programiz.com/dsa/linked-list
 - Arrays provide fast read operations;
 - Linked Lists provide fast insert and delete operations.
 
+## Recursion
+Recursion is a programming technique using function or algorithm that calls itself one or more times until a specified condition is met, wherein the result is processed beginning from the repetition, which is last called, to the repetition, which is called first. Problems, which are solved by recursion, can also be resolved by iteration, i.e. using loops (for, while, do-while). But recursion solutions tend to have fewer steps than non-recursive solutions: this means that they are easier for humans to read.
+
+Every recursion function consists of two parts:
+- base case: the function, which produces a result without recurring;
+- recursive case: a call of itself with the another [input](#what-is-algorithm).
+
+"Base case" terminates the chain of recursion. The job of the recursive cases can be seen as breaking down complex inputs into simpler ones.
+
+### Example
+Imagine a problem of calculating the sum of natural numbers from 1 to "7". The sum of such number will be "28": "1+2+3+4+5+6+7=28".
+
+#### With Recursion
+```
+public static int sum(int n) { // recursion function "sum" 
+    if(n == 1) {
+        return 1;              // base case
+    }
+    
+    return n + sum(n-1);       // recursive
+}
+```
+
+```
+int sumFrom1To7 = sum(7);          // calculates recursively the sum
+System.out.println(sumFrom1toTo7); // print the sum
+
+// Output: 28
+// 1 call: sum(7) → 7 + sum(6) //                          7 + 21 = 28
+// 2 call: sum(6) → 6 + sum(5) //                      6 + 15 = 21 (↑)
+// 3 call: sum(5) → 5 + sum(4) //                  5 + 10 = 15 (↑)
+// 4 call: sum(4) → 4 + sum(3) //               4 + 6 = 10 (↑) 
+// 5 call: sum(3) → 3 + sum(2) //        3 + 3 = 6 (↑) 
+// 6 call: sum(2) → 2 + sum(1) // 2 + 1 = 3 (↑)
+// 7 call: sum(1) → 1          //  1 (↑)
+```
+
+#### With Iteration
+
+```
+private static int sum(int maxNumber) {
+    int sum = 0;
+    for (int i = 0; i <= maxNumber; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+```
+
+```
+int sumFrom1To5 = sum(5);
+System.out.println(sumFrom1To5);
+
+// Output: 15
+// int = 0: 0 + 0 = 0 (↓)
+// int = 1:            0 + 1 = 1 (↓) 
+// int = 2:                       1 + 2 = 3 (↓)
+// int = 3:                                  3 + 3 = 6 (↓)
+// int = 4:                                             6 + 4 = 10 (↓)
+// int = 5:                                                         10 + 5 = 15
+```
+
+### How to create a recursion function
+1. Define a base case;
+2. Define 
+3. Verify that when algorithm is run, the base case will always be reached.
+
+Recursion functions can have more than one base case.
+
+### Summary
+- Recursion is when a function calls itself.
+
 ## References
 1. [[BOOK] Grokking Algorithms An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms?gclid=EAIaIQobChMIiMvGzdvU8wIVjbWyCh3XkgpuEAAYASAAEgKvDfD_BwE)
 2. [Time complexity](https://en.wikipedia.org/wiki/Time_complexity)
