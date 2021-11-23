@@ -418,6 +418,32 @@ Recursion functions can have more than one base case.
 ### Summary
 - Recursion is when a function calls itself.
 
+## "Divide and conquer" algorithm design paradigm
+"Divide-and-conquer" is a technique for solving problems, when algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until they become simple enough to be solved directly. Then the solutions to the sub-problems are combined to give a solution to the original problem.
+
+"Divide-and-conquer" is not just an algorithm, which solves a problem, instead, it is a way how to think about a problem.
+While implementing a "Divide-and-conquer" algorithm, we should define the following its main steps:
+1. _Divide_ a problem into a number of sub-problems that are smaller instances of the same problem;
+2. _Conquer_ sub-problems by solving them recursively: a sub-problem is small enough, when it can be salved as a base case;
+3. _Combine_ solutions to sub-problems into solution to an original problem.
+
+![Divide and Conquer](img/divide_and_conquer.png)
+
+"Divide and conquer" algorithm design paradigm is the basis of _**efficient**_ algorithms for many problems, such as searching and sorting.
+
+### Searching
+Binary search is a great example of searching "divide and conquer" algorithms. It finds an item in a sequence of items. It works by dividing a sequence array into two smaller sub-sequences, then it discards one of the sub-sequences and continues the search in other sub-sequences.
+
+In order to decide, which sub-sequence should be discarded, we compare a search key with an element in the middle of a sequence. If a value of a search key is less than an item in the middle of a sequence, we should discard a "higher" sub-sequence, otherwise, "lower" one should be discarded.
+
+![Binary Search](img/binary_search.png)
+
+In order to use this algorithm, a sequence must be sorted, thus let's move to a sorting algorithm.
+
+### Sorting
+The merge sort algorithm is also closely compliant with the divide and conquer paradigm. Using the merge sort algorithm, we divide a sequence, which is to be sorted and which has a size of "n" elements, into two subsequences with a size of "n/2" each. Next, we sort two sub-sequences recursively calling "merge sort", unless all elements are separated individually. Then, pairs of individual elements are compared, placed into order and combined. We are combining two sorted subsequences, until they to produce a final sorted sequence.
+
+
 ## References
 1. [[BOOK] Grokking Algorithms An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms?gclid=EAIaIQobChMIiMvGzdvU8wIVjbWyCh3XkgpuEAAYASAAEgKvDfD_BwE)
 2. [Time complexity](https://en.wikipedia.org/wiki/Time_complexity)
