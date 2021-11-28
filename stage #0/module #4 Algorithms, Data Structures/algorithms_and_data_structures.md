@@ -443,6 +443,10 @@ In order to use this algorithm, a sequence must be sorted, thus let's move to a 
 ### Sorting
 The merge sort algorithm is also closely compliant with the divide and conquer paradigm. Using the merge sort algorithm, we divide a sequence, which is to be sorted and which has a size of "n" elements, into two subsequences with a size of "n/2" each. Next, we sort two sub-sequences recursively calling "merge sort", unless all elements are separated individually. Then, pairs of individual elements are compared, placed into order and combined. We are combining two sorted subsequences, until they to produce a final sorted sequence.
 
+![Merge Sort](img/merge_sort.png)
+
+### Summary
+- "Divide and conquer" algorithms split a problem into smaller and smaller pieces until they become elementary and easy to solve.
 
 ## References
 1. [[BOOK] Grokking Algorithms An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms?gclid=EAIaIQobChMIiMvGzdvU8wIVjbWyCh3XkgpuEAAYASAAEgKvDfD_BwE)
