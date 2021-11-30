@@ -448,6 +448,39 @@ The merge sort algorithm is also closely compliant with the divide and conquer p
 ### Summary
 - "Divide and conquer" algorithms split a problem into smaller and smaller pieces until they become elementary and easy to solve.
 
+## Hash Tables
+A hash table is a data structure that implements an associative array, where is stored as a collection of key-value pairs. The position of the data within the array is determined by applying a hashing algorithm to the key - a process called hashing. The hashing algorithm is called a hash function.
+
+### Associative Array
+It is an abstract data type, containing "key/value" pairs, when each possible key can appear only once in the collection. The size of this array must be planned carefully, because it must be big enough to store all data, but it must not be so large to waste space.
+
+### Load Factor
+Load Factor allows us to determine a right size of an associative array. The load factor of a hash table can be defined as:
+`loadFactor=n/k`
+where `k` is a total number of nodes (positions) in the array and `n` is a number of occupied nodes. Keeping the load factor at around `0.75` is optimal.
+
+### Hash Function
+Hash function is an algorithm, which converts a key to a "hash value", that is an encrypted number, which should be consistent: a key should always have the same hash value after applying the same hash function. On the basis of hash value, hash function determines an exact index of an associative array, where data should be stored. Hash function provided only valid indices.
+
+### Hash Table Activity Diagram
+![Hash Table Activity Diagram](img/hash_tables_diagram.png)
+
+### Hash Table Operations
+Hash tables offer a combination of efficient search, insert and delete operations.
+In order to insert data into a hash table, it is necessary to use a hash function, so that to generate an array index, which will be used to store the data.
+In order to retrieve a value from a hash table, it is also to apply hash function to a key, so that to generate an index for a position within the array, then access the index and retrieve a value. Thus, data can be retrieved in a single operation without a necessity to carry out binary or other searches: we just refer to a correct position within an array.
+
+### Collisions
+The most common problem of hash tables is collisions. Collisions occur when a hash function produces the same "hash value" for two different key/value pairs. Every hash function is likely to produce such issues, and it doesn't matter how good it is read. Therefore, in order to implement a hash table, it is necessary to handle collisions.
+The most popular way of dealing with collisions is "Chaining", when a "key/value" element of an associate array (Node) contains a pointer to the next element with the same "hash value".
+
+![Hash Table Collisions](img/hash_tables_collisions.png)
+
+## Summary
+- a hash table is combined from an array and a hash function; 
+- operations with hash tables are fast;
+- it is necessary to create a hash function which reduces collisions.
+
 ## References
 1. [[BOOK] Grokking Algorithms An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms?gclid=EAIaIQobChMIiMvGzdvU8wIVjbWyCh3XkgpuEAAYASAAEgKvDfD_BwE)
 2. [Time complexity](https://en.wikipedia.org/wiki/Time_complexity)
