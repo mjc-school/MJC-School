@@ -29,9 +29,32 @@ All communication done via REST API uses only HTTP request.
 
 - HTTP verbs [TO DO]
 
-- Idempotence
+- _**Idempotence:**_ An idempotent method is a method that can be called many times without different outcomes. 
+It would not matter if the method is called only once, or ten times over. 
+NOTE: POST is neither safe nor idempotent.
+Example:
 
-- Safety
+a = 5 // It is Idempotence, as final value(a = 5)
+        // would not change after executing it multiple
+       // times.
+ 
+a++ // It is not Idempotence because the final value
+      // will depend upon the number of times the
+     // statement is executed.
+
+- _**Safety:**_ The concepts of ‘idempotent methods’ and ‘safe methods’ are often confused. 
+A safe method does not change the value that is returned, it reads – but it never writes. 
+Going back to our previous examples:
+
+x + 0; //it is idempotent and also safe, as final value x
+       // would not change after executing it multiple
+      // times.
+
+x = 5; //it is idempotent but is not safe, as original value x could be changed to 5
+
+The first of these, adding zero, will return the same value every time (it is idempotent), and adding zero will have no effect on that value (it is also safe). 
+The second example will return the same value every time (it is idempotent) but is not safe (if x is anything other than 5 before the operation runs, it changes x).
+Therefore, all safe methods are idempotent, but not all idempotent methods are safe.
 
 
 ## REST architectural constraints
