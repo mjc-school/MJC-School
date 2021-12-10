@@ -15,10 +15,9 @@
 5. Write a Java program to find the numbers less than 10 in a given TreeSet.
 
 ## Queue
-1. Write a Java program to create a new priority queue, add all the days of the week (string) and print out the elements of the priority queue.
-2. Write a Java program to iterate through all elements in priority queue.
-3. Write a Java program to add all the elements of a priority queue to another priority queue.
-4. Write a Java program to convert a priority queue to an array containing all of the elements of the queue.
+1. Write a Java program to create a new priority queue, add all the days of the week (string), iterate through elements and return a String object which contains days of the week.
+2. Write a Java program to add all the elements of a priority queue to another priority queue.
+3. Write a Java program to convert a priority queue to an array containing all of the elements of the queue.
 
 ## Map
 1. Write a Java program to test if a map contains a key for the specified value.
