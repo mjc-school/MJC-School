@@ -32,7 +32,7 @@ All communication done via REST API uses only HTTP request.
 - _**Idempotence:**_ An idempotent method is a method that can be called many times without different outcomes. 
 It would not matter if the method is called only once, or ten times over. 
 NOTE: POST is neither safe nor idempotent.
-Example:
+<br>Example:<br>
 
 a = 5 // It is Idempotence, as final value(a = 5) would not change after executing it multiple times.
  
@@ -40,7 +40,7 @@ a++ // It is not Idempotence because the final value will depend upon the number
 
 - _**Safety:**_ The concepts of ‘idempotent methods’ and ‘safe methods’ are often confused. 
 A safe method does not change the value that is returned, it reads – but it never writes. 
-Example:
+<br>Example:<br>
 
 x + 0; //it is idempotent and also safe, as final value x would not change after executing it multiple times.
 
@@ -52,12 +52,12 @@ Therefore, all safe methods are idempotent, but not all idempotent methods are s
 
 
 ## REST architectural constraints
-- **Client-Server:** [TO DO]
-- **Uniform Interface:** [TO DO]
-- **Stateless:** [TO DO]
-- **Cacheable:** [TO DO]
-- **Layered System:** [TO DO]
-- **Code on demand (optional):** [TO DO]
+- **Client-Server:**<br> [TO DO]
+- **Uniform Interface:**<br> [TO DO]
+- **Stateless:**<br> [TO DO]
+- **Cacheable:**<br> [TO DO]
+- **Layered System:**<br> [TO DO]
+- **Code on demand (optional):**<br> [TO DO]
 
 ## Basic principals of designing REST APIs
 
