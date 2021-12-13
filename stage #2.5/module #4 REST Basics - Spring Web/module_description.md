@@ -73,11 +73,11 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 - **Stateless:**<br> [TO DO]
 
-- **Cacheable:**<br> [TO DO]
+- **Cacheable:**<br> In order to provide a better performance, the applications are often made cacheable. This is done by labeling the response from the server as cacheable or non-cacheable either implicitly or explicitly. If the response is defined as cacheable, then the client cache can reuse the response data for equivalent responses in the future.
 
 - **Layered System:**<br> This constraint tells that the architecture of the application can be layered, without letting the client know about it.
 An application architecture needs to be composed of multiple layers. Each layer doesn’t know any thing about any layer other than that of immediate layer and 
-there can be lot of intermediate servers between client and the end server. 
+there can be lot of intermediate servers(layers) between client and the end server. 
 Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.
 
 - **Code on demand (optional):**<br> [TO DO]
