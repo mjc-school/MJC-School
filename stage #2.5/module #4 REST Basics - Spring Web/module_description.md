@@ -34,21 +34,15 @@ It would not matter if the method is called only once, or ten times over.
 NOTE: POST is neither safe nor idempotent.
 Example:
 
-a = 5 // It is Idempotence, as final value(a = 5)
-        // would not change after executing it multiple
-       // times.
+a = 5 // It is Idempotence, as final value(a = 5) would not change after executing it multiple times.
  
-a++ // It is not Idempotence because the final value
-      // will depend upon the number of times the
-     // statement is executed.
+a++ // It is not Idempotence because the final value will depend upon the number of times the statement is executed.
 
 - _**Safety:**_ The concepts of ‘idempotent methods’ and ‘safe methods’ are often confused. 
 A safe method does not change the value that is returned, it reads – but it never writes. 
-Going back to our previous examples:
+Example:
 
-x + 0; //it is idempotent and also safe, as final value x
-       // would not change after executing it multiple
-      // times.
+x + 0; //it is idempotent and also safe, as final value x would not change after executing it multiple times.
 
 x = 5; //it is idempotent but is not safe, as original value x could be changed to 5
 
@@ -58,7 +52,12 @@ Therefore, all safe methods are idempotent, but not all idempotent methods are s
 
 
 ## REST architectural constraints
-[TO DO]
+- **Client-Server:** [TO DO]
+- **Uniform Interface:** [TO DO]
+- **Stateless:** [TO DO]
+- **Cacheable:** [TO DO]
+- **Layered System:** [TO DO]
+- **Code on demand (optional):** [TO DO]
 
 ## Basic principals of designing REST APIs
 
