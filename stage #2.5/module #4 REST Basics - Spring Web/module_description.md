@@ -57,6 +57,7 @@ The first of these, adding zero, will return the same value every time (it is id
 The second example will return the same value every time (it is idempotent) but is not safe (if x is anything other than 5 before the operation runs, it changes x).
 Therefore, all safe methods are idempotent, but not all idempotent methods are safe.
 
+- _**PUT vs PATCH:**_ [TO DO]
 
 ## REST architectural constraints
 - **Client-Server:**<br> [TO DO]
