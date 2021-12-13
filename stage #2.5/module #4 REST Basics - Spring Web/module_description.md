@@ -38,8 +38,9 @@ a = 5 // It is Idempotence, as final value(a = 5) would not change after executi
  
 a++ // It is not Idempotence because the final value will depend upon the number of times the statement is executed.
 
-- _**Safety:**_ The concepts of ‘idempotent methods’ and ‘safe methods’ are often confused. 
-A safe method does not change the value that is returned, it reads – but it never writes. 
+- _**Safety:**_ The concepts of _**‘idempotent methods’**_ and _**‘safe methods’**_ are often confused. 
+A safe method does not change the value that is returned, it reads – but it never writes. Safe methods are HTTP methods that do not modify resources. 
+For instance, using GET or HEAD on a resource URL, should NEVER change the resource.
 <br>Example:<br>
 
 x + 0; //it is idempotent and also safe, as final value x would not change after executing it multiple times.
