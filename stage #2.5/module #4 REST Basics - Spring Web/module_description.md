@@ -66,11 +66,20 @@ but not necessarily so for PATCH.
 PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
+
 - **Client-Server:**<br> [TO DO]
+
 - **Uniform Interface:**<br> [TO DO]
+
 - **Stateless:**<br> [TO DO]
+
 - **Cacheable:**<br> [TO DO]
-- **Layered System:**<br> [TO DO]
+
+- **Layered System:**<br> This constraint tells that the architecture of the application can be layered, without letting the client know about it.
+An application architecture needs to be composed of multiple layers. Each layer doesn’t know any thing about any layer other than that of immediate layer and 
+there can be lot of intermediate servers between client and the end server. 
+Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.
+
 - **Code on demand (optional):**<br> [TO DO]
 
 ## Basic principals of designing REST APIs
