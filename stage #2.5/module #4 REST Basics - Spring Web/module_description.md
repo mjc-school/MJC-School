@@ -63,7 +63,7 @@ A PATCH is not necessarily idempotent, although it can be. Contrast this with PU
 The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. 
 For example if an auto-incrementing counter field is an integral part of the resource, then a PUT will naturally overwrite it (since it overwrites everything), 
 but not necessarily so for PATCH.
-PATCH (like POST) may have side-effects on other resources so they are not safe.
+PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
 - **Client-Server:**<br> [TO DO]
