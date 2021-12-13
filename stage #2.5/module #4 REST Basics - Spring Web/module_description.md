@@ -62,7 +62,7 @@ A PATCH request is considered a set of instructions on how to modify a resource.
 A PATCH is not necessarily idempotent, although it can be. Contrast this with PUT; which is always idempotent. 
 The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. 
 For example if an auto-incrementing counter field is an integral part of the resource, then a PUT will naturally overwrite it (since it overwrites everything), 
-but not necessarily so for PATCH.
+but not necessarily so for PATCH. The PATCH body should not just be a modified part of the resource, but in some kind of patch language like _**JSON Patch**_ or _**XML Patch**_.
 PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
