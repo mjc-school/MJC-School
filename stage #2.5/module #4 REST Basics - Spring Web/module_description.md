@@ -57,7 +57,13 @@ The first of these, adding zero, will return the same value every time (it is id
 The second example will return the same value every time (it is idempotent) but is not safe (if x is anything other than 5 before the operation runs, it changes x).
 Therefore, all safe methods are idempotent, but not all idempotent methods are safe.
 
-- _**PUT vs PATCH:**_ [TO DO]
+- _**HTTP PUT vs HTTP PATCH:**_ The HTTP PATCH request method applies partial modifications to a resource.
+A PATCH request is considered a set of instructions on how to modify a resource. Contrast this with PUT; which is a complete representation of a resource.
+A PATCH is not necessarily idempotent, although it can be. Contrast this with PUT; which is always idempotent. 
+The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. 
+For example if an auto-incrementing counter field is an integral part of the resource, then a PUT will naturally overwrite it (since it overwrites everything), 
+but not necessarily so for PATCH.
+PATCH (like POST) may have side-effects on other resources so they are not safe.
 
 ## REST architectural constraints
 - **Client-Server:**<br> [TO DO]
