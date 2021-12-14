@@ -20,7 +20,7 @@ Resources can be grouped into collections. Each collection is homogeneous so tha
 
 - _**Resource representations:**_ <br> A server can provide different representations for the same resource. A resource state can be represented in multiple formats, such as JSON, XML, YAML, etc. A client can use _**content negotiation (Accept ot Content-Type)**_ to request different representations of the same resource.
 
-- _**Resource identifiers:**_ <br>
+- _**Resource identifiers:**_ <br> REST APIs use _**Uniform Resource Identifiers (URIs)**_ to address resources. REST API designers should create URIs that convey a REST API’s resource model to the potential clients of the API. When resources are named well, an API is intuitive and easy to use. If done poorly, that same API can be challenging to use and understand. Creating URIs for resources you should follow the principale (the best practice) described lower in this document.
 
 - _**Stateless:**_ [TO DO]
 
