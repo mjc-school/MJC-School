@@ -17,7 +17,7 @@ All communication done via REST API uses only HTTP request.
 
 - Resource [TO DO]
 
-- Stateless [TO DO]
+- _**Stateless:**_ [TO DO]
 
 - REST API endpoint [TO DO]
 
@@ -76,7 +76,7 @@ There are four guidelines principle of Uniform Interface are:
 - _**Self-descriptive Messages:**_ Each message includes enough information to describe how to process the message so that server can easily analyses the request.
 - _**Hypermedia as the Engine of Application State (HATEOAS):**_ It need to include links for each response so that client can discover other resources easily.
 
-3.**Stateless:**<br> [TO DO]
+3.**Stateless:**<br> It means that the necessary state to handle the request is contained within the request itself and server would not store anything related to the session. In REST, the client must include all information for the server to fulfill the request whether as a part of query params, headers or URI. Statelessness enables greater availability since the server does not have to maintain, update or communicate that session state. There is a drawback when the client need to send too much data to the server so it reduces the scope of network optimization and requires more bandwidth.
 
 4.**Cacheable:**<br> In order to provide a better performance, the applications are often made cacheable. This is done by labeling the response from the server as cacheable or non-cacheable either implicitly or explicitly. If the response is defined as cacheable, then the client cache can reuse the response data for equivalent responses in the future.
 
