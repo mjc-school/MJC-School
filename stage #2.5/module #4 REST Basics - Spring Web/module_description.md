@@ -13,7 +13,7 @@ All communication done via REST API uses only HTTP request.
 
 ## Some definitions related to REST API
 
-- State [TO DO]
+-_**State:**_ [TO DO]
 
 - Resource [TO DO]
 
@@ -67,7 +67,12 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
 
-- **Client-Server:**<br> [TO DO]
+- **Client-Server:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
+There are four guidelines principle of Uniform Interface are:
+- _**Resource-Based:**_ Individual resources are identified in requests. For example: API/users.<br>
+- _**Manipulation of Resources Through Representations:**_ Client has representation of resource and it contains enough information to modify or delete the resource on the server, provided it has permission to do so. Example: Usually user get a user id when user request for a list of users and then use that id to delete or modify that particular user.
+- _**Self-descriptive Messages:**_ Each message includes enough information to describe how to process the message so that server can easily analyses the request.
+- _**Hypermedia as the Engine of Application State (HATEOAS):**_ It need to include links for each response so that client can discover other resources easily.
 
 - **Uniform Interface:**<br> [TO DO]
 
