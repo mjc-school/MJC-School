@@ -67,7 +67,7 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
 
-1.**Client-Server:**<br> [TO DO]
+1.**Client-Server:**<br> Every response should include whether the response is cacheable or not and for how much duration responses can be cached at the client side. Client will return the data from its cache for any subsequent request and there would be no need to send the request again to the server. A well-managed caching partially or completely eliminates some client–server interactions, further improving availability and performance. But sometime there are chances that user may receive stale data.
 
 2.**Uniform Interface:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
 There are four guidelines principle of Uniform Interface are:
