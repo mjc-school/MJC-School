@@ -18,7 +18,7 @@ Resources can be grouped into collections. Each collection is homogeneous so tha
 
 - _**Resource state:**_ <br> Resource state is the current state of a resource on a server at any point in time – and it has nothing to do with the interaction between client and server. It is what we get as a response from the server as the API response. We refer to it as resource representation.
 
-- _**Resource representations:**_ <br>
+- _**Resource representations:**_ <br> A server can provide different representations for the same resource. A resource state can be represented in multiple formats, such as JSON, XML, YAML, etc. A client can use _**content negotiation (Accept ot Content-Type)**_ to request different representations of the same resource.
 
 - _**Resource identifiers:**_ <br>
 
