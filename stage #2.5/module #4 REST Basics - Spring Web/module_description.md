@@ -15,7 +15,7 @@ All communication done via REST API uses only HTTP request.
 
 - _**Resource:**_ [TO DO]
 
-- _**State of a resource:**_ [TO DO]
+- _**Resource state:**_ <br> Resource state is the current state of a resource on a server at any point in time – and it has nothing to do with the interaction between client and server. It is what we get as a response from the server as the API response. We refer to it as resource representation.
 
 - _**Stateless:**_ [TO DO]
 
