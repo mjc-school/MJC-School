@@ -13,9 +13,9 @@ All communication done via REST API uses only HTTP request.
 
 ## Some definitions related to REST API
 
-- _**State:**_ [TO DO]
-
 - _**Resource:**_ [TO DO]
+
+- _**State of a resource:**_ [TO DO]
 
 - _**Stateless:**_ [TO DO]
 
