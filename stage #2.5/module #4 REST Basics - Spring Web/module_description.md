@@ -10,6 +10,10 @@ All communication done via REST API uses only HTTP request.
 
 ## Richardson REST API Maturity Model
 The Richardson REST Maturity Model describes four different levels of REST (starting at Level 0). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.
+-**Level 0**
+Level 1 - Resources
+Level 2 - HTTP Verbs
+Level 3 - Hypermedia Controls
 
 ## Some definitions related to REST API
 
