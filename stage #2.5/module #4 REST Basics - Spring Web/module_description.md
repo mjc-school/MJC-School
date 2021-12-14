@@ -15,19 +15,13 @@ All communication done via REST API uses only HTTP request.
 
 - _**State:**_ [TO DO]
 
-- Resource [TO DO]
+- _**Resource:**_ [TO DO]
 
 - _**Stateless:**_ [TO DO]
 
-- REST API endpoint [TO DO]
+- _**REST API endpoint:**_ [TO DO]
 
-- HTTP request/response [TO DO]
-
-- URL [TO DO]
-
-- Media types [TO DO]
-
-- HTTP verbs [TO DO]
+- _**Media types:**_ [TO DO]
 
 - _**Idempotence:**_ An idempotent method is a method that can be called many times without different outcomes. 
 It would not matter if the method is called only once, or ten times over. 
