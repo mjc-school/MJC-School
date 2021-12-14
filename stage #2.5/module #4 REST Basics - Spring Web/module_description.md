@@ -13,7 +13,7 @@ All communication done via REST API uses only HTTP request.
 
 ## Some definitions related to REST API
 
--_**State:**_ [TO DO]
+- _**State:**_ [TO DO]
 
 - Resource [TO DO]
 
@@ -67,25 +67,25 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
 
-- **Client-Server:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
+1.**Client-Server:**<br> [TO DO]
+
+2.**Uniform Interface:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
 There are four guidelines principle of Uniform Interface are:
 - _**Resource-Based:**_ Individual resources are identified in requests. For example: API/users.<br>
 - _**Manipulation of Resources Through Representations:**_ Client has representation of resource and it contains enough information to modify or delete the resource on the server, provided it has permission to do so. Example: Usually user get a user id when user request for a list of users and then use that id to delete or modify that particular user.
 - _**Self-descriptive Messages:**_ Each message includes enough information to describe how to process the message so that server can easily analyses the request.
 - _**Hypermedia as the Engine of Application State (HATEOAS):**_ It need to include links for each response so that client can discover other resources easily.
 
-- **Uniform Interface:**<br> [TO DO]
+3.**Stateless:**<br> [TO DO]
 
-- **Stateless:**<br> [TO DO]
+4.**Cacheable:**<br> In order to provide a better performance, the applications are often made cacheable. This is done by labeling the response from the server as cacheable or non-cacheable either implicitly or explicitly. If the response is defined as cacheable, then the client cache can reuse the response data for equivalent responses in the future.
 
-- **Cacheable:**<br> In order to provide a better performance, the applications are often made cacheable. This is done by labeling the response from the server as cacheable or non-cacheable either implicitly or explicitly. If the response is defined as cacheable, then the client cache can reuse the response data for equivalent responses in the future.
-
-- **Layered System:**<br> This constraint tells that the architecture of the application can be layered, without letting the client know about it.
+5.**Layered System:**<br> This constraint tells that the architecture of the application can be layered, without letting the client know about it.
 An application architecture needs to be composed of multiple layers. Each layer doesn’t know any thing about any layer other than that of immediate layer and 
 there can be lot of intermediate servers(layers) between client and the end server. 
 Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.
 
-- **Code on demand (optional):**<br> [TO DO]
+6.**Code on demand (optional):**<br> [TO DO]
 
 ## Basic principals of designing REST APIs
 
