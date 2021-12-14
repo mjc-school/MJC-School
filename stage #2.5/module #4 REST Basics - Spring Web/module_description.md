@@ -12,7 +12,7 @@ All communication done via REST API uses only HTTP request.
 The Richardson REST Maturity Model describes four different levels of REST (starting at Level 0). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.<br>
 - **Level 0 - a single URI and use a single HTTP method (typically POST):** <br> These services have a single URI and use a single HTTP method (typically POST). These are the most primitive way of building SOA applications with a single POST method and using XML to communicate between services.Level zero of maturity does not make use of any of URI, HTTP Methods, and HATEOAS capabilities.
 
-- **Level 1 - Resources:** <br> API design at Level 1 is all about using different URLs to interact with the different resources in your application.
+- **Level 1 - different URLs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URLs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
 
 - **Level 2 - HTTP Verbs:** <br>
 
