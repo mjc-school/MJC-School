@@ -22,11 +22,9 @@ Resources can be grouped into collections. Each collection is homogeneous so tha
 
 - _**Resource identifiers:**_ <br> REST APIs use _**Uniform Resource Identifiers (URIs)**_ to address resources. REST API designers should create URIs that convey a REST API’s resource model to the potential clients of the API. When resources are named well, an API is intuitive and easy to use. If done poorly, that same API can be challenging to use and understand. Creating URIs for resources you should follow the principale (the best practice) described lower in this document.
 
-- _**Stateless:**_ [TO DO]
+- _**Stateless:**_ Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill the request. The server never relies on information from previous requests from the client and doesn't store state about the client session on the server-side.
 
 - _**REST API endpoint:**_ [TO DO]
-
-- _**Media types:**_ [TO DO]
 
 - _**Idempotence:**_ An idempotent method is a method that can be called many times without different outcomes. 
 It would not matter if the method is called only once, or ten times over. 
