@@ -262,13 +262,6 @@ The below table summarises the use of HTTP methods and realated HTTP response st
 | <b>PUT</b>   | Update/Replace | 405 (Method not allowed), unless you want to update every resource in the entire collection of resource| 200 (OK) or 204 (No Content). Use 404 (Not Found), if ID is not found or invalid |                       
 | <b>DELETE</b>| Delete         | 405 (Method not allowed), unless you want to delete the whole collection — use with caution            | **200 (OK)** if the response includes an entity describing the status; <p>**202 (Accepted)** if the action has been queued; <p>**204 (No Content)** if the action has been performed but the response does not include an entity; <p>**404 (Not Found)** if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
-
-### Conform to HTTP semantics 
-[TO DO]
-
-### Use HTTP response status codes 
-[TO DO]
-
 ### Allow filtering, sorting, and pagination
 [TO DO]
 
@@ -405,13 +398,3 @@ Accept: application/vnd.example+json;version=1.0
 If the Accept header does not specify any known media types, the web server could generate an HTTP 406 (Not Acceptable) response message or return a message with a default media type.
 In the real world, an API is never going to be completely stable. So it’s important how this change is managed.
 A well-documented and gradual deprecation of API can be an acceptable practice for most APIs.
-
-### Provide Accurate API Documentation
-[TO DO]
-
-### REST APIs testing
-[TO DO]
-
-### Some tools for testing REST APIs
-[TO DO]
-
