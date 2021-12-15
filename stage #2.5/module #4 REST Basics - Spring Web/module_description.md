@@ -79,6 +79,17 @@ For example if an auto-incrementing counter field is an integral part of the res
 but not necessarily so for PATCH. The PATCH body should not just be a modified part of the resource, but in some kind of patch language like _**JSON Patch**_ or _**XML Patch**_.
 PATCH (like POST) may have side-effects on other resources so it is not safe.
 
+- _**HATEOAS (Hypermedia as the Engine of Application State):**_ HATEOAS is a constraint of the REST application architecture. HATEOAS keeps the REST style architecture unique from most other network application architectures.
+The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
+REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
+Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
+For example, the given below JSON response may be from an API like HTTP GET http://api.domain.com/management/departments/10
+HATEOAS is a constraint of the REST application architecture. HATEOAS keeps the REST style architecture unique from most other network application architectures.
+The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
+REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
+Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
+For example, the given below JSON response may be from an API like HTTP GET http://api.domain.com/management/departments/10
+
 ## REST architectural constraints
 
 1.**Client-Server:**<br> REST application should have a client-server architecture. This constraint essentially means that client applications and server applications MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all. A Client requests resources and is not concerned with data storage, which remains internal to each server, and server holds the resources and is not concerned with the user interface or user state. They can evolve independently. Client doesn’t need to know anything about business logic and server doesn’t need to know anything about frontend UI.
