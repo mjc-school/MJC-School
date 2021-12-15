@@ -146,6 +146,40 @@ http://api.example.com/user-management/users/{id}
 ```
 Resources can be divided by the **resource archetypes** into four categories **(document, collection, store, and controller)**. Then it would be best if you always targeted to put a resource into one archetype and then use its naming convention consistently.
 
+- ### document:
+A document resource is a singular concept that is akin to an object instance or database record.
+In REST, you can view it as a single resource inside resource collection. A document’s state representation typically includes both fields with values and links to other related resources.
+Use “singular” name to denote document resource archetype.
+```
+http://api.example.com/device-management/managed-devices/{device-id}
+http://api.example.com/user-management/users/{id}
+http://api.example.com/user-management/users/admin
+```
+- ### collection:
+A collection resource is a server-managed directory of resources.
+Clients may propose new resources to be added to a collection. However, it is up to the collection resource to choose to create a new resource or not.
+A collection resource chooses what it wants to contain and also decides the URIs of each contained resource.
+Use the “plural” name to denote the collection resource archetype.
+```
+http://api.example.com/device-management/managed-devices
+http://api.example.com/user-management/users
+http://api.example.com/user-management/users/{id}/accounts
+```
+- ### store:
+A store is a client-managed resource repository. A store resource lets an API client put resources in, get them back out, and decide when to delete them.
+A store never generates new URIs. Instead, each stored resource has a URI. The URI was chosen by a client when the resource initially put it into the store.
+Use “plural” name to denote store resource archetype.
+```
+http://api.example.com/song-management/users/{id}/playlists
+```
+- ### controller:
+A controller resource models a procedural concept. Controller resources are like executable functions, with parameters and return values, inputs, and outputs.
+Use “verb” to denote controller archetype.
+```
+http://api.example.com/cart-management/users/{id}/cart/checkout 
+http://api.example.com/song-management/users/{id}/playlist/play
+```
+
 ### Use consistent resource naming conventions and URI formatting
 
 
