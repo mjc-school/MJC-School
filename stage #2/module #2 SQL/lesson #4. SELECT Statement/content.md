@@ -7,6 +7,6 @@
 4.	Select unique values of Amount from Orders table
 
 ## Materials
-https://dev.mysql.com/doc/refman/8.0/en/select.html
-https://docs.microsoft.com/en-us/sql/t-sql/queries/select-transact-sql?view=sql-server-ver15
-https://www.w3schools.com/sql/sql_distinct.asp
+https://dev.mysql.com/doc/refman/8.0/en/select.html 
+https://docs.microsoft.com/en-us/sql/t-sql/queries/select-transact-sql?view=sql-server-ver15 
+https://www.w3schools.com/sql/sql_distinct.asp 
