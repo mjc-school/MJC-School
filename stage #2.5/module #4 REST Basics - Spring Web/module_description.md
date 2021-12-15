@@ -193,6 +193,13 @@ http://api.example.com/device-management/managed-devices/{id}
 http://api.example.com/device-management/managed-devices/{id}/scripts
 http://api.example.com/device-management/managed-devices/{id}/scripts/{id}
 ```
+- **Do not use trailing forward slash (/) in URIs:**
+As the last character within a URI’s path, a forward slash (/) adds no semantic value and may confuse. It’s better to drop it from the URI.
+```
+http://api.example.com/device-management/managed-devices/ 
+http://api.example.com/device-management/managed-devices  /*This is much better version*/
+```
+
 
 ============================================================
 ### Organize the API design around resources
