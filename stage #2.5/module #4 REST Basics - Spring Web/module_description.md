@@ -32,7 +32,11 @@ A resource may contain sub-collection resources also. For example, sub-collectio
 
 - _**Resource identifiers:**_ <br> REST APIs use _**Uniform Resource Identifiers (URIs)**_ to address resources. REST API designers should create URIs that convey a REST API’s resource model to the potential clients of the API. When resources are named well, an API is intuitive and easy to use. If done poorly, that same API can be challenging to use and understand. Creating URIs for resources you should follow the principale (the best practice) described lower in this document.
 
-- _**Stateless:**_ Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill the request. The server never relies on information from previous requests from the client and doesn't store state about the client session on the server-side. If any such information is important then the client will send that as part of the current request.
+- _**Application state:**_<br>
+Application state is server-side data that servers store to identify incoming client requests, their previous interaction details, and current context information.
+It is important to understand the difference between the application state and the resource state. Both are completely different things.
+
+- _**Stateless:**_ Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill the request. The server never relies on information from previous requests from the client and doesn't store state about the client session on the server-side. If any such information is important then the client will send that as part of the current request. REST statelessness means being free from the application state.
 
 - _**REST API endpoint:**_ An endpoint is one end of a communication channel. When an API interacts with another system, the touchpoints of this communication are considered endpoints. For APIs, an endpoint can include a URL of a server or service. Each endpoint is the location from which APIs can access the resources they need to carry out their function.
 APIs work using ‘requests’ and ‘responses.’ When an API requests information from a web application or web server, it will receive a response. The place that APIs send requests and where the resource lives, is called an endpoint.
