@@ -316,7 +316,37 @@ Validate request parameters on the very first step, before it reaches applicatio
 In API response, send relevant error messages and examples of correct input format to improve user experience.
 
 ### Cache data to improve performance
-[TO DO]
+Being cacheable is one of the architectural constraints of REST.
+
+- **GET** requests should be cachable by default – until a special condition arises. Usually, browsers treat all GET requests as cacheable.
+- **POST** requests are not cacheable by default but can be made cacheable if either an Expires header or a Cache-Control header with a directive, to explicitly allows caching, is added to the response.
+- Responses to **PUT and DELETE** requests are not cacheable at all.<br>
+Below given are main HTTP response headers that we can use to control caching behavior:
+- **Expires**<br>
+The Expires HTTP header specifies an absolute expiry time for a cached representation. Beyond that time, a cached representation is considered stale and must be re-validated with the origin server.
+To indicate that a representation never expires, a service can include a time up to one year in the future.
+```
+Expires: Fri, 20 May 2016 19:20:49 GMT
+```
+- **Cache-Control**<br>
+The header value comprises one or more comma-separated directives. These directives determine whether a response is cacheable, and if so, by whom, and for how long e.g. max-age or s-maxage directives.
+```
+Cache-Control: max-age=3600
+```
+Cacheable responses (whether to a GET or to a POST request) should also include a validator — either an ETag or a Last-Modified header.
+
+- **ETag**<br>
+An ETag value is an opaque string token that a server associates with a resource to uniquely identify the state of the resource over its lifetime.
+When the resource changes, the ETag changes accordingly.
+```
+ETag: "abcd1234567n34jv"
+```
+- **Last-Modified**<br>
+Whereas a response’s Date header indicates when the response was generated, the Last-Modified header indicates when the associated resource last changed.
+The Last-Modified value cannot be less than Date value.
+```
+Last-Modified: Fri, 10 May 2016 09:17:49 GMT
+```
 
 ### Support partial responses for large binary resources
 [TO DO]
