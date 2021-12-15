@@ -15,6 +15,7 @@ The Richardson REST Maturity Model describes four different levels of REST (star
 - **Level 1 - different URLs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URLs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
 
 - **Level 2 - HTTP Verbs:** <br>
+- Level 2 of maturity uses different URIs and HTTP Methods, but does not use the HATEOAS. Such RSET API supports several of the HTTP verbs on each exposed resource – Create, Read, Update and Delete (CRUD) operations. Here the state of resources, typically representing business entities, can be manipulated over the network.Maturity level 2 is the most popular usecase of REST principles, which advocate using different verbs based on the HTTP request methods, while the system can have multiple resources.
 
 - **Level 3 - Hypermedia Controls:** <br>
 
