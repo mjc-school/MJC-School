@@ -93,7 +93,7 @@ An application architecture needs to be composed of multiple layers. Each layer 
 there can be lot of intermediate servers(layers) between client and the end server. 
 Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.
 
-6.**Code on demand (optional):**<br> It is an optional feature. According to this, servers can also provide executable code to the client. The examples of code on demand may include the compiled components such as Java applets and client-side scripts such as JavaScript/Python.
+6.**Code on demand (optional):**<br> It is an optional feature. According to this, servers can also provide executable code to the client. The examples of code on demand may include a UI widget rendering code or client-side scripts such as JavaScript/Python.
 
 ## Basic principals of designing REST APIs
 
