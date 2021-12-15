@@ -272,9 +272,13 @@ Common error HTTP status codes include:
 - **401 Unauthorized** – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated.
 - **403 Forbidden** – This means the user is authenticated, but it’s not allowed to access a resource.
 - **404 Not Found** – This indicates that a resource is not found.
+- **406 Not Acceptable** – This indicates that the server cannot produce a response matching the list of acceptable values defined in the request's proactive content negotiation
+                           headers, and that the server is unwilling to supply a default representation.
+- **409 Conflict** – This indicates a request conflict with current state of the target resource. Conflicts are most likely to occur in response to a PUT or POST request.
 - **500 Internal server error** – This is a generic server error. It probably shouldn’t be thrown explicitly.
 - **502 Bad Gateway** – This indicates an invalid response from an upstream server.
 - **503 Service Unavailable** – This indicates that something unexpected happened on server side. It can be anything like server overload, some parts of the system failed.<br>
+
 We should be throwing errors that correspond to the problem that our app has encountered. Error codes need to have messages accompanied with them so that the maintainers have enough information to troubleshoot the issue.
 Whenever our API does not successfully complete, we should fail gracefully by sending an error with information to help users make corrective action.
 
