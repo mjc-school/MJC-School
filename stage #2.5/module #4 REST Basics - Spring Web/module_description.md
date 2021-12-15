@@ -310,8 +310,48 @@ In API response, send relevant error messages and examples of correct input form
 ### Use HATEOAS to enable navigation to related resources
 [TO DO]
 
-### Versioning a RESTful web API
-[TO DO]
+### Versioning a REST API
+APIs only need to be up-versioned when a breaking change is made.
+Breaking changes include:
+- a change in the format of the response data for one or more calls
+- a change in the request or response type (i.e. changing an integer to a float)
+- removing any part of the API.
+REST doesn’t provide any specific versioning guidelines, but the more commonly used approaches fall into four categories:
+- **URI Versioning:**<br>
+Using the URI is the most straightforward approach (and most commonly used as well) though it does violate the principle that a URI should refer to a unique resource. You are also guaranteed to break client integration when a version is updated.
+```
+http://api.example.com/v1
+http://apiv1.example.com
+The version need not be numeric, nor specified using the “v[x]” syntax.
+```
+Alternatives include dates, project names, seasons, or other identifiers that are meaningful enough to the team producing the APIs and flexible enough to change as the versions change.
+
+- **Query string versioning:**<br>
+Rather than providing multiple URIs, you can specify the version of the resource by using a parameter within the query string appended to the HTTP request, such as 
+```
+https://adventure-works.com/customers/3?version=2
+```
+The version parameter should default to a meaningful value such as 1 if it is omitted by older client applications.
+This approach has the semantic advantage that the same resource is always retrieved from the same URI, but it depends on the code that handles the request to parse the query string and send back the appropriate HTTP response. This approach also suffers from the same complications for implementing HATEOAS as the URI versioning mechanism.
+
+- **Versioning using Custom Request Header:**<br>
+A custom header (e.g. Accept-version) allows you to preserve your URIs between versions though it is effectively a duplicate of the content negotiation behavior implemented by the existing Accept header.
+```
+Accept-version: v1
+Accept-version: v2
+```
+
+- **Versioning using “Accept” header:**<br>
+Content negotiation may let you preserve a clean set of URLs, but you still have to deal with the complexity of serving different versions of content somewhere.
+This burden tends to be moved up the stack to your API controllers which become responsible for figuring out which version of a resource to send.
+The result tends to be a more complex API as clients have to know which headers to specify before requesting a resource.
+```
+Accept: application/vnd.example.v1+json
+Accept: application/vnd.example+json;version=1.0
+```
+If the Accept header does not specify any known media types, the web server could generate an HTTP 406 (Not Acceptable) response message or return a message with a default media type.
+In the real world, an API is never going to be completely stable. So it’s important how this change is managed.
+A well-documented and gradual deprecation of API can be an acceptable practice for most APIs.
 
 ### Provide Accurate API Documentation
 [TO DO]
