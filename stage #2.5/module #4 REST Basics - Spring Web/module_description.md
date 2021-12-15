@@ -335,10 +335,11 @@ The version parameter should default to a meaningful value such as 1 if it is om
 This approach has the semantic advantage that the same resource is always retrieved from the same URI, but it depends on the code that handles the request to parse the query string and send back the appropriate HTTP response. This approach also suffers from the same complications for implementing HATEOAS as the URI versioning mechanism.
 
 - **Versioning using Custom Request Header:**<br>
-A custom header (e.g. Accept-version) allows you to preserve your URIs between versions though it is effectively a duplicate of the content negotiation behavior implemented by the existing Accept header.
+A custom header (e.g. Accept-version) allows you to preserve your URIs between versions though it is effectively a duplicate of the content negotiation behavior implemented by the existing Accept header. Examples of cutom headers:<br>
 ```
 Accept-version: v1
-Accept-version: v2
+MyAPIVersionRequest-Header: 2
+api-version: 2
 ```
 
 - **Versioning using “Accept” header:**<br>
