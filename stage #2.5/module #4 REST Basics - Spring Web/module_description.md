@@ -251,13 +251,6 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&so
 ```
 
 ============================================================
-### Organize the API design around resources
-
-- **Use nouns instead of verbs in endpoint paths** [TO DO]
-
-- **Use Nesting on Endpoints to Show Relationships** [TO DO]
-
-- **Use Name convention** [TO DO]
 
 ### Define API operations in terms of HTTP methods 
 [TO DO]
@@ -274,8 +267,38 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&so
 ### Handle errors gracefully and return standard error codes
 [TO DO]
 
-### Maintain good security practices
-[TO DO]
+### Secure REST APIs and maintain good security practices
+Below given points may serve as a checklist for designing the security mechanism for REST APIs.
+
+- **Keep it Simple:**<br>
+Secure an API/System – just how secure it needs to be. Every time you make the solution more complex “unnecessarily,” you are also likely to leave a hole.
+
+- **Always Use HTTPS:**<br>
+Using SSL, the authentication credentials can be simplified to a randomly generated access token. The token is delivered in the username field of HTTP Basic Auth. 
+It’s relatively simple to use, and you get a lot of security features for free.
+
+- **Use Password Hash:**<br>
+Passwords must always be hashed to protect the system (or minimize the damage) even if it is compromised in some hacking attempts. There are many such hashing algorithms that can prove really effective for password security e.g. PBKDF2, bcrypt, and scrypt algorithms.
+
+- **Never expose information on URLs:**<br>
+Usernames, passwords, session tokens, and API keys should not appear in the URL, as this can be captured in web server logs, which makes them easily exploitable.
+```
+https://api.domain.com/user-management/users/{id}/someAction?apiKey=abcd123456789  //Very BAD !!
+```
+The above URL exposes the API key. So, never use this form of security.
+
+- **Consider OAuth:**<br>
+Though basic auth is good enough for most of the APIs and if implemented correctly, it’s secure as well – yet you may want to consider OAuth as well.
+The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its behalf.
+
+- **Consider Adding Timestamp in Request:**<br>
+Along with other request parameters, you may add a request timestamp as an HTTP custom header in API requests.
+The server will compare the current timestamp to the request timestamp and only accepts the request if it is after a reasonable timeframe (30 seconds, perhaps).
+This will prevent very basic replay attacks from people who are trying to brute force your system without changing this timestamp.
+
+- **Input Parameter Validation:**<br>
+Validate request parameters on the very first step, before it reaches application logic. Put strong validation checks and reject the request immediately if validation fails.
+In API response, send relevant error messages and examples of correct input format to improve user experience.
 
 ### Cache data to improve performance
 [TO DO]
