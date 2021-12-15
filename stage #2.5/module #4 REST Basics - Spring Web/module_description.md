@@ -175,11 +175,12 @@ http://api.example.com/song-management/users/{id}/playlists
 - ### controller:
 A controller resource models a procedural concept. Controller resources are like executable functions, with parameters and return values, inputs, and outputs.
 _**A REST API relies on controller resources to perform application specific actions that cannot be logically mapped to one of the standard methods (create, retrieve, update and delete).**_
-Use “verb” to denote controller archetype.
+Use “verb” to denote controller archetype. Controller  “verb” typically appear as the last segment in a URI path, with no child resources to follow them in the hierarchy. 
 ```
 http://api.example.com/cart-management/users/{id}/cart/checkout 
 http://api.example.com/song-management/users/{id}/playlist/play
 ```
+The example above shows a controller resource that allows a client to checkout his cart or start to play client's playlist.
 
 ### Use consistent resource naming conventions and URI formatting
 
