@@ -184,7 +184,7 @@ The example above shows a controller resource that allows a client to checkout h
 
 ### Use consistent resource naming conventions and URI formatting
 Using consistent resource naming conventions and URI formatting allows you to minimize ambiguity and maximize readability and maintainability. Below some design hints to achieve consistency:
-- **Use forward slash (/) to indicate hierarchical relationships:**
+- **Use forward slash (/) to indicate hierarchical relationships:**<br>
 The forward-slash (/) character is used in the path portion of the URI to indicate a hierarchical relationship between resources. e.g.
 ```
 http://api.example.com/device-management
@@ -193,35 +193,62 @@ http://api.example.com/device-management/managed-devices/{id}
 http://api.example.com/device-management/managed-devices/{id}/scripts
 http://api.example.com/device-management/managed-devices/{id}/scripts/{id}
 ```
-- **Do not use trailing forward slash (/) in URIs:**
-As the last character within a URI’s path, a forward slash (/) adds no semantic value and may confuse. It’s better to drop it from the URI.
+- **Do not use trailing forward slash (/) in URIs:**<br>
+As the last character within a URI’s path, a forward slash (/) adds no semantic value and may confuse. It’s better to drop it from the URI.<br> Examples:<br>
 ```
 http://api.example.com/device-management/managed-devices/ 
 http://api.example.com/device-management/managed-devices  /*This is much better version*/
 ```
-- **Use hyphens (-) to improve the readability of URIs:**
-To make your URIs easy for people to scan and interpret, use the hyphen (-) character to improve the readability of names in long path segments.
+- **Use hyphens (-) to improve the readability of URIs:**<br>
+To make your URIs easy for people to scan and interpret, use the hyphen (-) character to improve the readability of names in long path segments.<br> Examples:<br>
 ```
 http://api.example.com/device-management/managed-devices/
 http://api.example.com/device-management/managed-devices  /*This is much better version*/
 ```
-- **Do not use underscores ( _ ):**
+- **Do not use underscores ( _ ):**<br>
 It’s possible to use an underscore in place of a hyphen to be used as a separator – But depending on the application’s font, it is possible that _the underscore (_)_ _character can either get partially obscured or completely hidden in some browsers or screens._
-To avoid this confusion, use hyphens (-) instead of underscores ( _ ).
+To avoid this confusion, use hyphens (-) instead of underscores ( _ <br> Examples:<br>
 ```
 http://api.example.com/inventory-management/managed-entities/{id}/install-script-location  //More readable
 http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //(_) may be obscured or hidden 
                                                                                         //in some browsers or screens
 http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //Less readable
 ```
-- **Use lowercase letters in URIs:**
-When convenient, lowercase letters should be consistently preferred in URI paths.
+- **Use lowercase letters in URIs:**<br>
+When convenient, lowercase letters should be consistently preferred in URI paths.<br> Examples:<br>
 ```
 http://api.example.org/my-folder/my-doc       //1
 HTTP://API.EXAMPLE.ORG/my-folder/my-doc     //2
 http://api.example.org/My-Folder/my-doc       //3
 ```
 In the above examples, 1 and 2 are the same but 3 is not as it uses My-Folder in capital letters.
+
+- **Do not use file extensions:**<br>
+File extensions look bad and do not add any advantage. Removing them decreases the length of URIs as well. No reason to keep them.
+Apart from the above reason, if you want to highlight the media type of API using file extension, then you should rely on the media type, as communicated through the Content-Type header, to determine how to process the body’s content.<br> Examples:<br>
+```
+http://api.example.com/device-management/managed-devices.xml  /*Do not use xml in the URI*/
+http://api.example.com/device-management/managed-devices 	    /*This is correct URI*/
+```
+- **Never use CRUD function names in:**<br>
+We should not use URIs to indicate a CRUD function. URIs should only be used to uniquely identify the resources and not any action upon them.
+We should use HTTP request methods to indicate which CRUD function is performed.<br> Examples:<br>
+```
+HTTP GET http://api.example.com/device-management/managed-devices           //Get all devices
+HTTP POST http://api.example.com/device-management/managed-devices         //Create new Device
+HTTP GET http://api.example.com/device-management/managed-devices/{id}     //Get device for given Id
+HTTP PUT http://api.example.com/device-management/managed-devices/{id}     //Update device for given Id
+HTTP DELETE http://api.example.com/device-management/managed-devices/{id}  //Delete device for given Id
+```
+- **Use query component to filter URI collection:**<br>
+Often, you will encounter requirements where you will need a collection of resources sorted, filtered, or limited based on some specific resource attribute.
+For this requirement, do not create new APIs – instead, enable sorting, filtering, and pagination capabilities in resource collection API and pass the input parameters as query parameters.<br> Examples:<br>
+```
+http://api.example.com/device-management/managed-devices
+http://api.example.com/device-management/managed-devices?region=USA
+http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ
+http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&sort=installation-date
+```
 
 ============================================================
 ### Organize the API design around resources
