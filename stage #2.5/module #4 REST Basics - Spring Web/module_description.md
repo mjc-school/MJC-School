@@ -183,7 +183,16 @@ http://api.example.com/song-management/users/{id}/playlist/play
 The example above shows a controller resource that allows a client to checkout his cart or start to play client's playlist.
 
 ### Use consistent resource naming conventions and URI formatting
-
+Using consistent resource naming conventions and URI formatting allows you to minimize ambiguity and maximize readability and maintainability. Below some design hints to achieve consistency:
+- **Use forward slash (/) to indicate hierarchical relationships:**
+The forward-slash (/) character is used in the path portion of the URI to indicate a hierarchical relationship between resources. e.g.
+```
+http://api.example.com/device-management
+http://api.example.com/device-management/managed-devices
+http://api.example.com/device-management/managed-devices/{id}
+http://api.example.com/device-management/managed-devices/{id}/scripts
+http://api.example.com/device-management/managed-devices/{id}/scripts/{id}
+```
 
 ============================================================
 ### Organize the API design around resources
