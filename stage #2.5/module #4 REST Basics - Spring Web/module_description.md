@@ -83,12 +83,30 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
 REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
 Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
-For example, the given below JSON response may be from an API like HTTP GET http://api.domain.com/management/departments/10
+For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
 HATEOAS is a constraint of the REST application architecture. HATEOAS keeps the REST style architecture unique from most other network application architectures.
 The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
 REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
 Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
-For example, the given below JSON response may be from an API like HTTP GET http://api.domain.com/management/departments/10
+For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
+```
+{
+    "departmentId": 10,
+    "departmentName": "Administration",
+    "locationId": 1700,
+    "managerId": 200,
+    "links": [
+        {
+            "href": "10/employees",
+            "rel": "employees",
+            "type" : "GET"
+        }
+    ]
+}
+```
+In the example above, the response returned by the server contains hypermedia links to employee resources _10/employees_ which can be traversed by the client to read employees belonging to the department.
+The advantage of the above approach is that hypermedia links returned from the server drive the application’s state and not the other way around.
+JSON does not have any universally accepted format for representing links between two resources. We may choose to send in the response body or decide to send links in HTTP response headers.
 
 ## REST architectural constraints
 
@@ -114,6 +132,24 @@ Intermediary servers may improve system availability by enabling load-balancing 
 
 ## Basic principals of designing REST APIs
 
+### Use nouns to represent resources
+RESTful URI should refer to a resource that is a thing (noun) instead of referring to an action (verb) because nouns have properties that verbs do not have – similarly, resources have attributes. Some examples of a resource are:
+- Users of the system
+- User Accounts
+- Network Devices etc.
+and their resource URIs can be designed as below:
+```
+http://api.example.com/device-management/managed-devices 
+http://api.example.com/device-management/managed-devices/{device-id} 
+http://api.example.com/user-management/users
+http://api.example.com/user-management/users/{id}
+```
+Resources can be divided by the **resource archetypes** into four categories **(document, collection, store, and controller)**. Then it would be best if you always targeted to put a resource into one archetype and then use its naming convention consistently.
+
+### Use consistent resource naming conventions and URI formatting
+
+
+============================================================
 ### Organize the API design around resources
 
 - **Use nouns instead of verbs in endpoint paths** [TO DO]
