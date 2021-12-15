@@ -266,7 +266,17 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&so
 [TO DO]
 
 ### Handle errors gracefully and return standard error codes
-[TO DO]
+To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them.
+Common error HTTP status codes include:
+- **400 Bad Request** – This means that client-side input fails validation.
+- **401 Unauthorized** – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated.
+- **403 Forbidden** – This means the user is authenticated, but it’s not allowed to access a resource.
+- **404 Not Found** – This indicates that a resource is not found.
+- **500 Internal server error** – This is a generic server error. It probably shouldn’t be thrown explicitly.
+- **502 Bad Gateway** – This indicates an invalid response from an upstream server.
+- **503 Service Unavailable** – This indicates that something unexpected happened on server side. It can be anything like server overload, some parts of the system failed.<br>
+We should be throwing errors that correspond to the problem that our app has encountered. Error codes need to have messages accompanied with them so that the maintainers have enough information to troubleshoot the issue.
+Whenever our API does not successfully complete, we should fail gracefully by sending an error with information to help users make corrective action.
 
 ### Secure REST APIs and maintain good security practices
 Below given points may serve as a checklist for designing the security mechanism for REST APIs.
