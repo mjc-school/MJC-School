@@ -2,12 +2,12 @@
 
 ## Tasks: 
 -	Change table ‘Student’. 
- ‘Name’, ‘Surname’, ‘Birthdate’ fields cannot be null
+ ‘Birthday’ field cannot be null
 -	Change table ‘Mark’
 ‘Mark’ should be in range from 1 to 10
-‘StudentId’ and ‘SubjectId’ cannot be null
+‘Student_Id’ and ‘Subject_Id’ cannot be null
 -	Change table ‘Subject’
-‘Course’ should be in range from 1 to 5 
+‘Grade’ should be in range from 1 to 5 
 -	Change table ‘PaymentType’
 ‘Name’ should be a unique value
 -	Change table ‘Payment’
