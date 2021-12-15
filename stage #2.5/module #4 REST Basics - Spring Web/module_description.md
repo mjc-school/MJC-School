@@ -99,7 +99,8 @@ For example, the given below JSON response may be from an API like HTTP GET _htt
         {
             "href": "10/employees",
             "rel": "employees",
-            "type" : "GET"
+            "action":"GET",
+            "types":["text/xml","application/json"]
         }
     ]
 }
