@@ -75,7 +75,7 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 ## REST architectural constraints
 
-1.**Client-Server:**<br> REST application should have a client-server architecture. A Client is someone who is requesting resources and are not concerned with data storage, which remains internal to each server, and server is someone who holds the resources and are not concerned with the user interface or user state. They can evolve independently. Client doesn’t need to know anything about business logic and server doesn’t need to know anything about frontend UI.
+1.**Client-Server:**<br> REST application should have a client-server architecture. This constraint essentially means that client applications and server applications MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all. A Client requests resources and is not concerned with data storage, which remains internal to each server, and server holds the resources and is not concerned with the user interface or user state. They can evolve independently. Client doesn’t need to know anything about business logic and server doesn’t need to know anything about frontend UI.
 
 2.**Uniform Interface:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
 There are four guidelines principle of Uniform Interface are:
