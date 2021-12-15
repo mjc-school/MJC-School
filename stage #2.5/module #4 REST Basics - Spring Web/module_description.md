@@ -199,7 +199,29 @@ As the last character within a URI’s path, a forward slash (/) adds no semanti
 http://api.example.com/device-management/managed-devices/ 
 http://api.example.com/device-management/managed-devices  /*This is much better version*/
 ```
-
+- **Use hyphens (-) to improve the readability of URIs:**
+To make your URIs easy for people to scan and interpret, use the hyphen (-) character to improve the readability of names in long path segments.
+```
+http://api.example.com/device-management/managed-devices/
+http://api.example.com/device-management/managed-devices  /*This is much better version*/
+```
+- **Do not use underscores ( _ ):**
+It’s possible to use an underscore in place of a hyphen to be used as a separator – But depending on the application’s font, it is possible that _the underscore (_)_ _character can either get partially obscured or completely hidden in some browsers or screens._
+To avoid this confusion, use hyphens (-) instead of underscores ( _ ).
+```
+http://api.example.com/inventory-management/managed-entities/{id}/install-script-location  //More readable
+http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //(_) may be obscured or hidden 
+                                                                                        //in some browsers or screens
+http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //Less readable
+```
+- **Use lowercase letters in URIs:**
+When convenient, lowercase letters should be consistently preferred in URI paths.
+```
+http://api.example.org/my-folder/my-doc       //1
+HTTP://API.EXAMPLE.ORG/my-folder/my-doc     //2
+http://api.example.org/My-Folder/my-doc       //3
+```
+In the above examples, 1 and 2 are the same but 3 is not as it uses My-Folder in capital letters.
 
 ============================================================
 ### Organize the API design around resources
