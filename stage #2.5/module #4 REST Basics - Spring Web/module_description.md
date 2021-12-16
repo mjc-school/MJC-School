@@ -284,14 +284,19 @@ Where, **state** is a query parameter that implements a filter.
  
 - **Sorting:** Similar to filtering, a generic parameter sort can be used to describe sorting rules. Accommodate complex sorting requirements by letting the sort parameter take in list of comma separated fields, each with a possible unary negative to imply descending sort order. Let's look at some examples:
 ```
-GET /tickets?sort=-priority  //Retrieves a list of tickets in descending order of priority
-GET /tickets?sort=-priority,createdAt  //Retrieves a list of tickets in descending order of priority. 
-                                       //Within a specific priority, older tickets are ordered first
+GET /tickets?sort=-priority  //retrieves a list of tickets in descending order of priority
+GET /tickets?sort=-priority,createdAt  //retrieves a list of tickets in descending order of priority. 
+                                       //within a specific priority, older tickets are ordered first
+GET /users?sort=email&order=asc //sort by email in asc order
+GET /users?sort=email.asc //sort by email in asc order
 ```
-- **Pagination:** When the dataset is too large, we divide the data set into smaller chunks, which helps in improving the performance and is easier to handle the response.<br> Example:
+- **Pagination:** When the dataset is too large, we divide the data set into smaller chunks, which helps in improving the performance and is easier to handle the response.
+ Usin Limit/Offset is the simplest form of paging. Limit/Offset became popular with apps using SQL databases which already have LIMIT and OFFSET as part of the SQL SELECT Syntax. <br> Example:
  ```
  GET /companies?limit=20 //get the list of first 20 companies
- GET /items?limit=20&offset=20 //get next 20 companies
+ GET /companies?limit=20&offset=20 //get next 20 companies
+ GET /companies?limit=20&after_id=20 //get 20 companies after the id of ‘20’
+ GET /companies?limit=20&after_id=20&sort_by=name //get 20 companies after the id of ‘20’ sorting by company name
  GET /companies?page=23 //get the list of companies on 23rd page.
  ```
 - **Searching:** Sometimes basic filters aren't enough and you need the power of full text search. Perhaps you're already using ElasticSearch or another Lucene based search technology. When full text search is used as a mechanism of retrieving resource instances for a specific type of resource, it can be exposed on the API as a query parameter on the resource's endpoint. Let's say, Search queries should be passed straight to the search engine and API output should be in the same format as a normal list result.
@@ -304,28 +309,62 @@ GET /tickets?q=return&state=open&sort=-priority,createdAt  //Retrieve the highes
  ```
  You can use more complex query for searching resources e.g. adding a range, conditional expressions for searching like:
  ```
- GET /items?price[gte]=10&price[lte]=100 //find all the items where the price is greater than or equal to 10, but less than or equal to 100.
+ GET /items?price[gte]=10&price[lte]=100 //find all the items where the price is 
+                                         //greater than or equal to 10, but less than or equal to 100.
  ```
 We can have as many operators as needed such as **[lte], [gte], [exists], [regex], [before], and [after]**. Brackets are a little harder to parse on server side, but provides greater flexibility in what the filter value is for clients. No need to handle special characters differently.
 Similar to the bracket approach, you can design an API to take the operator using colon symbol **:**.<br>
 For example:
 ```
-GET /items?price=gte:10&price=lte:100 //find all the items where the price is greater than or equal to 10, but less than or equal to 100.
+GET /items?price=gte:10&price=lte:100 //find all the items where the price is greater than 
+                                      //or equal to 10, but less than or equal to 100.
 ```
 You can combine the two approaches (using bracket and colon symbol) to search for a resources.<br>
 Example:
 ```
-GET /items?q=title:red chair AND price:[10 TO 100] //search items for those that contain the terms red chair and the price is greater than or equal to 10 and  
-                                                   //less than or equal to 100
+GET /items?q=title:red chair AND price:[10 TO 100] //search items for those that contain the terms red chair   
+                                                   //and the price is greater than or equal to 10 and  less than or equal to 100
 ```
  If adding many query params in GET methods makes the URI too long, the server may respond with 414 URI Too long HTTP status. To avoid the issues you can store commonly - used queries on the server side and pass only the query alias as parameter or a part of path.
  
  - **Use aliases for common queries:** To make the API experience more pleasant for the average consumer, consider packaging up sets of conditions into easily accessible RESTful paths. For example, the recently closed tickets query above could be packaged up as 
  ```
  GET /tickets/recently_closed //query alias in the path
- GET /tickets/?queryAlias=recently_closed //query alias as a parameter
+ GET /tickets/?queryAlias=recently_closed //query alias as a parameter 
  ```
  Where recently_closed is the alias for a set of query parameters stored at the server side.
+ 
+ - **Limiting which fields are returned by the API:** The API consumer doesn't always need the full representation of a resource. The ability to select and chose returned fields goes a long way in letting the API consumer minimize network traffic and speed up their own usage of the API.
+Use a fields query parameter that takes a comma separated list of fields to include. For example, the following request would retrieve just enough information to display a sorted listing of open tickets:
+```
+GET /tickets?fields=id,subject,updated_at&state=open&sort=-updated_at
+```
+**Note:** This approach can also be combined with with autoloading of related resources see below:
+```
+GET /tickets?embed=customer&fields=id,customer.id,customer.name
+```
+- **Auto loading related resource representations:** There are many cases where an API consumer needs to load data related to (or referenced from) the resource being requested. Rather than requiring the consumer to hit the API repeatedly for this information, there would be a significant efficiency gain from allowing related data to be returned and loaded alongside the original resource on demand.
+However, as this goes against some RESTful principles, You can minimize this deviation by only doing so based on an embed (or expand) query parameter.
+In this case, embed would be a comma separated list of fields to be embedded. Dot-notation could be used to refer to sub-fields.<br> For example:
+```
+GET /tickets/12?embed=customer.name,assigned_user
+```
+This would return a ticket with additional details embedded, like:
+```
+{
+  "id" : 12,
+  "subject" : "I have a question!",
+  "summary" : "Hi, ....",
+  "customer" : {
+    "name" : "Bob"
+  },
+  assigned_user: {
+   "id" : 42,
+   "name" : "Jim",
+  }
+}
+```
+Of course, ability to implement something like this really depends on internal complexity. This kind of embedding can easily result in an **N+1 select issue**.
 
 ### Handle errors gracefully and return standard error codes
 To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them. The API should always return sensible HTTP status codes. API errors typically break down into 2 types: **400 series status codes for client issues** & **500 series status codes for server issues**.<br>
@@ -439,12 +478,8 @@ The Last-Modified value cannot be less than Date value.
 ```
 Last-Modified: Fri, 10 May 2016 09:17:49 GMT
 ```
-
-### Support partial responses for large binary resources
-[TO DO]
-
 ### Use HATEOAS to enable navigation to related resources
-[TO DO]
+The single most important reason for HATEOAS is **loose coupling**. If a consumer of a REST service needs to hard-code all the resource URLs, then it is tightly coupled with your service implementation. Instead, if you return the URLs, it could use for the actions, then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. When you design a RESTful service, there is a need to specify how to return data and links corresponding to a request. HATEOAS is a simple way that gives an easy, consistent way to hyperlink between resources in your REST API.
 
 ### Versioning a REST API
 APIs only need to be up-versioned when a breaking change is made.
