@@ -250,6 +250,18 @@ http://api.example.com/device-management/managed-devices?region=USA
 http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ
 http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&sort=installation-date
 ```
+- **Consistent subdomain names should be used for your APIs:**<br>
+The top-level domain and first subdomain names (e.g., soccer.restapi.org) of an API should identify its service owner. The full domain name of an API should add a subdomain named api.
+For example:
+```
+http://**api**.soccer.restapi.org
+```
+- **Consistent subdomain names should be used for your client developer portal:**<br>
+Many REST APIs have an associated website, known as a developer portal.
+For example:
+```
+http://developer.soccer.restapi.org
+```
 
 ### Define API operations in terms of HTTP methods and HTTP response status codes
 HTTP has defined few sets of methods which indicates the type of action to be performed on the resources.
@@ -260,7 +272,7 @@ The below table summarises the use of mostly-used HTTP methods and HTTP response
 | <b>POST</b>  | Create         | **201 (Created)**, ‘Location’ header with link to /users/{id} containing new ID                            | Avoid using POST on a single resource                                            |
 | <b>GET</b>   | Read           | **200 (OK)**, list of users. Use pagination, sorting, and filtering to navigate big lists; <p>**404 (Not Found)** if resources not found.                 | **200 (OK)**, single user. <p>**404 (Not Found)** if resource not found or invalid ID               |
 | <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity; <p>**204 (No Content)** if the action has been performed but the response does not include an entity; <p>**404 (Not Found)** if resource not found or invalid ID; <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource. |           **200 (OK)** if the response includes an entity describing the status;            
-| <b>DELETE</b>| Delete         | 405 (Method not allowed), unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
+| <b>DELETE</b>| Delete         | **405 (Method not allowed)**, unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
 ### Allow filtering, sorting, and pagination
 [TO DO]
