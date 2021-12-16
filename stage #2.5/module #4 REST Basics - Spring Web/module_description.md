@@ -274,7 +274,7 @@ Common error HTTP status codes include:
 - **404 Not Found** – This indicates that a resource is not found.
 - **406 Not Acceptable** – This indicates that the server cannot produce a response matching the list of acceptable values defined in the request's proactive content negotiation
                            headers, and that the server is unwilling to supply a default representation.
-- **409 Conflict** – This indicates a request conflict with current state of the target resource. Conflicts are most likely to occur in response to a PUT or POST request.
+- **409 Conflict** – This indicates a request conflict with current state of the target resource. Conflicts are most likely to occur in response to a PUT or POST request. 
 - **500 Internal server error** – This is a generic server error. It probably shouldn’t be thrown explicitly.
 - **502 Bad Gateway** – This indicates an invalid response from an upstream server.
 - **503 Service Unavailable** – This indicates that something unexpected happened on server side. It can be anything like server overload, some parts of the system failed.<br>
