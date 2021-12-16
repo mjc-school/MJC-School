@@ -254,7 +254,7 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&so
 The top-level domain and first subdomain names (e.g., soccer.restapi.org) of an API should identify its service owner. The full domain name of an API should add a subdomain named api.
 For example:
 ```
-http://**api**.soccer.restapi.org
+http://<bold>api</bold>.soccer.restapi.org
 ```
 - **Consistent subdomain names should be used for your client developer portal:**<br>
 Many REST APIs have an associated website, known as a developer portal.
@@ -280,13 +280,15 @@ The below table summarises the use of mostly-used HTTP methods and HTTP response
 ### Handle errors gracefully and return standard error codes
 To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them.
 Common error HTTP status codes include:
-- **400 Bad Request** – This means that client-side input fails validation.
+- **400 Bad Request** – This means that server fails to parse the request body (the reason of development errors). For example:Sending invalid JSON will result in a 400 Bad  Request response.Sending the wrong type of JSON values will result in a 400 Bad Request response. 
 - **401 Unauthorized** – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated.
 - **403 Forbidden** – This means the user is authenticated, but it’s not allowed to access a resource.
 - **404 Not Found** – This indicates that a resource is not found.
 - **406 Not Acceptable** – This indicates that the server cannot produce a response matching the list of acceptable values defined in the request's proactive content negotiation
                            headers, and that the server is unwilling to supply a default representation.
-- **409 Conflict** – This indicates a request conflict with current state of the target resource. Conflicts are most likely to occur in response to a PUT or POST request. 
+- **409 Conflict** – This indicates a request conflict with current state of the target resource. Conflicts are most likely to occur in response to a PUT or POST request when violating the resource constrains.
+ - **422 Unprocessable Entity** – This indicates that the server understands the content type of the request entity, and the syntax of the request entity is correct, 
+but it was unable to process the contained instructions.The Status code is used quite often to signify validation errors (end client errors).For example:Sending invalid fields will result in a 422 Unprocessable Entity response.
 - **500 Internal server error** – This is a generic server error. It probably shouldn’t be thrown explicitly.
 - **502 Bad Gateway** – This indicates an invalid response from an upstream server.
 - **503 Service Unavailable** – This indicates that something unexpected happened on server side. It can be anything like server overload, some parts of the system failed.<br>
