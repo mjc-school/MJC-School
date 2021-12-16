@@ -254,7 +254,7 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&so
 The top-level domain and first subdomain names (e.g., soccer.restapi.org) of an API should identify its service owner. The full domain name of an API should add a subdomain named api.
 For example:
 ```
-http://<bold>api</bold>.soccer.restapi.org
+http://api.soccer.restapi.org
 ```
 - **Consistent subdomain names should be used for your client developer portal:**<br>
 Many REST APIs have an associated website, known as a developer portal.
@@ -274,8 +274,58 @@ The below table summarises the use of mostly-used HTTP methods and HTTP response
 | <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity;<br> <p>**400 (Bad Request)**, if the server fails to parse the request body (the reason of development errors); <p>**403 (Forbidden)**, if user is authenticated, but it’s not allowed to access a resource;<br> <p>**404 (Not Found)** if resource not found or invalid ID;<br> <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource; |           **200 (OK)** if the response includes an entity describing the status; <p>**422 (Unprocessable Entity)**, if the server can't proccess request data due to validation errors caused by end client because of sending invalid fields.           
 | <b>DELETE</b>| Delete         | **405 (Method not allowed)**, unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
-### Allow filtering, sorting, and pagination
-[TO DO]
+### Allow filtering, sorting, pagination and searching
+Complex result filters, sorting requirements, data pagination and advanced searching (when restricted to a single type of resource) can all be easily implemented as query parameters on top of the base URL.
+- **Filtering:** Use a unique query parameter for each field that implements filtering. For example, when requesting a list of tickets from the **/tickets** endpoint, you may want to limit these to only those in the open state. This could be accomplished with a request like
+```
+GET /tickets?state=open
+```
+Where, **state** is a query parameter that implements a filter.
+ 
+- **Sorting:** Similar to filtering, a generic parameter sort can be used to describe sorting rules. Accommodate complex sorting requirements by letting the sort parameter take in list of comma separated fields, each with a possible unary negative to imply descending sort order. Let's look at some examples:
+```
+GET /tickets?sort=-priority  //Retrieves a list of tickets in descending order of priority
+GET /tickets?sort=-priority,createdAt  //Retrieves a list of tickets in descending order of priority. 
+                                       //Within a specific priority, older tickets are ordered first
+```
+- **Pagination:** When the dataset is too large, we divide the data set into smaller chunks, which helps in improving the performance and is easier to handle the response.<br> Example:
+ ```
+ GET /companies?limit=20 //get the list of first 20 companies
+ GET /items?limit=20&offset=20 //get next 20 companies
+ GET /companies?page=23 //get the list of companies on 23rd page.
+ ```
+- **Searching:** Sometimes basic filters aren't enough and you need the power of full text search. Perhaps you're already using ElasticSearch or another Lucene based search technology. When full text search is used as a mechanism of retrieving resource instances for a specific type of resource, it can be exposed on the API as a query parameter on the resource's endpoint. Let's say, Search queries should be passed straight to the search engine and API output should be in the same format as a normal list result.
+Combining these together, we can build queries like:
+```
+GET /tickets?sort=-updatedAt  //Retrieve recently updated tickets
+GET /tickets?state=closed&sort=-updatedAt  //Retrieve recently closed tickets
+GET /tickets?q=return&state=open&sort=-priority,createdAt  //Retrieve the highest priority open tickets 
+                                                           //mentioning the word 'return'
+ ```
+ You can use more complex query for searching resources e.g. adding a range, conditional expressions for searching like:
+ ```
+ GET /items?price[gte]=10&price[lte]=100 //find all the items where the price is greater than or equal to 10, but less than or equal to 100.
+ ```
+We can have as many operators as needed such as **[lte], [gte], [exists], [regex], [before], and [after]**. Brackets are a little harder to parse on server side, but provides greater flexibility in what the filter value is for clients. No need to handle special characters differently.
+Similar to the bracket approach, you can design an API to take the operator using colon symbol **:**.<br>
+For example:
+```
+GET /items?price=gte:10&price=lte:100 //find all the items where the price is greater than or equal to 10, but less than or equal to 100.
+```
+You can combine the two approaches (using bracket and colon symbol) to search for a resources.<br>
+Example:
+```
+GET /items?q=title:red chair AND price:[10 TO 100] //search items for those that contain the terms red chair and the price is greater than or equal to 10 and  
+                                                   //less than or equal to 100
+```
+ If adding many query params in GET methods makes the URI too long, the server may respond with 414 URI Too long HTTP status. To avoid the issues you can store commonly - used queries on the server side and pass only the query alias as parameter or a part of path.
+ 
+ - **Use aliases for common queries:** To make the API experience more pleasant for the average consumer, consider packaging up sets of conditions into easily accessible RESTful paths. For example, the recently closed tickets query above could be packaged up as 
+ ```
+ GET /tickets/recently_closed //query alias in the path
+ GET /tickets/?queryAlias=recently_closed //query alias as a parameter
+ ```
+ Where recently_closed is the alias for a set of query parameters stored at the server side.
 
 ### Handle errors gracefully and return standard error codes
 To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them. The API should always return sensible HTTP status codes. API errors typically break down into 2 types: **400 series status codes for client issues** & **500 series status codes for server issues**.<br>
