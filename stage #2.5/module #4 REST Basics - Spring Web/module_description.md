@@ -269,16 +269,16 @@ _The URL is a sentence, where resources are nouns and HTTP methods are verbs._
 The below table summarises the use of mostly-used HTTP methods and HTTP response status codes.
 | HTTP Method  | CRUD           | Collection Resource (e.g. /users)                                                                      | Single Resource (e.g. /users/123)                                                |
 | -------------|:--------------:| -------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|
-| <b>POST</b>  | Create         | **201 (Created)**, ‘Location’ header with link to /users/{id} containing new ID                            | Avoid using POST on a single resource                                            |
-| <b>GET</b>   | Read           | **200 (OK)**, list of users. Use pagination, sorting, and filtering to navigate big lists;<br> <p>**404 (Not Found)** if resources not found.                 | **200 (OK)**, single user.<br> <p>**404 (Not Found)** if resource not found or invalid ID               |
-| <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity;<br> <p>**204 (No Content)** if the action has been performed but the response does not include an entity;<br> <p>**404 (Not Found)** if resource not found or invalid ID;<br> <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource. |           **200 (OK)** if the response includes an entity describing the status;            
+| <b>POST</b>  | Create         | **201 (Created)**, ‘Location’ header with link to /users/{id} containing new ID; <p>**400 (Bad Request)**, if the server fails to parse the request body (the reason of development errors); <p>**409 (Conflict)**, if a request conflict with current state of the target resource; <p>**422 (Unprocessable Entity)**, if the server can't proccess request data due to validation errors caused by end client because of sending invalid fields.                            | Avoid using POST on a single resource                                            |
+| <b>GET</b>   | Read           | **200 (OK)**, list of users. Use pagination, sorting, and filtering to navigate big lists;<br> <p>**403 (Forbidden)**, if user is authenticated, but it’s not allowed to access a resource; <p>**404 (Not Found)** if resources not found.                 | **200 (OK)**, single user.<br> <p>**404 (Not Found)** if resource not found or invalid ID               |
+| <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity;<br> <p>**400 (Bad Request)**, if the server fails to parse the request body (the reason of development errors); <p>**403 (Forbidden)**, if user is authenticated, but it’s not allowed to access a resource;<br> <p>**404 (Not Found)** if resource not found or invalid ID;<br> <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource; |           **200 (OK)** if the response includes an entity describing the status; <p>**422 (Unprocessable Entity)**, if the server can't proccess request data due to validation errors caused by end client because of sending invalid fields.           
 | <b>DELETE</b>| Delete         | **405 (Method not allowed)**, unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
 ### Allow filtering, sorting, and pagination
 [TO DO]
 
 ### Handle errors gracefully and return standard error codes
-To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them.
+To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them. The API should always return sensible HTTP status codes. API errors typically break down into 2 types: **400 series status codes for client issues** & **500 series status codes for server issues**.<br>
 Common error HTTP status codes include:
 - **400 Bad Request** – This means that server fails to parse the request body (the reason of development errors). For example:Sending invalid JSON will result in a 400 Bad  Request response.Sending the wrong type of JSON values will result in a 400 Bad Request response. 
 - **401 Unauthorized** – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated.
@@ -293,7 +293,34 @@ but it was unable to process the contained instructions.The Status code is used 
 - **502 Bad Gateway** – This indicates an invalid response from an upstream server.
 - **503 Service Unavailable** – This indicates that something unexpected happened on server side. It can be anything like server overload, some parts of the system failed.<br>
 
-We should be throwing errors that correspond to the problem that our app has encountered. Error codes need to have messages accompanied with them so that the maintainers have enough information to troubleshoot the issue.
+ We should be throwing errors that correspond to the problem that our app has encountered. Error codes need to have messages accompanied with them so that the maintainers have enough information to troubleshoot the issue.
+ A response error body should provide a few things for the developer - a useful error message, a unique error code (that can be looked up for more details in the docs) and possibly a detailed description. Some examples:
+```
+{
+  "code" : 1234,
+  "message" : "Something bad happened :(",
+  "description" : "More details about the error here"
+}
+ ```
+Validation errors for **PUT, PATCH and POST** requests will _**need a field breakdown**_. This is best modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:
+```
+{
+  "code" : 1024,
+  "message" : "Validation Failed",
+  "errors" : [
+    {
+      "code" : 5432,
+      "field" : "first_name",
+      "message" : "First name cannot have fancy characters"
+    },
+    {
+       "code" : 5622,
+       "field" : "password",
+       "message" : "Password cannot be blank"
+    }
+  ]
+}
+```
 Whenever our API does not successfully complete, we should fail gracefully by sending an error with information to help users make corrective action.
 
 ### Secure REST APIs and maintain good security practices
