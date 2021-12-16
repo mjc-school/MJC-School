@@ -11,6 +11,8 @@
 
 ### Exception handling in Spring Web
 
+### Spring HATEOAS
+
 ### Spring Web Flow
 
 ### Testing in Spring Web
