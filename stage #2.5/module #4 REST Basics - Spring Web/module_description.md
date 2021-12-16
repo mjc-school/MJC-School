@@ -251,16 +251,16 @@ http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ
 http://api.example.com/device-management/managed-devices?region=USA&brand=XYZ&sort=installation-date
 ```
 
-============================================================
-
-### Define API operations in terms of HTTP methods and realated HTTP response status codes
-The below table summarises the use of HTTP methods and realated HTTP response status codes.
+### Define API operations in terms of HTTP methods and HTTP response status codes
+HTTP has defined few sets of methods which indicates the type of action to be performed on the resources.
+_The URL is a sentence, where resources are nouns and HTTP methods are verbs._
+The below table summarises the use of mostly-used HTTP methods and HTTP response status codes.
 | HTTP Method  | CRUD           | Collection Resource (e.g. /users)                                                                      | Single Resource (e.g. /users/123)                                                |
 | -------------|:--------------:| -------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|
-| <b>POST</b>  | Create         | 201 (Created), ‘Location’ header with link to /users/{id} containing new ID                            | Avoid using POST on a single resource                                            |
-| <b>GET</b>   | Read           | 200 (OK), list of users. Use pagination, sorting, and filtering to navigate big lists                  | 200 (OK), single user. 404 (Not Found), if ID not found or invalid               |
-| <b>PUT</b>   | Update/Replace | 405 (Method not allowed), unless you want to update every resource in the entire collection of resource| 200 (OK) or 204 (No Content). Use 404 (Not Found), if ID is not found or invalid |                       
-| <b>DELETE</b>| Delete         | 405 (Method not allowed), unless you want to delete the whole collection — use with caution            | **200 (OK)** if the response includes an entity describing the status; <p>**202 (Accepted)** if the action has been queued; <p>**204 (No Content)** if the action has been performed but the response does not include an entity; <p>**404 (Not Found)** if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
+| <b>POST</b>  | Create         | **201 (Created)**, ‘Location’ header with link to /users/{id} containing new ID                            | Avoid using POST on a single resource                                            |
+| <b>GET</b>   | Read           | **200 (OK)**, list of users. Use pagination, sorting, and filtering to navigate big lists; <p>**404 (Not Found)** if resources not found.                 | **200 (OK)**, single user. <p>**404 (Not Found)** if resource not found or invalid ID               |
+| <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity; <p>**204 (No Content)** if the action has been performed but the response does not include an entity; <p>**404 (Not Found)** if resource not found or invalid ID; <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource. |           **200 (OK)** if the response includes an entity describing the status;            
+| <b>DELETE</b>| Delete         | 405 (Method not allowed), unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
 ### Allow filtering, sorting, and pagination
 [TO DO]
