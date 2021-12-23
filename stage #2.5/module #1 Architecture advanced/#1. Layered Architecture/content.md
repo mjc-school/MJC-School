@@ -1,14 +1,12 @@
 <H1 style="color: green">Layered Architecture</h1>
 
-***
-
 ## Pattern Description
 
-Layered architecture patterns are n-tier patterns where the components are organized in horizontal layers and each layer has a specific role in the application (e.g., presentation logic or business logic). It means to be self-independent. All components should be interconnected, but not dependent on each other.
+Layered architecture patterns are n-tier patterns where the components are organized in horizontal layers and each layer has a specific role in the application (e.g. presentation logic or business logic). It means to be self-independent. All components should be interconnected, but not dependent on each other.
 
 Although the layered architecture pattern does not specify the number and types of layers that must exist in the pattern, most layered architectures consist of four standard layers: presentation, business, persistence, and database.
 
-In some cases, the business layer and persistence layer are combined into a single business layer, particularly when the persistence logic (e.g., SQL or HSQL) is embedded within the business layer components. Thus, smaller applications may have only three layers, whereas larger and more complex business applications may contain five or more layers.
+In some cases, the business layer and persistence layer are combined into a single business layer, particularly when the persistence logic (e.g. SQL or HSQL) is embedded within the business layer components. Thus, smaller applications may have only three layers, whereas larger and more complex business applications may contain five or more layers.
 
 ![](./media/layered_architecture.png "Layered Architecture")
 
@@ -31,7 +29,17 @@ Consider a request from a business user to get customer information for a specif
 
 ![](./media/pattern_example.png "Pattern example")
 
-The customer screen is responsible for accepting the request and displaying the customer information. It does not know where the data is, how it is retrieved, or how many database tables must be queries to get the data. Once the customer screen receives a request to get customer information for a particular individual, it then forwards that request onto the customer delegate module. This module is responsible for knowing which modules in the business layer can process that request and also how to get to that module and what data it needs. The customer object in the business layer is responsible for aggregating all of the information needed by the business request. This module calls out to the customer dao (data access object) module in the persistence layer to get customer data, and also the order dao module to get order information. These modules in turn execute SQL statements to retrieve the corresponding data and pass it back up to the customer object in the business layer. Once the customer object receives the data, it aggregates the data and passes that information back up to the customer delegate, which then passes that data to the customer screen to be presented to the user.
+The customer screen is responsible for accepting the request and displaying the customer information. It does not know where the data is, how it is retrieved, or how many database tables must be queries to get the data. 
+
+Once the customer screen receives a request to get customer information for a particular individual, it then forwards that request onto the customer delegate module.
+
+This module is responsible for knowing which modules in the business layer can process that request and also how to get to that module and what data it needs. 
+
+The customer object in the business layer is responsible for aggregating all of the information needed by the business request.
+
+This module calls out to the customer dao (data access object) module in the persistence layer to get customer data, and also the order dao module to get order information. 
+
+These modules in turn execute SQL statements to retrieve the corresponding data and pass it back up to the customer object in the business layer. Once the customer object receives the data, it aggregates the data and passes that information back up to the customer delegate, which then passes that data to the customer screen to be presented to the user.
 
 ## Architecture sinkhole anti-pattern
 
