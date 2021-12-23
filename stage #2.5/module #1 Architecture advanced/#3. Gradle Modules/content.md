@@ -1,7 +1,5 @@
 <H1 style="color: green">Gradle Modules</h1>
 
-***
-
 ## The main reasons for using multiple modules
 
 When projects become bigger, however, we might want to split our codebase into multiple build modules for better maintainability and understandability.
