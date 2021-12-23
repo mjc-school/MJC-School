@@ -1,7 +1,5 @@
 <H1 style="color: green">MVC (Model–view–controller)</h1>
 
-***
-
 ## Pattern Description
 
 MVC stands for model-view-controller. Here's what each of those components mean:
@@ -25,9 +23,9 @@ The concept of MVCs was first introduced by Trygve Reenskaug, who proposed it as
 MVC design allows for Separation of Concerns - dividing the logic up between the 3 buckets, so that each bucket can act independently.
 The model, view, and controller don’t depend on each other. Why does this matter? Generally, software is worked on by teams - a team might have a designer, engineer, and database architect. Separation of concerns means each team member can work on their piece at the same time, because logic has been separated into buckets. Separation of concerns is also great for maitenance - developers can fix a bug in one piece of code, without having to check out the other pieces of code.
 
-### Loosely Coupled
+### Loose Coupling
 
-Loosely coupled means that each piece: the model, view and controller, act independently of eachother.
+Loose Coupling means that each piece: the model, view and controller, act independently of each other.
 Developers can modify one of the pieces, and the other 2 pieces should keep working and not require modifications. When designing MVC software – the logic in each of the three buckets is independent. Everything in View acts independently of the model – and vice verse, the view won’t have any logic dependent on the model.
 Making independent models and views makes code organization simple and easy to understand and keeps maintenance easier. Programmers can fix a bug in the view without changing the model code.
 
