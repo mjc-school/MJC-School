@@ -1,9 +1,8 @@
 # SUBQUERY
 
 ## Tasks
-1) Select all students where average mark is higher than 4
-2) Select all students where paid amount to them is more than 10000$
-3) Select the subject where is the highest average mark
+1) Select all columns from Subject where average mark for that subject is more then average mark for all subjects
+2) Select all students who paid for school less than average paid amount for all students
 
 
 ## Materials
