@@ -32,3 +32,10 @@ Controller executes the business logic, sets the processing result in Model and 
 DispatcherServlet dispatches the task of resolving the View corresponding to the View name to ViewResolver. ViewResolver returns the View mapped to View name.
 DispatcherServlet dispatches the rendering process to returned View.
 View renders Model data and returns the response.
+
+
+## Spring MVC example project
+Spring MVC and Java-Based Configuration
+https://dzone.com/articles/spring-mvc-and-java-based-configuration-1
+Spring MVC using Java based configuration
+https://www.geeksforgeeks.org/spring-mvc-using-java-based-configuration/
