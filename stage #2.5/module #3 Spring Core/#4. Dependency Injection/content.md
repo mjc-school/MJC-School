@@ -4,9 +4,9 @@
 
 A typical Java application will have three layers in its architecture: web, business and data.
 
-* The web layer
-* The business layer
-* The data layer
+- The web layer
+- The business layer
+- The data layer
 
 In the above scenario:
 
@@ -19,11 +19,12 @@ Let’s look at an example:
 
 @Repository
 public class ExampleRepository {
-    // some database-related code goes here
+    // some database-related code goes here...
 }
 
 @Service
 public class ExampleService {
+    
     private final ExampleRepository repository;
 
     public ExampleService(ExampleRepository repository) {
@@ -46,6 +47,7 @@ public class ExampleController {
     public ExampleController(ExampleService service) {
         this.service = service;
     }
+    
     // some end-points definition code goes here...
 }
 ```
@@ -53,8 +55,8 @@ public class ExampleController {
 In the example above ExampleService is the business class, and it makes use of one data layer class - ExampleRepository.
 Also, we have two methods defined in ExampleService class:
 
-* readSomeDataById - returns data by provided id
-* saveSomeData - saves provided data
+- readSomeDataById - returns data by provided id
+- saveSomeData - saves provided data
 
 Both methods in ExampleService require ExampleRepository instance to do their logic. ExampleRepository is a dependency
 of ExampleService.
@@ -68,6 +70,7 @@ Have a look at the following example of code:
 
 ```java
 public class ComplexAlgorithm {
+    
     private final BubbleSortingAlgorithm sortingAlgorithm = new BubbleSortingAlgorithm();
 }
 ```
@@ -95,6 +98,7 @@ public interface SortingAlgorithm {
 }
 
 public class ComplexAlgorithm {
+    
     private SortingAlgorithm sortingAlgorithm;
 
     public ComplexAlgorithm(SortingAlgorithm sortingAlgorithm) {
@@ -120,6 +124,7 @@ Whichever class wants to make use of ComplexAlgorithm needs to write code such a
 
 ```java
 public class Program {
+    
     public static void main(String[] args) {
         CompexAlgorithm binarySearch = new ComplexAlgorithm(new QuickSortingAlgorithm());
     }
@@ -137,6 +142,7 @@ code for all it manually? How about having a framework that does this for you?
 Let’s consider the following example:
 
 ```java
+
 @Component
 public class QuickSortingAlgorithm implements SortingAlgorithm {
     // implementation...
@@ -144,19 +150,100 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
 
 @Component
 public class ComplexAlgorithm {
-    private SortingAlgorithm sortingAlgorithm;
 
     @Autowired
-    public ComplexAlgorithm(SortingAlgorithm sortingAlgorithm) {
-        this.sortingAlgorithm = sortingAlgorithm;
-    }
+    private SortingAlgorithm sortingAlgorithm;
 }
 ```
 
-When this code is run - Spring creates an instance of QuickSortingAlgorithm which implements SortingAlgorithm interface, and
-wires it into an instance of ComplexAlgorithm.
+When this code is run - Spring creates an instance of QuickSortingAlgorithm which implements SortingAlgorithm interface,
+and wires it into an instance of ComplexAlgorithm.
 
 This process, where the Spring framework identifies the beans, identifies the dependencies, and populates the
 dependencies inside the beans is called dependency injection.
 
 ## Types of Dependency injection in Spring
+
+Dependency Injection in Spring can be done through constructors, setters or fields.
+
+### Constructor-Based Dependency Injection
+
+In the case of constructor-based dependency injection, the container will invoke a constructor with arguments each
+representing a dependency we want to set.
+
+Spring resolves each argument primarily by type, followed by name of the attribute, and index for disambiguation. Let's
+see the example:
+
+```java
+
+@Component
+public class ConsumerBean {
+
+    private final DependencyBean dependency;
+
+    @Autowired
+    public ConsumerBean(DependencyBean dependency) {
+        this.dependency = dependency;
+    }
+}
+```
+
+In the example above we declared a single explicit constructor with a component dependency as an argument. Spring will
+try to find an instance of *DependencyBean* class and provide it as an argument to the *ConsumerBean* class constructor.
+
+Also, it is worth to mention, that in case when only one constructor is declared in a component class, spring will use
+it to inject any required dependencies, so annotation *@Autowired* is not required in this case.
+
+### Setter-Based Dependency Injection
+
+For setter-based DI, the container will call setter methods of our class after invoking a no-argument constructor or
+no-argument static factory method to instantiate the bean. Let's create see an example:
+
+```java
+
+@Component
+public class ConsumerBean {
+
+    private DependencyBean dependency;
+
+    @Autowired
+    public void setDependency(DependencyBean dependency) {
+        this.dependency = dependency;
+    }
+}
+```
+
+We can combine constructor-based and setter-based types of injection for the same bean. The Spring documentation
+recommends using constructor-based injection for mandatory dependencies, and setter-based injection for optional ones.
+
+### Field-Based Dependency Injection
+
+In case of Field-Based DI, we can inject the dependencies by marking them with an *@Autowired* annotation:
+
+```java
+
+@Component
+public class ConsumerBean {
+
+    @Autowired
+    private DependencyBean dependency;
+}
+```
+
+While constructing the ConsumerBean object, if there's no constructor or setter method to inject the DependencyBean
+instance, the container will use reflection to inject DependencyBean into ConsumerBean.
+
+This approach might look simpler and cleaner, but we don't recommend using it because it has a few drawbacks such as:
+
+- This method uses reflection to inject the dependencies, which is costlier than constructor-based or setter-based
+  injection.
+- It's really easy to keep adding multiple dependencies using this approach. If we were using constructor injection,
+  having multiple arguments would make us think that the class does more than one thing, which can violate the Single
+  Responsibility Principle.
+
+So far in this article, we have discussed two important concepts:
+
+- Dependency Inversion : We create loosely couple code by explicitly declaring dependencies, and introducing interfaces
+  for them.
+- Dependency Injection : The Spring framework identifies beans and dependencies, and wires dependencies inside beans.
+
