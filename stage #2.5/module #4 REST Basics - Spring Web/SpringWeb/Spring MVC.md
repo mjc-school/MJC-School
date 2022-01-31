@@ -1,8 +1,4 @@
 # Spring MVC
-https://www.javatpoint.com/spring-mvc-tutorial
-https://terasolunaorg.github.io/guideline/5.0.1.RELEASE/en/Overview/SpringMVCOverview.html
-https://docs.spring.io/spring-framework/docs/3.1.x/spring-framework-reference/html/mvc.html
-
 
 **A Spring MVC** is a Java framework which is used to build web applications. It follows the **Model-View-Controller design pattern**.<br>
 It implements all the basic features of a core spring framework like **Inversion of Control**, **Dependency Injection**.
