@@ -4,11 +4,10 @@ https://terasolunaorg.github.io/guideline/5.0.1.RELEASE/en/Overview/SpringMVCOve
 https://docs.spring.io/spring-framework/docs/3.1.x/spring-framework-reference/html/mvc.html
 
 
-**A Spring MVC** is a Java framework which is used to build web applications. It follows the **Model-View-Controller design pattern**.
-It implements all the basic features of a core spring framework like Inversion of Control, Dependency Injection.
-A Spring MVC provides an elegant solution to use MVC in spring framework by the help of **DispatcherServlet** that is completely 
-integrated with the Spring IoC container. <br>
-**DispatcherServlet** is a class that receives the incoming request and maps it to the right resource such as **Controllers**, **Models**, and **Views**.
+**A Spring MVC** is a Java framework which is used to build web applications. It follows the **Model-View-Controller design pattern**.<br>
+It implements all the basic features of a core spring framework like **Inversion of Control**, **Dependency Injection**.
+**A Spring MVC** provides an elegant solution to use **MVC** in spring framework by the help of **DispatcherServlet** that is completely 
+integrated with the **Spring IoC container**. **DispatcherServlet** is a class that receives the incoming request and maps it to the right resource such as **Controllers**, **Models**, and **Views**.
 
 ## Understanding Spring Web Model-View-Controller
 
