@@ -1,16 +1,18 @@
 # ALTER and Constraint
+This module is about constraints, and the way we work with it. 
+We are able to specify not only the type of the filed in the table, but also the rules according to which the data will be checked while performing different kinds of actions. 
 
 ## Tasks: 
--	Change table ‘Student’. 
+1)	Change table ‘Student’. 
  ‘Birthday’ field cannot be null
--	Change table ‘Mark’
+2)	Change table ‘Mark’
 ‘Mark’ should be in range from 1 to 10
 ‘Student_Id’ and ‘Subject_Id’ cannot be null
--	Change table ‘Subject’
+3)	Change table ‘Subject’
 ‘Grade’ should be in range from 1 to 5 
--	Change table ‘PaymentType’
+4)	Change table ‘PaymentType’
 ‘Name’ should be a unique value
--	Change table ‘Payment’
+5)	Change table ‘Payment’
 ‘Type’, ‘Amount’ and ‘Date’ cannot be null
 
 ## Materials
@@ -27,3 +29,9 @@
 -	https://postgrespro.ru/docs/postgresql/9.5/sql-altertable
 -	https://www.w3schools.com/sql/sql_ref_alter.asp
 
+## Questions
+1. What constraints do you know?
+2. What script modifies the table?
+3. Which way can we specify that the data of Filed 'Amount' should be from 1 to 1000?
+4. Which way can we specify that the field cannot be empty(without data)?
+5. Which way can we delete/add the column in the table?

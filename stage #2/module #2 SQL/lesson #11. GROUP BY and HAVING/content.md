@@ -1,4 +1,7 @@
 # GROUP BY and HAVING
+GROUP BY statement groups rows. As usual, it is used with aggregate functions. 
+HAVING is a clause for using with aggregate functions. 
+Both are useful in practice. 
 
 ## Tasks:
 
@@ -13,4 +16,8 @@
 -	https://www.guru99.com/group-by.html
 -	https://www.datacamp.com/community/tutorials/group-by-having-clause-sql
 
+## Questions
+1. What is GROUP BY used for? Describe syntax.
+2. What is HAVING used for? Describe syntax.
+3. Provide an example of usage both GROUP BY and HAVING.  
 
