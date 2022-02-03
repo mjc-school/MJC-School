@@ -1,4 +1,5 @@
 # Views
+In SQL, a view is a virtual table based on the result-set of an SQL statement.
 
 ## Tasks
 Create views which store: 
@@ -12,8 +13,14 @@ Create views which store:
 4) Payment type name, max amount of payment and student surname/name for all students. 
 
 ## Materials
-https://www.w3schools.com/sql/sql_view.asp\ 
+- https://www.w3schools.com/sql/sql_view.asp 
 
-https://www.geeksforgeeks.org/sql-views/ 
+- https://www.geeksforgeeks.org/sql-views/ 
 
-https://www.tutorialspoint.com/sql/sql-using-views.htm 
+- https://www.tutorialspoint.com/sql/sql-using-views.htm 
+
+##Questions
+1. What is a View in Sql?
+2. What are Views used for?
+3. How can you create a view?
+4. How can you update the view?
