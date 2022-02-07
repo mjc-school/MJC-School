@@ -27,6 +27,4 @@ https://www.baeldung.com/exception-handling-for-rest-with-spring
 https://spring.io/projects/spring-hateoas#samples
 https://github.com/spring-projects/spring-hateoas-examples/tree/main/hypermedia
 
-### Spring Web Flow
 
-### Testing in Spring Web

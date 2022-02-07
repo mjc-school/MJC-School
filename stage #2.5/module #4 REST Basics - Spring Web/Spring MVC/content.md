@@ -32,6 +32,8 @@ integrated with the **Spring IoC container**. **DispatcherServlet** is a class t
 
 
 ## Spring MVC example project
+https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-basics/src/main/webapp/WEB-INF/view
+https://www.baeldung.com/spring-mvc-tutorial
 Spring MVC and Java-Based Configuration
 https://dzone.com/articles/spring-mvc-and-java-based-configuration-1
 Spring MVC using Java based configuration
