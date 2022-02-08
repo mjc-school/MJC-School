@@ -49,4 +49,56 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
-To bootstrap an application that loads this configuration, we also need an initializer class:
+To bootstrap an spring web application that loads this configuration, you need an initializer class. For this purpose Spring Web provides WebApplicationInitializer which is Servlet 3.0 + implementation 
+to configure ServletContext programmatically in comparison to using web.xml in xml configuration.
+```Java
+public class MainWebAppInitializer implements WebApplicationInitializer {
+@Override
+public void onStartup(final ServletContext sc) throws ServletException {
+
+    //create the root Spring application context
+    AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
+    rootContext.register(WebConfig.class);
+    rootContext.setConfigLocation("com.epam.mjc.school.config");
+
+    //add ContextLoaderListner to the ServletContext which will be responsible to load the application context
+    servletContext.addListener(new ContextLoaderListener(rootContext));
+    
+    //register and map the dispatcher servlet
+    //note Dispatcher servlet with constructor arguments
+    ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",  new DispatcherServlet(servletAppContext));
+    dispatcher.setLoadOnStartup(1);
+    dispatcher.addMapping("/");
+
+    FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
+    encodingFilter.setInitParameter("encoding", "UTF-8");
+    encodingFilter.setInitParameter("forceEncoding", "true");
+    encodingFilter.addMappingForUrlPatterns(null, true, "/*");
+    }
+}
+```
+Let's have a look what onStartup method of WebApplicationInitializer interface contains:<br>
+If you want to use `Java-based annotation` instead of XML configuration, you should use `AnnotationConfigWebApplicationContext` for this
+```Java
+AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
+```
+You need to register application context, this can be easily done by registering your custom configuration class.<br>
+> servletAppContext.register(WebConfig.class);
+
+If your application configurations are spread across multiple classes and you want to use all of these configurations, Spring WebApplicationInitializer provide a way 
+to specify root package to be scanned for configuration classes.
+> rootContext.setConfigLocation("com.epam.mjc.school.config");
+
+To load the application context when the application starts you should add `ContextLoaderListner` to the `ServletContext` which will be responsible to load the context.
+> servletContext.addListener(new ContextLoaderListener(rootContext));
+
+Finally, you should create and register `Dispatcher servlet`, which is the entry point of our application.
+> ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",  new DispatcherServlet(servletAppContext));
+> dispatcher.setLoadOnStartup(1);
+> dispatcher.addMapping("/");
+
+If you want to add specific encoding you can add FilterRegistration.Dynamic filter:
+> FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
+> encodingFilter.setInitParameter("encoding", "UTF-8");
+> encodingFilter.setInitParameter("forceEncoding", "true");
+> encodingFilter.addMappingForUrlPatterns(null, true, "/*");
