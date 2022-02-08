@@ -12,7 +12,7 @@ Configuration is minimal, and it provides sensible defaults for what you would e
   
 ### Java based Web Configurations
 Spring framework provides two ways of configuring a RESTful application:
-- using xml configuration files;
+- using xml configuration files such as web.xml and SpringApplicationContext.xml;
 - using Java class.<br>
 
 Configuring a application on base of spring framework through Java is a modern approach in comparison with xml one.<br>
@@ -23,7 +23,7 @@ Let's consider Java configuration:
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
  public class WebConfig
 {
- //
+ //...
 }
 ```
 The **@Configuration annotation** is the central artifact of Spring’s Java-configurations. **@Configuration** is a meta-annotated as a @Component 
@@ -36,6 +36,17 @@ The functionality of the annotation is equivalent to the XML version:<br>
 
 **@ComponentScan annotation** with **@Configuration classes** enables Spring to scan all classes through the package and will register all beans and controller for our application.
 
-When you need more complex configuration, you should remove the **@EnableWebMvc annotation** and extend **WebMvcConfigurationSupport class** directly.
+The WebConfig class shown above will set up the basic support you need for a spring web project, such as registering controllers and mappings, type converters, validation support, 
+message converters and exception handling. The config class will replace SpringApplicationContext.xml in case of xml configuration.
 
+If we want to customize this configuration, you should implement the **WebMvcConfigurer interface** or remove the **@EnableWebMvc annotation** and extend **WebMvcConfigurationSupport class** directly.
+```Java
+@EnableWebMvc
+@Configuration
+@ComponentScan(basePackages = {"com.epam.mjc.school"})
+public class WebConfig implements WebMvcConfigurer {
+// ...
+}
+```
 
+To bootstrap an application that loads this configuration, we also need an initializer class:
