@@ -21,7 +21,7 @@ Let's consider Java configuration:
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
- public class WebConfig
+public class WebConfig
 {
  //...
 }
@@ -79,7 +79,7 @@ public void onStartup(final ServletContext sc) throws ServletException {
 }
 ```
 Let's have a look what **onStartup** method of **WebApplicationInitializer interface** contains:<br>
-If you want to use `Java-based annotation` instead of XML configuration, you should use `AnnotationConfigWebApplicationContext` for this
+If you want to use `Java-based annotation` instead of XML configuration, you should use **AnnotationConfigWebApplicationContext** for this
 ```Java
 AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
 ```
@@ -92,7 +92,7 @@ to specify root package to be scanned for configuration classes.
 ```Java
 rootContext.setConfigLocation("com.epam.mjc.school.config");
 ```
-To load the application context when the application starts you should add **ContextLoaderListner** to the `ServletContext` which will be responsible to load the context.
+To load the application context when the application starts you should add **ContextLoaderListner** to the **ServletContext** which will be responsible to load the context.
 ```Java
 servletContext.addListener(new ContextLoaderListener(rootContext));
 ```
@@ -102,7 +102,7 @@ ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",
 dispatcher.setLoadOnStartup(1);
 dispatcher.addMapping("/");
 ```
-If you want to add specific encoding you can add FilterRegistration.Dynamic filter:
+If you want to add specific encoding you can add **FilterRegistration.Dynamic filter**:
 ```Java
 FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
 encodingFilter.setInitParameter("encoding", "UTF-8");
