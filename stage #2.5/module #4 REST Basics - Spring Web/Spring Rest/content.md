@@ -36,15 +36,16 @@ The functionality of the annotation is equivalent to the XML version:<br>
 
 **@ComponentScan annotation** with **@Configuration classes** enables Spring to scan all classes through the package and will register all beans and controller for our application.
 
-The WebConfig class shown above will set up the basic support you need for a spring web project, such as registering controllers and mappings, type converters, validation support, 
-message converters and exception handling. The config class will replace SpringApplicationContext.xml in case of xml configuration.
+`The WebConfig class` shown above will set up the basic support you need for a spring web project, such as registering controllers and mappings, type converters, validation support, 
+message converters and exception handling. The config class will replace `SpringApplicationContext.xml` which is used in xml configuration.
 
 If we want to customize this configuration, you should implement the **WebMvcConfigurer interface** or remove the **@EnableWebMvc annotation** and extend **WebMvcConfigurationSupport class** directly.
 ```Java
-@EnableWebMvc
 @Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer 
+{
 // ...
 }
 ```
