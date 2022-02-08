@@ -18,8 +18,8 @@ Spring framework provides two ways of configuring a RESTful application:
 Configuring a application on base of spring framework through Java is a modern approach in comparison with xml one.<br>
 Let's consider Java configuration:
 ```Java
- @Configuration
- @EnableWebMvc
+@Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
  public class WebConfig
 {
