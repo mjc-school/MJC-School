@@ -18,16 +18,16 @@ Let’s look at an example:
 ```java
 
 @Repository
-public class ExampleRepository {
+public class MyRepository {
     // some database-related code goes here...
 }
 
 @Service
-public class ExampleService {
+public class MyService {
     
-    private final ExampleRepository repository;
+    private final MyRepository repository;
 
-    public ExampleService(ExampleRepository repository) {
+    public MyService(MyRepository repository) {
         this.repository = repository;
     }
 
@@ -41,10 +41,10 @@ public class ExampleService {
 }
 
 @RestController
-public class ExampleController {
-    private final ExampleService service;
+public class MyController {
+    private final MyService service;
 
-    public ExampleController(ExampleService service) {
+    public MyController(MyService service) {
         this.service = service;
     }
     
@@ -52,14 +52,14 @@ public class ExampleController {
 }
 ```
 
-In the example above ExampleService is the business class, and it makes use of one data layer class - ExampleRepository.
-Also, we have two methods defined in ExampleService class:
+In the example above MyService is the business class, and it makes use of one data layer class - MyRepository.
+Also, we have two methods defined in MyService class:
 
 - readSomeDataById - returns data by provided id
 - saveSomeData - saves provided data
 
-Both methods in ExampleService require ExampleRepository instance to do their logic. ExampleRepository is a dependency
-of ExampleService.
+Both methods in MyService require MyRepository instance to do their logic. MyRepository is a dependency
+of MyService.
 
 ## What Is Dependency Injection?
 
@@ -240,10 +240,3 @@ This approach might look simpler and cleaner, but we don't recommend using it be
 - It's really easy to keep adding multiple dependencies using this approach. If we were using constructor injection,
   having multiple arguments would make us think that the class does more than one thing, which can violate the Single
   Responsibility Principle.
-
-So far in this article, we have discussed two important concepts:
-
-- Dependency Inversion : We create loosely couple code by explicitly declaring dependencies, and introducing interfaces
-  for them.
-- Dependency Injection : The Spring framework identifies beans and dependencies, and wires dependencies inside beans.
-

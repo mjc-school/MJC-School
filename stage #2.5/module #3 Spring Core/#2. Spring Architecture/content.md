@@ -113,26 +113,26 @@ names ("spring.core", "spring.context", etc.) independent from jar artifact name
 pattern with "-" instead of ".", e.g. "spring-core" and "spring-context"). Of course, Spring’s framework jars keep
 working fine on the classpath on both JDK 8 and 9+.
 
-[1]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core
+[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#spring-core
 
-[2]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#context-introduction
+[2]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#context-introduction
 
-[3]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions
+[3]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#expressions
 
-[4]: https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#jdbc
+[4]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#jdbc
 
-[5]: https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#orm
+[5]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#orm
 
-[6]: https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#oxm
+[6]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#oxm
 
-[7]: https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#jms
+[7]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/integration.html#jms
 
-[8]: https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction
+[8]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#transaction
 
-[9]: https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc
+[9]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/web.html#mvc
 
-[10]: https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#spring-webflux
+[10]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/web-reactive.html#spring-webflux
 
-[11]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop
+[11]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#aop
 
-[12]: https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing
+[12]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/testing.html#testing
