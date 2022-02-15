@@ -109,3 +109,30 @@ encodingFilter.setInitParameter("encoding", "UTF-8");
 encodingFilter.setInitParameter("forceEncoding", "true");
 encodingFilter.addMappingForUrlPatterns(null, true, "/*");
 ```
+Normally, For bootstrapping a spring web application it is easy to use **AbstractAnnotationConfigDispatcherServletInitializer class** which is 
+an implemantation of **WebApplicationInitializer interface**. The **AbstractAnnotationConfigDispatcherServletInitializer class** registers a **ContextLoaderlistener** (optionally) 
+and a **DispatcherServlet** and allows you to easily add configuration classes to load for both classes and to apply filters to the **DispatcherServlet** and to provide the servlet mapping. 
+
+```Java
+public class MainWebAppInitializer implements AbstractAnnotationConfigDispatcherServletInitializer {
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class<?>[] { SecurityConfig.class, ApplicationConfig.class, RepositoryConfig.class };
+    }
+
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class<?>[] { WebConfig.class };
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
+    }
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        super.onStartup(servletContext);
+    }
+}
+```
