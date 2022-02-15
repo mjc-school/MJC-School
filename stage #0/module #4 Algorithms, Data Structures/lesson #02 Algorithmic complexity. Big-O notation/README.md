@@ -35,13 +35,13 @@ The time complexity is commonly expressed using **"Big-O notation"** (Landau's s
 
 Big-O notation represents the **upper bound of the running time** of an algorithm. Thus, it gives the worst-case complexity of an algorithm.
 
-<p align="center"><img src ="../media/big_o_notation.png" alt="Big O notation" width = 50%></p>
+<p align="center"><img src ="../media/big_o_notation.png" alt="Big O notation" width = 30%></p>
 
 As regards an origin of "Big O notation", it is used in complexity theory, computer science, and mathematics to describe the asymptotic behavior of functions, and it tells you how fast a function grows or declines (you are not supposed to know it, just for your information). Letter "O" is used because the rate of growth of a function is called its **O**rder.
 
 #### Big-O Complexity Chart
 
-<p align="center"><img src ="../media/big_o_complexity_chart.jpeg" alt="Big O Complexity Chart"></p>
+<p align="center"><img src ="../media/big_o_complexity_chart.jpeg" alt="Big O Complexity Chart" width = "70%"></p>
 
 **"Big-O notation"** tells us a number of operations, which an algorithm will perform.
 There are the following most common types of complexities (**from fastest to slowest**):

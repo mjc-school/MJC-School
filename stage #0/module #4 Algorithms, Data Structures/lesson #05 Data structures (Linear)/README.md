@@ -93,7 +93,7 @@ A stack is a **LIFO** (Last In First Out — the element placed at last can be a
 
 It can be physically implemented as an array or as a linked list. Insertion and deletion of elements in a stack occur at the top end only. An insertion in a stack is called **pushing** and deletion from a stack is called **popping**.
 
-<p align="center"><img src ="../media/stack.webp" alt="Stack"></p>
+<p align="center"><img src ="../media/stack.png" alt="Stack"></p>
 
 <p align="center"><img src ="../media/stack_anim.gif" alt="Stack Animation"></p>
 

@@ -1,6 +1,6 @@
 <h1 align="center">Algorithms. Data structures</h1>
 
-<p align="center"><img src ="media/algorithm_logo.png" alt="Algorithm Logo" width = 30%></p>
+<p align="center"><img src ="media/algorithm_logo.jpg" alt="Algorithm Logo" width = 30%></p>
 
 ## Contents
 
