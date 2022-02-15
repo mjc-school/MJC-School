@@ -136,3 +136,8 @@ public class MainWebAppInitializer implements AbstractAnnotationConfigDispatcher
     }
 }
 ```
+In the Web MVC framework, each **DispatcherServlet** has its own **WebApplicationContext**, 
+which inherits all the beans already defined in the root **WebApplicationContext**. 
+These inherited beans can be overridden in the servlet-specific scope, and you can define new scope-specific beans 
+local to a given Servlet instance.
+![Typical Сontext Hierarchy in Spring Web Application](media/Typical Сontext Hierarchy in Spring Web Application.PNG)
