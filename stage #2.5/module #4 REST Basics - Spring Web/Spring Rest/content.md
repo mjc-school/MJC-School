@@ -110,7 +110,7 @@ encodingFilter.setInitParameter("encoding", "UTF-8");
 encodingFilter.setInitParameter("forceEncoding", "true");
 encodingFilter.addMappingForUrlPatterns(null, true, "/*");
 ```
-Normally, For bootstrapping a spring web application it is easy to use **AbstractAnnotationConfigDispatcherServletInitializer class** which is 
+Normally, for bootstrapping a spring web application it is easy to use **AbstractAnnotationConfigDispatcherServletInitializer class** which is 
 an implemantation of **WebApplicationInitializer interface**. The **AbstractAnnotationConfigDispatcherServletInitializer class** registers a **ContextLoaderlistener** (optionally) 
 and a **DispatcherServlet** and allows you to easily add configuration classes to load for both classes and to apply filters to the **DispatcherServlet** and to provide the servlet mapping. 
 
@@ -141,8 +141,10 @@ public class MainWebAppInitializer implements AbstractAnnotationConfigDispatcher
     }
 }
 ```
-In the Web MVC framework, each **DispatcherServlet** has its own **WebApplicationContext**, 
+In the Spring Web framework, each **DispatcherServlet** has its own **WebApplicationContext**, 
 which inherits all the beans already defined in the root **WebApplicationContext**. 
 These inherited beans can be overridden in the servlet-specific scope, and you can define new scope-specific beans 
 local to a given Servlet instance. See the picture below:
 ![Typical Сontext Hierarchy in Spring Web Application](media/TypicalСontextHierarchyInSpringWebApplication.PNG)
+
+
