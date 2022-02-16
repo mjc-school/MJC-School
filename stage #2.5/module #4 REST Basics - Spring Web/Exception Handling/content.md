@@ -26,6 +26,27 @@ For example, the Controllers may already extend from another base class, which m
 This solution is to define an **HandlerExceptionResolver**. This will resolve any exception thrown by the application. It will also allow us to implement `a uniform exception handling mechanism` in our REST API.
 Let's consider the existing implementations of ExceptionResolvers.
 
-- **ExceptionHandlerExceptionResolver** is enabled by default in the DispatcherServlet.
+- **ExceptionHandlerExceptionResolver** is enabled by default in the `DispatcherServlet`.
 - **DefaultHandlerExceptionResolver** is enabled by default in the DispatcherServlet. It's used to resolve standard Spring exceptions to their corresponding HTTP Status Codes, namely Client error 4xx and Server error 5xx status codes. Here's the full list of the Spring Exceptions it handles and how they map to status codes. 
-  While it does set the Status Code of the Response properly, `one limitation is that it doesn't set anything to the body of the Response`. In some cases for a REST API — the Status Code is really not enough information to present to the Client — the response has to have a body as well, to allow the application to give additional information about the failure. 
+  While it does set the Status Code of the Response properly, `one limitation is that it doesn't set anything to the body of the Response`. In some cases for a REST API — the Status Code is really not enough information to present to the Client — the response has to have a body as well, to allow the application to give additional information about the failure.
+- **ResponseStatusExceptionResolver** is enabled by default in the `DispatcherServlet`. Its main responsibility is to use the **@ResponseStatus annotation** available on custom exceptions and to map these exceptions to `HTTP status codes`.
+  Such a custom exception may look like:
+```Java
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class ApplicationResourceNotFoundException extends RuntimeException 
+{
+    public ApplicationResourceNotFoundException() {
+        super();
+    }
+    public ApplicationResourceNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+    public ApplicationResourceNotFoundException(String message) {
+        super(message);
+    }
+    public ApplicationResourceNotFoundException(Throwable cause) {
+        super(cause);
+    }
+}
+```
+The same as the **DefaultHandlerExceptionResolver**, this resolver is limited in the way it deals with the body of the response — it does map the `Status Code` on the response, but does not set a body to Response, so the body is still null.
