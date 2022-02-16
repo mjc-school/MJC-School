@@ -71,6 +71,7 @@ public void onStartup(final ServletContext servletContext) throws ServletExcepti
     dispatcher.setLoadOnStartup(1);
     dispatcher.addMapping("/");
 
+    //add specific encoding (e.g. UTF-8) via CharacterEncodingFilter 
     FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
     encodingFilter.setInitParameter("encoding", "UTF-8");
     encodingFilter.setInitParameter("forceEncoding", "true");
@@ -132,6 +133,7 @@ public class MainWebAppInitializer implements AbstractAnnotationConfigDispatcher
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
+        //add specific encoding (e.g. UTF-8) via CharacterEncodingFilter
         FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
         encodingFilter.setInitParameter("encoding", "UTF-8");
         encodingFilter.setInitParameter("forceEncoding", "true");
