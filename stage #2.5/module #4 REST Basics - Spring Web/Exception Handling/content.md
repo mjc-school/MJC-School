@@ -18,7 +18,7 @@ public class BookController
     }
 }
 ```
-This approach has a major drawback: `**The @ExceptionHandler** annotated method is only active for that particular Controller, not globally for the entire application`. 
+This approach has a major drawback: **The @ExceptionHandler** `annotated method is only active for that particular Controller, not globally for the entire application`. 
 Of course, adding this to every controller makes it not well suited for a general exception handling mechanism.
 We can work around this limitation by having all Controllers extend a Base Controller class.
 However, this solution can be a problem for applications where, for whatever reason, that isn't possible. 
