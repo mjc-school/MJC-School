@@ -49,4 +49,11 @@ public class ApplicationResourceNotFoundException extends RuntimeException
     }
 }
 ```
-The same as the **DefaultHandlerExceptionResolver**, this resolver is limited in the way it deals with the body of the response — it does map the `Status Code` on the response, but does not set a body to Response, so the body is still null.
+The same as the **DefaultHandlerExceptionResolver**, this resolver is limited in the way it deals with the body of the response — `it does map the Status Code on the response`, but does not set a body to Response, so the body is still null.
+- **Custom HandlerExceptionResolver** [TO DO]
+
+### Solution 3: @ControllerAdvice
+[TO DO]
+
+### Solution 4: ResponseStatusException
+[TO DO]
