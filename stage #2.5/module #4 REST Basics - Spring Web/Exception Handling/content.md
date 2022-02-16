@@ -1,7 +1,5 @@
 ## Error Handling for REST with Spring
 
-https://www.baeldung.com/exception-handling-for-rest-with-spring
-
 Spring provides several ways of handling thrown exception in a spring web application. 
 Let's consider some of them: <br>
 
@@ -24,3 +22,10 @@ We can work around this limitation by having all Controllers extend a Base Contr
 However, this solution can be a problem for applications where, for whatever reason, that isn't possible. 
 For example, the Controllers may already extend from another base class, which may be in another jar or not directly modifiable, or may themselves not be directly modifiable.
 
+### Solution 2: the HandlerExceptionResolver
+This solution is to define an **HandlerExceptionResolver**. This will resolve any exception thrown by the application. It will also allow us to implement `a uniform exception handling mechanism` in our REST API.
+Let's consider the existing implementations of ExceptionResolvers.
+
+- **ExceptionHandlerExceptionResolver** is enabled by default in the DispatcherServlet.
+- **DefaultHandlerExceptionResolver** is enabled by default in the DispatcherServlet. It's used to resolve standard Spring exceptions to their corresponding HTTP Status Codes, namely Client error 4xx and Server error 5xx status codes. Here's the full list of the Spring Exceptions it handles and how they map to status codes. 
+  While it does set the Status Code of the Response properly, one limitation is that it doesn't set anything to the body of the Response. In some cases for a REST API — the Status Code is really not enough information to present to the Client — the response has to have a body as well, to allow the application to give additional information about the failure. 
