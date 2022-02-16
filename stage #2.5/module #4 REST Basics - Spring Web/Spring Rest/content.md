@@ -55,7 +55,7 @@ to configure ServletContext programmatically in comparison to using web.xml in x
 ```Java
 public class MainWebAppInitializer implements WebApplicationInitializer {
 @Override
-public void onStartup(final ServletContext sc) throws ServletException {
+public void onStartup(final ServletContext servletContext) throws ServletException {
 
     //create the root Spring application context
     AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
@@ -132,7 +132,10 @@ public class MainWebAppInitializer implements AbstractAnnotationConfigDispatcher
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        super.onStartup(servletContext);
+        FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
+        encodingFilter.setInitParameter("encoding", "UTF-8");
+        encodingFilter.setInitParameter("forceEncoding", "true");
+        encodingFilter.addMappingForUrlPatterns(null, true, "/*");
     }
 }
 ```
