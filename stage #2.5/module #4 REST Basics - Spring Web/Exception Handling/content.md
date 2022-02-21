@@ -65,7 +65,7 @@ public class RestResponseEntityExceptionHandler
     protected ResponseEntity<Object> handleConflict(
       RuntimeException ex, WebRequest request) {
         String bodyOfErrorResponse = "Argument or State of resource hase a illegal value.";
-        return handleExceptionInternal(ex, bodyOfResponse, 
+        return handleExceptionInternal(ex, bodyOfErrorResponse, 
           new HttpHeaders(), HttpStatus.CONFLICT, request);
     }
 }
@@ -104,7 +104,7 @@ What are the benefits of using **ResponseStatusException**?
 - We won't have to create as many custom exception classes.
 - We have more control over exception handling since the exceptions can be created programmatically.
 
-what are the tradeoffs?
+What are the tradeoffs?
 - There's no unified way of exception handling: It's more difficult to enforce some application-wide conventions as opposed to **@ControllerAdvice**, which provides a global approach.
 - Code duplication: We may find ourselves replicating code in multiple controllers.
 - We should also note that it's possible to combine different approaches within one application.
