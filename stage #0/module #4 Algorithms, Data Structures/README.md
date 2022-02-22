@@ -4,14 +4,14 @@
 
 ## Contents
 
-1. [Intro to algorithms](/lesson%20#01%20Intro%20to%20algorithms/README.md)
-2. [Algorithmic complexity. Big-O notation](/lesson%20#02%20Algorithmic%20complexity.%20Big-O%20notation/README.md)
-3. [Linear search. Binary search](/lesson%20#03%20Linear%20search.%20Binary%20search/README.md)
-4. [Data structures (Intro)](</lesson%20#04%20Data%20structures%20(Intro)/README.md>)
-5. [Data structures (Linear)](</lesson%20#05%20Data%20structures%20(Linear)/README.md>)
-6. [Data structures (Non-Linear)](</lesson%20#06%20Data%20structures%20(Non-Linear)/README.md>)
-7. [Recursion](/lesson%20#06%20Recursion/README.md)
-8. [Sorting algorithms](/lesson%20#07%20Sorting%20algorithms/README.md)
+1. [Intro to algorithms](../module%20%234%20Algorithms%2C%20Data%20Structures/lesson%20%2301%20Intro%20to%20algorithms/README.md)
+2. [Algorithmic complexity. Big-O notation](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2302%20Algorithmic%20complexity.%20Big-O%20notation/README.md)
+3. [Linear search. Binary search](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2303%20Linear%20search.%20Binary%20search/README.md)
+4. [Data structures (Intro)](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2304%20Data%20structures%20(Intro)/README.md)
+5. [Data structures (Linear)](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2305%20Data%20structures%20(Linear)/README.md)
+6. [Data structures (Non-Linear)](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2306%20Data%20structures%20(Non-Linear)/README.md)
+7. [Recursion](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2307%20Recursion/README.md)
+8. [Sorting algorithms](../module%20%234%20Algorithms%2C%20Data%20Structures//lesson%20%2308%20Sorting%20algorithms/README.md)
 
 ## Algorithms
 
