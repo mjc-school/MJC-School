@@ -160,6 +160,5 @@ System.out.println(sumFrom1To5);
 
 ## References
 
-1. []()
-2. []()
-3. []()
+1. [The Art of Recursion; a connection to infinity](https://towardsdatascience.com/the-art-of-recursion-a-connection-to-infinity-622292be0089)
+2. [Recursion](https://www.cpp.edu/~ftang/courses/CS240/lectures/recursion.htm)

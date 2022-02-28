@@ -70,6 +70,5 @@ In a group of learners, it’s entirely possible to get a different, but correct
 
 ## References
 
-1. []()
-2. []()
-3. []()
+1. [What is an Algorithm](https://www.javatpoint.com/data-structure-algorithm)
+2. [Most important type of Algorithms](https://www.geeksforgeeks.org/most-important-type-of-algorithms/)

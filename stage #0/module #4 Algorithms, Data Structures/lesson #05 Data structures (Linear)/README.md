@@ -190,6 +190,5 @@ The most popular way of dealing with collisions is "Chaining", when a "key/value
 
 ## References
 
-1. [Array & Linked list extra materials (Java related)](./arrays-linked-lists-extra.md)
-2. []()
-3. []()
+1. [Common Data Structures](https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42)
+2. [Array & Linked list extra materials (Java related)](./arrays-linked-lists-extra.md)

@@ -96,6 +96,5 @@ Hopefully this gives a sense of the differences in algorithm complexities. Choos
 
 ## References
 
-1. []()
-2. []()
-3. []()
+1. [Asymptotic Analysis(Big-O notation)](https://medium.com/@rajusvf735/asymptotic-analysis-big-o-notation-5dc9b4a23fa3)
+2. [Time and Space Complexity Analysis of Algorithm](https://afteracademy.com/blog/time-and-space-complexity-analysis-of-algorithm)

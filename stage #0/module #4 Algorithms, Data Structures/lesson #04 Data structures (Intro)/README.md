@@ -59,14 +59,13 @@ Such data structures supports multi-level storage and often cannot be traversed 
 | **Traversal**          |      As linear data structure is a single level, so it requires a single run to traverse each data item       | The data items in a non-linear data structure cannot be accessed in a single run. It requires multiple runs to be traversed |
 | **Arrangement**        |                           Each data item is attached to the previous and next items                           |                                          Each item is attached to many other items                                          |
 | **Levels**             | This data structure does not contain any hierarchy, and all the data elements are organized in a single level |                         In non-linear data structure, data elements are present at multiple levels                          |
-| **Memory utilization** |         Linear data structures are not very memory friendly and are not utilizing memory efficiently          |                                   Non-linear data structures uses memory very efficiently                                   |
+| **Memory utilization** |         Ineffective, in linear data Structure, most of the time we have to declare memory in advance          |  Effective, in non-linear data structure there is no need to declare memory in advance                 |
 | **Time complexity**    |                Time complexity of linear data structure often increases with increase in size                 |                       Time complexity of non-linear data structure often remain with increase in size                       |
-| **Applications**       |                      Linear data structures are mainly used for developing the software                       |                     Non-linear data structures are used in image processing and Artificial Intelligence                     |
+
 
 </div>
 
 ## References
 
-1. []()
-2. []()
-3. []()
+1. [Data structures](https://searchsqlserver.techtarget.com/definition/data-structure)
+2. [Difference between Linear and Non-linear Data Structures](https://www.geeksforgeeks.org/difference-between-linear-and-non-linear-data-structures/)

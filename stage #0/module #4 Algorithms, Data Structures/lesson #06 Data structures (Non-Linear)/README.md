@@ -153,6 +153,6 @@ The most common graph operations are:
 
 ## References
 
-1. []()
-2. []()
-3. []()
+1. [Common Data Structures](https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42)
+2. [Binary Tree Data Structure](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+3. [Graph Data Structure And Algorithms](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
