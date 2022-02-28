@@ -220,4 +220,97 @@ public class BookController {
     }
 }
 ```
+**@PathVariable** annotation indicates that **a method argument is bound to a URI template variable**. You can specify the URI template with the **@RequestMapping** annotation 
+and bind a method argument to one of the template parts with **@PathVariable**. The annotation extracts values from the URI path. You can achieve this with the name or its alias, 
+the value argument. If the name of the part in the template matches the name of the method argument, you don't have to specify it in the annotation:<br>
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
 
+    //..........
+
+    @GetMapping(value = "/{id:\\d+}")
+    ResponseEntity<List<BookDTO>> getBookById(@PathVariable long id) {
+        //....
+    }
+}
+```
+If the name of the part in the template does not matche the name of the method argument, you need to specify it in the annotation:
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+    
+    @GetMapping(value = "/{title}")
+    ResponseEntity<BookDTO> getBookByTitle(@PathVariable("title") long bookTitle) {
+        //....
+    }
+}
+```
+Moreover, you can mark a path variable optional by setting the argument required to false, the default value for the required property is true:
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @PutMapping(value = "/{id:\\d+}")
+    ResponseEntity<BookDTO> updateBook(@PathVariable(required = false) long id, @RequestBody BookUpdateDTO bookUpdateDTO) {
+        //....
+    }
+}
+```
+**@RequestParam** is used for accessing HTTP request parameters. **@RequestParams** extracts values from the query string.
+Example of the rest uri with the parameters: http://localhost:8080/bookshop/books?author=Conan Doyle&limit=10, where the query strings is author=Conan Doyle and limit=10.
+In **@RequestParam** you can specify an injected value when Spring finds no or empty value in the request. To achieve this, you have to set the defaultValue argument.
+
+Providing a default value implicitly sets required to false:
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @GetMapping()
+    ResponseEntity<BookDTO> getBooksByAuthor(@RequestParam("author") String authorName, @RequestParam(defaultValue = "5", required = false) int limit) {
+        //....
+    }
+}
+```
+Besides request parameters, there are other HTTP request parts you can access: cookies and headers. you can access them with the annotations **@CookieValue** and **@RequestHeader** respectively.
+You can configure them the same way as **@RequestParam**.
+
+**@RequestHeader** annotation maps all or a particular header values to an argument of a controller method. The type of **@RequestHeader** annotation is parameter. Thus you can add it directly on a controller method argument.
+In the next example you are reading all HTTP headers in a HashMap. you are using @RequestHeader annotation to map all HTTP headers into Java Map instance.
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @GetMapping()
+    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader Map<String, String> headers, @RequestParam(defaultValue = "5", required = false) int limit) {
+        //....
+    }
+}
+```
+Example of reading a specific header in Spring REST Controller:
+```Java
+@RestController
+@RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @GetMapping()
+    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader(value = "search-criteria", required = false) String contentType, @RequestParam(defaultValue = "5", required = false) int limit) {
+        //....
+    }
+}
+```
