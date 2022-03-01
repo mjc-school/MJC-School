@@ -201,11 +201,13 @@ public class BookController {
     }
 }
 ```
+**@RequestMapping** annotation that maps HTTP requests to handler methods of MVC and REST controllers.
 In the code above, Such annotations as **@GetMapping, @PostMapping, @PutMapping, @PatchMapping and  @DeleteMapping** are used for mapping HTTP GET, POST, PUT, PATCH and DELETE requests onto specific handler methods.
 **@RequestBody** annotation binds request body to method parameters. The process of serialization/deserialization is performed by **HttpMessageConverter**. 
 Automatic validation in controller methods can be applied by annotating the argument with **@Valid**. In order to validate BookPatchDTO via **@Valid** you should add **@NotNull**, **@Min** and other validation annotations on fields.
 **@PathVariable** is used for data passed in the URI.
 **@RequestParam** annotation is used for extracting query parameters, form parameters, and even files from the request.
+**ResponseEntity** is used as method response. **ResponseEntity** represents an HTTP response, including headers, body, and status.
 
 ### Error Handling
 Spring web provides support for a global **@ExceptionHandler** with the **@ControllerAdvice** annotation.
@@ -226,5 +228,7 @@ The actual mechanism is extremely simple but also very flexible:<br>
 - It provides mapping of several exceptions to the same method, to be handled together.
 - It makes good use of the newer RESTful ResposeEntity response.
 One thing to keep in mind here is to match the exceptions declared with **@ExceptionHandler** to the exception used as the argument of the method.
+
+### Versioning a REST API
 
 
