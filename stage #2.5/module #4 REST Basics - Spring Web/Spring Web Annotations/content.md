@@ -245,7 +245,7 @@ public class BookController {
     //..........
     
     @GetMapping(value = "/{title}")
-    ResponseEntity<BookDTO> getBookByTitle(@PathVariable("title") long bookTitle) {
+    ResponseEntity<BookDTO> getBookByTitle(@PathVariable("title") String bookTitle) {
         //....
     }
 }
@@ -309,8 +309,146 @@ public class BookController {
     //..........
 
     @GetMapping()
-    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader(value = "search-criteria", required = false) String contentType, @RequestParam(defaultValue = "5", required = false) int limit) {
+    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader(value = "content-type", required = false) String contentType, @RequestParam(defaultValue = "5", required = false) int limit) {
         //....
     }
 }
 ```
+**@CookieValue** annotation is used to get the value of any HTTP cookie without iterating over all the cookies fetched from the request. This annotation can be used to map the value of a cookie to the controller method parameter.
+```Java
+@RestController
+@RequestMapping(value = "/info")
+public class InfoController {
+
+    //..........
+
+    @GetMapping()
+    public String getSessionInfo(@CookieValue("JSESSIONID") String jsessionid, Model model) {
+        model.addAttribute("info", "JSESSIONID: " + jsessionid );
+        return "sessionInfo";
+    }
+}
+```
+
+**@ResponseBody** is used with **@Controller** annotation. Spring treats the result of the method as the response itself:
+```Java
+@Controller
+@RequestMapping(value = "/books", produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @GetMapping
+    @ResponseBody
+    ResponseEntity<List<BookDTO>> getAllBooks(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
+        //....
+    }
+}
+```
+
+**@ExceptionHandler** is used to declare **a custom error handler method**. Spring calls this method when a request handler method throws any of the specified exceptions.
+The caught exception can be passed to the method as an argument:
+```Java
+@Controller
+@RequestMapping(value = "/books", produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    //..........
+
+    @GetMapping(value = "/{id}")
+    ResponseEntity<BookDTO> getBookById(@PathVariable long id) {
+        //....
+    }
+
+    @ExceptionHandler(NoSuchResourceFoundException.class)
+    public ResponseEntity<String> handleNoSuchResourceFoundException(
+            NoSuchResourceFoundException exc
+    ) {
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(exc.getMessage());
+    }
+}
+```
+The exception handler method takes in an exception or a list of exceptions as an argument that you want to handle in the defined method. You annotate the method with **@ExceptionHandler** 
+to define the exception you want to handle.
+
+**@ResponseStatus** is used to specify the desired HTTP status of the response if you annotate a request handler method with this annotation. you can declare the status code with the code argument, 
+or its alias, the value argument. Also, you can provide a reason using the reason argument.
+You also can use it along with **@ExceptionHandler**:
+```Java
+@RestController
+@RequestMapping(value = "/books", produces = {"application/JSON", "application/XML"})
+public class BookController {
+
+    @Autowired
+    private BookService bookService;
+
+    @GetMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    BookDTO getBookById(@PathVariable long id) {
+        if (bookService.getBookById(id) == null)
+        {
+            throw new NoSuchResourceFoundException();
+        }
+    }
+
+    @ExceptionHandler(NoSuchResourceFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleNoSuchResourceFoundException(
+            NoSuchResourceFoundException exc
+    ) {
+        return exc.getMessage();
+    }
+}
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException {
+}
+```
+**@ModelAttribute** is used in Spring MVC application. You can access elements that are already in the model of an MVC **@Controller**, 
+by providing the model key:
+```Java
+@Controller
+@RequestMapping(value = "/books")
+public class BookController {
+
+    @Autowired
+    private BookService bookService;
+
+    @RequestMapping(method = RequestMethod.POST)
+    String submitNewBook(@ModelAttribute("book") Book book) {
+        bookService.createNewBook(book);
+        return "newBookView";
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ModelAttribute("book")
+    Book getBookById(@PathVariable long id) {
+        return bookService.getBookById(id);
+    }
+}
+```
+In the above code snippet, you are populating the book model attribute with data from a form submitted to the new book creation endpoint. 
+Spring MVC does this behind the scenes before invoking the submitNewBook method.
+If you annotate a method with **@ModelAttribute**, Spring will automatically add the method's return value to the model.
+
+**@CrossOrigin** enables cross-domain communication for the annotated request handler methods:
+```Java
+@CrossOrigin
+@RestController
+@RequestMapping(value = "/books")
+public class BookController {
+
+    //....
+
+    @GetMapping(value = "/{id}")
+    ResponseEntity<BookDTO> getBookById(@PathVariable long id) {
+        //....
+    }
+}
+```
+The **@CrossOrigin** annotation uses the default values:<br>
+- All origins are allowed.
+- The HTTP methods allowed are those specified in the @RequestMapping annotation (GET, for this example).
+- The time that the preflight response is cached (maxAge) is 30 minutes.
