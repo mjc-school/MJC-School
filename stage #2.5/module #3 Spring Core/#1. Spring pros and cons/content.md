@@ -42,9 +42,7 @@ While there are advantages of Spring framework, there are some disadvantages as 
 1. **Complexity**: Working with Spring is more complex. It requires a lot of expertise. If you have not used Spring
    before, first you will have to learn. The learning curve is also difficult, so if you have not a lot of development
    experience, it is difficult to learn.
-2. **Parallel Mechanism**: It provides multiple options to developers. These options create confusion to developers that
+2. **Parallel Mechanism**: It provides multiple options to developers. These options create confusion to developers:
    which feature to use and which to not and wrong decisions may lead to significant delays.
 3. **No Specific Guidelines**: It does not care about XSS or cross-site scripting. With this in mind, we need to figure
    out ways on how to stop hackers from infiltrating your application yourself.
-4. **High Learning Curve**: If you have not development experience in the field, it would be quite difficult to learn It
-   is difficult due to new programming methods.
