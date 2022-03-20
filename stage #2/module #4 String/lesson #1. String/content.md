@@ -3,14 +3,14 @@
 ## Overview
 The String class represents character strings.
 
-For example:
+**For example:**
 ```
   String str = "Geeks;
 ```
 
 ![image_info](media/charSequence.png)
 
-Hierarchy:
+**Hierarchy:**
 
 ![image info](media/stringHierachy.png)
 ## The important points about Java String are:
@@ -27,8 +27,8 @@ Hierarchy:
     text3 += text2;
 ```
 
-In addition to the methods defined by Serializable, CharSequence, Comparable<String>, String defines some of its own, which are summarized
-in the following table.
+In addition to the methods defined by **Serializable**, **CharSequence**, **Comparable<String>**,
+**String** defines some of its own, which are summarized in the following table.
 
 | Method                                                                                     | Description                                                                                                                                 |
 |--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -99,7 +99,7 @@ in the following table.
 | static String valueOf(long l)                                                              | Returns the string representation of the long argument.                                                                                     |
 | static String valueOf(Object obj)                                                          | Returns the string representation of the Object argument.                                                                                   |
 
-Constructors of String:
+Constructors of **String**:
 
 | Constructor                                                      | Description                                                                                                                                                                                 |
 |------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -121,7 +121,7 @@ Constructors of String:
 
 ### Overview
 
-The String is the most widely used data structure. Caching the String literals and reusing them
+The **String** is the most widely used data structure. Caching the String literals and reusing them
 saves a lot of heap space because different String variables refer to the same object in the String
 pool. String intern pool serves exactly this purpose.
 
@@ -149,8 +149,7 @@ pointing to same String object from the pool, thus saving crucial memory resourc
 
 If you want to store this string in the constant pool then you will need to “intern” it.
 
-For example:
-
+**For example:**
 ```
     String internedString = str.intern();
     // this will add the string to string constant pool.

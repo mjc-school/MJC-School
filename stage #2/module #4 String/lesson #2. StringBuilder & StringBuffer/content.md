@@ -1,7 +1,7 @@
 # StringBuffer (java.lang.StringBuffer)
 
 ## Overview
-A thread-safe, mutable sequence of characters. A string buffer is like a String, but can be
+A thread-safe, mutable sequence of characters. A string buffer is like a **String**, but can be
 modified.
 
 ## The important points about Java StringBuffer are:
@@ -63,7 +63,7 @@ modified.
 | String toString()                                                      | Returns a string representing the data in this sequence.                                                                  |
 | void trimToSize()                                                      | Attempts to reduce storage used for the character sequence.                                                               |
 
-Constructors of StringBuffer:
+Constructors of **StringBuffer**:
 
 | Constructor                    | Description                                                                                   | 
 |--------------------------------|-----------------------------------------------------------------------------------------------|
@@ -75,7 +75,7 @@ Constructors of StringBuffer:
 # StringBuilder (java.lang.StringBuilder)
 
 ## Overview
-A mutable sequence of characters. This class provides an API compatible with StringBuffer,
+A mutable sequence of characters. This class provides an API compatible with **StringBuffer**,
 but with no guarantee of synchronization.
 
 ```
@@ -136,7 +136,7 @@ but with no guarantee of synchronization.
 | String toString()                                                       | Returns a string representing the data in this sequence.                                                                  |
 | void trimToSize()                                                       | Attempts to reduce storage used for the character sequence.                                                               |
 
-Constructors of StringBuilder:
+Constructors of **StringBuilder**:
 
 | Constructor                     | Description                                                                                                      |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -146,7 +146,7 @@ Constructors of StringBuilder:
 | StringBuilder(String str)       | Constructs a string builder initialized to the contents of the specified string.                                 |
 
 ## StringBuffer vs StringBuilder
-A list of differences between StringBuffer and StringBuilder is given below:
+A list of differences between **StringBuffer** and **StringBuilder** is given below:
 
 | StringBuffer | StringBuilder   |
 |--------------|-----------------|
