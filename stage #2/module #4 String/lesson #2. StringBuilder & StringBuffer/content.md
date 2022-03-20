@@ -4,8 +4,6 @@
 A thread-safe, mutable sequence of characters. A string buffer is like a **String**, but can be
 modified.
 
-## The important points about Java StringBuffer are:
-
 ```
     StringBuffer s = new StringBuffer("GeeksforGeeks");
 ```
