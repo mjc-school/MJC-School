@@ -14,7 +14,7 @@ public class BookController {
 
     @GetMapping
     ResponseEntity<List<BookDTO>> getAllBooks(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
-        List<Book> bookList = bookService.getAllBooks();
+        List<Book> bookList = bookService.getAllBooks(limit, offest);
         List<BookDTO> bookDTOList = convertor.convertModelListToDtoList(bookList);
         return new ResponseEntity<>(bookDTOList, HttpStatus.OK);
     }
