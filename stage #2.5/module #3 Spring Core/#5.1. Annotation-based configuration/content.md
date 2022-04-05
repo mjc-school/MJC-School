@@ -200,10 +200,11 @@ automatically resolved, with no special setup necessary.
 
 ## Annotation-based Autowiring with Qualifiers
 
-When you need more control over the bean candidates selection process, you can use Spring's `@Qualifier` annotation. You
-can associate qualifier values with specific arguments, narrowing the set of type matches so that a specific bean is
-chosen for each argument. In the simplest case, this can be a plain descriptive value, as shown in the following
-example:
+If more than one bean of the same type is available in the container, the framework will throw
+`NoUniqueBeanDefinitionException`. This is because Spring doesn't know which bean to inject. To avoid this problem,
+there are several solutions, the `@Qualifier` annotation is one of them. You can associate qualifier values with
+specific arguments, narrowing the set of type matches so that a specific bean is chosen for each argument. In the
+simplest case, this can be a plain descriptive value, as shown in the following example:
 
 ```java
 public class MusicRatingService {
@@ -336,6 +337,10 @@ field, it takes the field name. In case of a setter method, it takes the bean pr
 In the exclusive case of `@Resource` usage with no explicit name specified, and similar to `@Autowired`, `@Resource`
 finds a primary type match instead of a specific named bean and resolves well known resolvable dependencies: the
 `BeanFactory`, `ApplicationContext`, `ResourceLoader`, `ApplicationEventPublisher`, and `MessageSource` interfaces.
+
+> - If `@Autowired` is used together with `@Qualifier`, it is the same as the `@Resource`.
+> - `@Resource` only supports for fields and setter injection while `@Autowired` supports fields, setter, constructors and
+  multi-argument methods injection.
 
 ## @Value
 
