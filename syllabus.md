@@ -94,3 +94,43 @@ Following topics are covered:
 * Modern UI 
 * AWS 
 * Spring Data 
+
+## Syllabus Readiness
+
+| Module | Theory Readiness | Practice Readiness | Group Exists |
+|--------|:----------------:|:------------------:|:------------:|
+|| Stage 0. Fundamentals ||
+| Computer Science | 99% | 15% | Yes |
+| Infrastructure (environment) | 99% | 15% | Yes |
+| JDK, JRE, Git Basics, IDE, Junit concepts | 99% | 15% | Yes |
+| Java Lang syntax | 99% | 15% | Yes |
+| Java Fundamentals | 99% | 15% | Yes |
+| Algorithms and Data Structures | 99% | 15% | Yes |
+| OOP/OOD Fundamentals | 99% | 15% | Yes |
+|| Stage 1. Core ||
+| Exceptions | 100% | 100% | No |
+| Strings | 100% | 0% | Yes |
+| Generics | 0% | 0% | No |
+| Collections (+collection internals) | 100% | 100% | No |
+| Stream API - lambdas, streams, func. Interfaces | 0% | 0% | No |
+| Java. I/O, NIO | 0% | 0% | No |
+| Data Formats (JSON, XML, YML) | 0% | 0% | No |
+| Concurrency | 0% | 0% | No |
+|| Stage 2. Web ||
+| Git & Build Tools | 100% | 100% | No |
+| Web, HTTP(s) methods, Java EE Servlets | 100% | 100% | No |
+| SQL | 100% | 100% | No |
+| Architecture basics. Architectural patterns. Engineering Best-practices | 0% | 0% | No |
+|| Stage 3. Modern Frameworks ||
+| Architecture Advanced | 100 % | 100 % | Yes |
+| ORM | 100% | 0% | Yes |
+| Spring Core | 100% | 0% | Yes |
+| REST Basics | 100% | 0% | Yes |
+| Swagger | 0% | 0% | Yes |
+|| Stage 4. Enterprise ||
+| CI\CD | 100% | 100% | No |
+| REST Advanced | 100% | 100% | No |
+| Authentication & Authorization, Spring Security | 100% | 100% | No |
+| Modern UI | 100% | 100% | No |
+| AWS | 100% | 100% | No |
+| Spring Data | 100% | 100% | No |
