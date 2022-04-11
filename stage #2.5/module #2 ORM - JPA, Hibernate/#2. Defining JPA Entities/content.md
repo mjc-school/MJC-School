@@ -19,7 +19,7 @@ is existed either inside or outside the class. This metadata can be in following
 
 
 #####2.2. The Entity annotations
-All the JPA annotations are defined in the **javax.persistence** package. HHibernate Annotations are based on the JPA 2 
+All the JPA annotations are defined in the **javax.persistence** package. Hibernate Annotations are based on the JPA 2 
 specification and supports all the features.
 
 #####2.2.1. The Entity Annotation
@@ -96,7 +96,7 @@ nullable element specifies whether the column is nullable or not, and the unique
 is unique. If we don't specify this annotation, the name of the field will be considered the name of the column in the table.
 
 #####2.2.5. The Transient Annotation
-Sometimes, we may want to make a field non-persistent. We can use the **@Transient**  annotationto do so. It specifies 
+Sometimes, we may want to make a field non-persistent. We can use the **@Transient**  annotation to do so. It specifies 
 that the field will not be persisted.For instance, we can calculate the age of a customer from the date of birth.
 
 
