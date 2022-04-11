@@ -49,7 +49,7 @@ factory for org.hibernate.Session instances. The EntityManagerFactory is the JPA
 basically, those two converge into the same SessionFactory implementation.
 A SessionFactory is very expensive to create, so, for any given database, the application should have only one 
 associated SessionFactory. The SessionFactory maintains services that Hibernate uses across all Session(s) such as s
-econd level caches, connection pools, transaction system integrations, etc.
+second level caches, connection pools, transaction system integrations, etc.
 
 **Session** (org.hibernate.Session)</br>
 A single-threaded, short-lived object conceptually modeling a "Unit of Work" (PoEAA). In JPA nomenclature, the Session 
@@ -240,7 +240,7 @@ org.hibernate.annotations.CascadeType enum:
 * REPLICATE - cascades the entity replicate operation.
 * LOCK - cascades the entity lock operation.
 
-The following examples will explain some aforementioned cascade operations using the following entities:
+The following examples will explain some before mentioned cascade operations using the following entities:
 
     @Entity
     public class Customer {
@@ -267,7 +267,7 @@ The following examples will explain some aforementioned cascade operations using
 ###3.1.2. Container and Application Managed EntityManager
 Basically, there are two types of EntityManager: Container-Managed and Application-Managed.
 ####3.1.2.1. Container-Managed EntityManager
-Here, the container((such as a JEE Container or Spring) ) injects the EntityManager in enterprise components.
+Here, the container (such as a JEE Container or Spring) injects the EntityManager in enterprise components.
 In other words, the container creates the EntityManager from the EntityManagerFactory:
 
     @PersistenceContext
@@ -287,7 +287,7 @@ we must explicitly call createEntityManager() in the EntityManagerFactory:
 
     protected static EntityManagerFactory entityManagerFactory;
     static {
-        entityManagerFactory = Persistence.createEntityManagerFactory("com.epam");
+        entityManagerFactory = Persistence.createEntityManagerFactory("com.mjc");
     }
 
     public T save(T entity) {
