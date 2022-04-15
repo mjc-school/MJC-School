@@ -210,7 +210,7 @@ simplest case, this can be a plain descriptive value, as shown in the following 
 public class MusicRatingService {
 
     @Autowired
-    @Qualifier("main")
+    @Qualifier("hardRock")
     private MusicMagazine musicMagazine;
 
     // ...
@@ -234,7 +234,7 @@ The following example shows corresponding bean definitions.
     <context:annotation-config/>
 
     <bean class="com.somepackage.MusicMagazineImpl">
-        <qualifier value="main"/>
+        <qualifier value="hardRock"/>
         <!-- inject any dependencies required by this bean -->
     </bean>
 
