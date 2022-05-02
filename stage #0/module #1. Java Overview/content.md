@@ -47,6 +47,8 @@ Java is an object-oriented programming language developed by Sun Microsystems in
 
 In some programming languages, code is compiled into native code for a specific architecture. And if we run such code in another platform, with a different architecture (processor, operating system), then most likely, this code will not work. The C compiler works in a similar way. The code written by a programmer is compiled into native code, understandable by the specific architecture in which it is written.
 
+![](compiler-flow.png)
+
 The Java language was originally made with the goal of writing once, running anywhere.
 Therefore, after writing a program, Java code is compiled into byte code. The bytecode looks the same regardless of the platform because only the JVM needs this code. The JVM, in turn, interprets the bytecode into native code that is understandable for a specific system. This is called **cross-platforming**.
 
