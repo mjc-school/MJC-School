@@ -355,7 +355,7 @@ UTF-16.
 
 Special point here is that _char_ type needs those single quotes for telling java that this is literal, that needs to be
 treated as symbol. The way java manages those symbols is the following: it associates value of symbol with unsigned short
-value. So the following is gonna be the same:
+value. So the following is going to be the same:
 
     char t = 't';
     char t1 = 116;

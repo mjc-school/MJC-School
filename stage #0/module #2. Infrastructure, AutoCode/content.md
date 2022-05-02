@@ -8,7 +8,7 @@
 ### JDK
 An essential toolkit for Java development. The JDK includes:
 an environment for executing Java programs called JRE. If you only need to run Java programs, without writing Java code, you can install the JRE separately.
-a set of necessary utilities (javac, java debuggers, java docs, etc). For example, the javac utility converts written code into intermediate byte code.
+a set of necessary utilities (javac, java debuggers, java docs, etc.). For example, the javac utility converts written code into intermediate byte code.
 
 ### JRE
 Runtime environment for Java programs. Included in JDK by default. JRE contains core libraries, class loader, and JVM.
@@ -21,7 +21,7 @@ A virtual machine that runs Java programs. It is part of the JRE. For each separ
 ### Installing JDK
 JDK is required for Java developers. It contains a Java compiler that allows you to compile your code written in Java in the byte code that JVM can understand. It also contains everything that you need to run Java applications.
 #### To install JDK follow the next steps:
-1. Go to https://www.oracle.com/java/technologies/downloads/. On the page, you can see there are several options. You can install the latest JDK version (currently it is JDK 18) or choose the earlier ones. I would recommend installing the latest one. You will have a new feature introduced in the latest version and you will be able to run code from the previous versions like Java 8.
+1. Go to https://www.oracle.com/java/technologies/downloads/. On the page, you can see there are several options. You can install the latest JDK version (currently it is JDK 18) or choose the earlier ones. I would recommend installing the latest one. You will have a new feature introduced in the latest version, and you will be able to run code from the previous versions like Java 8.
 2. Choose a system you are working on. On the page, you will see Linux/macOS/Windows sections. Choose an appropriate one.
 3. Find an option to download. You can download Java as an archive or as an installer.
 4. Install or archive the downloaded file.
@@ -40,6 +40,8 @@ So, it is enough to install the Community version for now by the following steps
 3. After it is downloaded, run the installer or archive in the appropriate folder.
 4. After it finishes installing, you can run IntelliJ Idea and create your first project. Details may be found by the link
 
+
+##
 ### Installing Git
 The next important tool that should be installed is Git. Git is distributed version control system. Such web services like GitHub, GitLab, and others, where you can search committed code, are based on Git. Thus, installing Git is a required step if you want to push/pull any changes from a remote repository. It also might be useful when you are just working locally and would like to store the history of the changes.
 
@@ -51,7 +53,7 @@ To install Git on Windows, follow the next steps:
       For other systems like Linux or macOS, the instructions may be found by the [link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git "link").
 
 ### Installing Maven
-Last but not least tool that should be installed is Maven. Maven is a framework for project build automation. In short, it allows you to specify dependencies of your code in one place (pom.xml) and then compile your code with those dependencies by running tasks. With Maven you can simply run a compile task that will compile your project’s code. If you did it manually, you would have to run the javac command with all the dependencies listed in the classpath.
+Last but not the least tool that should be installed is Maven. Maven is a framework for project build automation. In short, it allows you to specify dependencies of your code in one place (pom.xml) and then compile your code with those dependencies by running tasks. With Maven, you can simply run the "compile" task that will compile your project’s code. If you did it manually, you would have to run the javac command with all the dependencies listed in the classpath.
 1. Go to https://maven.apache.org/download.cgi
 2. In the Files sections, find and download Binary zip archive (currently it is apache-maven-3.8.3-bin.zip)
 3. After it is downloaded, unzip the archive into any folder.
@@ -68,7 +70,7 @@ Version control system is a necessary tool for maintaining the history of change
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 **Source:** https://git-scm.com/
 
-#### Gitlab and Gihub
+#### Gitlab and Github
 **GitLab**: GitLab is a repository hosting manager tool that is developed by GitLab Inc and is used for the software development process. It provides a variety of management by which we can streamline our collaborative workflow for completing the software development lifecycle. It also allows us to import the repository from Google Code, Bitbucket, etc.
 
 **GitHub**: GitHub is a repository hosting service tool that features collaboration and access control. It is a platform for programmers to fix bugs together and host open-source projects. GitHub is designed for the developers and to help them track their changes into a project through the repository. Following are some features of GitHub

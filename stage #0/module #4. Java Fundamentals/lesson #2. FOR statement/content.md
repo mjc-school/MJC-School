@@ -2,19 +2,7 @@
 Before diving into "loops", make the console output with the words: "writing the same code doesn't have much impact, and
 ****it's also time-consuming" for 20 times.
 
-### Task
-Repeat is bad. Create a program that will make console output for 20 times, saying:
-"writing the same code doesn't have much impact, and it's also time consuming".
-No loops, streams are allowed. The task should be implemented inside of repeatIsBad() of code snippet:
-
-    public class Main {
-        public void repeatIsBad(){
-            //write your code here
-        }
-    }
-
-
-###Plain task solution
+### Plain task solution
 You must have got something like this:
 
     System.out.println("writing the same code doesn't have much impact, and it's also time consuming");
@@ -80,7 +68,7 @@ constructions:"while", "for", "do-while". We will begin with the "while" loop, a
 And that is all! This seems to be much better and much more laconic, isn't it? Let's take a look under the hood:
 1) Just like in th block scheme we define the counter.
 2) Condition checking. The keyword "while", which literally says: until the counter is less than 20 do the following:
-3) Make the console output:System.out.println("writing the same code doesn't have much impact, and it's also time consuming");.
+3) Make the console output:System.out.println("writing the same code doesn't have much impact, and it's also time-consuming");.
 3.1) Increase the counter by one.
 4) AND as the condition checking in the 2nd step was true(the counter is still less than 20), and we got to this block 
 of code, we have to return to the 2nd step to check the condition once again, and it goes on until we reach 21 with our 
@@ -116,25 +104,15 @@ one block(or even one line), but the principle is still the same:
 Tricky point here is that if the condition is true it appears to be logical to increment the counter and only after that
 go to the code block execution, but it doesn't work like this, as the increment (counter++) statement is executed only 
 after the code block with the logics itself is finished.
-Also, the last "increment" statement usually interacts with the counter, so as to be able to break the loop once we need,
+Also, the last "increment" statement usually interacts with the counter, to be able to break the loop once we need,
 those interactions can be different: we can multiply, divide , decrease the counter(any math operation can be applied).
-
-
-###Tasks:
-1. Range sum. Write a program that will find the sum between numbers with in the range.
-2. Alphabet. Write a program that will write to console English alphabet.
-3. GCD. Write a program that will find the Greatest Common Divisor (GCD) of two numbers
-4. **REVERT STRING**. It's allowed to use only loops and no special methods like:String.revert(), ...
-5. Digits sum. Write a program that will find the sum of digits of a given number
-6. 9-s sum. Write a program that will display the sum of the series [ 9 + 99 + 999 + 9999 ...]
-7. Fibonacci. Write a program that will  display the first n terms of Fibonacci series.
 
 ***
 ###While vs For
 So when to use while and when is it preferable to use for loops? The answer is simple: when you know the final amount 
 of iterations it's better(simpler) to use "for", and when you have to check something which amount cannot be easily
 determined better to use "while", another point worth mentioning is that if you are to interact with the variable that 
-has already been defined it's also "while" usecase:
+has already been defined it's also "while" use-case:
 
     int toBeChanged = 742;
     ... //actions with the toBeChanged which eventually change the value to minus 5
@@ -162,12 +140,6 @@ Count the amount of even numbers from -5 to 17:
 Here we go from -5 to 17 inclusive and each time the number is even we increase counter.
 
 
-####Tasks
-REWRITE:
-1. (for) WordsBuilder. Write a program that will build a phrase from given chars (char...).
-2. (for) EvenNumbers. Write a program that will write to console even numbers from zero to the number from method.
-3. (while) Alphabet. Write a program that will write to console English alphabet.
-4. (while) Digits sum. Write a program that will find the sum of digits of a given number
 ***
 ## Do-while
 Do-while loop is a bit different from "while" and "for" as this loop literally says:" before checking the condition 
@@ -188,7 +160,7 @@ And do-while block has the following structure:
 In this case console output will be from 0 to 9, as the number is printed before the increment statement, and if here we
 used simple while loop (or for) the code block wouldn't be executed as the condition check would be performed before the 
 action block, which means that counter would still remain 0, which is obviously not more than 0.
-"Do-while" block is not met that often as "while" and "for" are, because it has a bit different usecase scenarios, it's 
+"Do-while" block is not met that often as "while" and "for" are, because it has a bit different use-case scenarios, it's 
 usually used when we need to perform some action at least once before checking some condition, like in cases when we 
 have to get some data from anywhere (if the data can be provided continuously), we have to try to get this data and 
 while we are receiving this data, we continue(pseudocode example):
@@ -245,7 +217,7 @@ often
 ###Break
 There can be situations when we do not want to proceed loop execution, because of different facts, for example if the 
 data that our program consumes is unexpected (if we are expecting to get only positive numbers, but the number we receive 
-is zero or below), for that particular cases java offers you "break" keyword:
+is zero or below), for that particular case java offers you "break" keyword:
 
     for (int i = 0; i < 10; i++) {
         if (i == 5) {
