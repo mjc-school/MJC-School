@@ -25,10 +25,10 @@ As regards an origin of "Big O notation", it is used in complexity theory, compu
 
 "Big O notation" tells us a number of operations, which an algorithm will perform.
 There are the following most common types of complexities (from fastest to slowest):
-- "O(1)", also known as (henceforce - a.k.a) "_constant time_": the number of operations, which are needed to complete an algorithm, is fixed and doesn't depend on the input number;
+- "O(1)", also known as (henceforth - a.k.a) "_constant time_": the number of operations, which are needed to complete an algorithm, is fixed and doesn't depend on the input number;
 - "O(log n)", a.k.a "logarithmic time": the ratio of the operations number to the input size decreases and tends to zero when "n" increases, i.e. the more input is, the less time is needed;
 - "O(n)", a.k.a "linear time": running time increases with the size of the input in the linear way, i.e.  ;
-- "O(n * log n)", a.k.a "linearithmic time": the "n log n" running time is simply the result of performing a "Θ(log n)" operation "n" times;
+- "O(n * log n)", a.k.a "logarithmic time": the "n log n" running time is simply the result of performing a "Θ(log n)" operation "n" times;
 - "O(n^2)", a.k.a "quadratic time": the number of operations it performs scales in proportion to the square of the input;
 - "O(2^n)", a.k.a "exponential time": any time an input unit increases by 1, it causes you to double the number of operations performed;
 - "O(n!)", a.k.a "factorial time": the number of operations it performs scales in proportion to the result of multiplication of all positive integers less than or equal to the input.
@@ -222,7 +222,7 @@ System.arraycopy(src, 0, dest, 2, 5)
 #### Multidimensional Arrays
 Arrays we have mentioned till now are called one-dimensional arrays. However, we can declare multidimensional arrays in Java. A multidimensional array in Java is an array of arrays, that is, each element of a multidimensional array is an array itself.
 
-A two-dimensional array is the simplest form of multi-dimensional arrays, in other words, it is an array of one-dimensional arrays. it is stored in the form of rows and columns.
+A two-dimensional array is the simplest form of multidimensional arrays, in other words, it is an array of one-dimensional arrays. it is stored in the form of rows and columns.
 ```
 int[][] arr;                 // defines a two-dimensional array
 arr = new int[2][5];         // creates a two-dimensional array definition with "2" rows and "5" columns
@@ -331,10 +331,10 @@ Summarizing the aforementioned situations, here is provided "Time Complexity Cha
 https://www.programiz.com/dsa/linked-list
 
 | Operation | Arrays | Linked Lists |
-| --- | --- | --- |
-| Reading | O(1) | O(n) |
-| Insertion | O(n) | O(1) |
-| Deletion | O(n) | O(1) |
+|-----------|--------|--------------|
+| Reading   | O(1)   | O(n)         |
+| Insertion | O(n)   | O(1)         |
+| Deletion  | O(n)   | O(1)         |
 
 ### Summary
 - Data structures should be treated as a method to store information;
