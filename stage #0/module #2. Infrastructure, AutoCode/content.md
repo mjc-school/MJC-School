@@ -15,7 +15,8 @@ Runtime environment for Java programs. Included in JDK by default. JRE contains 
 
 ### JVM
 A virtual machine that runs Java programs. It is part of the JRE. For each separate running Java program, its own JVM instance is created.
-//TODO: Add picture
+
+![](jdk-structure.png)
 
 ### Installing JDK
 JDK is required for Java developers. It contains a Java compiler that allows you to compile your code written in Java in the byte code that JVM can understand. It also contains everything that you need to run Java applications.
