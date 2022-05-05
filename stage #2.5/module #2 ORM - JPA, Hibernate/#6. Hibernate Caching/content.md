@@ -11,7 +11,7 @@ Caching is a feature that is being used in applications to improve the performan
 database and the application and usually the data of database queries gets cached (local copy) in disk or memory so that
 subsequent calls for the same data can be served by cache only. Caching is important to Hibernate as well. 
 It utilizes a multilevel caching scheme as explained below.
-<br>![](../%236%20Hibernate%20Caching/media/hibernate_cache.jpg)</br>
+<br>![](../%236.%20Hibernate%20Caching/media/hibernate_cache.jpg)</br>
 Hibernate cache is 3 levels of caching:
 * Cache of the first level (First-level cache);
 * Second-level cache (Second-level cache);
