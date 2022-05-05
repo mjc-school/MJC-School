@@ -48,7 +48,7 @@ The common approach is to assign a service role that we are to create beforehand
      - Assign the Role created in step 2.
      - Within User Data section add the script that downloads your application from S3 bucket and launchs it. Use aws cli command: aws s3 cp s3://BUCKET-NAME/FILENAME . 
      - In security group settings open the port your application will be running on.
-*6. Terminate or remove all created resources/services once you finished the module and showed a demo.*
+6. *Terminate or remove all created resources/services once you finished the module and showed a demo.*
 
 #### General requirements
 
