@@ -1,6 +1,6 @@
 ## 3. REST API Tools for Testing, Design, and Development
 
-* Overview
+* 3.Overview
 * 3.1. Postman
 * 3.2. SoapUI
 * 3.3. RESTAssured
