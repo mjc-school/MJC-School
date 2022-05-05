@@ -1,11 +1,12 @@
 ##3. REST API Tools for Testing, Design, and Development
 
-Overview
-3.1. Postman
-3.2. SoapUI
-3.3. RESTAssured
-3.4. Swagger
-3.5. Curl
+* Overview
+* 3.1. Postman
+* 3.2. SoapUI
+* 3.3. RESTAssured
+* 3.4. Swagger
+* 3.5. Curl
+
 ###3. Overview
 
 These REST API testing and development tools will help you to test your APIs as you build, starting from unit testing 
