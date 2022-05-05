@@ -28,7 +28,7 @@ https://www.baeldung.com/postman-testing-collections
 SoapUI is a functional testing tool that is the world’s leading solution for SOAP and REST testing. In essence, 
 it works as a headless API testing tool. You can quickly and easily create and execute automated functional, regression,
 and load tests with SoapUI’s user-friendly graphical interface and enterprise-class features. Several protocols and 
-technologies are supported by SOAPUI to test all types of APIs. The SoapUI  interface is intuitive, so technical users 
+technologies are supported by SoapUI to test all types of APIs. The SoapUI  interface is intuitive, so technical users 
 and non-techies alike can use it seamlessly.
 
 https://www.soapui.org/docs/rest-testing/
