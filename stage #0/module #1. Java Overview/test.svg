@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject>
+      <div xmlns="http://www.w3.org/1999/xhtml" id='root'>
+          
+		  <script>
+			var resp = httpGet('https://raw.githubusercontent.com/mjc-school/MJC-School/stage0/stage%20%230/module%20%231.%20Java%20Overview/content.md')
+			
+			var el = document.getElementsByName('textarea')
+			el[0].innerHTML = resp
+			
+			function httpGet(theUrl)
+			{
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+				xmlHttp.send( null );
+				return xmlHttp.responseText;
+			}
+		  </script>
+      </div>
+  </foreignObject>
+</svg>
