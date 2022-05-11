@@ -23,6 +23,7 @@ To consolidate the material covered in this course, we will ask to write some ta
 To confidently use these tools, we will need to learn following:
 - How to compile and run Java application
 - Git basics
+- Maven basic installation
 - How to use Autocode for doing practical tasks
 - **Advance:** What is Unit tests
 
@@ -123,8 +124,25 @@ To install Git on Windows, follow the next steps:
 You can find details tips at the end of the chapter.
 
 ### Installing Maven
-// TODO: Add Maven
-// TODO: Add screenshots
+Another tool we are going to use in this course is Maven.
+Maven is a framework for project build automation. In short, it allows you to specify dependencies of your code in one place (pom.xml) and then compile your code with those dependencies by running tasks. With Maven you can simply run a compile task that will compile your project’s code. If you did it manually, you would have to run the javac command with all the dependencies listed in the classpath.
+
+For our usage you can install Maven using Intellij IDEA or manually and then configure to use your installation in Intellij IDEA
+
+#### To install manually:
+1. Go to [link](https://maven.apache.org/download.cgi).
+2. In the Files sections, find and download Binary zip archive (currently it is apache-maven-3.8.3-bin.zip).
+3. After it is downloaded, unzip the archive into any folder.
+4. Create MAVEN_HOME and M2_HOME environment variables which will point out to maven directory (an example: C:\tools\maven)
+5. Add a path to maven bin directory to a Path environment variable (an example: C:\tools\maven\bin)
+6. Open Command Prompt and perform the next command:
+   - mvn -v
+
+#### To install using Intellij IDEA
+1. Open Intellij IDEA.
+2. Use `CTRL + ALT + S` in order to open preferences.
+3. Type `Maven` in search bar. Or it should be under `Build, Execution, Deployment -> Build Tools -> Maven`.
+4. You can specify to use bundled Maven version (IDEA can download it for you) or specify manual installation folder.
 
 ### How to use Autocode for doing practical tasks
 While reading materials from that course you will be able to solve related practical tasks which will be prepared using Autocode platform.
@@ -135,14 +153,15 @@ Autocode has a well-formed documentation ([link](https://autocode-next.lab.epam.
 3. Start doing task.
 4. Using Intellij IDEA with git.
 5. Submitting task.
+6. How to understand results.
 
-#### Create your GitHub
+#### Create your GitHub account
 In order to submit solutions you will need to have account on GitHub, it will be used to automatically fork task repository and then get final solution.
 You can simply visit SignUp page: [GitHub](https://github.com/signup).
 
 Follow instructions, most probably you will need to verify your email - please do it.
 
-#### Connect account to Autocode
+#### Connect GitHub account to Autocode
 After you will have activated account you can start linkin you account to Autocode.
 In order to link:
 1. Log in to Autocode.
@@ -198,7 +217,7 @@ This can be done using Intellij IDEA or via CommandPrompt.
 4. Press `Commit and Push`.
 5. Confirm by clicking `Push`.
 
-#### Using git
+#### Using CMD
 1. Open CommandPrompt(CMD) as for Windows or similar for other Operating System.
 2. Navigate to project folder.
 3. Use `git status` in order to see which files already included in commit.
@@ -206,8 +225,35 @@ This can be done using Intellij IDEA or via CommandPrompt.
 5. To commit use: `git commit -m "My first commit!"`. Where you need to replace "My first commit!" with commit message.
 6. Then use `git push` in order to update GitHub repository with your local changes.
 
-//TODO: Submitting task
-//TODO: Advanced topics
+#### Result
+You should be able to see your changes on GitHub repository via browser. If you think this is final solution, or you want to check intermittent result you can submit task.
+
+### Submit task using Autocode platform
+In order to check if your solution and get score you need do following:
+1. Open Autocode platform and sign in.
+2. Go to course structure page.
+3. Find task you want to submit, for e.g. `Task #1. Autocode greetings`
+   - You should be able to see your last commit, this is a good sign. If not - use `refresh`.
+4. Click `Submit solution`.
+5. You will see result soon.
+
+### How to understand results
+Usually all tasks should contain following stages:
+1. Checkout - Autocode prepare your source code to be checked.
+- You will not get score for successfully passing this stage.
+- If this stage failing - it should be most probably environmental or GitHub issue.
+2. Compile - Autocode using Javac to check compile error and prepare tests to be executed.
+- In specific tasks, which require solving compile errors, you will get score points.
+- If this stage failing - check your core for different issue, open code in Intellij IDEA. Detailed logs will be available on Autocode. Maybe you forget to commit your changes or push them to remote repository.
+3. Test - **_(Main part)_** Autocode start running prepared tests to verify your solution. Test can check result of your solution, check how you solve it and are you following requirements. You can find more about Unit tests in next section.
+- You will receive score points for every successful test. Up to maximum points. 
+- If you do not receive maximum points - it means that some tests are failing, You will be able to see detailed message. But in some cases it is fine to get only minimum points to finish task.
+4. Quality - (**_Optional_**) Autocode in specific tasks will check your code smells.
+- You will get penalties for issue that can lead to issues or bugs.
+- You will be able to see detailed description what is not ok.
+
+### Note: Do not forget to check how many times you can submit solution!
+
 ### Unit testing. Junit
 A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property.
 
