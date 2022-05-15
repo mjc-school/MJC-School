@@ -6,8 +6,8 @@
 * 2.3. Entity Relationships
 * 2.4. Lazy Loading and Eager Loading
 
-###2.1.Defining JPA Entities
-####2.1. Entity
+### 2.1.Defining JPA Entities
+#### 2.1. Entity
 Entities in JPA are nothing but POJOs representing data that can be persisted to the database. An entity represents
 a table stored in a database. Every instance of an entity represents a row in the table.
 
@@ -18,11 +18,11 @@ is existed either inside or outside the class. This metadata can be in following
 * **XML** - In this form, metadata persist outside the class in XML file.
 
 
-#####2.2. The Entity annotations
+##### 2.2. The Entity annotations
 All the JPA annotations are defined in the **javax.persistence** package. Hibernate Annotations are based on the JPA 2 
 specification and supports all the features.
 
-#####2.2.1. The Entity Annotation
+##### 2.2.1. The Entity Annotation
 Let's say we have a POJO called Customer which represents the data of a customer, and we would like to store it in the
 database.
 
@@ -39,7 +39,7 @@ We must also ensure that the entity has a no-arg constructor and a primary key:
     }
 Because various JPA implementations will try subclassing our entity in order to provide their functionality, entity
 classes must not be declared final.
-#####2.2.2. The Id Annotation
+##### 2.2.2. The Id Annotation
 Each JPA entity must have a primary key which uniquely identifies it. The **@Id** annotation defines the primary key. 
 We can generate the identifiers in different ways which are specified by the **@GeneratedValue** annotation.
 
@@ -55,7 +55,7 @@ identifiers.
      private String name;
         // getters and setters
     }
-#####2.2.3. The Table Annotation
+##### 2.2.3. The Table Annotation
 In most cases, the name of the table in the database and the name of the entity will not be the same.
 In these cases, we can specify the table name using the **@Table** annotation:
 
@@ -75,7 +75,7 @@ We can also mention the schema using the schema element:
      }
 Schema name helps to distinguish one set of tables from another. If we do not use the **@Table** annotation, the name
 of the entity will be considered the name of the table.
-#####2.2.4. The Column Annotation
+##### 2.2.4. The Column Annotation
 We can use the **@Column** annotation to mention the details of a column in the table.
 The **@Column** annotation has many elements such as name, length, nullable, and unique.
 
@@ -95,7 +95,7 @@ The name element specifies the name of the column in the table. The length eleme
 nullable element specifies whether the column is nullable or not, and the unique element specifies whether the column
 is unique. If we don't specify this annotation, the name of the field will be considered the name of the column in the table.
 
-#####2.2.5. The Transient Annotation
+##### 2.2.5. The Transient Annotation
 Sometimes, we may want to make a field non-persistent. We can use the **@Transient**  annotation to do so. It specifies 
 that the field will not be persisted.For instance, we can calculate the age of a customer from the date of birth.
 
@@ -117,7 +117,7 @@ that the field will not be persisted.For instance, we can calculate the age of a
     }
 As a result, the field age will not be persisted to the table.
 
-#####2.2.6. The Enumerated Annotation
+##### 2.2.6. The Enumerated Annotation
 Sometimes, we may want to persist a Java enum type.
 We can use the @Enumerated annotation to specify whether the enum should be persisted by name or by ordinal (default).
 
@@ -255,7 +255,7 @@ inverseJoinColumns attributes tells your JPA framework how to map these classes 
 The @ManyToMany annotation in the Item class references the field in the Order class that manages the relationship;
 namely the items property.
 
-#####2.4. Lazy Loading and Eager Loading
+##### 2.4. Lazy Loading and Eager Loading
 JPA  specification defines two major strategies of loading data (Lazy and Eager):
 * **EAGER** strategy is a requirement on the persistence provider runtime that data must be eagerly fetched;
 * **LAZY** strategy is a hint to the persistence provider runtime that data should be fetched lazily when it is first

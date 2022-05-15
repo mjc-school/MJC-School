@@ -13,7 +13,7 @@
 * 3.10. Cascading entity state transitions
 
 
-###3. Overview
+### 3. Overview
 ![](media/data_access_layers.svg )
 </br>
 Hibernate, as an ORM solution, effectively "sits between" the Java application data access layer and the Relational 
@@ -32,7 +32,7 @@ And if you need some specific features that are not available in the EntityManag
 
     Session session = entityManager.unwrap(Session.class);
 
-###3.1. Main Definitions of Java Persistence API and Hibernate API
+### 3.1. Main Definitions of Java Persistence API and Hibernate API
 **EntityManagerFactory**</br>
 An entity manager factory provides entity manager instances, all instances are configured to connect to the same 
 database, to use the same default settings as defined by the particular implementation, etc. You can prepare several 
@@ -68,7 +68,7 @@ A persistence context is a set of entity instances in which for any persistent e
 instance. Within the persistence context, the entity instances and their life cycle is managed by a particular entity
 manager. The scope of this context can either be the transaction, or an extended unit of work.
 
-###3.2. Entity Object Life Cycle
+### 3.2. Entity Object Life Cycle
 The life cycle of entity objects consists of four states: **Transient**, **Managed**, **Removed** and **Detached**:
 
 ![](media/jpa-entity-lifecycle.png "JPA States")
@@ -83,7 +83,7 @@ context, but scheduled for removal from the database.
 
 The EntityManager API allows you to change the state of an entity, or in other words, to load and store objects. 
 
-###3.3.  Making entities persistent 
+### 3.3.  Making entities persistent 
 Once you’ve created a new entity instance (using the standard new operator) it is in new state. You can make it 
 **persistent** by associating it to either an **org.hibernate.Session** or a **javax.persistence.EntityManager**.
   
@@ -109,7 +109,7 @@ is called. If the identifier is not automatically generated, the manually assign
 set on the instance before the save or persist methods are called.
 
 
-###3.4. Loading an object 
+### 3.4. Loading an object 
 It is common to want to obtain an entity along with its data (e.g. like when we need to display it in the UI).
 
     Example . Obtaining an entity reference with its data initialized with JPA
@@ -264,9 +264,9 @@ The following examples will explain some before mentioned cascade operations usi
     ...
     }
 
-###3.1.2. Container and Application Managed EntityManager
+### 3.1.2. Container and Application Managed EntityManager
 Basically, there are two types of EntityManager: Container-Managed and Application-Managed.
-####3.1.2.1. Container-Managed EntityManager
+#### 3.1.2.1. Container-Managed EntityManager
 Here, the container (such as a JEE Container or Spring) injects the EntityManager in enterprise components.
 In other words, the container creates the EntityManager from the EntityManagerFactory:
 
@@ -280,7 +280,7 @@ In other words, the container creates the EntityManager from the EntityManagerFa
     }
 This also means the container is in charge of beginning the transaction, as well as committing or rolling it back.
 
-####3.1.2.2. Application-Managed EntityManager
+#### 3.1.2.2. Application-Managed EntityManager
 An application-managed entity manager allows you to control the entity manager in application code.
 This entity manager is retrieved through the EntityManagerFactory API. In order to create an EntityManager,
 we must explicitly call createEntityManager() in the EntityManagerFactory:
