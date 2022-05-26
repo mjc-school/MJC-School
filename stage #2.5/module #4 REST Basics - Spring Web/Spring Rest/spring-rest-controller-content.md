@@ -13,53 +13,53 @@ public class BookController {
     private Convertor<BookDTO, Book> convertor;
 
     @GetMapping
-    ResponseEntity<List<BookDTO>> getAllBooks(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
+    ResponseEntity<List<BookDTO>> getAll(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
         List<Book> bookList = bookService.getAllBooks(limit, offest);
         List<BookDTO> bookDTOList = convertor.convertModelListToDtoList(bookList);
         return new ResponseEntity<>(bookDTOList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id:\\d+}")
-    ResponseEntity<List<BookDTO>> getBookById(@PathVariable long id) {
+    ResponseEntity<List<BookDTO>> getById(@PathVariable long id) {
         Book book = bookService.getBookById(id);
         BookDTO bookDTO = convertor.convertModelToDto(book);
         return new ResponseEntity<>(bookDTO, HttpStatus.OK);
     }
 
     @PostMapping
-    ResponseEntity<BookDTO> createBook(@RequestBody BookCreateDTO bookCreateDTO) {
+    ResponseEntity<BookDTO> create(@RequestBody BookCreateDTO bookCreateDTO) {
         Book book = convertor.convertDtoToModel(bookCreateDTO);
         Book createdBook = bookService.createBook(book);
         return new ResponseEntity<>(convertor.convertModelToDto(createdBook), HttpStatus.CREATE);
     }
 
     @PutMapping(value = "/{id:\\d+}")
-    ResponseEntity<BookDTO> updateBook(@PathVariable long id, @Valid @RequestBody BookUpdateDTO bookUpdateDTO) {
+    ResponseEntity<BookDTO> update(@PathVariable long id, @Valid @RequestBody BookUpdateDTO bookUpdateDTO) {
         Book book = convertor.convertDtoToModel(bookUpdateDTO);
         Book updatedBook = bookService.updateBook(book);
         return new ResponseEntity<>(convertor.convertModelToDto(updatedBook), HttpStatus.OK);
     }
 
     @PatchMapping(value = "/{id:\\d+}")
-    ResponseEntity<BookDTO> patchBook(@PathVariable long id, @Valid @RequestBody BookPatchDTO bookPatchDTO) {
+    ResponseEntity<BookDTO> patch(@PathVariable long id, @Valid @RequestBody BookPatchDTO bookPatchDTO) {
         Book book = convertor.convertDtoToModel(bookPatchDTO);
         Book patchedBook = bookService.patchBook(id, book);
         return new ResponseEntity<>(convertor.convertModelToDto(patchedBook), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{id:\\d+}")
-    ResponseEntity<V> deleteBook(@PathVariable long id) {
+    ResponseEntity<V> delete(@PathVariable long id) {
         bookService.deleteBok(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);;
     }
 }
 ```
 **@RequestMapping** annotation that maps HTTP requests to handler methods of MVC and REST controllers.
-In the code above, Such annotations as **@GetMapping, @PostMapping, @PutMapping, @PatchMapping and  @DeleteMapping** are used for mapping HTTP GET, POST, PUT, PATCH and DELETE requests onto specific handler methods.
+In the code above, such annotations as **@GetMapping, @PostMapping, @PutMapping, @PatchMapping and  @DeleteMapping** are used for mapping HTTP GET, POST, PUT, PATCH and DELETE requests onto specific handler methods.
 **@RequestBody** annotation binds request body to method parameters. The process of serialization/deserialization is performed by **HttpMessageConverter**.
 Automatic validation in controller methods can be applied by annotating the argument with **@Valid**. In order to validate BookPatchDTO via **@Valid** you should add **@NotNull**, **@Min** and other validation annotations on fields.
 **@PathVariable** is used for data passed in the URI.
-**@RequestParam** annotation is used for extracting query parameters, form parameters, and even files from the request.
+**@RequestParam** annotation is used for extracting query parameters, form parameters and even files from the request.
 **ResponseEntity** is used as method response. **ResponseEntity** represents an HTTP response, including headers, body, and status.
 
 ### Error Handling

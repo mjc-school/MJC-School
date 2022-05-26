@@ -5,9 +5,9 @@ Implementing pagination in REST API is not different but need some extra thought
 Providing a fluent and efficient pagination for REST API could increase user experience and help to build efficient and fast REST API.
 
 ## Resource vs Representation
-Before you start designing our pagination API, you need to have a clear understanding of page as a resource or a representation of the resource.
+Before you start designing pagination API, you need to have a clear understanding of page as a resource or a representation of the resource.
 1. If you consider that the page is not a resource in REST but its a property of the request.
-The example:
+The example
 ```
 http://domainname/products?page=1
 ```

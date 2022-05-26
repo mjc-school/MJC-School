@@ -26,7 +26,7 @@ A class annotated with **@Configuration annotation** shows that this can be used
 The new **@EnableWebMvc annotation** does some useful things – specifically, in the case of REST,
 it detects the existence of Jackson and JAXB 2 on the classpath and automatically creates and registers default JSON and XML converters.
 The functionality of the annotation is equivalent to the XML version:<br>
-> <mvc:annotation-driven /> <br>
+> <mvc:annotation-driven />
 
 **@ComponentScan annotation** with **@Configuration classes** enables Spring to scan all classes through the package and will register all beans and controller for our application.
 
