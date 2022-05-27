@@ -12,17 +12,17 @@ All communication done via REST API uses only HTTP request.
 The Richardson REST Maturity Model describes four different levels of REST (starting at Level 0). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.<br>
 - **Level 0 - a single URI and use a single HTTP method (typically POST):** <br> These services have a single URI and use a single HTTP method (typically POST). These are the most primitive way of building SOA applications with a single POST method and using XML to communicate between services.Level zero of maturity does not make use of any of URI, HTTP Methods, and HATEOAS capabilities.
 
-- **Level 1 - different URLs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URLs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
+- **Level 1 - different URIs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URIs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
 
 - **Level 2 - different URIs and HTTP Verbs for manipulating resources:** <br>
-REST API of Level 2 uses different URIs and HTTP Methods, but does not use the HATEOAS. Such RSET API supports several of the HTTP verbs on each exposed resource – Create, Read, Update and Delete (CRUD) operations. Here the state of resources, typically representing business entities, can be manipulated over the network.Maturity level 2 is the most popular usecase of REST principles, which advocate using different verbs based on the HTTP request methods, while the system can have multiple resources.
+REST API of Level 2 uses different URIs and HTTP Methods, but does not use the HATEOAS. Such REST API supports several of the HTTP verbs on each exposed resource – Create, Read, Update and Delete (CRUD) operations. Here the state of resources, typically representing business entities, can be manipulated over the network.Maturity level 2 is the most popular usecase of REST principles, which advocate using different verbs based on the HTTP request methods, while the system can have multiple resources.
 
 - **Level 3 - different URIs and HTTP Verbs and HATEOAS:** <br>
 REST API of Level 3 is the most mature level of Richardson’s model, which encourages easy discoverability. This level makes it easy for the responses to be self-descriptive by using HATEOAS. Level 3 leads the service consumers through a trail of resources, causing application state transitions as a result.
 
 ## Some definitions related to REST API
 
-- _**Resource:**_ <br> The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service (e.g. "today's weather in Los Angeles"), a collection of other resources, a non-virtual object (e.g. a person), and so on. In other words, any concept that might be identified by a URL provided by the server can be called a resource. A resource is an object with a type, associated data, relationships to other resources, and a set of methods that operate on it. It is similar to an object instance in an object-oriented programming language, with the important difference that only a few standard methods are defined for the resource (corresponding to the standard HTTP GET, POST, PUT and DELETE methods), while an object instance typically has many methods.Resources can be singleton or grouped into collections. <br>
+- _**Resource:**_ <br> The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service (e.g. "today's weather in Los Angeles"), a collection of other resources, a non-virtual object (e.g. a person), and so on. In other words, any concept that might be identified by a URI provided by the server can be called a resource. A resource is an object with a type, associated data, relationships to other resources, and a set of methods that operate on it. It is similar to an object instance in an object-oriented programming language, with the important difference that only a few standard methods are defined for the resource (corresponding to the standard HTTP GET, POST, PUT and DELETE methods), while an object instance typically has many methods.Resources can be singleton or grouped into collections. <br>
 _**1.Singleton and Collection Resources**_<br>
 For example, _“customers”_ is a collection resource and _“customer”_ is a singleton resource (in a banking domain).We can identify _“customers”_ collection resource using the URI **“/customers“**.  We can identify a single _“customer”_ resource using the URI **“/customers/{customerId}“**.<br>
 _**2.Collection and Sub-collection Resources**_<br>
@@ -40,7 +40,7 @@ It is important to understand the difference between the application state and t
 
 - _**Stateless:**_ Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill the request. The server never relies on information from previous requests from the client and doesn't store state about the client session on the server-side. If any such information is important then the client will send that as part of the current request. REST statelessness means being free from the application state.
 
-- _**REST API endpoint:**_ An endpoint is one end of a communication channel. When an API interacts with another system, the touchpoints of this communication are considered endpoints. For APIs, an endpoint can include a URL of a server or service. Each endpoint is the location from which APIs can access the resources they need to carry out their function.
+- _**REST API endpoint:**_ An endpoint is one end of a communication channel. When an API interacts with another system, the touchpoints of this communication are considered endpoints. For APIs, an endpoint can include a URI of a server or service. Each endpoint is the location from which APIs can access the resources they need to carry out their function.
 APIs work using ‘requests’ and ‘responses.’ When an API requests information from a web application or web server, it will receive a response. The place that APIs send requests and where the resource lives, is called an endpoint.
 
 - _**Idempotence:**_ An idempotent method is a method that can be called many times without different outcomes. 
@@ -57,7 +57,7 @@ a++ // It is not Idempotence because the final value will depend upon the number
 
 - _**Safety:**_ The concepts of _**‘idempotent methods’**_ and _**‘safe methods’**_ are often confused. 
 A safe method does not change the value that is returned, it reads – but it never writes. Safe methods are HTTP methods that do not modify resources. 
-For instance, using GET or HEAD on a resource URL, should NEVER change the resource.
+For instance, using GET or HEAD on a resource URI, should NEVER change the resource.
 <br>Example:<br>
 
 ```
@@ -265,7 +265,7 @@ http://developer.soccer.restapi.org
 
 ### Define API operations in terms of HTTP methods and HTTP response status codes
 HTTP has defined few sets of methods which indicates the type of action to be performed on the resources.
-_The URL is a sentence, where resources are nouns and HTTP methods are verbs._
+_The URI is a sentence, where resources are nouns and HTTP methods are verbs._
 The below table summarises the use of mostly-used HTTP methods and HTTP response status codes.
 | HTTP Method  | CRUD           | Collection Resource (e.g. /users)                                                                      | Single Resource (e.g. /users/123)                                                |
 | -------------|:--------------:| -------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|
@@ -275,7 +275,7 @@ The below table summarises the use of mostly-used HTTP methods and HTTP response
 | <b>DELETE</b>| Delete         | **405 (Method not allowed)**, unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
 ### Allow filtering, sorting, pagination and searching
-Complex result filters, sorting requirements, data pagination and advanced searching (when restricted to a single type of resource) can all be easily implemented as query parameters on top of the base URL.
+Complex result filters, sorting requirements, data pagination and advanced searching (when restricted to a single type of resource) can all be easily implemented as query parameters on top of the base URI.
 - **Filtering:** Use a unique query parameter for each field that implements filtering. For example, when requesting a list of tickets from the **/tickets** endpoint, you may want to limit these to only those in the open state. This could be accomplished with a request like
 ```
 GET /tickets?state=open
@@ -425,12 +425,12 @@ It’s relatively simple to use, and you get a lot of security features for free
 - **Use Password Hash:**<br>
 Passwords must always be hashed to protect the system (or minimize the damage) even if it is compromised in some hacking attempts. There are many such hashing algorithms that can prove really effective for password security e.g. PBKDF2, bcrypt, and scrypt algorithms.
 
-- **Never expose information on URLs:**<br>
-Usernames, passwords, session tokens, and API keys should not appear in the URL, as this can be captured in web server logs, which makes them easily exploitable.
+- **Never expose information on URIs:**<br>
+Usernames, passwords, session tokens, and API keys should not appear in the URI, as this can be captured in web server logs, which makes them easily exploitable.
 ```
 https://api.domain.com/user-management/users/{id}/someAction?apiKey=abcd123456789  //Very BAD !!
 ```
-The above URL exposes the API key. So, never use this form of security.
+The above URI exposes the API key. So, never use this form of security.
 
 - **Consider OAuth:**<br>
 Though basic auth is good enough for most of the APIs and if implemented correctly, it’s secure as well – yet you may want to consider OAuth as well.
@@ -479,4 +479,4 @@ The Last-Modified value cannot be less than Date value.
 Last-Modified: Fri, 10 May 2016 09:17:49 GMT
 ```
 ### Use HATEOAS to enable navigation to related resources
-The single most important reason for HATEOAS is **loose coupling**. If a consumer of a REST service needs to hard-code all the resource URLs, then it is tightly coupled with your service implementation. Instead, if you return the URLs, it could use for the actions, then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. When you design a RESTful service, there is a need to specify how to return data and links corresponding to a request. HATEOAS is a simple way that gives an easy, consistent way to hyperlink between resources in your REST API.
+The single most important reason for HATEOAS is **loose coupling**. If a consumer of a REST service needs to hard-code all the resource URIs, then it is tightly coupled with your service implementation. Instead, if you return the URIs, it could use for the actions, then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. When you design a RESTful service, there is a need to specify how to return data and links corresponding to a request. HATEOAS is a simple way that gives an easy, consistent way to hyperlink between resources in your REST API.
