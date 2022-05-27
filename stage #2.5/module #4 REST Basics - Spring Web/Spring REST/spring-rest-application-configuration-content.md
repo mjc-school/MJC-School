@@ -2,14 +2,14 @@
 
 Spring framework provides two ways of configuring a RESTful application:
 - using xml configuration files such as web.xml and SpringApplicationContext.xml;
-- using Java class.<br>
+- using Java class.
 
 Let's consider the most widely used approach to configuring a spring REST application which is based on
-**Java based Web Configurations**<br>
+**Java based Web Configurations**
 
 ### Java based Web Configurations
 
-Configuring a application on base of spring framework through Java is a modern approach in comparison with xml one.<br>
+Configuring a application on base of spring framework through Java is a modern approach in comparison with xml one.
 Let's consider Java configuration:
 ```Java
 @Configuration
@@ -17,7 +17,7 @@ Let's consider Java configuration:
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
 public class WebConfig
 {
- //...
+ //Here, you configure beans related to web application context
 }
 ```
 The **@Configuration annotation** is the central artifact of Spring’s Java-configurations. **@Configuration** is a meta-annotated as a @Component
@@ -40,7 +40,7 @@ If we want to customize this configuration, you should implement the **WebMvcCon
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
 public class WebConfig implements WebMvcConfigurer 
 {
-// ...
+// Here, you configure beans related to web application context
 }
 ```
 
