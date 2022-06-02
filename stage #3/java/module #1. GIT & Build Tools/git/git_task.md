@@ -13,61 +13,61 @@ We are going to set up simple git branching strategy.
 
 1. Create empty git repository with *<span class="underline">git init</span>* command. Also read up about --bare option and bare repositories themselves.
 
-![](./media/image1.png)
+    ![](./media/image1.png)
 
 2. Let us create new file with *<span class="underline">touch README.md</span>* command.
 
-![](./media/image2.png)
+    ![](./media/image2.png)
 
 3. To modify the existing file, we will use VIM text editor. This editor is widely used for rebasing and other git activities so every developer should get used to it. Type vim README.md command to open vim text editor. Press letter *<span class="underline">i</span>* to enter the insert mode. Type in “Hello World” or something you like. Press *<span class="underline">escape</span>* on the keyboard to exit from insert mode and go to the command mode. In the command mode press *<span class="underline">shift + ZZ</span>* to save current file and exit.
 
-![](./media/image3.png)
+    ![](./media/image3.png)
 
-![](./media/image4.png)
+    ![](./media/image4.png)
 
-In the bottom left corner of the above screenshot you can see that currently the editor is in insert mode.
+    In the bottom left corner of the above screenshot you can see that currently the editor is in insert mode.
 
 4. To check the progress type *<span class="underline">git status</span>* command. You should see that readme file is untracked now. You should check for a status as often as it is possible. If you always read status carefully enough, you will never end up in strange unpredictable situations.
 
-![](./media/image5.png)
+    ![](./media/image5.png)
 
 5. To track readme you can use *<span class="underline">git add .</span>* command. This will track and stage all the files in the current directory. Now you should see that your readme file is green which means it is also staged. Take a moment to read about tracking and staging and how they are different with each other.
 
-![](./media/image6.png)
+    ![](./media/image6.png)
 
 6. It is time to commit changes. To create commit use *<span class="underline">git commit -m “created readme”</span>* command which will create commit with corresponding message. Your working tree should be clean now.
 
-![](./media/image7.png)
+    ![](./media/image7.png)
 
 7. We are going to create new branch called develop, which will contain all the functionality you are currently working on. To create a new branch, execute *<span class="underline">git checkout -b develop</span>* command. This will create new branch from the current (master). Create ***git\_task*** branch from ***develop*** and ***git\_0*** branch from ***git\_task***.
 
-![](./media/image8.png)
+    ![](./media/image8.png)
 
-You can use *<span class="underline">git show-branch</span>* command to view all branches at once. The branch you are currently working with is marked with ***\**** symbol.
+    You can use *<span class="underline">git show-branch</span>* command to view all branches at once. The branch you are currently working with is marked with ***\*** symbol.
 
-![](./media/image9.png)
+    ![](./media/image9.png)
 
 8. Now we will add some changes to README.md, with ***vim***, check status, stage changes with *<span class="underline">git add README.md</span>* command, commit changes, check the result (status) then checkout to ***git\_task*** branch (with *<span class="underline">git checkout git\_task</span>* command) and **merge** changes from ***git\_0*** branch with *<span class="underline">git merge git\_0 --no-ff</span>* command. Take some time to read about merging and **no-ff** option. <span class="underline">This is usually the default pull request merging behavior so you will work with it on you daily basis</span>.
 
-![](./media/image10.png)
+    ![](./media/image10.png)
 
-Also note that you can view staged changes with *<span class="underline">git diff --cached</span>* command. For example tere we can see that new line “changes from git\_0” was added to the file.
+    Also note that you can view staged changes with *<span class="underline">git diff --cached</span>* command. For example tere we can see that new line   “changes from git\_0” was added to the file.
 
-![](./media/image11.png)
+    ![](./media/image11.png)
 
-![](./media/image12.png)
+    ![](./media/image12.png)
 
-Also note that you can view your latest changes with *<span class="underline">gitk</span>* command (which should invoke gitk tool). If this command does nothing or returns error, this usually means that you do not have gitk installed by default (e.g. working from mac). This tool is not necessary and is the matter of choice.
+    Also note that you can view your latest changes with *<span class="underline">gitk</span>* command (which should invoke gitk tool). If this command does nothing or returns error, this usually means that you do not have gitk installed by default (e.g. working from mac). This tool is not necessary and is the matter of choice.
 
-![](./media/image13.png)
+    ![](./media/image13.png)
 
-You can also use *<span class="underline">git show-branch</span>* command (or even *<span class="underline">git log</span>* command) to quickly look through your recent work.
+    You can also use *<span class="underline">git show-branch</span>* command (or even *<span class="underline">git log</span>* command) to quickly look through your recent work.
 
-![](./media/image14.png)
+    ![](./media/image14.png)
 
 9. Now repeat merging process to get your commit to ***master*** (through ***develop*** of course) branch. When you finish, you can use something this *<span class="underline">git log --all --graph --decorate --oneline --simplify-by-decoration</span>* or this *<span class="underline">git log --graph --oneline –all</span>* command. These commands were found on the stackoverflow as an answer to a question of viewing git history as a tree. This is not the best solution but it is more than enough for our needs. You output should look similar to this:
 
-![](./media/image15.png)
+    ![](./media/image15.png)
 
 From this picture you can see that the HEAD is currently looking at the master’s latest commit. We have created 5 commits: 2 with actual edits and 3 merge commits.
 
