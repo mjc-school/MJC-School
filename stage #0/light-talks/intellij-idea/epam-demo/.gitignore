@@ -1,0 +1,16 @@
+.gradle/
+build/
+config/
+.idea/
+out/
+.vagrant/
+Vagrantfile
+*.log
+*.iml
+gradle.properties
+
+**/main/resources/application.properties
+**/main/resources/logback.xml
+**/main/resources/users.properties
+
+.DS_Store

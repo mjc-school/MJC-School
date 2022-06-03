@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: actor-service
+  cloud:
+    config:
+      uri: http://localhost:8090
+      fail-fast: true
+  profiles:
+    active: dev

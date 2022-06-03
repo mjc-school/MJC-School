@@ -1,0 +1,7 @@
+com/epam/monitoring/Deadlock.java
+ com.epam.monitoring.Deadlock
+ com.epam.monitoring.Deadlock$LockingThread
+com/epam/monitoring/MemoryLeak.java
+ com.epam.monitoring.MemoryLeak
+com/epam/monitoring/GCSpammer.java
+ com.epam.monitoring.GCSpammer

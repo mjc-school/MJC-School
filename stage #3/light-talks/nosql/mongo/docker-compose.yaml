@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: mongoadmin
+    volumes:
+      - mongodb_master_data:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+  mongodb_master_data:
+    driver: local
