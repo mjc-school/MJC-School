@@ -1,13 +1,12 @@
 # READING
 
 1. [JS documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-2. [JS video by net ninja](https://www.youtube.com/c/TheNetNinja/playlists)
-3. [Неплохое руководство на русском языке](https://learn.javascript.ru/)
-4. [JS tests](https://jestjs.io/ru/)
-5. [JavaScript essentials](https://www.linkedin.com/learning/javascript-essential-training-3/)
-6. [Event phases](https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/)
-7. [Event loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-8. [DOM Events (lecture)](https://youtu.be/1Z2FYFZ_trI)
+2. [The Modern JavaScript Tutorial](https://javascript.info/)
+3. [JS tests](https://jestjs.io/)
+4. [JavaScript essentials](https://www.linkedin.com/learning/javascript-essential-training-3/)
+5. [Event phases](https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/)
+6. [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
+7. [HTML DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 # PRACTICE
 ## Example

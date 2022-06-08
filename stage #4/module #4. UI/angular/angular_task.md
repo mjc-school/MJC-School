@@ -1,10 +1,10 @@
 # READING
 
 1. [Angular Docs](https://angular.io/guide/setup-local)
-2. [Angular Guide](https://metanit.com/web/angular2/1.1.php)
+2. [Getting started with Angular](https://angular.io/start)
 3. [Angular Tutorial](https://angular.io/tutorial)
 4. [RxJs Basics with visualizations](https://rxjs-dev.firebaseapp.com/guide/overview)
-5. [RxJS: реактивное расширение для фронтенд разработки](https://habr.com/ru/company/jugru/blog/302284/)
+5. [The RxJS library](https://angular.io/guide/rx-library)
 6. [How to add Angular Material](https://material.angular.io/guide/getting-started)
 
 # PRACTICE
