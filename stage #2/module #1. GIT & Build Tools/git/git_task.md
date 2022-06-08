@@ -104,9 +104,9 @@ Mentee should be able to answer questions during demo session.
 
 1. [Useful git commands](https://davidwalsh.name/git-commands)
 2. [Vim commands cheat sheet](https://www.fprintf.net/vimCheatSheet.html)
-3. [Vim basics](https://youtu.be/zNnsNtBF80g)
+3. [Basic Vim commands - For getting started](https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started)
 4. [vim adventures](https://vim-adventures.com/)
-5. [Epam learning git](https://learn.epam.com/detailsPage?id=601f195a-d408-4439-a16d-0630ed2a412e)
+5. [Version Control with Git](https://swcarpentry.github.io/git-novice/)
 6. [Git optional](https://try.github.io/)
 7. [Git videos](https://youtu.be/jUlT-zQ-mbk)
 8. [10-minutes git concepts video](https://youtu.be/8KCQe9Pm1kg)

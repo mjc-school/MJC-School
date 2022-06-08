@@ -1,15 +1,14 @@
 # READING
 
 1. [TypeScript (en)](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-2. [TypeScript (rus)](http://typescript-lang.ru/docs/)
-3. [Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-4. [Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
-5. [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
-6. [Literal Types](https://www.typescriptlang.org/docs/handbook/literal-types.html)
-7. [Unions and Intersections](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)
-8. [Classes](https://www.typescriptlang.org/docs/handbook/classes.html)
-9. [Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
-10. [Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
+2. [Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+3. [Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+4. [Functions](https://www.typescriptlang.org/docs/handbook/functions.html)
+5. [Literal Types](https://www.typescriptlang.org/docs/handbook/literal-types.html)
+6. [Unions and Intersections](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)
+7. [Classes](https://www.typescriptlang.org/docs/handbook/classes.html)
+8. [Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+9. [Generics](https://www.typescriptlang.org/docs/handbook/generics.html)
 
 # PRACTICE
 ## Task
