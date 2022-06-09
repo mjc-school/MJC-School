@@ -12,12 +12,12 @@ Configuration is minimal, and it provides sensible defaults for what you would e
 
 Let's consider how to build REST application using Spring Web framework step by step.
 
-### [REST Controllers in Spring](./spring-rest-controller-content.md)
+### REST Controllers in Spring
 
-### [Spring REST Application Configuration](./spring-rest-application-configuration-content.md)
+### Spring REST Application Configuration
 
-### [Versioning a REST API in Spring](./spring-versioning-rset-api-content.md)
+### Versioning a REST API in Spring
 
-### [REST Pagination in Spring](./spring-rest-pagination-content.md)
+### REST Pagination in Spring
 
-### [Spring HATEOAS](./spring-hateoas-content.md)
+### Spring HATEOAS

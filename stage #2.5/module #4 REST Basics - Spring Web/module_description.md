@@ -5,7 +5,7 @@ This module provides basic patterns, principals and approaches that can be appli
 ## Contents
 
 * REST Basics
-* Spring MVC
 * Spring Web Annotations
+* Spring MVC
 * Spring REST
 * Exception Handling

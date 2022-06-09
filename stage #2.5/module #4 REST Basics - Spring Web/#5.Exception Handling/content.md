@@ -1,18 +1,20 @@
 ## Error Handling for REST with Spring
 
 Spring provides several ways of handling thrown exception in a spring web application. 
-Let's consider some of them: <br>
+Let's consider some of them:
 
-### Solution 1: the Controller-Level @ExceptionHandler
-The first solution works at the `@RestController level`. We will define a method to handle exceptions and annotate that with **@ExceptionHandler**:<br>
+### Solution 1: Controller-Level @ExceptionHandler
+The first solution works at the `@RestController level`. We will define a method to handle exceptions and annotate that with **@ExceptionHandler**:
 ```Java
 @RestController
 public class BookController 
 {
-    //...
+    //REST endpoints of BookController
+    //..............................
+    
     @ExceptionHandler({ CustomException1.class, CustomException2.class })
-    public void handleException() {
-        //
+    public ResponseEntity<String> handleException(Exception exc) {
+        return new ResponseEntity<>(exc.getMessage(), ERROR_STATUS);
     }
 }
 ```
@@ -49,8 +51,6 @@ public class ApplicationResourceNotFoundException extends RuntimeException
     }
 }
 ```
-The same as the **DefaultHandlerExceptionResolver**, this resolver is limited in the way it deals with the body of the response — `it does map the Status Code on the response`, but does not set a body to Response, so the body is still null.
-- **Custom HandlerExceptionResolver** [TO DO]
 
 ### Solution 3: @ControllerAdvice
 Spring brings support for a global **@ExceptionHandler** with the **@ControllerAdvice** annotation.

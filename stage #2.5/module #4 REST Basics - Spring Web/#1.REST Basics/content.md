@@ -9,7 +9,8 @@ simple and flexible making it more suitable for internet usage. It’s used to f
 All communication done via REST API uses only HTTP request.
 
 ## Richardson REST API Maturity Model
-The Richardson REST Maturity Model describes four different levels of REST (starting at Level 0). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.<br>
+The Richardson Maturity Model grades RESTful API by their maturity. The REST Maturity Model is a way to grade your API according to the constraints of REST.
+It describes four different levels of REST (starting from 0 to 3 level). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.
 - **Level 0 - a single URI and use a single HTTP method (typically POST):** <br> These services have a single URI and use a single HTTP method (typically POST). These are the most primitive way of building SOA applications with a single POST method and using XML to communicate between services.Level zero of maturity does not make use of any of URI, HTTP Methods, and HATEOAS capabilities.
 
 - **Level 1 - different URIs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URIs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
@@ -84,11 +85,7 @@ The term “hypermedia” refers to any content that contains links to other for
 REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
 Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
 For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
-HATEOAS is a constraint of the REST application architecture. HATEOAS keeps the REST style architecture unique from most other network application architectures.
-The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
-REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
-Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
-For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
+
 ```
 {
     "departmentId": 10,
@@ -203,7 +200,7 @@ http://api.example.com/device-management/managed-devices  /*This is much better 
 - **Use hyphens (-) to improve the readability of URIs:**<br>
 To make your URIs easy for people to scan and interpret, use the hyphen (-) character to improve the readability of names in long path segments.<br> Examples:<br>
 ```
-http://api.example.com/device-management/managed-devices/
+http://api.example.com/devicemanagement/manageddevices/
 http://api.example.com/device-management/managed-devices  /*This is much better version*/
 ```
 - **Do not use underscores ( _ ):**<br>
@@ -211,16 +208,15 @@ It’s possible to use an underscore in place of a hyphen to be used as a separa
 To avoid this confusion, use hyphens (-) instead of underscores ( _ <br> Examples:<br>
 ```
 http://api.example.com/inventory-management/managed-entities/{id}/install-script-location  //More readable
-http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //(_) may be obscured or hidden 
-                                                                                        //in some browsers or screens
-http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation  //Less readable
+http://api.example.com/inventory_management/managed-entities/{id}/install_script_location  //(_) may be obscured or hidden in some browsers or screens
+http://api.example.com/inventory-management/managedEntities/{id}/installScriptLocation     //Less readable
 ```
 - **Use lowercase letters in URIs:**<br>
 When convenient, lowercase letters should be consistently preferred in URI paths.<br> Examples:<br>
 ```
-http://api.example.org/my-folder/my-doc       //1
+http://api.example.org/my-folder/my-doc     //1
 HTTP://API.EXAMPLE.ORG/my-folder/my-doc     //2
-http://api.example.org/My-Folder/my-doc       //3
+http://api.example.org/My-Folder/my-doc     //3
 ```
 In the above examples, 1 and 2 are the same but 3 is not as it uses My-Folder in capital letters.
 
@@ -236,10 +232,10 @@ We should not use URIs to indicate a CRUD function. URIs should only be used to 
 We should use HTTP request methods to indicate which CRUD function is performed.<br> Examples:<br>
 ```
 HTTP GET http://api.example.com/device-management/managed-devices           //Get all devices
-HTTP POST http://api.example.com/device-management/managed-devices         //Create new Device
-HTTP GET http://api.example.com/device-management/managed-devices/{id}     //Get device for given Id
-HTTP PUT http://api.example.com/device-management/managed-devices/{id}     //Update device for given Id
-HTTP DELETE http://api.example.com/device-management/managed-devices/{id}  //Delete device for given Id
+HTTP POST http://api.example.com/device-management/managed-devices          //Create new Device
+HTTP GET http://api.example.com/device-management/managed-devices/{id}      //Get device for given Id
+HTTP PUT http://api.example.com/device-management/managed-devices/{id}      //Update device for given Id
+HTTP DELETE http://api.example.com/device-management/managed-devices/{id}   //Delete device for given Id
 ```
 - **Use query component to filter URI collection:**<br>
 Often, you will encounter requirements where you will need a collection of resources sorted, filtered, or limited based on some specific resource attribute.
@@ -267,6 +263,7 @@ http://developer.soccer.restapi.org
 HTTP has defined few sets of methods which indicates the type of action to be performed on the resources.
 _The URI is a sentence, where resources are nouns and HTTP methods are verbs._
 The below table summarises the use of mostly-used HTTP methods and HTTP response status codes.
+
 | HTTP Method  | CRUD           | Collection Resource (e.g. /users)                                                                      | Single Resource (e.g. /users/123)                                                |
 | -------------|:--------------:| -------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------:|
 | <b>POST</b>  | Create         | **201 (Created)**, ‘Location’ header with link to /users/{id} containing new ID; <p>**400 (Bad Request)**, if the server fails to parse the request body (the reason of development errors); <p>**409 (Conflict)**, if a request conflict with current state of the target resource; <p>**422 (Unprocessable Entity)**, if the server can't proccess request data due to validation errors caused by end client because of sending invalid fields.                            | Avoid using POST on a single resource                                            |
