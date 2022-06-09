@@ -49,22 +49,22 @@ public class RestAssuredAPITest {
     @Test
     public void GetAllNewsTest() { 
         private final int EXPECTED_STATUS_CODE = 200;
-     
-	    // Specify the base URL to the RESTful service 
-	    RestAssured.baseURI = BASE_URI + REQUEST_MAPPING_URI; 
+        
+        // Specify the base URL to the RESTful service
+        RestAssured.baseURI = BASE_URI + REQUEST_MAPPING_URI; 
 	
-	    // Get the RequestSpecification of the request to be sent to the server. 
-	    RequestSpecification httpRequest = RestAssured.given().header("Authorization", "Bearer " + SECURITY_TOKEN)
+        // Get the RequestSpecification of the request to be sent to the server. 
+        RequestSpecification httpRequest = RestAssured.given().header("Authorization", "Bearer " + SECURITY_TOKEN)
             .header("Content-Type", "application/json");
 	
-	    // Specify the method type (GET) and the parameters if any. 
-	    //In this case the request does not take any parameters 
-	    Response response = httpRequest.request(Method.GET, "");
+        // Specify the method type (GET) and the parameters if any. 
+        //In this case the request does not take any parameters 
+        Response response = httpRequest.request(Method.GET, "");
 
-	    //Converting the response body to string
-	    String responseBodyAsString = response.asString();
+        //Converting the response body to string
+        String responseBodyAsString = response.asString();
 	
-	    // Verify the status and body of the response received from the server
+        // Verify the status and body of the response received from the server
         assertEquals(EXPECTED_STATUS_CODE, response.getStatusCode());
         assertNotNull(responseBodyAsString);     
     }
