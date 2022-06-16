@@ -1,21 +1,23 @@
-# MJC School
+# MJC School - We Learn Java
+Educational environment for Engineers, students, and Java enthusiasts to deliver top-notch discipline standards and create knowledge-sharing culture.
 
 ## Who we are?
 
-We are EPAM employees who drive MJC School initiative. We don’t build our initiative from scratch: it is based on the EPAM Training Center experience and production people collaboration.
+MJC School was created by Engineers for Engineers. We give you the skills to meet the requirements of modern projects and a chance to become a member of a wide family of Java Engineers. Let's grow and innovate together! Learn Java with us and become a Junior Software Engineer.
 
-## What we do?
+## Benefits
 
-We do Java juniors education. We call current education run - pilot run, because we still keep Java Laboratory education flow but with some changes.
+**ONLINE EDUCATION** Education is online, available from any location!
 
-Previously we had plan to make our Java education public and community based. We still have such plan for September.
+**FREE FOR EVERYONE** Education is free of charge. Everyone can join, all you need are basic programming skills.
 
-But the situation has changed. We need to proceed and not stop Java education but do it in new reality with online world and unpredictable vacancies demand.
+**EXPERIENCED MENTORS** Course is created and maintained by real professionals who work with Java on a daily basis.
 
-## How we are going to proceed?
+**PRODUCTION MENTORING** During the Stage 4 you'll get into individual mentoring where production engineers will help you to cover with advanced education program!
 
-* Take possible number of students for the pilot run
-* Involve production people for mentoring and content work
-* Create mentor and mentee pairs
-* Keep active communication
-* Provide and get feedbacks
+**PROFESSIONAL OPPORTUNITIES** The course gives sufficient knowledge to join a company as a Junior Software Developer.
+
+**COMMUNITY SUPPORT** Community - is not only about school! Subscribe to [our channels](https://www.linkedin.com/groups/12668113/), join [chats](https://join.slack.com/t/mjc-r0o8608/shared_invite/zt-19dbjp0wh-trLwtW2~WPW5LBdF2lNFJg) and stay informed about all the upcoming events!
+
+Powered by
+![](./assets/img/EPAM_LOGO_Primary.png)
