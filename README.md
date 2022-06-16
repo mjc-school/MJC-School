@@ -19,5 +19,5 @@ MJC School was created by Engineers for Engineers. We give you the skills to mee
 
 **COMMUNITY SUPPORT** Community - is not only about school! Subscribe to [our channels](https://www.linkedin.com/groups/12668113/), join [chats](https://join.slack.com/t/mjc-r0o8608/shared_invite/zt-19dbjp0wh-trLwtW2~WPW5LBdF2lNFJg) and stay informed about all the upcoming events!
 
-Powered by
+### Powered by
 ![](./assets/img/EPAM_LOGO_Primary.png)
