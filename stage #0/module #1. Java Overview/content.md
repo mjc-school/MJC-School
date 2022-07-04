@@ -11,12 +11,13 @@ Java is an object-oriented programming language developed by Sun Microsystems in
 ### Main Features of Java:
 - Object-oriented programming.
 - Simplicity.
-- Security. Can't access memory directly
+- Security. Can't access memory directly.
 - Cross-platform. Can be run on any platform where the JRE is installed.
 - Automatic garbage collection. The memory does not need to be explicitly cleared.
 
 **As Java has evolved, many features have been added. Some of them:**
-- Java 5.
+
+Java 5:
 - Generics
 - Annotations
 - Autoboxing/unboxing
@@ -25,25 +26,27 @@ Java is an object-oriented programming language developed by Sun Microsystems in
 - Enhanced for each loop
 - Static imports
 - New concurrency utilities in java.util.concurrent
-- Scanner class for parsing data from various input streams and buffers.
-- Java 8.
+- Scanner class for parsing data from various input streams and buffers
+
+Java 8:
 - Lambda expression support in APIs
 - Stream API
 - Functional interface and default methods
 - Optionals
 - Annotation on Java Types
 - Unsigned Integer Arithmetic
--  Repeating annotations
+- Repeating annotations
 - New Date and Time API
 - Remove the permanent generation from GC
-- Java 9.
+
+Java 9:
 - Java platform module system
 - Interface Private Methods
 - HTTP 2 Client
 - JShell – REPL Tool
 - Platform and JVM Logging
 
-## How the code is compiled and why cross-platform is needed in Java.
+## How the code is compiled and why cross-platform is needed in Java
 
 In some programming languages, code is compiled into native code for a specific architecture. And if we run such code in another platform, with a different architecture (processor, operating system), then most likely, this code will not work. The C compiler works in a similar way. The code written by a programmer is compiled into native code, understandable by the specific architecture in which it is written.
 
@@ -57,7 +60,7 @@ Therefore, after writing a program, Java code is compiled into byte code. The by
 
 Imagine we have written a program in Java and want to submit it to a tester for testing. The tester has a different operating system installed than ours. To run such a program in C, he would have to compile your code for his system. But since Java is platform-independent, the tester, having the JRE installed, can launch your Java application for testing, without having to recompile it again.
 
-1. Dev writes Java code in its own IDE
+1. Dev writes Java code in its own IDE.
 2. Dev then compiles this code into bytecode using the utility.
     - Manually by using Javac utility
     - Automatically compiling in IDE or building tools like Maven or Gradle
@@ -65,7 +68,7 @@ Imagine we have written a program in Java and want to submit it to a tester for 
     - Manually by using Jar cvf
     - Automatically building using build tools like Maven or Gradle
 4. Then the Dev passes this file to the tester.
-5. The tester, in turn, having the JRE installed, launches the Jar file
+5. The tester, in turn, having the JRE installed, launches the Jar file.
 6. After that, a new instance of the JVM is launched, which reads all the bytecode classes from the Jar, translates them into native code, and executes.
 7. Tester can use the program.
 
@@ -77,5 +80,4 @@ When you run programs in development environments, the code is compiled automati
 - [How do I make a JAR from a .java file?](https://stackoverflow.com/questions/9941296/how-do-i-make-a-jar-from-a-java-file "How do I make a JAR from a .java file?")
 - [What is the difference between a compiler of java (JVM) and a compiler of C and C#?](https://www.quora.com/What-is-the-difference-between-a-compiler-of-java-JVM-and-a-compiler-of-C-and-C "What is the difference between a compiler of java (JVM) and a compiler of C and C#?")
 - [Introduction to the Java Programming Environment](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqb/index.html "Introduction to the Java Programming Environment")
-- [Java Programming Environment and the Java Runtime Environment (JRE)](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html "Java Programming Environment and the Java Runtime Environment (JRE)")
 - [Cross-platform software](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C "Cross-platform software")
