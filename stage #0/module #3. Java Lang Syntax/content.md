@@ -83,7 +83,7 @@ row on 1 tab symbol for each not closed curly bracket.
 And the last 2 lines are closing curly braces: they simply mean the ending of boarders, that were opened before, there are
 two of them as 1 belong to method and the other belongs to class.
 
-In this module we have got acquainted with key points in java syntax,and also we've seen a program example.
+In this module we have got acquainted with key points in java syntax, and also we've seen a program example.
 
 -------------------------
 

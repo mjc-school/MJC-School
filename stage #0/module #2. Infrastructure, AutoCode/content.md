@@ -11,7 +11,7 @@ an environment for executing Java programs called JRE. If you only need to run J
 a set of necessary utilities (javac, java debuggers, java docs, etc.). For example, the javac utility converts written code into intermediate byte code.
 
 ### JRE
-Runtime environment for Java programs. Included in JDK by default. JRE contains core libraries, class loader, and JVM.
+Runtime environment for Java programs. Included in JDK by default. JRE contains core libraries, class loader and JVM.
 
 ### JVM
 A virtual machine that runs Java programs. It is part of the JRE. For each separate running Java program, its own JVM instance is created.
@@ -27,7 +27,7 @@ To confidently use these tools, we will need to learn following:
 - How to use Autocode for doing practical tasks
 - **Advance:** What is Unit tests
 
-### How to compile and run Java application
+## How to compile and run Java application
 Currently, on large projects, they manually compile and assemble the project only in exceptional situations. To simplify the work, integrated development environments (IDE) are used to develop and run applications, as well as build tools and dependency management.
 
 In this chapter, however, we will consider how to run Java code ourselves so that an understanding of how this process works is formed. But in the future, for convenience, we recommend using specialized tools, which we will analyze a little later.
@@ -36,7 +36,7 @@ In this chapter, however, we will consider how to run Java code ourselves so tha
 1. Install JDK.
 2. Write first application.
 3. Compile .java file to .class.
-4. Run .class file
+4. Run .class file.
 
 ### Installing JDK
 JDK is required for Java developers. It contains a Java compiler that allows you to compile your code written in Java in the byte code that JVM can understand. It also contains everything that you need to run Java applications.
@@ -55,7 +55,7 @@ JDK is required for Java developers. It contains a Java compiler that allows you
 ### Writing first application
 To write the first program, we need any text editor. While it won't be smart enough to tell errors or run our program, it's enough to write and work with Java.
 
-In the old tradition, programmers start learning a new programming language by writing the "Hello World!" program. This program will simply print "Hello World!" to the console. We will simply provide code that you can copy, the meaning of which will be disassembled later.
+In the old tradition, programmers start learning a new programming language by writing the "Hello, World!" program. This program will simply print "Hello, World!" to the console. We will simply provide code that you can copy, the meaning of which will be disassembled later.
 
     class HelloWorld {
       public static void main(String[] args) {
@@ -89,7 +89,7 @@ So, it is enough to install the Community version for now by the following steps
 1. Go to https://www.jetbrains.com/ru-ru/idea/download/
 2. Choose your system Windows/macOS/Linux and a file type .exe or .zip and press the Download button for the Community version.
 3. After it is downloaded, run the installer or archive in the appropriate folder.
-4. After it finishes installing, you can run IntelliJ Idea and create your first project. Details may be found by the [link](https://www.jetbrains.com/ru-ru/idea/download/#section=windows)
+4. After it finishes installing, you can run IntelliJ Idea and create your first project.
 
 At the end of this chapter we will provide advance topic related to usage of Intellij IDEA.
 
@@ -105,21 +105,22 @@ Git is a free and open source distributed version control system designed to han
 **Source:** https://git-scm.com/
 
 #### Gitlab and Github
-**GitLab**: GitLab is a repository hosting manager tool that is developed by GitLab Inc and is used for the software development process. It provides a variety of management by which we can streamline our collaborative workflow for completing the software development lifecycle. It also allows us to import the repository from Google Code, Bitbucket, etc.
+**GitLab**: GitLab is a repository hosting manager tool that is developed by GitLab Inc. and is used for the software development process. It provides a variety of management by which we can streamline our collaborative workflow for completing the software development lifecycle. It also allows us to import the repository from Google Code, Bitbucket, etc.
 
-**GitHub**: GitHub is a repository hosting service tool that features collaboration and access control. It is a platform for programmers to fix bugs together and host open-source projects. GitHub is designed for the developers and to help them track their changes into a project through the repository. Following are some features of GitHub
+**GitHub**: GitHub is a repository hosting service tool that features collaboration and access control. It is a platform for programmers to fix bugs together and host open-source projects. GitHub is designed for the developers and to help them track their changes into a project through the repository.
 
 You can see detailed difference using this [link](https://www.geeksforgeeks.org/difference-between-gitlab-and-github/ "link").
 
 ### Installing Git
-The next important tool that should be installed is Git. Git is distributed version control system. Such web services like GitHub, GitLab, and others, where you can search committed code, are based on Git. Thus, installing Git is a required step if you want to push/pull any changes from a remote repository. It also might be useful when you are just working locally and would like to store the history of the changes.
+The next important tool that should be installed is Git. Git is distributed version control system. Such web services like GitHub, GitLab and others, where you can search committed code, are based on Git. Thus, installing Git is a required step if you want to push/pull any changes from a remote repository. It also might be useful when you are just working locally and would like to store the history of the changes.
 
 To install Git on Windows, follow the next steps:
 1. Go to https://git-scm.com/download/win and the download will start automatically.
 2. Run the installer. Leave checkboxes and other settings as they are by default.
 3. After the installing is done, run Command Prompt and perform the following command to make sure that Git was installed successfully:
     - git --version
-      For other systems like Linux or macOS, the instructions may be found by the [link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git "link").
+   
+For other systems like Linux or macOS, the instructions may be found by the [link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git "link").
 
 You can find details tips at the end of the chapter.
 
@@ -127,18 +128,18 @@ You can find details tips at the end of the chapter.
 Another tool we are going to use in this course is Maven.
 Maven is a framework for project build automation. In short, it allows you to specify dependencies of your code in one place (pom.xml) and then compile your code with those dependencies by running tasks. With Maven you can simply run a compile task that will compile your project’s code. If you did it manually, you would have to run the javac command with all the dependencies listed in the classpath.
 
-For our usage you can install Maven using Intellij IDEA or manually and then configure to use your installation in Intellij IDEA
+For our usage you can install Maven using Intellij IDEA or manually and then configure to use your installation in Intellij IDEA.
 
 #### To install manually:
 1. Go to [link](https://maven.apache.org/download.cgi).
-2. In the Files sections, find and download Binary zip archive (currently it is apache-maven-3.8.3-bin.zip).
+2. In the Files sections, find and download Binary zip archive (currently it is apache-maven-3.8.6-bin.zip).
 3. After it is downloaded, unzip the archive into any folder.
-4. Create MAVEN_HOME and M2_HOME environment variables which will point out to maven directory (an example: C:\tools\maven)
-5. Add a path to maven bin directory to a Path environment variable (an example: C:\tools\maven\bin)
+4. Create MAVEN_HOME and M2_HOME environment variables which will point out to maven directory (an example: C:\tools\maven).
+5. Add a path to maven bin directory to a Path environment variable (an example: C:\tools\maven\bin).
 6. Open Command Prompt and perform the next command:
    - mvn -v
 
-#### To install using Intellij IDEA
+#### To install using Intellij IDEA:
 1. Open Intellij IDEA.
 2. Use `CTRL + ALT + S` in order to open preferences.
 3. Type `Maven` in search bar. Or it should be under `Build, Execution, Deployment -> Build Tools -> Maven`.
@@ -146,7 +147,7 @@ For our usage you can install Maven using Intellij IDEA or manually and then con
 
 ### How to use Autocode for doing practical tasks
 While reading materials from that course you will be able to solve related practical tasks which will be prepared using Autocode platform.
-Autocode has a well-formed documentation ([link](https://autocode-next.lab.epam.com/help/starting-work)), but we will discuss most needed steps.
+Autocode has a well-formed documentation ([link](https://autocode-next.lab.epam.com/help/starting-work)), but we will discuss most needed steps:
 
 1. Create your GitHub account.
 2. Connect new account to Autocode.
@@ -162,20 +163,20 @@ You can simply visit SignUp page: [GitHub](https://github.com/signup).
 Follow instructions, most probably you will need to verify your email - please do it.
 
 #### Connect GitHub account to Autocode
-After you will have activated account you can start linkin you account to Autocode.
+After you will have activated account you can start linking you account to Autocode.
 In order to link:
 1. Log in to Autocode.
-2. Click on you profile name, as e.g. `Ivan Ivanov`.
+2. Click on your profile name, as e.g. `Ivan Ivanov`.
 3. Click `profile`.
 4. Click authorize for GitHub.
 5. Confirm authorization in GitHub if needed.
 
 #### Start doing task
-When you will access course in autocode you will be able to see modules and tasks.
+When you will access course in Autocode you will be able to see modules and tasks.
 Select the task you want to start (Let's start doing `autocode-greetings` task) and use `Start` button. You will see some additional details here, such as minimum pass score, number of attempts and deadline.
 
-The most import point is newly forked repository with small GitHub icon. 
-This repository (you can click on it and see it on GitHub) will be used to check you solution. Every repository already contains small piece of code, you will need to extend it accordingly to task.
+The most important point is newly forked repository with small GitHub icon. 
+This repository (you can click on it and see it on GitHub) will be used to check your solution. Every repository already contains small piece of code, you will need to extend it accordingly to task.
 
 Let's start implementing your first task!
 
@@ -184,7 +185,7 @@ Let's start from opening IDE and getting repository already created.
 **In order to get repository:**
 1. Open Intellij IDEA.
 2. Select `Get from VCS`.
-3. You will need to provide and URL from GitHub.
+3. You will need to provide a URL from GitHub.
    - Open Autocode task.
    - Click on repository, you will be redirected to GitHub.
    - Click on button `Code`.
@@ -205,7 +206,7 @@ Finally, you should be able to see project structure:
 
 It is a typical structure for a Java project using Maven. Let's discuss key points here:
 - `readme.md `- This file usually contains task description, where you can find some details of what should be done and how.
-- `FirstApplication.java` - This file (or similar but with different naming) contains some basic logic to help you start implementing task. In this task you will need to make this file printing `Hello World!` into the console.
+- `FirstApplication.java` - This file (or similar but with different naming) contains some basic logic to help you start implementing task. In this task you will need to make this file printing `Hello, World!` into the console.
 
 After carefully reading all the files and doing needed changes - you will need to publish you solution to GitHub.
 This can be done using Intellij IDEA or via CommandPrompt.
@@ -218,15 +219,15 @@ This can be done using Intellij IDEA or via CommandPrompt.
 5. Confirm by clicking `Push`.
 
 #### Using CMD
-1. Open CommandPrompt(CMD) as for Windows or similar for other Operating System.
+1. Open CommandPrompt (CMD) as for Windows or similar for other Operating System.
 2. Navigate to project folder.
 3. Use `git status` in order to see which files already included in commit.
-4. In order to add file into commit you need to run `git add %FILE_NAME%`. And specify a file name, or you can simply do `git add .` - which means to add all files.
+4. In order to add file into commit you need to run `git add %FILE_NAME%` and specify a file name, or you can simply do `git add .` - which means to add all files.
 5. To commit use: `git commit -m "My first commit!"`. Where you need to replace "My first commit!" with commit message.
 6. Then use `git push` in order to update GitHub repository with your local changes.
 
 #### Result
-You should be able to see your changes on GitHub repository via browser. If you think this is final solution, or you want to check intermittent result you can submit task.
+You should be able to see your changes on GitHub repository via browser. If you think this is final solution, or you want to check intermediate result you can submit task.
 
 ### Submit task using Autocode platform
 In order to check if your solution and get score you need do following:
@@ -239,13 +240,13 @@ In order to check if your solution and get score you need do following:
 
 ### How to understand results
 Usually all tasks should contain following stages:
-1. Checkout - Autocode prepare your source code to be checked.
+1. Checkout - Autocode prepares your source code to be checked.
 - You will not get score for successfully passing this stage.
-- If this stage failing - it should be most probably environmental or GitHub issue.
+- If this stage is failing - it should be most probably environmental or GitHub issue.
 2. Compile - Autocode using Javac to check compile error and prepare tests to be executed.
 - In specific tasks, which require solving compile errors, you will get score points.
-- If this stage failing - check your core for different issue, open code in Intellij IDEA. Detailed logs will be available on Autocode. Maybe you forget to commit your changes or push them to remote repository.
-3. Test - **_(Main part)_** Autocode start running prepared tests to verify your solution. Test can check result of your solution, check how you solve it and are you following requirements. You can find more about Unit tests in next section.
+- If this stage is failing - check your core for different issue, open code in Intellij IDEA. Detailed logs will be available on Autocode. Maybe you forget to commit your changes or push them to remote repository.
+3. Test - **_(Main part)_** Autocode starts running prepared tests to verify your solution. Test can check result of your solution, check how you solve it and are you following requirements. You can find more about Unit tests in next section.
 - You will receive score points for every successful test. Up to maximum points. 
 - If you do not receive maximum points - it means that some tests are failing, You will be able to see detailed message. But in some cases it is fine to get only minimum points to finish task.
 4. Quality - (**_Optional_**) Autocode in specific tasks will check your code smells.
@@ -254,14 +255,14 @@ Usually all tasks should contain following stages:
 
 ### Note: Do not forget to check how many times you can submit solution!
 
-### Unit testing. Junit
+## Unit testing. Junit
 A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property.
 
-JUnit is a unit testing framework for Java programming language. It plays a crucial role test-driven development, and is a family of unit testing frameworks collectively known as xUnit. JUnit promotes the idea of "first testing then coding", which emphasizes on setting up the test data for a piece of code that can be tested first and then implemented. This approach is like "test a little, code a little, test a little, code a little." It increases the productivity of the programmer and the stability of program code, which in turn reduces the stress on the programmer and the time spent on debugging.
+JUnit is a unit testing framework for Java programming language. It plays a crucial role test-driven development and is a family of unit testing frameworks collectively known as xUnit. JUnit promotes the idea of "first testing then coding", which emphasizes on setting up the test data for a piece of code that can be tested first and then implemented. This approach is like "test a little, code a little, test a little, code a little." It increases the productivity of the programmer and the stability of program code, which in turn reduces the stress on the programmer and the time spent on debugging.
 
 Sources:
 --------
-- https://smartbear.com/learn/automated-testing/what-is-unit-testing/
+- https://www.techtarget.com/searchsoftwarequality/definition/unit-testing
 - https://www.tutorialspoint.com/junit/junit_overview.htm
 
 Advance topic:
