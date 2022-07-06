@@ -128,10 +128,10 @@ reason why java expects to see identifier after certain combination of keywords.
 Those words cannot be used for names of literals, variables, classes, methods etc. The main reason for that is that java
 looks for such words to understand what a programmer wants, it's a tool for creating commands for java to perform.
 
-## Java variables
+# Java variables
 
-As mentioned above identifiers are sort of names for something. They are used, to associate a certain name with language
-construction, for example with a **_variable_**. Variable is a name(identifier) that is associated with a certain value
+As mentioned above identifiers are sort of names for something. They are used to associate a certain name with language
+construction, for example, with a **_variable_**. Variable is a name (identifier) that is associated with a certain value
 of certain type.
 
     int t = 10;
@@ -146,12 +146,12 @@ processes can come separately:
 On the first line we told java to create a container for int type, and only after that we put there the value.
 The construction above consists of: identifier here is "t", the value is 10, and "int" is a type, which
 represents integer value. So everything must be saved somewhere, mustn't it? Variables in java are saved in computer
-memory. The left-hand side of a variable declaration says:"allocate memory that is enough for saving int value(so-called
+memory. The left-hand side of a variable declaration says: "allocate memory that is enough for saving int value (so-called
 container) and associate identifier _t_ with that container, and put 10 there". This is actually what is happening when
 someone declares a variable. And as it was mentioned, memory is allocated not for the value, but for the container for that.
-This is done to be able to reuse that container in the future.
+This is done so as to be able to reuse that container in future.
 
-![img_10.png](img/img_10.png)
+![img_15.png](https://github.com/Andrekukshinov/contribution_for_epam_mjc/blob/master/goal/basicSyntax/img_15.png?raw=true)
 
 It's just like creating a box that is big enough to store the laptop. And the identifier here is associated with that box,
 not with the laptop. Such approach provides us with an opportunity to take this box later and get the value from it.
@@ -162,34 +162,33 @@ The process of variable creation is called _declaration_. Variables are declared
 
     data_type variable_name = value;
 
-Where the data_type is the type of container(amount of memory) to be allocated.
+Where the data_type is the type of container (amount of memory) to be allocated.
 Variable_name is the identifier.
-Value - to be put in the container. Or in other words **literal**.
+Value - to be put in the container. Or, in other words, **literal**.
 They are called variables (not constants) as their value can be changed:
 
     int t = 10;
     t = 0;
 
 Important thing here is that when we reuse the variable we do not set its type, as it was already announced. We just
-reassign the new value for the old container, which is addressed with its name "t" in this case. 
-
-There are some rule for variables naming in java:
-1) Variables naming cannot contain white spaces, for example: int num ber = 100; is invalid because the variable name
+reassign the new value for the old container, which is addressed with its name "t" in this case. There are some rules
+for variables naming in java:
+1) Variables naming cannot contain white spaces, for example: **int num ber = 100;** is invalid because the variable name
    has space in it.
-2) Variable name can begin with special characters such as $ and _
-3) As per the java coding standards the variable name should begin with a lower case letter, for example int number;
-   For lengthy variables names that has more than one words do it like this: int smallNumber; int bigNumber;
+2) Variable name can begin with special characters such as **$** and **_**.
+3) As per the java coding standards the variable name should begin with a lower case letter, for example, **int number;**
+   For lengthy variable's names that has more than one word do it like this: **int smallNumber; int bigNumber;**
    (start the following word with capital letter).
-4) Variable names are case-sensitive in Java, which means that number and nUmber - are different variables.
+4) Variable names are case sensitive in Java, which means that number and nUmber - are different variables.
 
 
-## Literals
-Before diving into numeric primitives' theory it's good to take a look at the "literal" definition. So literals are simply
+#### Literals
+Before diving into numeric primitives theory it's good to take a look at the "literal" definition. So, literals are simply
 the values that are associated with the identifiers that are given to them:
 
     int t = 1;
 
-So here the literal is **1** and it's of an integer type, identifier here is _t_. So essentially, literals are the values
+So, here the literal is **1** and it's of an integer type, identifier here is **_t_**. So essentially, literals are the values
 that are stored in variables.
 
 ##Java primitives
