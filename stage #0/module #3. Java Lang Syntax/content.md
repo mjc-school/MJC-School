@@ -196,7 +196,7 @@ that are stored in variables.
 As was mentioned above each variable is a container for some values. They store data just like boxes in real life store
 things. Each box in real life has its parameters, like: size, color, etc. In programming languages those boxes have 2
 main characteristics, that we are interested in:
-1) data type - type of value that can be saved in container.
+1) data type - type of value that can be saved in container,
 2) size of container - each data type in java requires some space for its needs.
 
 For simplicity imagine that we can have 2 containers:
@@ -220,25 +220,26 @@ the way of doing that will be introduced later in the future.
 
 In real world we have some classes of numbers: natural, real, rational, irrational, etc. So in programming
 languages classes of numbers also exist, but they are grouped in a little different way:
-1. for integer numbers there are 4 types: byte, short, int, long.
+1. for integer numbers there are 4 types: byte, short, int, long;
 2. for decimal numbers: float and double.
 
 These are 2 main groups for serving numbers in java. It seems a bit confusing as java has 4 types for serving integer
 values, there's a reason for that: each type as you remember has its size, and those types differ on size:
 
 ![img_13.png](img/img_13.png)
+
 *More details you can find using the [link](https://www.baeldung.com/java-primitives)*
 
 The difference between those types is not only in the size, but as you must have already mentioned from table above, also
 in capacity of values that can be stored in it. Those different capabilities mean that you should always think about the
 integer value that you are going to use across the program. 
 
-For some cases using bytes(which contain values from -128 to 127) is more than enough: if the task is to save the amount of floors in a building - bytes are perfect. This is done
+For some cases using bytes (which contain values from -128 to 127) is more than enough: if the task is to save the amount of floors in a building - bytes are perfect. This is done
 to be able to allocate only necessary amount of memory for the variable. 
 
 There's no doubt that, from language
 perspective you can always use **long** type for integer numbers, but if you need to store number that in not going to take
-huge values(amount of days in a year, etc.) the best option would be to use something suitable: an average yer contains 365
+huge values (amount of days in a year, etc.) the best option would be to use something suitable: an average year contains 365
 days, which is bigger that a byte can contain => using short here is the best option. 
 
 But why is it a bad idea to use say integer or a long for that? So the answer is simple, consider the following example: you need to store a laptop,
@@ -261,11 +262,11 @@ Let's find out how to create a **byte** variable:
 
     public class Main {
        public static void main(String[] args) {
-           byte b = 1b;
+           byte b = 1;
        }
     }
 
-As you remember the first 2 statements are used by java, so for now, we do nat pay attention to them.
+As you remember the first 2 statements are used by java, so for now, we do not pay attention to them.
 
 ![](img/img_14.png)
 
@@ -273,14 +274,14 @@ The line that we are interested in is: **byte b = 1;** so this is just a simple 
 1. the first thing is type definition, the place where we tell java what container should be used.
 2. identifier - the name to be associated with the value.
 3. literal - the value to be stored in the container.
-4. assignment - process of putting the value to container(setting the literal value to a byte container).
+4. assignment - process of putting the value to container (setting the literal value to a byte container).
 
 This is an example of **byte** variable creation. Essentially, variable of any type is created in java this way.  Just
 like any other variable, byte is a primitive type. It can only hold integer values from -128 to 127. And as it's clear
 from its name, it requires 1 byte of free space for managing those values.
 
 ### Short
-The next primitive type that we are gonna to take a look at is **short**, it's a bit bigger than a byte(actually it
+The next primitive type that we are gonna to take a look at is **short**, it's a bit bigger than a byte (actually it
 consists of 2 bytes of memory (8 bits)):
 
     short s = 500;
@@ -297,13 +298,13 @@ If we need to serve even bigger numbers than those, java provides us with **int*
 By the way this is the most commonly used integer type of all, as it covers the majority of use cases in programs.
 
 ### Long
-**Long** is the biggest type for holding integer values, it requires 8 bytes of free space(64 bits) and correspondingly,
+**Long** is the biggest type for holding integer values, it requires 8 bytes of free space (64 bits) and correspondingly,
 can serve values from -9_223_372_036_854_775_808 to 9_223_372_036_854_775_807:
 
     long l1 = 100L;
     long l2 = 100_000_000_000;
 
-The only difference here in type declaration is that when a value is smaller than the biggest integer value you (or
+The only difference here in type declaration is that when a value is smaller than the biggest integer value (or
 less than the smallest) you should clarify that this should be a long value adding to literal value symbol "L". This is
 required because default value type in java for integer literals is int, and if you want to allocate more memory, than
 you have to explicitly tell java that this is going to be for long, otherwise you will see the error.
