@@ -118,14 +118,14 @@ Java has certain naming conventions. Using this [link](https://www.javatpoint.co
 
 Identifiers are tightly tied with _keywords_. Those are special words that are reserved by java for its needs. They
 are used all over any program and have special meaning for java, and this is the reason why they are reserved. There are
-about 50 reserved keywords in java, and you have already seen some of them:**class**, **public**, **void** etc. Cool
+about 50 reserved keywords in java, and you have already seen some of them: **class**, **public**, **void** etc. Cool
 point here is that there's no need in memorizing all of them at once, as you will learn them, when necessary. Keywords
 are usually used for creating some constructions, which should be identified, like classes, methods etc. This is the
 reason why java expects to see identifier after certain combination of keywords.
 
 ![img_9.png](img/img_9.png)
 
-Those words cannot be used for names of literals, variables, classes, methods etc. the main reason for that is that java
+Those words cannot be used for names of literals, variables, classes, methods etc. The main reason for that is that java
 looks for such words to understand what a programmer wants, it's a tool for creating commands for java to perform.
 
 ## Java variables
