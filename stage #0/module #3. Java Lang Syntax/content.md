@@ -10,7 +10,7 @@ Programming languages have the same purpose - it's the tool for information exch
 Just the same as in spoken languages, programming languages have their own syntax. Whereas syntax
 itself is a set of rules that define certain combination, order and structure of programming language. They are required
 to make it possible for computer to "read", understand and execute written in human language code. In other words
-it's a bridge between mache commands and human communication, it is used for "explaining" what a programmer wants to get
+it's a bridge between machine commands and human communication, it is used for "explaining" what a programmer wants to get
 from a machine. It's the way of creating commands for the computer to execute.
 
 ![img_2.png](img/img_2.png)
