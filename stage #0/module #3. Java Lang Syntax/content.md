@@ -376,17 +376,17 @@ calculating sum of anything, etc. For that purposes java has list of operators t
 5. Bitwise Operator*.
 6. Logical Operator*.
 7. Ternary Operator*.
-8. Shift Operator.*
+8. Shift Operator*.
 
 
-*- These operators will be introduced later throughout the course
+*- These operators will be introduced later throughout the course.
 
-Arithmetic operators are the ones that can be met in math:+, -, *, /, %(modulo), ^(power operator).
+Arithmetic operators are the ones that can be met in math:+, -, *, /, % (modulo), ^ (power operator).
 
 
 ### Unary operators
-Usually operators perform calculations over variables or in other words _operands_. And if an operator interacts with 2
-operands -> they are called binary operators(e.g. math operators). Meanwhile, _unary_ operators need only 1 variable to
+Usually operators perform calculations over variables or, in other words, _operands_. And if an operator interacts with 2
+operands -> they are called binary operators (e.g. math operators). Meanwhile, _unary_ operators need only 1 variable to
 work with:
 
     int t = 10;
@@ -440,8 +440,8 @@ number. And java has a _short form_ for such cases:
 Which is the same as the example above. These short forms exist for all of arithmetical operators:-=,+=,*=,/=,%=.
 
 ### Relational variables
-If we need to compare 2 values in math we do that with relational signs: >, <, <=(less or equals), >=(more or eq),
-=(equals). So, those math signs has correlation in java, all above but equals sign(in java equals operator is **==**) are
+If we need to compare 2 values in math we do that with relational signs: >, <, <= (less or equals), >= (more or eq),
+= (equals). So, those math signs has correlation in java, all above but equals sign (in java equals operator is **==**) are
 the same, and the result of those operators is not a number, but a boolean value:
 
     boolean b = 4 > 6;
@@ -451,7 +451,7 @@ the same, and the result of those operators is not a number, but a boolean value
 The result of expression is boolean, as we expect to get from those operators some kind of comparison result which, in
 the end, is used to see if it's true or not.
 
-There are 2 operators which look different from math signs: equals operator(==) and not equals (!=). The reason why
+There are 2 operators which look different from math signs: equals operator (==) and not equals (!=). The reason why
 equals in java consists of 2 equal signs is because a single one in java is an **assignment operator**, which, as you've
 already seen is used to associate literal with identifier.
 
