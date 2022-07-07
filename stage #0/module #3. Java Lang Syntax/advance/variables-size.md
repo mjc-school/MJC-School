@@ -1,4 +1,4 @@
-##Explanation why integer types have different size
+## Explanation why integer types have different size
 
 As it was mentioned above each type in java has its size. The smallest size value for any programming language is a bit.
 Bit is a binary digit. It's the smallest unit in computer memory that can have 2 states: 0 and 1 (this is why it is called
