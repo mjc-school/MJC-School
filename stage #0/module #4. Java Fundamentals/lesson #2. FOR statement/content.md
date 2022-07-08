@@ -54,9 +54,7 @@ the variable through which we will be able to have control over the loop itself,
     - increase counter by 1, which means that actual iteration of code execution is over
   - counter is more than 20, which means that we shouldn't do anything else as we have reached the amount of necessary 
      repetitions
-
-
-
+  
 There are 3 (actually 4, but we will get acquainted with the 4th one in the future modules) main types of loop 
 constructions: "while", "for", "do-while". We will begin with the "while" loop, and the task with console output becomes:
 
@@ -96,7 +94,6 @@ The code has become even shorter, as we have extracted all the code that is resp
 one block (or even one line), but the principle is still the same:
 
 ![img_2.png](img/img_2.png)
-
 
 1) Define the counter (just like before).
 2) Go to the following statement, which is checking the condition.
@@ -187,7 +184,7 @@ But here we have to execute the same action twice, which is not that efficient.
 
 
 ***
-#Loop keywords
+# Loop keywords
 
 ## Continue
 Sometimes it's necessary to skip some loop iterations if a specific condition is met, like, if we have numbers from zero to 
