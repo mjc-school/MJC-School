@@ -44,6 +44,7 @@ The recommended timeline for the whole module is 1 week.
 Mentee should be able to answer questions during demo session.
 
 ## Extra Materials
+
 1. [What is Jenkins? Why Use Continuous Integration (CI) Tool?](https://www.guru99.com/jenkin-continuous-integration.html)
 2. [What is Continuous Integration](https://aws.amazon.com/en/devops/continuous-integration/)
 3. [Introduction to CI/CD with GitLab](https://docs.gitlab.com/ee/ci/introduction/#introduction-to-cicd-methodologies)
