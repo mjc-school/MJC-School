@@ -17,7 +17,7 @@ The recommended timeline for the whole module is 1 week.
 2. Configure Jenkins build job (pool, run test, build) to checkout your repository, use pooling interval.
 3. Install SonarQube. Configure Jenkins to use local SonarQube installation. Analyze your source code with SonarQube after Maven builds your project. Use JaCoCo for code coverage.
 4. Jenkins should deploy your application (after passing SonarQube quality gate) under your local tomcat server. Please use **Deploy to container Plugin**.
-5. (Optional task) Create a Pipeline to complete the above tasks (build, run SonarQube, deploy to Tomcat). Jenkinsfile should be committed to the GitHub repo and pulled up from there. Try out Blue Ocean plugin for pipelines.
+5. (Optional task) Create a Pipeline to complete the above tasks (build, run SonarQube, deploy to Tomcat). Jenkinsfile should be committed to the GitHub repository and pulled up from there. Try out Blue Ocean plugin for pipelines.
 
 #### General requirements
 
