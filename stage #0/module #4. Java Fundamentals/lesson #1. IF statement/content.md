@@ -14,22 +14,22 @@ are more than one probable outcomes, depending on some criteria or a condition, 
 what college/university to enter, he has multiple options to choose from (for simplicity we will choose between 2), and
 also the decision he is about to make is going to have impact on his nearest future, e.g. entering technical University in
 the majority of the cases means that studies and, probably, career is going to be related to dealing with engineering
-issues. On the other hand if the same student enrolls with college of laws, his future will be related to layer
+issues. On the other hand if the same student enrolls with college of laws, his future will be related to lawyer
 activities and so on.
 
 ![img_2.png](img/img_2.png)
 
-Here we can see that there's a certain variability(we have to think what abilities do we have), if we have technical
+Here we can see that there's a certain variability (we have to think what abilities do we have), if we have technical
 abilities than we probably will think of entering technical university, and it demonstrates that all activities after
-the decision was made don't cross with the ones from the other flow(or block of actions), and eventually we get to
+the decision was made don't cross with the ones from the other flow (or block of actions), and eventually we get to
 certain point which might be completely different from the one with the "law flow". And this demonstrates that one small
 choice can lead to a completely different result.
 ***
 
-# The key word "if" and "if" block structure
+# The keyword "if" and "if" block structure
 
-For such particular cases in all c-like languages there's an "if" construction which provides a developer with an
-ability to change the program flow depending on certain circumstances(pseudocode example):
+For such particular cases in all C-like languages there's an "if" construction which provides a developer with an
+ability to change the program flow depending on certain circumstances (pseudocode example):
 
     if (condition) {
          instruction 
@@ -39,13 +39,13 @@ ability to change the program flow depending on certain circumstances(pseudocode
 
 Here we can see the following parts:
 
-1) if - keyword, which helps execute different codeblocks depending on condition check outcome. This keyword must always
+1) if - a keyword, which helps execute different codeblocks depending on condition check outcome. This keyword must always
    be the first in such blocks ("if").
-2) condition to be checked - in the round brackets.
-3) instruction to be executed if the condition is true.
-4) else - keyword, which provides you with an opportunity what to do if condition in "if"
-   block is false(else).
-5) instruction to be executed if "else" case is in.
+2) a condition to be checked - in the round brackets.
+3) an instruction to be executed if the condition is true.
+4) else - a keyword, which provides you with an opportunity what to do if the condition in "if"
+   block is false.
+5) an instruction to be executed if "else" case is in.
 
 ## How about java?
 
@@ -59,12 +59,12 @@ Java provides you with the "if-else" blocks, with the following structure:
 
 This is called conditional operator, and it consists of several parts:
 
-1) if - keyword.
-2) condition - false in our case.
-3) block of code to be executed if the condition is true.
-4) else - keyword, which provides you with an opportunity what to do if condition in "if"
+1) if - a keyword.
+2) a condition - false in our case.
+3) a block of code to be executed if the condition is true.
+4) else - a keyword, which provides you with an opportunity what to do if the condition in "if"
    block is false.
-5) block of code to be executed if "else" case is in.
+5) a block of code to be executed if "else" case is in.
 
 ## Time to "uncover" the magic
 
