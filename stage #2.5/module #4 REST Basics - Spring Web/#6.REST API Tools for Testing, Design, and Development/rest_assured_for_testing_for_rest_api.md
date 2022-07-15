@@ -32,7 +32,7 @@ public class RestAssuredAPITest {
     @Injected
     private final NewsService newsService;
 
-    @BeforeTest
+    @BeforeEach
     void setUp() {
         //Create a piece of news for the testing purpose.
         News news = new News(EXPECTED_NEWS_CONTENT);
@@ -40,7 +40,7 @@ public class RestAssuredAPITest {
         newsID = createdNews.getId();
     }
 
-    @AfterTest
+    @AfterEach
     void tearDown() {
         //Delete a piece of news for executing a test.
         newsService.delete(news);

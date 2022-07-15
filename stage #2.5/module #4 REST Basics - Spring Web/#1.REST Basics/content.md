@@ -2,16 +2,16 @@
 
 ## Basics of RESTful APIs
 _**REST is an API architecture style.**_ It stands for Representational State Transfer (REST). 
-RREST is an architectural style that defines a set of constraints to be used for creating web services. 
+REST is an architectural style that defines a set of constraints to be used for creating web services. 
 REST API is a way of accessing web services in a simple and flexible way without having any processing.
 REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP) technology because REST uses less bandwidth, 
 simple and flexible making it more suitable for internet usage. It’s used to fetch or give some information from a web service. 
-All communication done via REST API uses only HTTP request.
+All communication done via REST API uses only HTTP protocol.
 
 ## Richardson REST API Maturity Model
 The Richardson Maturity Model grades RESTful API by their maturity. The REST Maturity Model is a way to grade your API according to the constraints of REST.
 It describes four different levels of REST (starting from 0 to 3 level). A REST API that supports hypermedia controls is classified as Level 3 in this maturity model.
-- **Level 0 - a single URI and use a single HTTP method (typically POST):** <br> These services have a single URI and use a single HTTP method (typically POST). These are the most primitive way of building SOA applications with a single POST method and using XML to communicate between services.Level zero of maturity does not make use of any of URI, HTTP Methods, and HATEOAS capabilities.
+- **Level 0 - a single URI and use a single HTTP method (typically POST):** <br> These services have a single URI and use a single HTTP method (typically POST). This is the most primitive way of building SOA applications with a single POST method and using XML to communicate between services. Level zero of maturity does not make use of any of URI, HTTP Methods, and HATEOAS capabilities.
 
 - **Level 1 - different URIs for different resources but use a single HTTP method (typically POST):** <br> API design at Level 1 is all about using different URIs to interact with the different resources in your application but only a single HTTP verb – generally HTTP POST. These services will give each resource, available in the application, a unique URI. A unique URI separately identifies one unique resource – and that makes these REST API better than level zero.
 
@@ -23,7 +23,7 @@ REST API of Level 3 is the most mature level of Richardson’s model, which enco
 
 ## Some definitions related to REST API
 
-- _**Resource:**_ <br> The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service (e.g. "today's weather in Los Angeles"), a collection of other resources, a non-virtual object (e.g. a person), and so on. In other words, any concept that might be identified by a URI provided by the server can be called a resource. A resource is an object with a type, associated data, relationships to other resources, and a set of methods that operate on it. It is similar to an object instance in an object-oriented programming language, with the important difference that only a few standard methods are defined for the resource (corresponding to the standard HTTP GET, POST, PUT and DELETE methods), while an object instance typically has many methods.Resources can be singleton or grouped into collections. <br>
+- _**Resource:**_ <br> The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service (e.g. "today's weather in Los Angeles"), a collection of other resources, a non-virtual object (e.g. a person), and so on. In other words, any concept that might be identified by a URI provided by the server can be called a resource. A resource is an object with a type, associated data, relationships to other resources, and a set of methods that operate on it. It is similar to an object instance in an object-oriented programming, with the important difference that only a few standard methods are defined for the resource (corresponding to the standard HTTP GET, POST, PUT and DELETE methods), while an object instance typically has many methods. Resources can be singleton or grouped into collections. <br>
 _**1.Singleton and Collection Resources**_<br>
 For example, _“customers”_ is a collection resource and _“customer”_ is a singleton resource (in a banking domain).We can identify _“customers”_ collection resource using the URI **“/customers“**.  We can identify a single _“customer”_ resource using the URI **“/customers/{customerId}“**.<br>
 _**2.Collection and Sub-collection Resources**_<br>
@@ -82,7 +82,7 @@ PATCH (like POST) may have side-effects on other resources so it is not safe.
 
 - _**HATEOAS (Hypermedia as the Engine of Application State):**_ HATEOAS is a constraint of the REST application architecture. HATEOAS keeps the REST style architecture unique from most other network application architectures.
 The term “hypermedia” refers to any content that contains links to other forms of media such as images, movies, and text.
-REST architectural style lets us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
+REST architectural style let us use the hypermedia links in the API response contents. It allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links.
 Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
 For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
 

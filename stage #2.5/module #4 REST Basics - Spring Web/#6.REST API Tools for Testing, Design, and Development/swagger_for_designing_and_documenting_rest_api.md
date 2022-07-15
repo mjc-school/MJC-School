@@ -64,14 +64,14 @@ Here, You have added metadata information about the REST API such as API name, a
 
 Since we have enabled Swagger, let us see the documentation of our API endpoints done by Swagger. This is rendered through Swagger UI in the following link:
 
-http://localhost:8080//swagger-ui.html#/news-controller
+http://localhost:8080/swagger-ui.html#/news-controller
 
 ![](./media/swagger_default_documentation.png "Swagger default documentation")
 
 Here, Swagger has put together the following information:
 
 - Document metadata (API name, license, website, contact and so on)
--All REST endpoints with default information it can infer from code. Note that endpoint descriptions are method names
+- All REST endpoints with default information it can infer from code. Note that endpoint descriptions are method names
 
 These are the default information. If you want, you can provide a detailed description and information about the endpoints and operations.
 
@@ -87,27 +87,25 @@ For each of the REST endpoint and its associated operations, You can provide Api
 public class NewsController {
 
     @Autowired
-    private NewsRepository newsRepository;
+    private NewsService newsService;
 
     @PostMapping
-    @ApiOperation(value = "Create a piece of news", response = ResponseEntity.class)
+    @ApiOperation(value = "Create a piece of news", response = News.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Successfully created a piece of news"),
+            @ApiResponse(code = 201, message = "Successfully created a piece of news"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
             @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
             @ApiResponse(code = 500, message = "Application failed to process the request")
     }
     )
-    public ResponseEntity<News> createNews(@RequestBody News news){
-       
-            News savedNews = newsRepository.save(news);
-            return new ResponseEntity<News>(savedNews, HttpStatus.OK);
-       
+    @ResponseStatus(HttpStatus.CREATED)
+    public News createNews(@RequestBody News news){         
+            return newsService.save(news);
     }
 
     @GetMapping
-    @ApiOperation(value = "View all news", response = Iterable.class)
+    @ApiOperation(value = "View all news", response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved all news"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -116,12 +114,12 @@ public class NewsController {
             @ApiResponse(code = 500, message = "Application failed to process the request")
     }
     )
-    public Iterable<Donor> getNews(){
-        return newsRepository.findAll();
+    public List<News> getNews(){
+        return newsService.findAll();
     }
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Retrieve specific news with the supplied id", response = ResponseEntity.class)
+    @ApiOperation(value = "Retrieve specific news with the supplied id", response = News.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved the news with the supplied id"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -130,16 +128,12 @@ public class NewsController {
             @ApiResponse(code = 500, message = "Application failed to process the request")
     }
     )
-    public ResponseEntity<News> getNews(@PathVariable("id") Long id){
-        Optional news = newsRepository.findById(id);
-        if(!news.isPresent()){
-            return new ResponseEntity<News>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<News>((News) news.get(), HttpStatus.OK);
+    public News getNews(@PathVariable("id") Long id){
+        return newsService.findById(id);
     }
 
     @PutMapping("/{id}")
-    @ApiOperation(value = "Update a piece of news information", response = ResponseEntity.class)
+    @ApiOperation(value = "Update a piece of news information", response = News.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully updated news information"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -148,13 +142,8 @@ public class NewsController {
             @ApiResponse(code = 500, message = "Application failed to process the request")
     }
     )
-    public ResponseEntity<Donor> UpdateNews(@PathVariable("id") Long id, @RequestBody News news){
-        Optional findNews = newsRepository.findById(id);
-        if(!findNews.isPresent()){
-            throw new NewsNotFoundException("The News with id "+ news.getId()+" is not present");
-        }
-        News savedNews = newsRepository.save(news);
-        return new ResponseEntity<News>(savedNews, HttpStatus.OK);
+    public News UpdateNews(@PathVariable("id") Long id, @RequestBody News news){
+        return newsService.update(news);
     }
 
     @DeleteMapping("/{id}")
@@ -167,14 +156,15 @@ public class NewsController {
             @ApiResponse(code = 500, message = "Application failed to process the request")
     }
     )
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id){
-        newsRepository.deleteById(id);
+        newsService.deleteById(id);
     }
 }
 ```
 Now, restart the application and access the URL:
 
-http://localhost:8080//swagger-ui.html#/news-controller
+http://localhost:8080/swagger-ui.html#/news-controller
 
 Here, you can see the same REST API documentation as above, so you can find here the information about response with HTTP response codes:
 
@@ -194,7 +184,7 @@ This JSON document conforms OpenAPI specification and can be accessed through Sw
 Here, you can view the description of your application API endpoints and all other related metadata such as model structure, data types and so on.
 
 ## Stubbing with Swagger Codegen
-Swagger codegen lets us generate server stub and client SDKs from a supplied OpenAPI document. Swagger codegen presently supports the following server (Over 20 languages) and client SDK generation (Over 40 languages):
+Swagger codegen let us generate server stub and client SDKs from a supplied OpenAPI document. Swagger codegen presently supports the following server (Over 20 languages) and client SDK generation (Over 40 languages):
 
 Swagger codegen can be access through Command Line Interface (codegen-cli) or the maven\gradle plugin. To access codegen CLI jar file you can download the jar from here (https://search.maven.org/classic/remotecontent?filepath=io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar).
 
