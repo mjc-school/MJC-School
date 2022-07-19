@@ -235,7 +235,7 @@ line 6:
 ```
 A name of a package corresponds organization of directories (folders), which source code files are located in: a package name of a class is composed of directories separated by dots ".", where a class-file is located.
 
-For example, if a class `RandomClass` has a package name `com.example.app`, then a project will contain a folder named `com`, which will contain a folder `example`, that will contain one other folder `app` with a file named `RandomClass.class` containing Java code.
+For example, if a class `RandomClass` has a package name `com.example.app`, then a project will contain a folder named `com`, which will contain a folder `example`, that will contain one other folder `app` with a file named `RandomClass.java` containing Java code.
 
 If we need to use classes from other packages, we will need to connect these packages and classes. The exception is classes from the `java.lang` package (for example, String), which are automatically included in the program.
 There are two ways to connect classes from other packages:
