@@ -369,7 +369,6 @@ public class AppClass {
 
 ### Static class members
 If it is required that all objects of a class were using the same field or method, it may be marked with a keyword `static`.
-package com.example.app;
 ```
 package com.example.app;
 
