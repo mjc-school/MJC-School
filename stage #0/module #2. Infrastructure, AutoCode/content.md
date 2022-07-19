@@ -28,7 +28,7 @@ To confidently use these tools, we will need to learn following:
 - **Advance:** What is Unit tests
 
 ## How to compile and run Java application
-Currently, on large projects, they manually compile and assemble the project only in exceptional situations. To simplify the work, integrated development environments (IDE) are used to develop and run applications, as well as build tools and dependency management.
+Currently, on large projects, programmers manually compile and assemble the project only in exceptional situations. To simplify the work, integrated development environments (IDE) are used to develop and run applications, as well as build tools and dependency management.
 
 In this chapter, however, we will consider how to run Java code ourselves so that an understanding of how this process works is formed. But in the future, for convenience, we recommend using specialized tools, which we will analyze a little later.
 
