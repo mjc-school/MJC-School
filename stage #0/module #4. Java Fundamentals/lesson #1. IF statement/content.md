@@ -80,7 +80,7 @@ in different parts is separate one from another, and it never crosses.
 
 # Operators used with booleans
 
-The **boolean** type must contain the result of any conditional(!, ||, &&) or comparative(==, !=, <
+The **boolean** type must contain the result of any conditional (!, ||, &&) or comparative (==, !=, <
 , >, >=, <=) operator, as after the calculation of them, we get either true or false.
 
 Each of those operators can be applied in boolean conditions like:
@@ -106,7 +106,7 @@ other number => the result will be more than 0.
 
       boolean falseResult = true && false;
 
-This operator is true if ONLY all conditions are true: in our case the first literal was true this is why searching went
+This operator is true if ONLY all conditions are true: in our case the first literal was true, this is why searching went
 on, and it always continues until the first "false" is met or the statement has ended. It's like multiplying numbers by
 zeros
 (if zero is false and any other number is true) if you multiply zero with anything you will still get zero, but if you
@@ -117,7 +117,7 @@ multiply ANY other numbers => the result will be more than 0.
       boolean trueResult = 5 == 5;
 
 This operator is used for comparing variables: in our case the result will be true as 5 is equal to 5. And if only those
-numbers(or any other variables) are the same the result is true, otherwise it's false. It sounds like: "Is 5 equal to
+numbers (or any other variables) are the same the result is true, otherwise it's false. It sounds like: "Is 5 equal to
 5?"
 
 #### Not equals operator
