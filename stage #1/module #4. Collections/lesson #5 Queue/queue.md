@@ -1,3 +1,4 @@
+# Queue Interface (_java.util.Queue_)
 
 ## Agenda
 * Hierarchy. Queue.
@@ -17,14 +18,14 @@ The Java **Queue** interface, _java.util.Queue_ represents a data structure desi
 public interface Queue<E> extends Collection<E>  
 ```
 
-Method | Second Description
------------- | -------------
-**boolean add(object)** | Inserts the specified element into this queue and returns true upon success
-**boolean offer(object)** | Insert the specified element into this queue
-**Object remove()** | Retrieves and removes the head of this queue
-**Object poll()** | Retrieves and removes the head of this queue, or returns null if this queue is empty
-**Object element()** | Retrieves, but does not remove, the head of this queue
-**Object peek()** | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
+ Method                    | Second Description
+---------------------------| ----------------------------------------------------------------------------------------------
+ ``boolean add(object)``   | Inserts the specified element into this queue and returns true upon success
+ ``boolean offer(object)`` | Insert the specified element into this queue
+ ``Object remove()``       | Retrieves and removes the head of this queue
+ ``Object poll()``         | Retrieves and removes the head of this queue, or returns null if this queue is empty
+ ``Object element()``      | Retrieves, but does not remove, the head of this queue
+ ``Object peek()``         | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
 
 ## PriorityQueue
 Java **PriorityQueue** class is a queue data structure implementation in which objects are processed based on their **priority**. It is different from standard queues where FIFO (First-In-First-Out) algorithm is followed.
@@ -68,15 +69,15 @@ By default, the priority is determined by objects’ natural ordering. Default p
 ```
 
 ### Features
-* PriorityQueue is an unbounded queue and grows dynamically. The default initial capacity is **11** which can be overridden using **initialCapacity** parameter in appropriate constructor
-* It does not allow NULL objects
-* Objects added to _PriorityQueue_ MUST be comparable
+* **PriorityQueue** is an unbounded queue and grows dynamically. The default initial capacity is **11** which can be overridden using **initialCapacity** parameter in appropriate constructor.
+* It does not allow ``NULL`` objects.
+* Objects added to **PriorityQueue** MUST be comparable.
 * The objects of the priority queue are **ordered by default in natural order**
-* A _Comparator_ can be used for custom ordering of objects in the queue
-* The **head** of the priority queue is the **least** element based on the natural ordering or comparator based ordering. When we poll the queue, it returns the head object from the queue
-* If multiple objects are present of same priority - it can poll any one of them randomly
-* _PriorityQueue_ is not thread safe. Use _PriorityBlockingQueue_ in concurrent environment
-* It provides **O(log(n))** time for add and poll methods
+* A ``Comparator`` can be used for custom ordering of objects in the queue.
+* The **head** of the priority queue is the **least** element based on the natural ordering or comparator based ordering. When we poll the queue, it returns the head object from the queue.
+* If multiple objects are present of same priority - it can poll any one of them randomly.
+* **PriorityQueue** is not thread safe. Use **PriorityBlockingQueue** in concurrent environment.
+* It provides ``O(log(n))`` time for add and poll methods.
 
 
 ## Deque
@@ -90,12 +91,12 @@ Since Java **Deque** is an interface you need to instantiate a concrete implemen
 
 ### Features
 * **Deque** interface supports resizable arrays that can grow as required
-* Array deques _do not allow the use of NULL values_
+* Array dequeue _do not allow the use of ``NULL`` values_
 * **Deque** does not support concurrent access by more than one thread
 * **Deque** _is not thread-safe_ unless an external synchronization is provided
 
 ## LinkedList
-The **LinkedList** class is a pretty standard _Deque_ and _Queue_ implementation. It uses a linked list internally to model a _queue_ or a _deque_.
+The **LinkedList** class is a pretty standard **Deque** and **Queue** implementation. It uses a linked list internally to model a _queue_ or a _deque_.
 
 It is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses. Each element is known as a node. Due to the dynamicity and ease of insertions and deletions, they are preferred over the arrays or queues.
 
@@ -129,7 +130,7 @@ It is a linear data structure where the elements are not stored in contiguous lo
 ```
 
 ## ArrayDeque
-**ArrayDeque** belongs to _java.util_ package. It implements both _Queue_ and _Deque_ interfaces. Internally, the **ArrayDeque** class makes use of a dynamically resizable array that grows as the number of elements is increased.
+**ArrayDeque** belongs to _java.util_ package. It implements both **Queue** and **Deque** interfaces. Internally, the **ArrayDeque** class makes use of a dynamically resizable array that grows as the number of elements is increased.
 
 ```
     Deque<String> arrayDeque=new ArrayDeque<String>();  
