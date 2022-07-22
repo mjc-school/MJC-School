@@ -12,20 +12,20 @@
 ## Hierarchy. Queue.
 ![](media/queue_hierarchy.png)
 
-The Java **Queue** interface, _java.util.Queue_ represents a data structure designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue. It follows the FIFO or the First-In-First-Out principle.
+The Java **Queue** interface, `java.util.Queue` represents a data structure designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue. It follows the FIFO or the First-In-First-Out principle.
 (**FIFO** - First In, First out)
 ```
 public interface Queue<E> extends Collection<E>  
 ```
 
- Method                    | Second Description
----------------------------| ----------------------------------------------------------------------------------------------
- ``boolean add(object)``   | Inserts the specified element into this queue and returns true upon success
- ``boolean offer(object)`` | Insert the specified element into this queue
- ``Object remove()``       | Retrieves and removes the head of this queue
- ``Object poll()``         | Retrieves and removes the head of this queue, or returns null if this queue is empty
- ``Object element()``      | Retrieves, but does not remove, the head of this queue
- ``Object peek()``         | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
+ Method                  | Second Description
+-------------------------| ----------------------------------------------------------------------------------------------
+ `boolean add(object)`   | Inserts the specified element into this queue and returns true upon success
+ `boolean offer(object)` | Insert the specified element into this queue
+ `Object remove()`       | Retrieves and removes the head of this queue
+ `Object poll()`         | Retrieves and removes the head of this queue, or returns null if this queue is empty
+ `Object element()`      | Retrieves, but does not remove, the head of this queue
+ `Object peek()`         | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
 
 ## PriorityQueue
 Java **PriorityQueue** class is a queue data structure implementation in which objects are processed based on their **priority**. It is different from standard queues where FIFO (First-In-First-Out) algorithm is followed.
@@ -70,28 +70,28 @@ By default, the priority is determined by objects’ natural ordering. Default p
 
 ### Features
 * **PriorityQueue** is an unbounded queue and grows dynamically. The default initial capacity is **11** which can be overridden using **initialCapacity** parameter in appropriate constructor.
-* It does not allow ``NULL`` objects.
+* It does not allow `NULL` objects.
 * Objects added to **PriorityQueue** MUST be comparable.
 * The objects of the priority queue are **ordered by default in natural order**
-* A ``Comparator`` can be used for custom ordering of objects in the queue.
+* A `Comparator` can be used for custom ordering of objects in the queue.
 * The **head** of the priority queue is the **least** element based on the natural ordering or comparator based ordering. When we poll the queue, it returns the head object from the queue.
 * If multiple objects are present of same priority - it can poll any one of them randomly.
 * **PriorityQueue** is not thread safe. Use **PriorityBlockingQueue** in concurrent environment.
-* It provides ``O(log(n))`` time for add and poll methods.
+* It provides `O(log(n))` time for add and poll methods.
 
 
 ## Deque
-The **Deque** interface present in _java.util_ package is a subtype of the **Queue** interface. The **Deque** is related to the _double-ended_ queue that supports addition or removal of elements from either end of the data structure. **Deque** is the acronym for _Double Ended Queue_.
+The **Deque** interface present in `java.util` package is a subtype of the **Queue** interface. The **Deque** is related to the _double-ended_ queue that supports addition or removal of elements from either end of the data structure. **Deque** is the acronym for _Double Ended Queue_.
 
 The Java **Deque** interface extends the Java Queue interface. That means that you can use all the Java **Queue** methods when working with a **Deque**.
 
 Since Java **Deque** is an interface you need to instantiate a concrete implementation of the interface in order to use it:
-* java.util.LinkedList
-* java.util.ArrayDeque
+* `java.util.LinkedList`
+* `java.util.ArrayDeque`
 
 ### Features
 * **Deque** interface supports resizable arrays that can grow as required
-* Array dequeue _do not allow the use of ``NULL`` values_
+* Array dequeue _do not allow the use of `NULL` values_
 * **Deque** does not support concurrent access by more than one thread
 * **Deque** _is not thread-safe_ unless an external synchronization is provided
 
@@ -130,7 +130,7 @@ It is a linear data structure where the elements are not stored in contiguous lo
 ```
 
 ## ArrayDeque
-**ArrayDeque** belongs to _java.util_ package. It implements both **Queue** and **Deque** interfaces. Internally, the **ArrayDeque** class makes use of a dynamically resizable array that grows as the number of elements is increased.
+**ArrayDeque** belongs to `java.util` package. It implements both **Queue** and **Deque** interfaces. Internally, the **ArrayDeque** class makes use of a dynamically resizable array that grows as the number of elements is increased.
 
 ```
     Deque<String> arrayDeque=new ArrayDeque<String>();  

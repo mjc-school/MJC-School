@@ -76,7 +76,7 @@ public interface MyInterface {
 ![](media/hierarchy.png)
 
 ## Iterable interface
-The **Iterable** interface was introduced in JDK 1.5. It belongs to java.lang package. In general, an object Implementing Iterable allows it to be iterated. An iterable interface allows an object to be the target of enhanced for loop(**for-each loop**).
+The **Iterable** interface was introduced in JDK 1.5. It belongs to `java.lang` package. In general, an object Implementing Iterable allows it to be iterated. An iterable interface allows an object to be the target of enhanced for loop(**for-each loop**).
 
 **Iterable** interface is the root interface for all the collection classes
 
@@ -92,7 +92,7 @@ public interface Iterable<T>{
 ```
 Method                        | Second Description
 ----------------------------- | --------------------
-``Iterator <T> iterator()`` | Returns the iterator
+`Iterator <T> iterator()` | Returns the iterator
 
 There are three ways in which objects of **Iterable** can be iterated:
 * **Using enhanced for loop(for-each loop)**
@@ -139,14 +139,14 @@ while(iterator.hasNext()) {
 
 Method                | Second Description
 ----------------------|-------------
-``boolean hasNext()`` | Returns true if the iterator has more elements otherwise it returns false
-``Object next()``     | Returns the element and moves the cursor pointer to the next element. (throws ``NoSuchElementException``)
-``void remove()``     | Removes the last elements returned by the iterator
-``forEachRemaining()``| Iterates over all remaining elements in the Iterator and calls a Java Lambda Expression passing each remaining element as parameter to the lambda expression.
+`boolean hasNext()` | Returns true if the iterator has more elements otherwise it returns false
+`Object next()`     | Returns the element and moves the cursor pointer to the next element. (throws `NoSuchElementException`)
+`void remove()`     | Removes the last elements returned by the iterator
+`forEachRemaining()`| Iterates over all remaining elements in the Iterator and calls a Java Lambda Expression passing each remaining element as parameter to the lambda expression.
 
 ### Obtaining an Iterator
 Most often that is how you will interact with an **Iterator** by obtaining it from some Java object that contains multiple nested objects.
-You can also obtain an **Iterator** from many of the Java Collection data structures, e.g. a List, Set, Map, Queue, Deque or Map.
+You can also obtain an **Iterator** from many of the Java Collection data structures, e.g. a **List**, **Set**, **Map**, **Queue**, **Deque** or **Map**.
 ```
 List<String> list = new ArrayList<>();
 list.add("one");
@@ -175,7 +175,7 @@ while(iterator.hasNext()) {
 ```
 
 ### Modification During Iteration
-Some collections do not allow you to modify the collection while you are iterating it via an **Iterator**. In that case you will get a ``ConcurrentModificationException`` the next time you call the ``Iterator next()`` method. The following example results in a ``ConcurrentModificationException`` when executed.
+Some collections do not allow you to modify the collection while you are iterating it via an **Iterator**. In that case you will get a `ConcurrentModificationException` the next time you call the `Iterator next()` method. The following example results in a `ConcurrentModificationException` when executed.
 ```
 List<String> list = new ArrayList<>();
 
@@ -195,7 +195,7 @@ while(iterator.hasNext()) {
 ```
 
 ### Remove Elements During Iteration
-The Java Iterator interface has a ``remove()`` method which lets you remove the element just returned by ``next()`` from the underlying collection. Calling ``remove()`` does not cause a ``ConcurrentModificationException`` to be thrown.
+The Java Iterator interface has a `remove()` method which lets you remove the element just returned by `next()` from the underlying collection. Calling `remove()` does not cause a `ConcurrentModificationException` to be thrown.
 ```
 List<String> list = new ArrayList<>();
 
@@ -219,31 +219,31 @@ The **Collection** interface represents a group of objects (elements)
 
 The **Collection** interface is implemented by all the classes in the collection framework
 
-Method                                      | Second Description
---------------------------------------------| -------------------------------------------------
-``int size()``                              | Returns the number of elements in this collection
-``boolean isEmpty()``                       | TRUE - contains no elements, FALSE - contains
-``boolean contains Object o)``              | TRUE - contains the specified element, FALSE - no
-``boolean containsAll (Collection<?>)``     | TRUE - contains ***all*** of the elements
-``boolean add E e)``                        | Inserts an element to collection
-``boolean addAll (Collection<? extends E>)``| Insert the specified collection elements
-``boolean remove(Object element)``          | Removes the given objection
-``boolean removeAll (Collection<?>)``       | Removes all given objects
-``boolean retainAll (Collection<?>)``       | Retains only given objects
+Method                                    | Second Description
+------------------------------------------| -------------------------------------------------
+`int size()`                              | Returns the number of elements in this collection
+`boolean isEmpty()`                       | TRUE - contains no elements, FALSE - contains
+`boolean contains Object o)`              | TRUE - contains the specified element, FALSE - no
+`boolean containsAll (Collection<?>)`     | TRUE - contains ***all*** of the elements
+`boolean add E e)`                        | Inserts an element to collection
+`boolean addAll (Collection<? extends E>)`| Insert the specified collection elements
+`boolean remove(Object element)`          | Removes the given objection
+`boolean removeAll (Collection<?>)`       | Removes all given objects
+`boolean retainAll (Collection<?>)`       | Retains only given objects
 
 
 ## Collections
-The Java **Collections** class ( _java.util.Collections_ package), contains a long list of utility methods for working with collections in Java. 
+The Java **Collections** class (`java.util.Collections` package), contains a long list of utility methods for working with collections in Java. 
 * **addAll()**
 
-The Java Collections ``addAll()`` method can add a variable number of elements to a Collection
+The Java Collections `addAll()` method can add a variable number of elements to a Collection
 ```
 List<String> list = new ArrayList<>();
 Collections.addAll(list, "element 1", "element 2", "element 3");
 ```
 * **binarySearch()**
 
-The Collections ``binarySearch()`` method can search for an element using a binary search algorithm. The **List** must be sorted in ascending order before you search it using ``binarySearch()``.
+The Collections `binarySearch()` method can search for an element using a binary search algorithm. The **List** must be sorted in ascending order before you search it using `binarySearch()`.
 ```
 List<String> list = new ArrayList<>();
 list.add("one");
@@ -258,7 +258,7 @@ System.out.println(index);
 ```
 * **copy()**
 
-The Collections ``copy()`` method can copy all elements of a **List** into another **List**.
+The Collections `copy()` method can copy all elements of a **List** into another **List**.
 ```
 List<String> source = new ArrayList<>();
 Collections.addAll(source, "e1", "e2", "e3");
@@ -268,7 +268,7 @@ Collections.copy(destination, source);
 ```
 * **reverse()**
 
-The Collections ``reverse()`` method can reverse the elements in a Java **List**.
+The Collections `reverse()` method can reverse the elements in a Java **List**.
 ```
 List<String> list = new ArrayList<String>();
 
@@ -278,10 +278,10 @@ list.add("three");
 
 Collections.reverse(list);
 ```
-After executing the above code, the sequence of the elements in the List will be three, two, one .
+After executing the above code, the sequence of the elements in the **List** will be three, two, one .
 * **shuffle()**
 
-The Collections ``shuffle()`` method can shuffle the elements of a List.
+The Collections `shuffle()` method can shuffle the elements of a **List**.
 ```
 List<String> list = new ArrayList<String>();
 
@@ -293,7 +293,7 @@ Collections.shuffle(list);
 ```
 * **sort()**
 
-The Collections ``sort()`` method can sort a Java List.
+The Collections `sort()` method can sort a Java **List**.
 ```
 List<String> list = new ArrayList<String>();
 
@@ -307,7 +307,7 @@ Collections.sort(list);
 After running this code the order of the elements in the **List** will be four, one, three, four, as the _String_ elements will be sorted _alphabetically_.
 
 * **min()/max()**
-  The Collections ``max()``/``min()`` method can find the maximum/minimum element in a **List** according to the _natural order_ of the elements.
+  The Collections `max()`/`min()` method can find the maximum/minimum element in a **List** according to the _natural order_ of the elements.
 ```
 List source = new ArrayList();
 source.add("1");
