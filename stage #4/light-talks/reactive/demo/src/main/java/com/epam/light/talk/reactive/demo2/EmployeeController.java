@@ -18,7 +18,9 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     private Mono<Employee> getEmployeeById(@PathVariable int id) {
-        return employeeService.getById(id);
+        Mono<Employee> mono = employeeService.getById(id);
+        System.out.println("Mono assembled " +  mono);
+        return mono;
     }
 
 }
