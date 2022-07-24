@@ -1,10 +1,13 @@
 package com.epam.mjc.live.template;
 
-import java.util.List;
 
+/**
+ * Show live templates usage
+ * {@code psvm} - main method
+ * {@code fori} - cycle
+ * {@code sout} - System.out.println
+ */
 public class Demo_01 {
 
-    private static final List<String> STRINGS = List.of("a", "b", "c", "d");
-
-
+    // Task: print "Hello World" 10 times
 }

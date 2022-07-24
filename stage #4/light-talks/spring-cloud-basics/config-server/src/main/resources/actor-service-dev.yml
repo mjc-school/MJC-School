@@ -1,7 +1,0 @@
-server:
-  port: 8085
-
-
-spring:
-  application:
-    name: actor-service

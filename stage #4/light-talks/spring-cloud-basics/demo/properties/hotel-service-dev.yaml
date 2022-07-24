@@ -1,0 +1,5 @@
+hotel:
+  one:
+    enabled: 'true'
+  two:
+    enabled: 'true'

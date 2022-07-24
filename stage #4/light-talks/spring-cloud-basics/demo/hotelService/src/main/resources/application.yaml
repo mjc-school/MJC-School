@@ -1,0 +1,25 @@
+server:
+  port: '8080'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+hotel:
+  one:
+    enabled: 'true'
+  two:
+    enabled: 'false'
+spring:
+#  config:
+#    import: configserver:http://localhost:8081
+  application:
+    name: hotel-service
+  profiles:
+    active: dev
+#eureka:
+#  instance:
+#    preferIpAddress: 'true'
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka

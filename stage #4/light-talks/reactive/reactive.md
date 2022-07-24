@@ -16,7 +16,7 @@
 6. Java reactive libraries
     1. RXJava
     2. Project Reactor - integrates with Spring WebFlux
-7. Some Project Reactor internals
+7. Project Reactor internals - 3 main classes
 8. Demo
     1. <MainTest class> Go through tests one by one from top to the bottom
     2. <Employee web app> Show Employee class, service and controller. Launch it, make a request to the controller

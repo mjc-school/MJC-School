@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:./properties/
+  profiles:
+    active: native,dev,prod
+server:
+  port: '8081'
