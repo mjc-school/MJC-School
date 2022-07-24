@@ -24,8 +24,8 @@ The recommended timeline for the whole module is 2 weeks.
 ##### Business requirements
 
 1. Develop web service for News Management system with the following entities:
-   ![Schema](media/schema.jpg)
-   * <img src="media/snowflake.jpg" alt="Snowflake" width="18"/> - unique value
+   ![Schema](./media/schema.jpg)
+   * <img src="./media/snowflake.jpg" alt="Snowflake" width="18"/> - unique value
    * All Name, Title and Content fields are required
    * Created, Modified – have ISO 8601 format [wiki: ISO_8601](https://en.wikipedia.org/wiki/ISO_8601). Example: 2018-08-29T06:12:15.156. More discussion here: [stackoverflow: how to get iso 8601](https://stackoverflow.com/questions/3914404/how-to-get-current-moment-in-iso-8601-format-with-date-hour-and-minute).
      
