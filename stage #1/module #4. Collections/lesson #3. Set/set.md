@@ -19,23 +19,23 @@ Since Set is an interface, objects cannot be created of the typeset. We always n
 Set<T> set = new HashSet<>();
 ```
 
- Method                                        | Description
------------------------------------------------|------------------------------------------------------------------------------------------
- `boolean add(E e)`                            | Adds the specified element to this set if it is not already present (optional operation)
- `boolean	addAll(Collection<? extends E> c)` | Adds all of the elements in the specified collection to this set if they're not already present (optional operation)
- `void	clear()`                               | Removes all of the elements from this set (optional operation)
- `boolean	contains(Object o)`                | Returns true if this set contains the specified element
- `boolean	containsAll(Collection<?> c)`      | Returns true if this set contains all of the elements of the specified collection
- `boolean	equals(Object o)`                  | Compares the specified object with this set for equality
- `int	hashCode()`                            | Returns the hash code value for this set
- `boolean	isEmpty()`                         | Returns true if this set contains no elements
- `Iterator<E>	iterator()`                    | Returns an iterator over the elements in this set
- `boolean	remove(Object o)`                  | Removes the specified element from this set if it is present (optional operation)
- `boolean	removeAll(Collection<?> c)`        | Removes from this set all of its elements that are contained in the specified collection (optional operation)
- `boolean	retainAll(Collection<?> c)`        | Retains only the elements in this set that are contained in the specified collection (optional operation)
- `int	size()`                                | Returns the number of elements in this set (its cardinality)
- `default Spliterator<E>	spliterator()`     | Creates a Spliterator over the elements in this set
- `Object[]	toArray()`                         | Returns an array containing all of the elements in this set
+| Method                                      | Description                                                                                                           |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `boolean add(E e)`                          | Adds the specified element to this set if it is not already present (optional operation)                              |
+| `boolean	addAll(Collection<? extends E> c)` | Adds all of the elements in the specified collection to this set if they're not already present (optional operation)  |
+| `void	clear()`                           | Removes all of the elements from this set (optional operation)                                                        |
+| `boolean	contains(Object o)`                | Returns true if this set contains the specified element                                                               |
+| `boolean	containsAll(Collection<?> c)`      | Returns true if this set contains all of the elements of the specified collection                                     |
+| `boolean	equals(Object o)`                  | Compares the specified object with this set for equality                                                              |
+| `int	hashCode()`                            | Returns the hash code value for this set                                                                              |
+| `boolean	isEmpty()`                         | Returns true if this set contains no elements                                                                         |
+| `Iterator<E>	iterator()`                    | Returns an iterator over the elements in this set                                                                     |
+| `boolean	remove(Object o)`                  | Removes the specified element from this set if it is present (optional operation)                                     |
+| `boolean	removeAll(Collection<?> c)`        | Removes from this set all of its elements that are contained in the specified collection (optional operation)         |
+| `boolean	retainAll(Collection<?> c)`        | Retains only the elements in this set that are contained in the specified collection (optional operation)             |
+| `int	size()`                                | Returns the number of elements in this set (its cardinality)                                                          |
+| `default Spliterator<E>	spliterator()`     | Creates a Spliterator over the elements in this set                                                                   |
+| `Object[]	toArray()`                     | Returns an array containing all of the elements in this set                                                           |
 
 ## HashSet
 ### Overview
@@ -45,7 +45,7 @@ The **HashSet** class implements the **Set** interface, backed by a hash table w
 ```
 public class HashSet<E> extends AbstractSet<E> implements Set<E>, Cloneable, Serializable
 ```
-where E is the type of elements stored in a HashSet.
+where E is the type of elements stored in a **HashSet**.
 
 Let's see a simple example of **HashSet**.
 ```
@@ -80,7 +80,7 @@ Three
 ### HashSet Performance
 
 **HashSet** extends **Abstract Set<E>** class and implements **Set<E>**, **Cloneable** and **Serializable** interfaces where E is the type of elements maintained by this set. The directly known subclass of **HashSet** is **LinkedHashSet**.
-Now for the maintenance of constant time performance, iterating over **HashSet** requires time proportional to the sum of the HashSet instance’s size (the number of elements) plus the “capacity” of the backing **HashMap** instance (the number of buckets). Thus, it’s very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important. 
+Now for the maintenance of constant time performance, iterating over **HashSet** requires time proportional to the sum of the **HashSet** instance’s size (the number of elements) plus the “capacity” of the backing **HashMap** instance (the number of buckets). Thus, it’s very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important. 
 * **Initial Capacity**: 
 
 The initial capacity means the number of buckets when hashtable (**HashSet** internally uses hashtable data structure) is created. The number of buckets will be automatically increased if the current size gets full. 
@@ -120,7 +120,7 @@ public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, S
 ```
 
 
-* **Contains unique elements only like HashSe**t. It extends the HashSet class and implements the Set interface.
+* **Contains unique elements only like HashSet**. It extends the **HashSet** class and implements the **Set** interface.
 * **Maintains insertion order**.
 
 Let's see a simple example of Java **LinkedHashSet** class.
@@ -158,7 +158,7 @@ Five
 ![](media/LinkedHashMapVsLinkedHashSetDiff.jpg)
 
 #### Note:
-Keeping the insertion order in both **LinkedHashmap** and **LinkedHashset** have additional associated costs, both in terms of spending additional CPU cycles and needing more memory. If you do not need the insertion order maintained, it is recommended to use the lighter-weight **HashSet** and **HashMap** instead.
+Keeping the insertion order in both **LinkedHashmap** and **LinkedHashSet** have additional associated costs, both in terms of spending additional CPU cycles and needing more memory. If you do not need the insertion order maintained, it is recommended to use the lighter-weight **HashSet** and **HashMap** instead.
 
 ## TreeSet
 ### Overview
@@ -168,7 +168,7 @@ It can also be ordered by a `Comparator` provided at set creation time, dependin
 The **TreeSet** implements a **NavigableSet** interface by inheriting **AbstractSet** class.
 **NavigableSet** extends the **SortedSet** interface. Since a set doesn’t retain the insertion order, the **NavigableSet** interface provides the implementation to navigate through the **Set**. The class which implements the **NavigableSet** is a **TreeSet** which is an implementation of a _self-balancing tree_. Therefore, this interface provides us with a way to navigate through this tree.
 
-Let's see a simple example of Java TreeSet.
+Let's see a simple example of Java **TreeSet**.
 ```
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -203,7 +203,7 @@ Vijay
 * **TreeSet** serves as an excellent choice for storing large amounts of sorted information which are supposed to be accessed quickly because of its faster access and retrieval time.
 
 ### How does TreeSet work Internally?
-**TreeSet** is basically an implementation of a self-balancing binary search tree like a Red-Black Tree. Therefore operations like `add`, `remove`, and `search` takes `O(log(N))` time. The reason is that in a self-balancing tree, it is made sure that the height of the tree is always `O(log(N))` for all the operations. Therefore, this is considered as one of the most efficient data structures in order to store the huge sorted data and perform operations on it. However, operations like `printing N elements` in the sorted order take `O(N)` time.
+**TreeSet** is basically an implementation of a self-balancing binary search tree like a Red-Black Tree. Therefore, operations like `add`, `remove`, and `search` takes `O(log(N))` time. The reason is that in a self-balancing tree, it is made sure that the height of the tree is always `O(log(N))` for all the operations. Therefore, this is considered as one of the most efficient data structures in order to store the huge sorted data and perform operations on it. However, operations like `printing N elements` in the sorted order take `O(N)` time.
 
 The implementation of a **TreeSet is not synchronized**. This means that if multiple threads access a **TreeSet** concurrently, and at least one of the threads modifies the set, it must be synchronized externally. This is typically accomplished by synchronizing some object that naturally encapsulates the set. If no such object exists, the set should be `“wrapped”` using the `Collections.synchronizedSortedSet` method. This is best done at the creation time, to prevent accidental unsynchronized access to the set.
 
@@ -221,6 +221,3 @@ The implementation of a **TreeSet is not synchronized**. This means that if mult
 <https://www.geeksforgeeks.org/set-in-java/>
 
 <https://www.javatpoint.com/java-hashset>
-
-
-

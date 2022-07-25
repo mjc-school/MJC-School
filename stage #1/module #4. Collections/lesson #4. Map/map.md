@@ -9,7 +9,7 @@ Map<K,V> Interface (_java.util.Map_)
 * Materials
 
 ## Overview
-The **Map** interface present in `java.util` package represents a mapping between a key and a value. The **Map** interface _**is not a subtype**_ of the **Collection** interface. Therefore it behaves a bit differently from the rest of the collection types. A **Map** contains unique keys.
+The **Map** interface present in `java.util` package represents a mapping between a key and a value. The **Map** interface _**is not a subtype**_ of the **Collection** interface. Therefore, it behaves a bit differently from the rest of the collection types. A **Map** contains unique keys.
 
 ![](media/map_hierarchy.png)
 
@@ -18,6 +18,7 @@ The **Map** interface present in `java.util` package represents a mapping betwee
 * A **Map** cannot contain duplicate keys and each key can map to at most one value. Some implementations allow `null key` and `null value` like the **HashMap** and **LinkedHashMap**, but some do not like the **TreeMap**.
 * The order of a **Map** depends on the specific implementations. For example, **TreeMap** and **LinkedHashMap** have predictable order, while **HashMap** does not.
 * There are three interfaces for implementing **Map** in java. They are, **Map**, **SortedMap** and **NavigableMap**, and four classes: **HashMap**, **WeakHashMap**, **TreeMap** and **LinkedHashMap**.
+
 ### Why and When to use Maps?
 **Maps** are perfect to use for key-value association mapping such as dictionaries. The maps are used to perform lookups by keys or when someone wants to retrieve and update elements by keys. Some examples are:
 
@@ -27,7 +28,7 @@ The **Map** interface present in `java.util` package represents a mapping betwee
 * A map of classes and students. Each class (key) is associated with a list of students (value).
 
 ### Creating Map Objects
-Since **Map** is an interface, objects cannot be created of the type map. We always need a class which extends this map in order to create an object. And also, after the introduction of `Generics` in _Java 1.5_, it is possible to restrict the type of object that can be stored in the **Map**. This type-safe map can be defined as:
+Since **Map** is an interface, objects cannot be created of the type **Map**. We always need a class which extends this **Map** in order to create an object. And also, after the introduction of `Generics` in _Java 1.5_, it is possible to restrict the type of object that can be stored in the **Map**. This type-safe **Map** can be defined as:
 
 ```
 Map<Integer, String> map = new HashMap<>();
@@ -69,11 +70,11 @@ public class GFG {
 } 
 ```
 ### HashMap Performance
-The **performance** of a hash map is affected by two parameters: **Initial Capacity** and **Load Factor**. 
+The **performance** of a **HashMap** is affected by two parameters: **Initial Capacity** and **Load Factor**. 
 
 The **capacity** is the number of buckets or the underlying array length and the initial capacity is simply the capacity during creation.
 
-The **load factor** or **LF**, in short, is a measure of how full the hash map should be after adding some values before it is resized.
+The **load factor** or **LF**, in short, is a measure of how full the **HashMap** should be after adding some values before it is resized.
 
 The **_default initial capacity is 16_** and **_default load factor is 0.75_**. The default values set by the Java team are well optimized for most cases. However, if you need to use your own values, which is very okay, you need to understand the performance implications so that you know what you are doing.
 
@@ -118,7 +119,7 @@ In _Java 8_, **HashMap** replaces linked list with a binary tree when the number
 
 ## LinkedHashMap
 ### Overview
-A **LinkedHashMap** is an extension of the **HashMap** class and it implements the Map interface. Therefore, the class is declared as:
+A **LinkedHashMap** is an extension of the **HashMap** class and it implements the **Map** interface. Therefore, the class is declared as:
 ```
 public class LinkedHashMap<K,​V> extends HashMap<K,​V> implements Map<K,​V>
 ```
@@ -126,10 +127,10 @@ In this class, the data is stored in the form of nodes. The implementation of th
 ![](media/LinkedHashMap-Node-in-Java.png)
 
 * `Hash`: All the input keys are converted into a hash which is a shorter form of the key so that the search and insertion are faster.
-* `Key`: Since this class extends HashMap, the data is stored in the form of a key-value pair. Therefore, this parameter is the key to the data.
+* `Key`: Since this class extends **HashMap**, the data is stored in the form of a key-value pair. Therefore, this parameter is the key to the data.
 * `Value`: For every key, there is a value associated with it. This parameter stores the value of the keys. Due to generics, this value can be of any form.
-* `Next`: Since the LinkedHashMap stores the insertion order, this contains the address to the next node of the LinkedHashMap.
-* `Previous`: This parameter contains the address to the previous node of the LinkedHashMap.
+* `Next`: Since the **LinkedHashMap** stores the insertion order, this contains the address to the next node of the **LinkedHashMap**.
+* `Previous`: This parameter contains the address to the previous node of the **LinkedHashMap**.
 ```
 // Java Program to illustrate the LinkedHashmap Class
 import java.util.*;
@@ -163,7 +164,7 @@ This is because, for **LinkedHashMap**, `n` in `O(n)` is only the number of entr
 **Load Factor** and **Initial Capacity** are defined precisely as for **HashMap**. Note, however, that the penalty for choosing an excessively high value for initial capacity is less severe for **LinkedHashMap** than for **HashMap**, as iteration times for this class are unaffected by capacity.
 
 ### Synchronized LinkedHashMap
-The implementation of **LinkedHashMap** not synchronized. If multiple threads access a linked hash map concurrently, and at least one of the threads modifies the map structurally, it must be synchronized externally. This is typically accomplished by synchronizing on some object that naturally encapsulates the map. If no such object exists, the map should be `“wrapped”` using the `Collections.synchronizedMap` method. This is best done at creation time, to prevent accidental unsynchronized access to the map:
+The implementation of **LinkedHashMap** not synchronized. If multiple threads access a **LinkedHashMap** concurrently, and at least one of the threads modifies the map structurally, it must be synchronized externally. This is typically accomplished by synchronizing on some object that naturally encapsulates the map. If no such object exists, the map should be `“wrapped”` using the `Collections.synchronizedMap` method. This is best done at creation time, to prevent accidental unsynchronized access to the map:
 ```
 Map m = Collections.synchronizedMap(new LinkedHashMap(…));
 ```
@@ -200,8 +201,8 @@ public class GFG {
 * **TreeMap** in Java **_does not allow_** `null` keys (like **Map**) and thus a `NullPointerException` is thrown. However, multiple null values can be associated with different keys.
 * Entry pairs returned by the methods in this class and its views represent snapshots of mappings at the time they were produced. They do not support the `Entry.setValue` method.
 
-### How Does the TreemMap work Internally?
-The methods in a **TreeMap** while getting keyset and values, return an `Iterator` that are fail-fast in nature. Thus, any concurrent modification will throw `ConcurrentModificationException`. A **TreeMap** is based upon a redblack tree data structure. Each node in the tree has:
+### How Does the TreeMap work Internally?
+The methods in a **TreeMap** while getting `keyset` and `values`, return an `Iterator` that are fail-fast in nature. Thus, any concurrent modification will throw `ConcurrentModificationException`. A **TreeMap** is based upon a redblack tree data structure. Each node in the tree has:
 
 * 3 Variables (K key=Key, V value=Value, boolean color=Color)
 * 3 References (Entry left = Left, Entry right = Right, Entry parent = Parent)
@@ -220,9 +221,9 @@ Both `null values` and the `null key` are supported. This class has performance 
 Like most collection classes, this class is not synchronized. A synchronized **WeakHashMap** may be constructed using the `Collections.synchronizedMap` method.
 
 This class is intended primarily for use with key objects whose equals methods test for object identity using the `==` operator. Once such a key is discarded it can never be recreated, so it is impossible to do a `lookup` of that key in a **WeakHashMap** at some later time and be surprised that its entry has been removed. This class will work perfectly well with key objects whose `equals` methods are not based upon object identity, such as _String_ instances. With such recreatable key objects, however, the automatic removal of **WeakHashMap** entries whose keys have been discarded may prove to be confusing.
-The behavior of the **WeakHashMap** class depends in part upon the actions of the garbage collector, so several familiar (though not required) **Map** invariants do not hold for this class. Because the garbage collector may discard keys at any time, a WeakHashMap may behave as though an unknown thread is silently removing entries. In particular, even if you synchronize on a WeakHashMap instance and invoke none of its mutator methods, it is possible for the `size` method to return smaller values over time, for the `isEmpty` method to return false and then true, for the `containsKey` method to return true and later false for a given key, for the `get` method to return a value for a given key but later return null, for the `put` method to return null and the `remove` method to return false for a key that previously appeared to be in the map, and for successive examinations of the `key set`, the `value collection`, and the `entry set` to yield successively smaller numbers of elements.
+The behavior of the **WeakHashMap** class depends in part upon the actions of the garbage collector, so several familiar (though not required) **Map** invariants do not hold for this class. Because the garbage collector may discard keys at any time, a **WeakHashMap** may behave as though an unknown thread is silently removing entries. In particular, even if you synchronize on a **WeakHashMap** instance and invoke none of its mutator methods, it is possible for the `size` method to return smaller values over time, for the `isEmpty` method to return false and then true, for the `containsKey` method to return true and later false for a given key, for the `get` method to return a value for a given key but later return null, for the `put` method to return null and the `remove` method to return false for a key that previously appeared to be in the map, and for successive examinations of the `key set`, the `value collection`, and the `entry set` to yield successively smaller numbers of elements.
 
-Each key object in a **WeakHashMap** is stored indirectly as the referent of a weak reference. Therefore a key will automatically be removed only after the weak references to it, both inside and outside of the map, have been cleared by the garbage collector.
+Each key object in a **WeakHashMap** is stored indirectly as the referent of a weak reference. Therefore, a key will automatically be removed only after the weak references to it, both inside and outside the map, have been cleared by the garbage collector.
 
 ### Implementation note:
 The value objects in a **WeakHashMap** are held by ordinary strong references. Thus care should be taken to ensure that value objects do not strongly refer to their own keys, either directly or indirectly, since that will prevent the keys from being discarded. Note that a value object may refer indirectly to its key via the **WeakHashMap** itself; that is, a value object may strongly refer to some other key object whose associated value object, in turn, strongly refers to the key of the first value object. If the values in the map do not rely on the map holding strong references to them, one way to deal with this is to wrap values themselves within **WeakReferences** before inserting, as in: `m.put(key, new WeakReference(value))`, and then unwrapping upon each get.

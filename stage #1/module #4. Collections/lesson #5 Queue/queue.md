@@ -18,14 +18,14 @@ The Java **Queue** interface, `java.util.Queue` represents a data structure desi
 public interface Queue<E> extends Collection<E>  
 ```
 
- Method                  | Second Description
--------------------------| ----------------------------------------------------------------------------------------------
- `boolean add(object)`   | Inserts the specified element into this queue and returns true upon success
- `boolean offer(object)` | Insert the specified element into this queue
- `Object remove()`       | Retrieves and removes the head of this queue
- `Object poll()`         | Retrieves and removes the head of this queue, or returns null if this queue is empty
- `Object element()`      | Retrieves, but does not remove, the head of this queue
- `Object peek()`         | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty
+| Method                  | Second Description                                                                             |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| `boolean add(object)`   | Inserts the specified element into this queue and returns true upon success                    |
+| `boolean offer(object)` | Insert the specified element into this queue                                                   |
+| `Object remove()`       | Retrieves and removes the head of this queue                                                   |
+| `Object poll()`         | Retrieves and removes the head of this queue, or returns null if this queue is empty           |
+| `Object element()`      | Retrieves, but does not remove, the head of this queue                                         |
+| `Object peek()`         | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty |
 
 ## PriorityQueue
 Java **PriorityQueue** class is a queue data structure implementation in which objects are processed based on their **priority**. It is different from standard queues where FIFO (First-In-First-Out) algorithm is followed.
@@ -98,7 +98,7 @@ Since Java **Deque** is an interface you need to instantiate a concrete implemen
 ## LinkedList
 The **LinkedList** class is a pretty standard **Deque** and **Queue** implementation. It uses a linked list internally to model a _queue_ or a _deque_.
 
-It is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses. Each element is known as a node. Due to the dynamicity and ease of insertions and deletions, they are preferred over the arrays or queues.
+It is a linear data structure where the elements are not stored in contiguous locations and every element is a separate object with a data part and address part. The elements are linked using pointers and addresses. Each element is known as a node. Due to the dynamic and ease of insertions and deletions, they are preferred over the arrays or queues.
 
 ```
          Deque<String> linkedListDeque = new LinkedList<String>();

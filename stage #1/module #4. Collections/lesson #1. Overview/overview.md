@@ -90,9 +90,9 @@ public interface Iterable<T>{
 }
 
 ```
-Method                        | Second Description
------------------------------ | --------------------
-`Iterator <T> iterator()` | Returns the iterator
+| Method                    | Second Description   |
+|---------------------------|----------------------|
+| `Iterator <T> iterator()` | Returns the iterator |
 
 There are three ways in which objects of **Iterable** can be iterated:
 * **Using enhanced for loop(for-each loop)**
@@ -137,12 +137,12 @@ while(iterator.hasNext()) {
 ## Iterator
 **Iterator** interface represents an object capable of iterating through a collection of Java objects, one object at a time.
 
-Method                | Second Description
-----------------------|-------------
-`boolean hasNext()` | Returns true if the iterator has more elements otherwise it returns false
-`Object next()`     | Returns the element and moves the cursor pointer to the next element. (throws `NoSuchElementException`)
-`void remove()`     | Removes the last elements returned by the iterator
-`forEachRemaining()`| Iterates over all remaining elements in the Iterator and calls a Java Lambda Expression passing each remaining element as parameter to the lambda expression.
+| Method               | Second Description                                                                                                                                            |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `boolean hasNext()`  | Returns true if the iterator has more elements otherwise it returns false                                                                                     |
+| `Object next()`      | Returns the element and moves the cursor pointer to the next element. (throws `NoSuchElementException`)                                                       |
+| `void remove()`      | Removes the last elements returned by the iterator                                                                                                            |
+| `forEachRemaining()` | Iterates over all remaining elements in the Iterator and calls a Java Lambda Expression passing each remaining element as parameter to the lambda expression. |
 
 ### Obtaining an Iterator
 Most often that is how you will interact with an **Iterator** by obtaining it from some Java object that contains multiple nested objects.
@@ -219,18 +219,17 @@ The **Collection** interface represents a group of objects (elements)
 
 The **Collection** interface is implemented by all the classes in the collection framework
 
-Method                                    | Second Description
-------------------------------------------| -------------------------------------------------
-`int size()`                              | Returns the number of elements in this collection
-`boolean isEmpty()`                       | TRUE - contains no elements, FALSE - contains
-`boolean contains Object o)`              | TRUE - contains the specified element, FALSE - no
-`boolean containsAll (Collection<?>)`     | TRUE - contains ***all*** of the elements
-`boolean add E e)`                        | Inserts an element to collection
-`boolean addAll (Collection<? extends E>)`| Insert the specified collection elements
-`boolean remove(Object element)`          | Removes the given objection
-`boolean removeAll (Collection<?>)`       | Removes all given objects
-`boolean retainAll (Collection<?>)`       | Retains only given objects
-
+| Method                                     | Second Description                                |
+|--------------------------------------------|---------------------------------------------------|
+| `int size()`                               | Returns the number of elements in this collection |
+| `boolean isEmpty()`                        | TRUE - contains no elements, FALSE - contains     |
+| `boolean contains Object o)`               | TRUE - contains the specified element, FALSE - no |
+| `boolean containsAll (Collection<?>)`      | TRUE - contains ***all*** of the elements         |
+| `boolean add E e)`                         | Inserts an element to collection                  |
+| `boolean addAll (Collection<? extends E>)` | Insert the specified collection elements          |
+| `boolean remove(Object element)`           | Removes the given objection                       |
+| `boolean removeAll (Collection<?>)`        | Removes all given objects                         |
+| `boolean retainAll (Collection<?>)`        | Retains only given objects                        |
 
 ## Collections
 The Java **Collections** class (`java.util.Collections` package), contains a long list of utility methods for working with collections in Java. 
