@@ -1,31 +1,37 @@
 # String (java.lang.String)
 
 ## Overview
-The String class represents character strings.
+The String class represents sequences of characters.
 
 **For example:**
 ```
-  String str = "Geeks;
+  String str = "Geeks";
 ```
 
 ![image_info](media/charSequence.png)
 
+**Creation**
+
+Strings could be created in two ways:
+
+Declaring String variable and assigning a value to it (value in double quotes is called string literal):
+```
+  String str1 = "Autumn";
+```
+
+With new keyword (i.e. calling a constructor):
+```
+  String str2 = new String("Winter");
+  
+  char data[] = {'S', 'p', 'r', 'i', 'n', 'g'};
+  String str3 = new String(data);
+```
+
 **Hierarchy:**
 
-![image info](media/stringHierachy.png)
-## The important points about Java String are:
-- Immutable class
-- Sequence of characters
-- String pool
-- Concatenation operator (+)
-- UTF-16
+String implements several interfaces, and have all their methods inherited:
 
-```
-    String text1 = "Message";
-    String text2 = text1 + "!";
-    String text3 = "This ";
-    text3 += text2;
-```
+![image info](media/stringHierachy.png)
 
 In addition to the methods defined by **Serializable**, **CharSequence**, **Comparable<String>**,
 **String** defines some of its own, which are summarized in the following table.
@@ -75,6 +81,33 @@ Constructors of **String**:
 | String(StringBuffer buffer)                  | Allocates a new string that contains the sequence of characters currently contained in the string buffer argument.                                                                          |
 | String(StringBuilder builder)                | Allocates a new string that contains the sequence of characters currently contained in the string builder argument.                                                                         |
 
+## Important points about Java String:
+
+String is Immutable class: It means, that String object cannot be changed after creation. However, a new value can be assigned to the String reference
+
+```
+  String a = "a';
+  Stirng b = "b";
+  
+  a = b; // references a and b now both point to String object with value "b". 
+```
+ 
+Sequence of characters: String stores its value as array of bytes.
+
+String pool: In Java, Strings are 'pooled', this concept is explained below.
+
+Concatenation operator '+': In Java, plus operator support String operands. If operands of '+' are Strings, they are concatenated and returned as a new String. If only one operand is a String, the other one is converted to String before concatenation. 
+
+```
+    String text1 = "Message";
+    
+    String text2 = text1 + ": ";      
+                                      // text2 is "Message: "
+    
+    String text3 = text1 + 12         // 12 is converted to "12"         
+                                      // text3 is "Message: 12"
+```
+
 ## String pool
 
 ### Overview
@@ -83,7 +116,7 @@ The **String** is the most widely used data structure. Caching the String litera
 saves a lot of heap space because different String variables refer to the same object in the String
 pool. String intern pool serves exactly this purpose.
 
-## The important points about Java String pool are:
+## Important points about Java String pool:
 - Security
 - Synchronization
 - Hashcode Caching
@@ -97,7 +130,7 @@ copy of each literal String in the pool. This process is called interning:
     String s1 = "Hello World";
     String s2 = "Hello World";
 
-    assertThat(s1 == s2).isTrue();
+    assertThat(s1 == s2).isTrue();       // s1 and s2 point to same object
 ```
 
 Because of the presence of the String pool in the preceding example, two different variables are
