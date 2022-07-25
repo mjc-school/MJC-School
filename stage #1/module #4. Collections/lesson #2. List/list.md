@@ -203,13 +203,13 @@ private static class Node<E> {
 | Less memory                                                                                        | More memory as it stores next/previous references                                                         |
 | List                                                                                               | List + Deque                                                                                              |
 
-| Operation              |  ArrayList   | LinkedList |
-|------------------------|:------------:|:----------:|
-| `get(int index)`       |     O(1)     |    O(n)    |
-| `add(E el) `           | O(1) -> O(n) |    O(1)    |
-| `add(int index, E el)` |    O(n/2)    |   O(n/4)   |
-| `remove(int index) `   |    O(n/2)    |   O(n/4)   |
-| `Iterator.remove()`    |    O(n/2)    |    O(1)    |
+| Operation              | ArrayList    | LinkedList |
+|------------------------|--------------|------------|
+| `get(int index)`       | O(1)         | O(n)       |
+| `add(E el) `           | O(1) -> O(n) | O(1)       |
+| `add(int index, E el)` | O(n/2)       | O(n/4)     |
+| `remove(int index) `   | O(n/2)       | O(n/4)     |
+| `Iterator.remove()`    | O(n/2)       | O(1)       |
 
 * **ArrayList** is better for storing and accessing data.
 * **LinkedList** is better for manipulating data.
@@ -238,17 +238,17 @@ private static class Node<E> {
 
 ### Constructors of CopyOnWriteArrayList:
 
-| Constructor                          |                    Description                    |
-|--------------------------------------|:-------------------------------------------------:|
+| Constructor                          | Description                                       |
+|--------------------------------------|---------------------------------------------------|
 | `CopyOnWriteArrayList(E[] toCopyIn)` | Creates a list holding a copy of the given array. |
 
 ### Additional methods of CopyOnWriteArrayList:
 
-| Method                                      |                                                                                                Description                                                                                                |
-|---------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| `int indexOf(E e, int index)`               |                        Returns the index of the first occurrence of the specified element in this list, searching forwards from index, or returns -1 if the element is not found.                         |
-| `int lastIndexOf(E e, int index)`           |                        Returns the index of the last  occurrence of the specified element in this list, searching backwards from index, or returns -1 if the element is not found.                        |
-| `boolean addIfAbsent(E e)`                  |                                                                                   Appends the element, if not present.                                                                                    |
+| Method                                      | Description                                                                                                                                                                                               |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `int indexOf(E e, int index)`               | Returns the index of the first occurrence of the specified element in this list, searching forwards from index, or returns -1 if the element is not found.                                                |
+| `int lastIndexOf(E e, int index)`           | Returns the index of the last  occurrence of the specified element in this list, searching backwards from index, or returns -1 if the element is not found.                                               |
+| `boolean addIfAbsent(E e)`                  | Appends the element, if not present.                                                                                                                                                                      |
 | `int addAllAbsent(Collection<? extends E>)` | Appends all of the elements in the specified collection that are not already contained in this list, to the end of this list, in the order that they are returned by the specified collection’s iterator. |
 
 ## Materials
