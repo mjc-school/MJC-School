@@ -1,5 +1,5 @@
-Set Interface (_java.util.Set_)
-=================================================
+# Set Interface (_java.util.Set_)
+
 ## Agenda
 * Overview
 * HashSet
@@ -8,13 +8,14 @@ Set Interface (_java.util.Set_)
 * Materials
 
 ## Overview
-The Set interface is present in `java.util` package and extends the Collection interface is an unordered collection of objects in which duplicate values cannot be stored. It is an interface that implements the mathematical set. This interface contains the methods inherited from the Collection interface and adds a feature that restricts the insertion of the duplicate elements. There are two interfaces that extend the set implementation namely SortedSet and NavigableSet.
+The **Set** interface is present in `java.util` package and extends the **Collection** interface is an unordered collection of objects in which duplicate values cannot be stored. It is an interface that implements the mathematical set. This interface contains the methods inherited from the **Collection** interface and adds a feature that restricts the insertion of the duplicate elements. There are two interfaces that extend the set implementation namely **SortedSet** and **NavigableSet**.
 
 ![](media/set_hierarchy.png)
 
-Since a set doesn’t retain the insertion order, the navigable set interface provides the implementation to navigate through the Set. The class which implements the navigable set is a TreeSet which is an implementation of a self-balancing tree. Therefore, this interface provides us with a way to navigate through this tree.
+Since a set doesn’t retain the insertion order, the **NavigableSetInterface** provides the implementation to navigate through the **Set**. The class which implements the **NavigableSet** is a **TreeSet** which is an implementation of a self-balancing tree. Therefore, this interface provides us with a way to navigate through this tree.
+
 ### Creating Set Objects
-Since Set is an interface, objects cannot be created of the typeset. We always need a class that extends this list in order to create an object. And also, after the introduction of Generics in Java 1.5, it is possible to restrict the type of object that can be stored in the Set. This type-safe set can be defined as:
+Since **Set** is an interface, objects cannot be created of the typeset. We always need a class that extends this list in order to create an object. And also, after the introduction of `Generics` in _Java 1.5_, it is possible to restrict the type of object that can be stored in the **Set**. This type-safe set can be defined as:
 ```
 Set<T> set = new HashSet<>();
 ```
@@ -97,7 +98,7 @@ If internal capacity is 16 and the load factor is 0.75 then the number of bucket
 Load factor and initial capacity are two main factors that affect the performance of **HashSet** operations. A load factor of 0.75 provides very effective performance with respect to time and space complexity. If we increase the load factor value more than that then memory overhead will be reduced (because it will decrease internal rebuilding operation) but, it will affect the add and search operation in the hashtable. To reduce the rehashing operation we should choose initial capacity wisely. If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operation will ever occur.
 
 #### Note:
-The implementation in a **HashSet is not synchronized**, in the sense that if multiple threads access a hash set concurrently, and at least one of the threads modifies the set, it must be synchronized externally. This is typically accomplished by synchronizing on some object that naturally encapsulates the set. If no such object exists, the set should be “wrapped” using the `Collections.synchronizedSet` method.
+The implementation in a **HashSet is not synchronized**, in the sense that if multiple threads access a hash set concurrently, and at least one of the threads modifies the set, it must be synchronized externally. This is typically accomplished by synchronizing on some object that naturally encapsulates the set. If no such object exists, the set should be `“wrapped”` using the `Collections.synchronizedSet` method.
 
 
 ### Time Complexity of HashSet Operations

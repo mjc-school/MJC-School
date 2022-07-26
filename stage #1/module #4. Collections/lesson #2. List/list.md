@@ -13,6 +13,7 @@
 An ordered collection (also known as a sequence).
 
 ![image info](media/Collections.png)
+
 ### The important points about Java List are:
 - Elements can be inserted or accessed by their position in the list, using a zero-based index.
 - Elements have a specific order.
@@ -27,7 +28,7 @@ An ordered collection (also known as a sequence).
   list.add("String3");
 ```
 
-In addition to the methods defined by Collection, **List** defines some of its own, which are summarized in the following table.
+In addition to the methods defined by **Collection**, **List** defines some of its own, which are summarized in the following table.
 
 | Method                                                 | Description                                                                                                                       |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|

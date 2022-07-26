@@ -1,4 +1,4 @@
-Collections Overview
+# Collections Overview
 
 ## Agenda
 * Before Collections
@@ -13,7 +13,7 @@ Collections Overview
 
 
 ## Overview
-Before Collections made its most welcome debut, the standard methods for grouping Java objects were via the **arrays**, the **Vector**, and the **Hashtable**
+Before **Collections** made its most welcome debut, the standard methods for grouping Java objects were via the **arrays**, the **Vector**, and the **Hashtable**
 
 All three of these collections have different methods and syntax for accessing members: 
 
@@ -21,11 +21,11 @@ All three of these collections have different methods and syntax for accessing m
 * **Vector** uses the elementAt method
 * **Hashtable** uses get and put methods. 
 
-These differences have long led programmers down the path to inconsistency in implementing their own collections -- some emulate the Vector access methods and some emulate the Enumeration interface.
+These differences have long led programmers down the path to inconsistency in implementing their own collections -- some emulate the **Vector** access methods and some emulate the Enumeration interface.
 
-To further complicate matters, most of the Vector methods are marked as final; that is, you cannot extend the Vector class to implement a similar sort of collection. We could create a collection class that looked like a Vector and acted like a Vector, but it couldn't be passed to a method that takes a Vector as a parameter.
+To further complicate matters, most of the Vector methods are marked as final; that is, you cannot extend the **Vector** class to implement a similar sort of collection. We could create a collection class that looked like a **Vector** and acted like a **Vector**, but it couldn't be passed to a method that takes a **Vector** as a parameter.
 
-Finally, none of the collections (array, Vector or Hashtable) implements a standard member access interface and had no common interface.
+Finally, none of the collections (**array**, **Vector** or **Hashtable**) implements a standard member access interface and had no common interface.
 
 ## Java Collections Framework
 JDK 1.2 introduced a new framework for collections of objects, called the **Java Collections Framework**, offers developers a common way to implement and access collections.
