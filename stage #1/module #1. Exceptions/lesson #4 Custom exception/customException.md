@@ -1,173 +1,14 @@
-# Exceptions
+# How to write your own exception classes?
 
-
-## Lesson Agenda
-+ What is an Exception?
-+ The Three Kinds of Exceptions
-+ How to Catch and Handle Exceptions?
-+ The Exceptions Thrown by a Method
-+ How to write your own exception classes?
+## Agenda
++ Intro
++ Why do I need custom exceptions?
++ Writing your own exception class
++ Re-throwing an exception which is wrapped in a custom exception
++ Best practices for custom exceptions
 + Materials
 
-
-## What is an Exception?
-
-### Throwing an exception
-**An exception** is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
-
-**Throwing an exception** is the process of creating an exception object and handing it to the runtime system.
-
-![image](./media/image1.png)
-
-### The call stack
-**The call stack** is the ordered list of methods that had been called to get to the method where the error occurred.
-
-![image](./media/image2.png)
-
-### A stack trace
-**A Stack trace** is an information on the execution history of the current thread and lists the names of the classes and methods that were called at the point when the exception occurred.
-
-![image](./media/image3.png)
-
-
-## The Three Kinds of Exceptions
-
-### Checked, Unchecked Exception and Error
-**A Checked Exception** is an exceptional condition that a well-written application should anticipate and recover from. If your code invokes a method which is defined to throw checked exception, your code MUST provide a catch handler. The compiler generates an error if the appropriate catch handler is not present.
-
-**An Error** is an exceptional condition that is external to the application, and that the application usually cannot anticipate or recover from.
-
-**A Runtime Exception** is an exceptional conditions that is internal to the application, and that the application usually cannot anticipate or recover from.
-
-**An Unchecked Exception** is the exception indicated by Errors and Runtime Exceptions.
-
-### Exception Hierarchy
-
-![image](./media/image4.png)
-
-## How to Catch and Handle Exceptions?
-
-### Try Catch Finally syntax
-
-![image](./media/try_catch_finally_syntax_1.png)
-
-A __try__ block can be followed by one or more __catch__ blocks, each specifying a different type. The first catch block that handles the exception class or one of its superclasses will be executed. So, make sure to catch the most specific class first.
-
-If an exception occurs in the __try__ block, the exception is thrown to the first __catch__ block. If not, the Java exception passes down to the second __catch__ statement. This continues until the exception either is caught or falls through all catches.
-
-![image](./media/try_catch_finally_syntax_2.png)
-
-![image](./media/try_catch_finally_syntax_3.png)
-
-### Try-with-resources syntax
-**The Try-with-resources statement** is a try statement that declares one or more resources. It
-ensures that each resource is closed at the end of the statement. A try-with-resources
-statement can have catch and finally blocks just like an ordinary try statement. In a try-with-resources statement, any catch or finally block is run after the resources declared have been
-closed.
-
-![image](./media/Try-with-resources.png)
-
-## The Exceptions Thrown by a Method
-
-### Throws and Throw syntax
-
-![image](./media/The_Exceptions_Thrown_by_a_Method.png)
-
-### Exceptions and Method Overriding
-
-To handle the exception while you overriding a method in Java, you will have to follow three important rules. They are
-as follows:
-
-1. If an overridden method does not throw an exception using throws clause then
-
-    + The overriding method can not throw any checked or compile-time exception.
-    + The overriding method can throw any unchecked or runtime exception.
-
-2. If an overridden method throws an unchecked or runtime exception then
-
-    + The overriding method can throw any unchecked or runtime exception.
-    + The overriding method can throw the same exception which is thrown by the overridden method.
-    + The overriding method can ignore the method level exception.
-
-3. If the superclass method throws checked or compile-time exception then
-
-    + Subclass method can throw an exception which is a subclass of the superclass method’s exception.
-    + Subclass method cannot throw the exception which is a superclass of the superclass method’s exception.
-    + Subclass method can throw any unchecked or runtime exception.
-
-Look at the below figure to understand better.
-
-![image](./media/handlingMethod.png)
-
-Let’s take different types of example programs based on these rules.
-
-```java
-public class Parent {
-  // Overridden method is not throwing an exception. 
-  void msg() {
-    System.out.println("msg-Parent");
-  }
-}
-
-public class Child extends Parent {
-  void msg() throws IOException // Compile-time error because the overriding method is throwing a checked exception. 
-  {
-    System.out.println("msg-Child");
-  }
-
-  public static void main(String[] args) throws IOException {
-    Parent p = new Child();
-    p.msg();
-
-    Child c = new Child();
-    c.msg();
-  }
-}
-```
-
-```Output: 
-Unresolved compilation problem: Exception IOException is not compatible with throws clause in Parent.msg()
-```
-
-In the above example program, if overriding method throws an unchecked exception, there will be no compile-time error.
-Look at the program source code.
-
-```java
-public class Parent {
-  // Overridden method is not throwing an exception. 
-  void msg() {
-    System.out.println("msg-Parent");
-  }
-}
-
-public class Child extends Parent {
-  void msg() throws ArithmeticException // No compile-time error because the overriding method is throwing an unchecked exception. 
-  {
-    System.out.println("msg-Child");
-  }
-
-  public static void main(String[] args) throws IOException {
-    Parent p = new Child();
-    p.msg();
-    Child c = new Child();
-    c.msg();
-  }
-}
-```
-
-```
-Output: 
-       msg-Child 
-       msg-Child
-```
-
-In the above example program, if overriding method throws an unchecked exception, there will be no compile-time error.
-Look at the program source code.
-
-## How to write your own exception classes?
-
-### Intro
-
+## Intro
 In the article **How to Catch and Handle Exceptions?** and **The Exceptions Thrown by a
 Method**, you know how to catch throw and catch exceptions which are defined by JDK such
 as `IllegalArgumentException`, `IOException`, `NumberFormatException`, etc.
@@ -182,7 +23,7 @@ We will call JDK’s exceptions **built-in exceptions** and call our own excepti
 Let me tell you this: Writing custom exceptions in Java is very easy, but the important thing is, you should ask
 yourself this question:
 
-### Why do I need custom exceptions?
+## Why do I need custom exceptions?
 _Why do we need to create a new exception, instead of using the ones defined by JDK?_
 
 The answer could be very simple: When you couldn’t find any relevant exceptions in the JDK, it’s time to create new ones
@@ -196,7 +37,7 @@ From my experience, most of the cases we need custom exceptions for representing
 level higher than technical exceptions defined by JDK. For example: InvalidAgeException, LowScoreException,
 TooManyStudentsException, etc.
 
-### Writing your own exception class
+## Writing your own exception class
 Now, let’s see how to create a custom exception in action. Here are the steps:
 
 + Create a new class whose name should end with `Exception` like `ClassNameException`. This is a convention to
@@ -261,7 +102,7 @@ Run this program and you will see this output:
 StudentNotFoundException: Could not find student with ID 0000001
 ```
 
-### Re-throwing an exception which is wrapped in a custom exception
+## Re-throwing an exception which is wrapped in a custom exception
 It’s a common practice for catching a built-in exception and re-throwing it via a custom exception. To do so, let add a
 new constructor to our custom exception class. This constructor takes two parameters: the detail message and the cause
 of the exception. This constructor is implemented in the `Exception` class as following:
@@ -325,7 +166,7 @@ try {
 
 That’s about the lesson of writing custom exceptions in Java.
 
-### Best practices for custom exceptions
+## Best practices for custom exceptions
 **Prefer Specific Exceptions.** The more specific the exception that you throw is, the better. Always try to find the
 class that fits best to your exceptional event and first look at existing Exceptions before creating your own.
 
