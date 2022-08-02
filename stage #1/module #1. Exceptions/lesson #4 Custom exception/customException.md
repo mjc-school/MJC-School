@@ -1,14 +1,14 @@
 # How to write your own exception classes?
 
 ## Agenda
-+ Intro
-+ Why do I need custom exceptions?
-+ Writing your own exception class
-+ Re-throwing an exception which is wrapped in a custom exception
-+ Best practices for custom exceptions
-+ Materials
++ [Intro](#intro)
++ [Why do I need custom exceptions?](#why-do-i-need-custom-exceptions)
++ [Writing your own exception class](#writing-your-own-exception-class)
++ [Re-throwing an exception which is wrapped in a custom exception](#re-throwing)
++ [Best practices for custom exceptions](#best-practices)
++ [Materials](#materials)
 
-## Intro
+## <a id="intro"></a> Intro
 In the article **How to Catch and Handle Exceptions?** and **The Exceptions Thrown by a
 Method**, you know how to catch throw and catch exceptions which are defined by JDK such
 as `IllegalArgumentException`, `IOException`, `NumberFormatException`, etc.
@@ -23,7 +23,7 @@ We will call JDK’s exceptions **built-in exceptions** and call our own excepti
 Let me tell you this: Writing custom exceptions in Java is very easy, but the important thing is, you should ask
 yourself this question:
 
-## Why do I need custom exceptions?
+## <a id="why-do-i-need-custom-exceptions"></a> Why do I need custom exceptions?
 _Why do we need to create a new exception, instead of using the ones defined by JDK?_
 
 The answer could be very simple: When you couldn’t find any relevant exceptions in the JDK, it’s time to create new ones
@@ -37,7 +37,7 @@ From my experience, most of the cases we need custom exceptions for representing
 level higher than technical exceptions defined by JDK. For example: InvalidAgeException, LowScoreException,
 TooManyStudentsException, etc.
 
-## Writing your own exception class
+## <a id="writing-your-own-exception-class"></a> Writing your own exception class
 Now, let’s see how to create a custom exception in action. Here are the steps:
 
 + Create a new class whose name should end with `Exception` like `ClassNameException`. This is a convention to
@@ -102,7 +102,7 @@ Run this program and you will see this output:
 StudentNotFoundException: Could not find student with ID 0000001
 ```
 
-## Re-throwing an exception which is wrapped in a custom exception
+## <a id="re-throwing"></a> Re-throwing an exception which is wrapped in a custom exception
 It’s a common practice for catching a built-in exception and re-throwing it via a custom exception. To do so, let add a
 new constructor to our custom exception class. This constructor takes two parameters: the detail message and the cause
 of the exception. This constructor is implemented in the `Exception` class as following:
@@ -166,7 +166,7 @@ try {
 
 That’s about the lesson of writing custom exceptions in Java.
 
-## Best practices for custom exceptions
+## <a id="best-practices"></a> Best practices for custom exceptions
 **Prefer Specific Exceptions.** The more specific the exception that you throw is, the better. Always try to find the
 class that fits best to your exceptional event and first look at existing Exceptions before creating your own.
 
@@ -180,7 +180,7 @@ common error scenarios.
 **Provide a constructor that sets the cause.** You should implement at least one constructor that gets the causing
 Throwable as a parameter and sets it on the superclass
 
-## Materials
+## <a id="materials"></a> Materials
 
 https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
 

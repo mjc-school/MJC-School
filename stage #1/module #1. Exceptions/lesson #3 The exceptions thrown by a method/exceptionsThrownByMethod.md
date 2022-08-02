@@ -1,15 +1,15 @@
 # The Exceptions Thrown by a Method
 
 ## Agenda
-+ Throws and Throw syntax
-+ Exceptions and Method Overriding
-+ Materials
++ [Throws and Throw syntax](#throws-and-throw-syntax)
++ [Exceptions and Method Overriding](#exceptions-and--method-overriding)
++ [Materials](#materials)
 
-## Throws and Throw syntax
+## <a id="throws-and-throw-syntax"></a> Throws and Throw syntax
 
 ![image](./media/ExceptionsThrownByMethod.png)
 
-## Exceptions and Method Overriding
+## <a id="exceptions-and--method-overriding"></a> Exceptions and Method Overriding
 To handle the exception while you overriding a method in Java, you will have to follow three important rules. They are
 as follows:
 
@@ -99,7 +99,7 @@ Output:
 In the above example program, if overriding method throws an unchecked exception, there will be no compile-time error.
 Look at the program source code.
 
-## Materials
+## <a id="materials"></a> Materials
 https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
 
 https://www.geeksforgeeks.org/exceptions-in-java

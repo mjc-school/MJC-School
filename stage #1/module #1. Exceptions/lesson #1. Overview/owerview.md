@@ -1,11 +1,11 @@
 # Exceptions Overview
 
 ## Agenda
-+ What is an Exception?
-+ The Three Kinds of Exceptions
-+ Materials
++ [What is an Exception?](#what-is-an-exception)
++ [The Three Kinds of Exceptions](#the-three-kinds-of-exceptions)
++ [Materials](#materials)
 
-## What is an Exception?
+## <a id="what-is-an-exception"></a> What is an Exception? 
 ### Throwing an exception
 **An exception** is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
 
@@ -23,7 +23,7 @@
 
 ![image](./media/StackTrace.png)
 
-## The Three Kinds of Exceptions
+##  <a id="the-three-kinds-of-exceptions"></a> The Three Kinds of Exceptions
 ### Checked, Unchecked Exception and Error
 **A Checked Exception** is an exceptional condition that a well-written application should anticipate and recover from. If your code invokes a method which is defined to throw checked exception, your code MUST provide a catch handler. The compiler generates an error if the appropriate catch handler is not present.
 
@@ -37,7 +37,7 @@
 
 ![image](./media/Hierarchy.png)
 
-## Materials
+## <a id="materials"></a> Materials
 https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
 
 https://www.geeksforgeeks.org/exceptions-in-java

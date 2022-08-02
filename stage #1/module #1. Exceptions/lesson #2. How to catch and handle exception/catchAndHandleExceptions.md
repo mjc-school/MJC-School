@@ -1,11 +1,11 @@
 # How to catch and handle exception?
 
 ## Agenda
-+ Try Catch Finally syntax
-+ Try-with-resources syntax
-+ Materials
++ [Try Catch Finally syntax](#try-catch-finally-syntax)
++ [Try-with-resources syntax](#try-with-resources-syntax)
++ [Materials](#materials)
 
-## Try Catch Finally syntax
+## <a id="try-catch-finally-syntax"></a> Try Catch Finally syntax
 
 ![image](./media/TryCatchFinallySyntax1.png)
 
@@ -17,7 +17,7 @@ If an exception occurs in the __try__ block, the exception is thrown to the firs
 
 ![image](./media/TryCatchFinallySyntax3.png)
 
-## Try-with-resources syntax
+## <a id="try-with-resources-syntax"></a> Try-with-resources syntax
 **The Try-with-resources statement** is a try statement that declares one or more resources. It
 ensures that each resource is closed at the end of the statement. A try-with-resources
 statement can have catch and finally blocks just like an ordinary try statement. In a try-with-resources statement, any catch or finally block is run after the resources declared have been
@@ -25,7 +25,7 @@ closed.
 
 ![image](./media/TryWithResources.png)
 
-## Materials
+## <a id="materials"></a> Materials
 https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
 
 https://www.geeksforgeeks.org/exceptions-in-java
