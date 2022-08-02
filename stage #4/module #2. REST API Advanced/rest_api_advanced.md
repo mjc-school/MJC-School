@@ -51,7 +51,7 @@ The recommended timeline for the whole module is 2 weeks.
      * by part Name
      * by News Id (URL examples:\
            /news/{newsId}/tags - *should return tags collection*\
-           /news/{newsId}/authors - *should return 1 author*)
+           /news/{newsId}/author - *should return 1 author*)
    * Get authors with amount of written news. Sort by news amount Desc.
    * Optional:  load Content of News through separate operation
 3. Pagination should be implemented for all GET endpoints. Please, create a flexible and non-erroneous solution. Handle all exceptional cases.
