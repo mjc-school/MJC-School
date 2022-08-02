@@ -196,7 +196,7 @@ bicycle.speed = 10;
 System.out.println(bicycle.speed); // Output: 10
 ```
 
-### Initializers
+### <div id="initializers">Initializers</div>
 In addition to constructors an initialization of an object can be carried out with the help of initializer block. Initializer blocks are performed before any constructors. We can place common code for all constructors.
 
 ```
@@ -222,8 +222,8 @@ public class Bicycle {
 }
 ```
 
-### Packages
-Java classes are combined into packages. Such combination allows avoiding conflicts of classes' names, when developers may give classes same names. Packages ensure uniqueness of each class. Package in Java is included as the first operator in a class by the means of a keyword "package":```package name_of_package```.
+### <div id="packages">Packages</div>
+Java classes are combined into packages. Such combination allows avoiding conflicts of classes' names, when developers may give classes same names. Packages ensure uniqueness of each class. Package in Java is included as the first operator in a class by the means of a keyword "package": ```package name_of_package```.
 Example:
 ```
 line 1: package com.example;
@@ -260,7 +260,7 @@ import com.example.app.RandomClass;
 public Example {
 
     public static void main(String[] args) {
-        RandomClass randomClass = new com.example.app.RandomClass();
+        RandomClass randomClass = new RandomClass();
     }
 
 }
@@ -313,7 +313,7 @@ public class AppClass {
 ```
 package com.example.app;
 
-public class FriedlyClass {
+public class FriendlyClass {
 
     public static void main(String[] args){
         AppClass appClass = new AppClass();
@@ -565,7 +565,7 @@ Object-oriented programming is based on the following pillars:
 - [Polymorphism](#polymorphism)
 - [Abstraction](#abstraction)
 
-### Inheritance
+### <div id="inheritance">Inheritance</div>
 As well as most of object-oriented languages, Java allows using Inheritance. Inheritance is a process, when a class (a child class) can be created on the basis of another class (a parent class).
 
 In order to make a class as a child towards a parent one, while its creation it is necessary to add a keyword `extends` and a name of a parent class:
@@ -624,7 +624,7 @@ In Java a class may have only one parent class, multiple inheritance is not supp
 
 In order to forbid inheritance from a class, it is required to mark it with a modifier `final`.
 ```
-public final NoInteritableClass {
+public final NoInheritableClass {
     // a class which can not be extended.
 }
 ```
@@ -664,8 +664,8 @@ public class Child extends Parent {
 
 A child class may alter methods, which are received from a parent class, with its own ones ([overriding](#overriding))
 
-#### Overriding
-Java allows us to create a method in a child class with same signature (name, input parameters) and same return type as in a parent class. Such a process is called as "overriding". By the means of overriding we may alter a behaviour of a parent method completely or partially. It is a good practise to place before an overridden method an annotation `@Override`, which is optional.
+#### <div id="overriding">Overriding</div>
+Java allows us to create a method in a child class with same signature (name, input parameters) and same return type as in a parent class. Such a process is called as "overriding". By the means of overriding we may alter a behaviour of a parent method completely or partially. It is a good practice to place before an overridden method an annotation `@Override`, which is optional.
 
 ```
 package com.example;
@@ -761,9 +761,9 @@ class Scratch {
 ```
 
 ### Additional topics to read about
-- #### Encapsulation
-- #### Polymorphism
-- #### Abstraction
+- #### <div id="encapsulation">Encapsulation</div>
+- #### <div id="polymorphism">Polymorphism</div>
+- #### <div id="abstraction">Abstraction</div>
 - #### Order of Initialization ([useful link](https://www.baeldung.com/java-initialization))
 - #### Abstract classes
 - #### Interfaces
