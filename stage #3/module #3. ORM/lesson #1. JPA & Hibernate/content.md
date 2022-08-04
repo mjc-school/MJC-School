@@ -1,20 +1,20 @@
-## Materials
-###1.ORM ,JPA & Hibernate
-+ 1.1.Persistence
-+ 1.2.ORM
-+ 1.3.JPA
-+ 1.4.Hibernate
-+ 1.5 JPA vs. Hibernate
+# ORM ,JPA & Hibernate
 
-##1.ORM ,JPA & Hibernate
-###1.1.Persistence
+## Materials
++ Persistence
++ ORM
++ JPA
++ Hibernate
++ JPA vs Hibernate
+
+## Persistence
 Almost all applications require persistent data. Persistence is one of the fundamental concepts in application
 development. If an information system didn’t preserve data when it was powered off, the system would be of little  
 practical use. Object persistence means individual objects can outlive the application process; they can be saved to
 a data store and be re-created at a later point in time. When we talk about persistence in Java, we’re normally  
 talking about mapping and storing object instances in a database using SQL.
 
-###1.2.ORM 
+## ORM 
 **Object/relational mapping** is the automated (and transparent) persistence of objects in a Java application
 to the tables in an SQL database, using metadata that describes the mapping between the classes of the application and
 the schema of the SQL database. 
@@ -22,7 +22,8 @@ the schema of the SQL database.
 ![](media/orm.jpg "ORM")
 </br>
 In other words, ORM is a programming technique that maps the object to the data stored in the database.
-###1.3.JPA
+
+## JPA
 A **JPA (Java Persistence API)** is a specification of Java which is used to access, manage, and persist data between 
 Java object and relational database. It is considered as a standard approach for Object Relational Mapping.
 
@@ -30,13 +31,13 @@ JPA can be seen as a bridge between object-oriented domain models and relational
 specification, JPA doesn't perform any operation by itself. Thus, it requires implementation. So, ORM tools like
 Hibernate, TopLink, and iBatis implements JPA specifications for data persistence.
 
-###1.4.Hibernate
+## Hibernate
 **Hibernate** is a Java framework which is used to store the Java objects in the relational database system. 
 It is an open-source, lightweight, ORM (Object Relational Mapping) tool.
 
 Hibernate is an implementation of JPA. So, it follows the common standards provided by the JPA.
 
-###1.5.JPA vs. Hibernate
+## JPA vs Hibernate
 
 | JPA|Hibernate| 
    |:------------------------------------------------:|:----------------------------------------------:

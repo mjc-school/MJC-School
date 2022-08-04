@@ -1,9 +1,15 @@
 ## Error Handling for REST with Spring
 
+## Materials
++ Solution 1: Controller-Level @ExceptionHandler
++ Solution 2: the HandlerExceptionResolver
++ Solution 3: @ControllerAdvice
++ Solution 4: ResponseStatusException
+
 Spring provides several ways of handling thrown exception in a spring web application. 
 Let's consider some of them:
 
-### Solution 1: Controller-Level @ExceptionHandler
+## Solution 1: Controller-Level @ExceptionHandler
 The first solution works at the `@RestController level`. We will define a method to handle exceptions and annotate that with **@ExceptionHandler**:
 ```Java
 @RestController
@@ -24,7 +30,7 @@ We can work around this limitation by having all Controllers extend a Base Contr
 However, this solution can be a problem for applications where, for whatever reason, that isn't possible. 
 For example, the Controllers may already extend from another base class, which may be in another jar or not directly modifiable, or may themselves not be directly modifiable.
 
-### Solution 2: the HandlerExceptionResolver
+## Solution 2: the HandlerExceptionResolver
 This solution is to define an **HandlerExceptionResolver**. This will resolve any exception thrown by the application. It will also allow us to implement `a uniform exception handling mechanism` in our REST API.
 Let's consider the existing implementations of ExceptionResolvers.
 
@@ -52,7 +58,7 @@ public class ApplicationResourceNotFoundException extends RuntimeException
 }
 ```
 
-### Solution 3: @ControllerAdvice
+## Solution 3: @ControllerAdvice
 Spring brings support for a global **@ExceptionHandler** with the **@ControllerAdvice** annotation.
 This enables a mechanism that breaks away from the older MVC model and makes use of ResponseEntity along 
 with the type safety and flexibility of **@ExceptionHandler**:
@@ -82,7 +88,7 @@ However, when the exception is actually thrown at runtime, **the exception resol
 java.lang.IllegalStateException: No suitable resolver for argument [0] [type=...]
 HandlerMethod details: ...
 ```
-### Solution 4: ResponseStatusException
+## Solution 4: ResponseStatusException
 Spring 5 provides introduced the **ResponseStatusException** class.
 We can create an instance of it providing an HttpStatus and optionally a reason and a cause:
 ```Java

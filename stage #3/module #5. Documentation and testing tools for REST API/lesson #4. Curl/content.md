@@ -1,5 +1,13 @@
-<H1 style="color: green">Curl for testing REST API</h1>
+# Curl for testing REST API
 
+## Materials
++ Overview
++ Command-line options
++ Verbose mode
++ Output
++ Methods
+
+## Overview
 Сurl is a cross-platform command-line utility that allows you to interact with various servers using a variety of different protocols with URL syntax. cURL can automate file transfers or a sequence of such operations. For example, it is a good tool for modeling client actions with an API.
 
 Curl is a command-line tool for transferring data and supports about 22 protocols, including HTTP. This combination makes it a very good special tool for testing almost any REST service.
@@ -41,12 +49,13 @@ This is especially helpful when the response size from the REST request is large
 
 Each HTTP request contains a request method. The most commonly used methods are GET, POST, PUT and DELETE.
 
-## GET Method
+## Methods
+### GET method
 This is the default method when making HTTP calls using curl. In fact, the previously shown examples were simple GET calls. When starting a local service instance on port 8080, you can use this command to call GET:
 
 > curl -v http://localhost:8082/
 
-## POST method
+### POST method
 This method is used to send data to the received service. And for this, you use the data option. The easiest way to do this is by putting data in a command:
 
 > curl -d 'id=1&name=create' http://localhost:8080/new
@@ -55,12 +64,12 @@ or you can transfer the file containing the request body to the data option as f
 
 > curl -d @request.json -H "Content-Type: application/json" http://localhost:8080/new
 
-## PUT Method
+### PUT Method
 This method is very similar to POST. But it is used when you need to send a new version of an existing resource. To do this, use the -X option. Without any mention of the type of the request method, curl uses GET by default. Therefore, we explicitly mention the type of method in the case of PUT:
 
 > curl -d @request.json -H 'Content-Type: application/json' -X PUT http://localhost:8080/update
 
-## DELETE Method
+### DELETE Method
 Use DELETE with the -X option:
 
 > curl -X DELETE http://localhost:8082/

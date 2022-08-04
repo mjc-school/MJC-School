@@ -1,9 +1,16 @@
 # Spring MVC
 
-**A Spring MVC** is a Java framework which is used to build web applications. It follows the **Model-View-Controller design pattern**.<br>
-It implements all the basic features of a core spring framework like **Inversion of Control**, **Dependency Injection**.
-**A Spring MVC** provides an elegant solution to use **MVC** in spring framework by the help of **DispatcherServlet** that is completely 
-integrated with the **Spring IoC container**. **DispatcherServlet** is a class that receives the incoming request and maps it to the right resource such as **Controllers**, **Models**, and **Views**.
+## Materials
++ Overview
++ Understanding Spring Web Model-View-Controller
++ Understanding the flow of Spring Web MVC
++ Spring MVC example project
+
+## Overview
+A **Spring MVC** is a Java framework which is used to build web applications. It follows the **Model-View-Controller design pattern**.<br>
+It implements all the basic features of a core spring framework like Inversion of Control, Dependency Injection.
+A Spring MVC provides an elegant solution to use MVC in spring framework by the help of DispatcherServlet that is completely 
+integrated with the Spring IoC container. DispatcherServlet is a class that receives the incoming request and maps it to the right resource such as Controllers, Models and Views.
 
 ## Understanding Spring Web Model-View-Controller
 
@@ -33,8 +40,11 @@ integrated with the **Spring IoC container**. **DispatcherServlet** is a class t
 
 ## Spring MVC example project
 https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-basics/src/main/webapp/WEB-INF/view
+
 https://www.baeldung.com/spring-mvc-tutorial
+
 Spring MVC and Java-Based Configuration
 https://dzone.com/articles/spring-mvc-and-java-based-configuration-1
+
 Spring MVC using Java based configuration
 https://www.geeksforgeeks.org/spring-mvc-using-java-based-configuration/

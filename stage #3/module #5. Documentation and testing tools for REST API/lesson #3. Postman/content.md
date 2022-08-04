@@ -1,4 +1,4 @@
-<H1 style="color: green">Postman for testing REST API</h1>
+# Postman for testing REST API
 
 Postman is designed to check requests from the client to the server and receive a response from the back-end with a great user interface. 
 

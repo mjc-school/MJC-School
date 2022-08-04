@@ -1,7 +1,14 @@
 ## REST with Spring
 
-### Understanding REST in Spring
+## Materials
++ Understanding REST in Spring
++ Rest Controllers
++ Spring REST Application Configuration
++ Versioning a REST API
++ REST Pagination in Spring
++ Spring HATEOAS
 
+## Understanding REST in Spring
 The Spring framework supports two ways of creating RESTful services:
 - using MVC with ModelAndView;
 - using HTTP message converters.<br>
@@ -12,10 +19,9 @@ Configuration is minimal, and it provides sensible defaults for what you would e
 
 Let's consider how to build REST application using Spring Web framework step by step.
 
-### Rest Controllers
-
+## Rest Controllers
 Let's consider how to build REST controllers using Spring Web framework.
-Spring REST controllers are annotated with **@RestController**. The annotation includes the **@RestController** and **@ResponseBody** annotations, and as a result, simplifies the controller implementation:
+Spring REST controllers are annotated with @RestController. The annotation includes the @RestController and @ResponseBody annotations, and as a result, simplifies the controller implementation:
 ```Java
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
@@ -68,15 +74,9 @@ public class BookController {
     }
 }
 ```
-**@RequestMapping** annotation that maps HTTP requests to handler methods of MVC and REST controllers.
-In the code above, such annotations as **@GetMapping, @PostMapping, @PutMapping, @PatchMapping and  @DeleteMapping** are used for mapping HTTP GET, POST, PUT, PATCH and DELETE requests onto specific handler methods.
-**@RequestBody** annotation binds request body to method parameters. The process of serialization/deserialization is performed by **HttpMessageConverter**.
-Automatic validation in controller methods can be applied by annotating the argument with **@Valid**. In order to validate BookPatchDTO via **@Valid** you should add **@NotNull**, **@Min** and other validation annotations on fields.
-**@PathVariable** is used for data passed in the URI.
-**@RequestParam** annotation is used for extracting query parameters, form parameters and even files from the request.
-**ResponseEntity** is used as method response. **ResponseEntity** represents an HTTP response, including headers, body, and status.
+**ResponseEntity** is used as method response. ResponseEntity represents an HTTP response, including headers, body, and status.
 
-### Spring REST Application Configuration
+## Spring REST Application Configuration
 
 Spring framework provides two ways of configuring a RESTful application:
 - using xml configuration files such as web.xml and SpringApplicationContext.xml;
@@ -96,9 +96,9 @@ public class WebConfig
  //Here, you configure beans related to web application context
 }
 ```
-The **@Configuration annotation** is the central artifact of Spring’s Java-configurations. **@Configuration** is a meta-annotated as a @Component
+The **@Configuration annotation** is the central artifact of Spring’s Java-configurations. @Configuration is a meta-annotated as a @Component
 which make is eligible for component scanning, it also gives the flexibility to use **@Autowired annotations**.
-A class annotated with **@Configuration annotation** shows that this can be used by **Spring IoC container** for bean definitions.<br>
+A class annotated with @Configuration annotation shows that this can be used by Spring IoC container for bean definitions.<br>
 The new **@EnableWebMvc annotation** does some useful things – specifically, in the case of REST,
 it detects the existence of Jackson and JAXB 2 on the classpath and automatically creates and registers default JSON and XML converters.
 The functionality of the annotation is equivalent to the XML version:
@@ -217,13 +217,13 @@ These inherited beans can be overridden in the servlet-specific scope, and you c
 local to a given Servlet instance. See the picture below:
 ![Typical Сontext Hierarchy in Spring Web Application](media/TypicalСontextHierarchyInSpringWebApplication.PNG)
 
-### Versioning a REST API
+## Versioning a REST API
 
 There are some ways of versioning REST API. Let's consider the high level approaches to versioning the REST API:
-- **URI Versioning** – version the URI space using version indicators.
-- **Versioning using Accept Header** – version REST API using Media Type.
-- **Versioning using Custom Header** - version REST API using custom http header.
-- **Versioning using URI parameter** - version REST API using URI query parameter.
+- URI Versioning – version the URI space using version indicators.
+- Using Accept Header – version REST API using Media Type.
+- Using Custom Header - version REST API using custom http header.
+- Using URI parameter - version REST API using URI query parameter.
 
 **1. URI Versioning**
 
@@ -290,7 +290,7 @@ http://host/catalog/titles/series/70023522?v=1.5
 If REST API client tries to use old API, the system should return **HTTP 410 status code**.
 **HTTP 410 Gone status code** indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 
-### REST Pagination in Spring
+## REST Pagination in Spring
 
 Pagination is a mechanism for handling the big result set in any type of application.
 Implementing pagination in REST API is not different but need some extra thought process.
@@ -413,7 +413,7 @@ Link →
 ```
 For example, `Github API` use the link header for pagination.
 
-### Spring HATEOAS
+## Spring HATEOAS
 https://www.baeldung.com/spring-hateoas-tutorial
 https://www.javadevjournal.com/spring/spring-hateoas/
 

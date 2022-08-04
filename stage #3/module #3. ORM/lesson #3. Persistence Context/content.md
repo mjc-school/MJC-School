@@ -1,19 +1,18 @@
 ## Materials
++ Overview
++ Main Definitions of Java Persistence API and Hibernate API
++ Entity Object Life Cycle
++ Making entities persistent
++ Loading an object
++ Detaching objects
++ Modifying persistent objects
++ Modifying detached objects
++ Deleting (removing) entities
++ Checking persistent state
++ Cascading entity state transitions
++ Container and Application Managed EntityManager
 
-* 3. Overview
-* 3.1. Main Definitions of Java Persistence API and Hibernate API
-* 3.2. Entity Object Life Cycle
-* 3.3. Making entities persistent
-* 3.4. Loading an object
-* 3.5. Detaching objects
-* 3.6. Modifying persistent objects
-* 3.7. Modifying detached objects
-* 3.8. Deleting (removing) entities
-* 3.9. Checking persistent state
-* 3.10. Cascading entity state transitions
-
-
-###3. Overview
+## Overview
 ![](media/data_access_layers.svg )
 </br>
 Hibernate, as an ORM solution, effectively "sits between" the Java application data access layer and the Relational 
@@ -32,7 +31,7 @@ And if you need some specific features that are not available in the EntityManag
 
     Session session = entityManager.unwrap(Session.class);
 
-###3.1. Main Definitions of Java Persistence API and Hibernate API
+## Main Definitions of Java Persistence API and Hibernate API
 **EntityManagerFactory**</br>
 An entity manager factory provides entity manager instances, all instances are configured to connect to the same 
 database, to use the same default settings as defined by the particular implementation, etc. You can prepare several 
@@ -58,7 +57,7 @@ Behind the scenes, the Hibernate Session wraps a JDBC java.sql.Connection and ac
 **org.hibernate.Transaction** instances. It maintains a generally "repeatable read" persistence context (first level cache) 
 of the application domain model.
 
-**Transaction**(org.hibernate.Transaction)</br>
+**Transaction** (org.hibernate.Transaction)</br>
 A single-threaded, short-lived object used by the application to demarcate individual physical transaction boundaries.
 EntityTransaction is the JPA equivalent and both act as an abstraction API to isolate the application from the 
 underlying transaction system in use (JDBC or JTA).
@@ -68,7 +67,7 @@ A persistence context is a set of entity instances in which for any persistent e
 instance. Within the persistence context, the entity instances and their life cycle is managed by a particular entity
 manager. The scope of this context can either be the transaction, or an extended unit of work.
 
-###3.2. Entity Object Life Cycle
+## Entity Object Life Cycle
 The life cycle of entity objects consists of four states: **Transient**, **Managed**, **Removed** and **Detached**:
 
 ![](media/jpa-entity-lifecycle.png "JPA States")
@@ -83,7 +82,7 @@ context, but scheduled for removal from the database.
 
 The EntityManager API allows you to change the state of an entity, or in other words, to load and store objects. 
 
-###3.3.  Making entities persistent 
+## Making entities persistent 
 Once you’ve created a new entity instance (using the standard new operator) it is in new state. You can make it 
 **persistent** by associating it to either an **org.hibernate.Session** or a **javax.persistence.EntityManager**.
   
@@ -109,7 +108,7 @@ is called. If the identifier is not automatically generated, the manually assign
 set on the instance before the save or persist methods are called.
 
 
-###3.4. Loading an object 
+## Loading an object 
 It is common to want to obtain an entity along with its data (e.g. like when we need to display it in the UI).
 
     Example . Obtaining an entity reference with its data initialized with JPA
@@ -155,12 +154,12 @@ its collections are refreshed unless you specify REFRESH as a cascade style of a
         session.flush(); 
         session.refresh(customer);
 
-### 3.5. Detaching objects
+## Detaching objects
 We can use **detach()** method. We pass the object to be detached as the parameter to the method:
 
     entityManager.detach(customer);
 
-### 3.6. Modifying persistent objects
+## Modifying persistent objects
 Entities in managed/persistent state may be manipulated by the application, and any changes will be automatically
 detected and persisted when the persistence context is flushed. There is no need to call a particular method to make 
 your modifications persistent.
@@ -175,7 +174,7 @@ your modifications persistent.
         customer.setName("Peter");
         session.flush();
 
-### 3.7.  Modifying detached objects
+##  Modifying detached objects
 Many applications need to retrieve an object in one transaction, send it to the presentation layer for manipulation, 
 and later save the changes in a new transaction. There can be significant user think and waiting time between both 
 transactions. We can make use of the **merge()** method, for such situations. The merge method helps to bring in the 
@@ -194,7 +193,7 @@ modifications made to the detached entity, in the managed entity, if any:
         customer.setName("Mikle");
         customer = (Customer) session.merge(customer);
 
-### 3.8.  Deleting (removing) entities
+##  Deleting (removing) entities
 Entities can also be deleted.
 
     Example . Deleting an entity with JPA
@@ -202,7 +201,7 @@ Entities can also be deleted.
     
     Example . Deleting an entity with the Hibernate API
         session.delete(customer);
-### 3.9. Checking persistent state
+## Checking persistent state
 An application can verify the state of entities and collections in relation to the persistence context.
 
     Example  . Verifying managed state with JPA
@@ -223,7 +222,7 @@ An application can verify the state of entities and collections in relation to t
         boolean customerNameInitialized = Hibernate.isPropertyInitialized( customer, "name" );
 
 
-### 3.10. Cascading entity state transitions
+## Cascading entity state transitions
 
 JPA allows you to propagate the state transition from a parent entity to a child. For this purpose, the JPA 
 **javax.persistence.CascadeType** defines various cascade types:
@@ -264,9 +263,10 @@ The following examples will explain some before mentioned cascade operations usi
     ...
     }
 
-###3.1.2. Container and Application Managed EntityManager
+## Container and Application Managed EntityManager
 Basically, there are two types of EntityManager: Container-Managed and Application-Managed.
-####3.1.2.1. Container-Managed EntityManager
+
+### Container-Managed EntityManager
 Here, the container (such as a JEE Container or Spring) injects the EntityManager in enterprise components.
 In other words, the container creates the EntityManager from the EntityManagerFactory:
 
@@ -280,7 +280,7 @@ In other words, the container creates the EntityManager from the EntityManagerFa
     }
 This also means the container is in charge of beginning the transaction, as well as committing or rolling it back.
 
-####3.1.2.2. Application-Managed EntityManager
+### Application-Managed EntityManager
 An application-managed entity manager allows you to control the entity manager in application code.
 This entity manager is retrieved through the EntityManagerFactory API. In order to create an EntityManager,
 we must explicitly call createEntityManager() in the EntityManagerFactory:

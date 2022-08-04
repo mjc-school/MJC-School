@@ -1,4 +1,8 @@
-<h1 style="color: green">Spring Architecture</h1>
+# Spring Architecture
+
+## Materials
++ Design Philosophy
++ Modules
 
 ## Design Philosophy
 
@@ -29,7 +33,7 @@ parallel, the Spring WebFlux reactive web framework.
 
 <img src="./media/spring-overview.png" title="Spring Framework Runtime" width="70%" style="display: block; margin: auto;"/>
 
-## Core
+### Core
 
 The [Core][1] consists of the Core, Beans, Context, and Expression Language modules.
 
@@ -52,7 +56,7 @@ accessing the context of arrays, collections and indexers, logical and arithmeti
 retrieval of objects by name from Spring’s IoC container. It also supports list projection and selection as well as
 common list aggregations.
 
-## Data Access/Integration
+### Data Access/Integration
 
 The Data Access/Integration layer consists of the JDBC, ORM, OXM, JMS and Transaction modules.
 
@@ -71,7 +75,7 @@ The Java Messaging Service ([JMS][7]) module contains features for producing and
 The [Transaction][8] module supports programmatic and declarative transaction management for classes that implement
 special interfaces and for all your POJOs (plain old Java objects).
 
-## Web
+### Web
 
 The Web layer consists of the Web, Web Servlet and Web Reactive modules.
 
@@ -87,7 +91,7 @@ Parallel to Spring Web MVC, Spring Framework 5.0 introduced a reactive-stack web
 name, [“Spring WebFlux”][10]
 is also based on its source module.
 
-## AOP and Instrumentation
+### AOP and Instrumentation
 
 Spring’s [AOP][11] module provides an AOP Alliance-compliant aspect-oriented programming implementation allowing you to
 define, for example, method-interceptors and pointcuts to cleanly decouple code that implements functionality that
@@ -99,13 +103,13 @@ The separate Aspects module provides integration with AspectJ.
 The Instrumentation module provides class instrumentation support and classloader implementations to be used in certain
 application servers.
 
-## Test
+### Test
 
 The [Test][12] module supports the testing of Spring components with JUnit or TestNG. It provides consistent loading of
 Spring ApplicationContexts and caching of those contexts. It also provides mock objects that you can use to test your
 code in isolation.
 
-## A note about modules
+### A note about modules
 
 Spring’s framework jars allow for deployment to JDK 9’s module path ("Jigsaw"). For use in Jigsaw-enabled applications,
 the Spring Framework 5 jars come with "Automatic-Module-Name" manifest entries which define stable language-level module

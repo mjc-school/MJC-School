@@ -1,5 +1,12 @@
 # REST Basics - Spring Web
 
+## Materials
++ Basics of RESTful APIs
++ Richardson REST API Maturity Model
++ Some definitions related to REST API
++ REST architectural constraints
++ Basic principals of designing REST APIs
+
 ## Basics of RESTful APIs
 _**REST is an API architecture style.**_ It stands for Representational State Transfer (REST). 
 REST is an architectural style that defines a set of constraints to be used for creating web services. 
@@ -108,29 +115,35 @@ JSON does not have any universally accepted format for representing links betwee
 
 ## REST architectural constraints
 
-1.**Client-Server:**<br> REST application should have a client-server architecture. This constraint essentially means that client applications and server applications MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all. A Client requests resources and is not concerned with data storage, which remains internal to each server, and server holds the resources and is not concerned with the user interface or user state. They can evolve independently. Client doesn’t need to know anything about business logic and server doesn’t need to know anything about frontend UI.
+### 1. Client-Server
+REST application should have a client-server architecture. This constraint essentially means that client applications and server applications MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all. A Client requests resources and is not concerned with data storage, which remains internal to each server, and server holds the resources and is not concerned with the user interface or user state. They can evolve independently. Client doesn’t need to know anything about business logic and server doesn’t need to know anything about frontend UI.
 
-2.**Uniform Interface:**<br> It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
+### 2. Uniform Interface
+It is a key constraint that differentiate between a REST API and Non-REST API. It suggests that there should be an uniform way of interacting with a given server irrespective of device or type of application (website, mobile app).
 There are four guidelines principle of Uniform Interface are:
 - _**Resource-Based:**_ Individual resources are identified in requests. For example: API/users.<br>
 - _**Manipulation of Resources Through Representations:**_ Client has representation of resource and it contains enough information to modify or delete the resource on the server, provided it has permission to do so. Example: Usually user get a user id when user request for a list of users and then use that id to delete or modify that particular user.
 - _**Self-descriptive Messages:**_ Each message includes enough information to describe how to process the message so that server can easily analyses the request.
 - _**Hypermedia as the Engine of Application State (HATEOAS):**_ It need to include links for each response so that client can discover other resources easily.
 
-3.**Stateless:**<br> The restriction is called _**Statelessness**_ if the server does not store any data about the client session on the server-side.  It means that the necessary data\state to handle the request is contained within the request itself and server would not store anything related to the client session. The server will not store anything about the latest HTTP request the client made. It will treat every request as new. _No client context shall be stored on the server between requests. No session, no history. The client is responsible for managing the state of the application._ In REST, the client must include all information for the server to fulfill the request whether as a part of query params, headers or URI. For making REST API stateless, Even authentication/authorization details of the client should not be stored on the server side. Provide authentication credentials with each request. Statelessness enables greater availability since the server does not have to maintain, update or communicate that client session state. There is a drawback when the client need to send too much data to the server so it reduces the scope of network optimization and requires more bandwidth.
+### 3. Stateless
+The restriction is called _**Statelessness**_ if the server does not store any data about the client session on the server-side.  It means that the necessary data\state to handle the request is contained within the request itself and server would not store anything related to the client session. The server will not store anything about the latest HTTP request the client made. It will treat every request as new. _No client context shall be stored on the server between requests. No session, no history. The client is responsible for managing the state of the application._ In REST, the client must include all information for the server to fulfill the request whether as a part of query params, headers or URI. For making REST API stateless, Even authentication/authorization details of the client should not be stored on the server side. Provide authentication credentials with each request. Statelessness enables greater availability since the server does not have to maintain, update or communicate that client session state. There is a drawback when the client need to send too much data to the server so it reduces the scope of network optimization and requires more bandwidth.
 
-4.**Cacheable:**<br> In order to provide a better performance, the applications are often made cacheable. Every response should include whether the response is cacheable or not and for how much duration responses can be cached at the client side. Client will return the data from its cache for any subsequent request and there would be no need to send the request again to the server. A well-managed caching partially or completely eliminates some client–server interactions, further improving availability and performance. But sometime there are chances that user may receive stale data To prevent it, the cached data needs to be updated each time the data is getting updated server side.
+### 4. Cacheable
+In order to provide a better performance, the applications are often made cacheable. Every response should include whether the response is cacheable or not and for how much duration responses can be cached at the client side. Client will return the data from its cache for any subsequent request and there would be no need to send the request again to the server. A well-managed caching partially or completely eliminates some client–server interactions, further improving availability and performance. But sometime there are chances that user may receive stale data To prevent it, the cached data needs to be updated each time the data is getting updated server side.
 
-5.**Layered System:**<br> This constraint tells that the architecture of the application can be layered, without letting the client know about it.
+### 5. Layered System
+This constraint tells that the architecture of the application can be layered, without letting the client know about it.
 An application architecture needs to be composed of multiple layers. Each layer doesn’t know any thing about any layer other than that of immediate layer and 
 there can be lot of intermediate servers(layers) between client and the end server. 
 Intermediary servers may improve system availability by enabling load-balancing and by providing shared caches.
 
-6.**Code on demand (optional):**<br> It is an optional feature. According to this, servers can also provide executable code to the client. The examples of code on demand may include a UI widget rendering code or client-side scripts such as JavaScript/Python.
+### 6. Code on demand (optional)
+It is an optional feature. According to this, servers can also provide executable code to the client. The examples of code on demand may include a UI widget rendering code or client-side scripts such as JavaScript/Python.
 
 ## Basic principals of designing REST APIs
 
-### Use nouns to represent resources
+### 1. Use nouns to represent resources
 RESTful URI should refer to a resource that is a thing (noun) instead of referring to an action (verb) because nouns have properties that verbs do not have – similarly, resources have attributes. Some examples of a resource are:
 - Users of the system
 - User Accounts
@@ -180,7 +193,7 @@ http://api.example.com/song-management/users/{id}/playlist/play
 ```
 The example above shows a controller resource that allows a client to checkout his cart or start to play client's playlist.
 
-### Use consistent resource naming conventions and URI formatting
+### 2. Use consistent resource naming conventions and URI formatting
 Using consistent resource naming conventions and URI formatting allows you to minimize ambiguity and maximize readability and maintainability. Below some design hints to achieve consistency:
 - **Use forward slash (/) to indicate hierarchical relationships:**<br>
 The forward-slash (/) character is used in the path portion of the URI to indicate a hierarchical relationship between resources. e.g.
@@ -259,7 +272,7 @@ For example:
 http://developer.soccer.restapi.org
 ```
 
-### Define API operations in terms of HTTP methods and HTTP response status codes
+### 3. Define API operations in terms of HTTP methods and HTTP response status codes
 HTTP has defined few sets of methods which indicates the type of action to be performed on the resources.
 _The URI is a sentence, where resources are nouns and HTTP methods are verbs._
 The below table summarises the use of mostly-used HTTP methods and HTTP response status codes.
@@ -271,7 +284,7 @@ The below table summarises the use of mostly-used HTTP methods and HTTP response
 | <b>PUT</b>   | Update/Replace | **405 (Method not allowed)**, unless you want to update every resource in the entire collection of resource| **200 (OK)** if the response includes an updated entity;<br> <p>**400 (Bad Request)**, if the server fails to parse the request body (the reason of development errors); <p>**403 (Forbidden)**, if user is authenticated, but it’s not allowed to access a resource;<br> <p>**404 (Not Found)** if resource not found or invalid ID;<br> <p>**409 (Conflict)**, if there is a request conflict with current state of the target resource; |           **200 (OK)** if the response includes an entity describing the status; <p>**422 (Unprocessable Entity)**, if the server can't proccess request data due to validation errors caused by end client because of sending invalid fields.           
 | <b>DELETE</b>| Delete         | **405 (Method not allowed)**, unless you want to delete the whole collection — use with caution            | **200 (OK)**, if the response includes an entity describing the status; <p>**202 (Accepted)**, if the action has been queued; <p>**204 (No Content)**, if the action has been performed but the response does not include an entity; <p>**404 (Not Found)**, if resource not found or invalid ID. <p>_Repeatedly calling DELETE API on that resource will not change the outcome – however, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed._                            |
 
-### Allow filtering, sorting, pagination and searching
+### 4. Allow filtering, sorting, pagination and searching
 Complex result filters, sorting requirements, data pagination and advanced searching (when restricted to a single type of resource) can all be easily implemented as query parameters on top of the base URI.
 - **Filtering:** Use a unique query parameter for each field that implements filtering. For example, when requesting a list of tickets from the **/tickets** endpoint, you may want to limit these to only those in the open state. This could be accomplished with a request like
 ```
@@ -363,7 +376,7 @@ This would return a ticket with additional details embedded, like:
 ```
 Of course, ability to implement something like this really depends on internal complexity. This kind of embedding can easily result in an **N+1 select issue**.
 
-### Handle errors gracefully and return standard error codes
+### 5. Handle errors gracefully and return standard error codes
 To eliminate confusion for API users when an error occurs, we should handle errors gracefully and return HTTP response codes that indicate what kind of error occurred. This gives maintainers of the API enough information to understand the problem that’s occurred. We don’t want errors to bring down our system, so we can leave them unhandled, which means that the API consumer has to handle them. The API should always return sensible HTTP status codes. API errors typically break down into 2 types: **400 series status codes for client issues** & **500 series status codes for server issues**.<br>
 Common error HTTP status codes include:
 - **400 Bad Request** – This means that server fails to parse the request body (the reason of development errors). For example:Sending invalid JSON will result in a 400 Bad  Request response.Sending the wrong type of JSON values will result in a 400 Bad Request response. 
@@ -409,7 +422,7 @@ Validation errors for **PUT, PATCH and POST** requests will _**need a field brea
 ```
 Whenever our API does not successfully complete, we should fail gracefully by sending an error with information to help users make corrective action.
 
-### Secure REST APIs and maintain good security practices
+### 6. Secure REST APIs and maintain good security practices
 Below given points may serve as a checklist for designing the security mechanism for REST APIs.
 
 - **Keep it Simple:**<br>
@@ -442,7 +455,7 @@ This will prevent very basic replay attacks from people who are trying to brute 
 Validate request parameters on the very first step, before it reaches application logic. Put strong validation checks and reject the request immediately if validation fails.
 In API response, send relevant error messages and examples of correct input format to improve user experience.
 
-### Cache data to improve performance
+### 7. Cache data to improve performance
 Being cacheable is one of the architectural constraints of REST.
 
 - **GET** requests should be cachable by default – until a special condition arises. Usually, browsers treat all GET requests as cacheable.
@@ -475,5 +488,5 @@ The Last-Modified value cannot be less than Date value.
 ```
 Last-Modified: Fri, 10 May 2016 09:17:49 GMT
 ```
-### Use HATEOAS to enable navigation to related resources
+### 8. Use HATEOAS to enable navigation to related resources
 The single most important reason for HATEOAS is **loose coupling**. If a consumer of a REST service needs to hard-code all the resource URIs, then it is tightly coupled with your service implementation. Instead, if you return the URIs, it could use for the actions, then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. When you design a RESTful service, there is a need to specify how to return data and links corresponding to a request. HATEOAS is a simple way that gives an easy, consistent way to hyperlink between resources in your REST API.

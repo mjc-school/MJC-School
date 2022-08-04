@@ -1,10 +1,15 @@
-<H1 style="color: green">Gradle Modules</h1>
+# Gradle Modules
+
+## Materials
++ The main reasons for using multiple modules
++ Advantage
++ Downside
 
 ## The main reasons for using multiple modules
 
 When projects become bigger, however, we might want to split our codebase into multiple build modules for better maintainability and understandability.
 
-### Advantage
+## Advantage
 
 * <b>Reuse</b> - The main advantage of using multiple modules is that they are reusable, while individual modules often contain multiple functionality that is not necessarily related to each other and is impractical for reuse. It depends on the size of the project, but for larger projects, multiple modules are more beneficial.
 
@@ -16,7 +21,7 @@ When projects become bigger, however, we might want to split our codebase into m
 
 * <b>Replacing</b> - Replacing a module with another depending on the interface.
 
-### Downside
+## Downside
 * Multiple modules can be more difficult to maintain. If they exist in large numbers and are not well documented, tracking dependencies can also be challenging. 
 
 For a better understanding of the multi modules in gradle, consider the following example (*Note that the application is written using the Spring Boot Framework, which is not necessary to understand at this stage*). The [project example](https://github.com/mjc-school/multi-module-gradle-project-example) you can see at the following link.

@@ -3,7 +3,6 @@
 This module provides basic concepts of Java Persistence API & Hibernate
 
 ## Contents
-
 1. ORM , JPA & Hibernate
 2. Defining JPA Entities
 3. Persistence Context
