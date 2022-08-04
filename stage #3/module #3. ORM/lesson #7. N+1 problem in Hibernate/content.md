@@ -13,50 +13,58 @@ where N = number of records in table) in database for a single select query at a
 Hibernate & Spring Data JPA provides multiple ways to catch and address this performance problem.
 
 Let's look at an example for tables Customer and Order:
+```java
+ @Entity
+ @Table(name="CUSTOMER")
+ public class Customer {
+     @Id
+     @GeneratedValue
+     private Long id;
+     
+     private String name;
+     
+     @OneToMany(mappedBy = "order")
+     private List<Order> orders = new ArrayList<>();
+     // ...
+ }
 
-    @Entity
-    @Table(name="CUSTOMER")
-    public class Customer {
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String name;
-    @OneToMany(mappedBy = "order")
-    private List<Order> orders = new ArrayList<>();
-    ...
-    }
-
-    @Entity
-    @Table(name="ORDER")
-    public class Order {
-    @Id
-    private Long id;
-    private Date date;
-    Decimal amount;
-    @ManyToOne 
-    @JoinColumn(name="CUSTOMER_ID")
-    private Customer customer;
-    ...
-    }
-
+ @Entity
+ @Table(name="ORDER")
+ public class Order {
+     @Id
+     private Long id;
+     
+     private Date date;
+     
+     Decimal amount;
+     
+     @ManyToOne 
+     @JoinColumn(name="CUSTOMER_ID")
+     private Customer customer;
+     // ...
+ }
+```
 
 Stored in the Session's cache is an object graph associated with each other. By default, when Hibernate loads the 
 Customer object from the database, it will load all associated Orders objects at the same time. Take the Customer and
 Order classes as an example, assuming that the CUSTOMER_ID foreign key of the ORDERS table is allowed to be null.
 
 The following find() method of the Session is used to retrieve all Customer objects from the database:
-
-    List customerLists=session.find("from Customer as c");
+```java
+List customerLists=session.find("from Customer as c");
+```
 
 When running the above find() method, Hibernate will first query all the records in the CUSTOMERS table, and then query
 the records with reference relationship in the ORDERS table according to the ID of each record. Hibernate will execute 
 the following select statements in turn:
 
-    select * from CUSTOMERS;
-    select * from ORDERS where CUSTOMER_ID=1;
-    select * from ORDERS where CUSTOMER_ID=2;
-    select * from ORDERS where CUSTOMER_ID=3;
-    select * from ORDERS where CUSTOMER_ID=4;
+```roomsql
+select * from CUSTOMERS;
+select * from ORDERS where CUSTOMER_ID=1;
+select * from ORDERS where CUSTOMER_ID=2;
+select * from ORDERS where CUSTOMER_ID=3;
+select * from ORDERS where CUSTOMER_ID=4;
+```
 
 Through the above five select statements, Hibernate finally loads 4 Customer objects and 5 Order objects, 
 forming an associated object graph in memory.
@@ -69,10 +77,10 @@ retrieval performance. If you need to query n Customer objects, you must execute
 the classic n+1 select query problem. This retrieval strategy does not utilize the SQL connection query function. 
 For example, the above five select statements can be completely completed by the following one select statement:
 
-
-    select * from CUSTOMERS left outer join ORDERS
-    on CUSTOMERS.ID=ORDERS.CUSTOMER_ID
-
+   ```roomsql
+   select * from CUSTOMERS left outer join ORDERS
+   on CUSTOMERS.ID=ORDERS.CUSTOMER_ID
+   ```
 The above select statement uses SQL's left outer join query function, which can query all the records of the CUSTOMERS 
 table and the records of the matched ORDERS table in a select statement.
 
@@ -84,18 +92,22 @@ At initial thought, you can lazy load the child. So to do this set the annotatio
 Under the hood, lazy loading creates proxy objects for child objects. As and when we access the child objects, hibernate
 will fire the queries and load them. With that being said, this may look like a good idea, but lazy loading is not 
 the perfect solution.
-
-    @Entity
-    public class Order {
+```java
+@Entity
+public class Order {
     @Id
     private Long id;
+    
     private Date date;
+    
     Decimal amount;
+    
     @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name="CUSTOMER_ID")
     private Customer customer;
-    ...
-    }
+    // ...
+}
+```
 
 This is due to the underlying logic behind lazy loading. When lazy loading is enabled, hibernate will create proxies
 for the orders fields. When the order field is accessed, hibernate will fill the proxy with values from the 
@@ -104,10 +116,10 @@ database. Yes, a query will still happen for each Customer object.
 ## Solution
 So how do we solve the N+1 problem? For this, we need to get back to some basics of SQL. When we have to load data from
 two separate tables, we can use joins. So instead of using multiple queries, we can write a single query like below.
-
-    select * from CUSTOMERS left outer join ORDERS
-    on CUSTOMERS.ID=ORDERS.CUSTOMER_ID
-
+```roomsql
+select * from CUSTOMERS left outer join ORDERS
+on CUSTOMERS.ID=ORDERS.CUSTOMER_ID
+```
 ## Why you should avoid N+1 problems?
 The reasons:
 

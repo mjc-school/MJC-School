@@ -19,7 +19,7 @@ Spring's dependency injection. Essentially, the `@Autowired` annotation provides
 in [Autowiring Collaborators][1] but with more fine-grained control and wider applicability. Spring 2.5 also added
 support for JSR-250 annotations, such as `@PostConstruct` and `@PreDestroy`. Spring 3.0 added support for JSR-330 (
 Dependency Injection for Java) annotations contained in the `javax.inject` package such as `@Inject`
-and `@Named` ([JSR 330 Standard Annotations][2])
+and `@Named` ([JSR 330 Standard Annotations][2]).
 
 > Annotation injection is performed before XML injection. Thus, the XML configuration overrides the annotations for
 > properties wired through both approaches.

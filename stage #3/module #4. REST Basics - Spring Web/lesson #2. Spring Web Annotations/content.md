@@ -215,12 +215,10 @@ public class BookController {
 
     @PutMapping(value = "/{id:\\d+}")
     ResponseEntity<BookDTO> updateBook(@PathVariable long id, @RequestBody BookUpdateDTO bookUpdateDTO) {
-        if (bookUpdateDTO.getId > 0 && bookUpdateDTO.getId != id)
-        {
+        if (bookUpdateDTO.getId > 0 && bookUpdateDTO.getId != id) {
             throw new BadRequestException("Resource id in path and request body does not match.");
         }
-        if (bookUpdateDTO.getId == 0)
-        {
+        if (bookUpdateDTO.getId == 0) {
             bookUpdateDTO.setId(id);
         }
         Book book = convertor.convertDtoToModel(bookUpdateDTO);
@@ -244,8 +242,7 @@ the value argument. If the name of the part in the template matches the name of 
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping(value = "/{id:\\d+}")
     ResponseEntity<List<BookDTO>> getBookById(@PathVariable long id) {
@@ -258,8 +255,7 @@ If the name of the part in the template does not matche the name of the method a
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
     
     @GetMapping(value = "/{title}")
     ResponseEntity<BookDTO> getBookByTitle(@PathVariable("title") String bookTitle) {
@@ -272,8 +268,7 @@ Moreover, you can mark a path variable optional by setting the argument required
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @PutMapping(value = "/{id:\\d+}")
     ResponseEntity<BookDTO> updateBook(@PathVariable(required = false) long id, @RequestBody BookUpdateDTO bookUpdateDTO) {
@@ -291,11 +286,12 @@ Providing a default value implicitly sets required to false:
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping()
-    ResponseEntity<BookDTO> getBooksByAuthor(@RequestParam("author") String authorName, @RequestParam(defaultValue = "5", required = false) int limit) {
+    ResponseEntity<BookDTO> getBooksByAuthor(
+            @RequestParam("author") String authorName, 
+            @RequestParam(defaultValue = "5", required = false) int limit) {
         //....
     }
 }
@@ -310,11 +306,12 @@ In the next example you are reading all HTTP headers in a HashMap. you are using
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping()
-    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader Map<String, String> headers, @RequestParam(defaultValue = "5", required = false) int limit) {
+    ResponseEntity<List<BookDTO>> getAllBooks(
+            @RequestHeader Map<String, String> headers, 
+            @RequestParam(defaultValue = "5", required = false) int limit) {
         //....
     }
 }
@@ -324,11 +321,12 @@ Example of reading a specific header in Spring REST Controller:
 @RestController
 @RequestMapping(value = "/books", consumes = {"application/JSON"}, produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping()
-    ResponseEntity<List<BookDTO>> getAllBooks(@RequestHeader(value = "content-type", required = false) String contentType, @RequestParam(defaultValue = "5", required = false) int limit) {
+    ResponseEntity<List<BookDTO>> getAllBooks(
+            @RequestHeader(value = "content-type", required = false) String contentType, 
+            @RequestParam(defaultValue = "5", required = false) int limit) {
         //....
     }
 }
@@ -339,8 +337,7 @@ This annotation is used to get the value of any HTTP cookie without iterating ov
 @RestController
 @RequestMapping(value = "/info")
 public class InfoController {
-
-    //..........
+    //....
 
     @GetMapping()
     public String getSessionInfo(@CookieValue("JSESSIONID") String jsessionid, Model model) {
@@ -356,12 +353,13 @@ Annotation is used with @Controller annotation. Spring treats the result of the 
 @Controller
 @RequestMapping(value = "/books", produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping
     @ResponseBody
-    ResponseEntity<List<BookDTO>> getAllBooks(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
+    ResponseEntity<List<BookDTO>> getAllBooks(
+            @RequestParam(defaultValue = "10", required = false) int limit, 
+            @RequestParam(defaultValue = "5", required = false) int offset) {
         //....
     }
 }
@@ -374,8 +372,7 @@ The caught exception can be passed to the method as an argument:
 @Controller
 @RequestMapping(value = "/books", produces = {"application/JSON", "application/XML"})
 public class BookController {
-
-    //..........
+    //....
 
     @GetMapping(value = "/{id}")
     ResponseEntity<BookDTO> getBookById(@PathVariable long id) {
@@ -410,17 +407,14 @@ public class BookController {
     @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     BookDTO getBookById(@PathVariable long id) {
-        if (bookService.getBookById(id) == null)
-        {
+        if (bookService.getBookById(id) == null) {
             throw new NoSuchResourceFoundException();
         }
     }
 
     @ExceptionHandler(NoSuchResourceFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleNoSuchResourceFoundException(
-            NoSuchResourceFoundException exc
-    ) {
+    public String handleNoSuchResourceFoundException(NoSuchResourceFoundException exc) {
         return exc.getMessage();
     }
 }
@@ -464,7 +458,6 @@ Enables cross-domain communication for the annotated request handler methods:
 @RestController
 @RequestMapping(value = "/books")
 public class BookController {
-
     //....
 
     @GetMapping(value = "/{id}")

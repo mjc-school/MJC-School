@@ -71,10 +71,8 @@ settings.gradle file of the root project should include all modules.
 ![](media/settings-gradle.png "settings.gradle file")
 
 
-Next, we need to configure the gradle.build for the parent-project, which will consist of three chats: *buildscript*, *allprojects*, *subprojects*
-
-<pre>
-    <code>
+Next, we need to configure the gradle.build for the parent-project, which will consist of three chats: *buildscript*, *allprojects*, *subprojects*.
+```groovy
     buildscript {
 
     ext {
@@ -119,8 +117,7 @@ subprojects {
         testCompile group: 'junit', name: 'junit', version: '4.12'
     }
 }
-    </code>
-</pre>
+```
 
 * *buildscript* - Specifies how the project will be built.
 * *allprojects* - Group and version assignment for all modules.

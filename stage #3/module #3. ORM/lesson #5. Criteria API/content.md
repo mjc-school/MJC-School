@@ -26,80 +26,91 @@ This chapter will focus on the JPA APIs for declaring type-safe criteria queries
 ## Steps to create Criteria Query
 1) Create an object of CriteriaBuilder interface by invoking _getCriteriaBuilder()_ method on the instance of
 EntityManager interface.</br>
-
-    
+    ```java
     EntityManager entityManager = entityManager.createEntityManager();
     CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+    ```
+   
 2) build an instance of CriteriaQuery interface to create a query object.
-
-   
+   ```java
     CriteriaQuery<Customer> cq=cq.createQuery(Customer.class);  
-3) Call from method on CriteriaQuery object to set the query root.
-
-    
-    Root<Customer> customer=cq.from(Customer.class);
-4) Call the select method of CriteriaQuery Object to specify type of query result.
-
+    ```
    
-    CriteriaQuery<Customer> select = cq.select(customer); 
+3) Call from method on CriteriaQuery object to set the query root.
+    ```java
+    Root<Customer> customer=cq.from(Customer.class);
+    ```
+   
+4) Call the select method of CriteriaQuery Object to specify type of query result.
+    ```java
+    CriteriaQuery<Customer> select = cq.select(customer);
+    ```
+
 5) CriteriaQuery<StudentEntity> select = cq.select(stud);  
-
-    
+    ```java
     Query q = entityManager.createQuery(select);  
+    ```
 6) Calling the methods of Query Interface
+    ```java
+    List<Customer> list = q.getResultList(); 
+    ```
 
-
-    List<Customer> list = q.getResultList();  
 ## Restrictions
 Restrictions with like:
 
-    EntityManager entityManager = entityManager.createEntityManager();
-    CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-    CriteriaQuery<Customer> cq=cg.createQuery(Customer.class);  
-    Root<Customer> customer=cq.from(Customer.class);
-    cq.select(customer).where(cq.like(customer.get("name"), "%Iva%"));
-    List<Customer> customers = entityManager.createQuery(cq).getResultList();
+```java
+EntityManager entityManager = entityManager.createEntityManager();
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<Customer> cq = cg.createQuery(Customer.class);
+Root<Customer> customer = cq.from(Customer.class);
+cq.select(customer).where(cq.like(customer.get("name"), "%Iva%"));
+List<Customer> customers = entityManager.createQuery(cq).getResultList();
+```
 
 Restrictions with between:
 
-    EntityManager entityManager = entityManager.createEntityManager();
-    CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-    CriteriaQuery<Customer> cq=cb.createQuery(Customer.class);
-    Root<Customer> customer=cq.from(Customer.class);
-    cq.select(emp).where(cb.between(emp.get("age"), 35, 50));
-    List<Employee> employees = em.createQuery(cq).getResultList();
+```java
+EntityManager entityManager = entityManager.createEntityManager();
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<Customer> cq = cb.createQuery(Customer.class);
+Root<Customer> customer = cq.from(Customer.class);
+cq.select(emp).where(cb.between(emp.get("age"), 35, 50));
+List<Employee> employees = em.createQuery(cq).getResultList();
+```
 
 ## Sorting 
 
-    EntityManager entityManager = entityManager.createEntityManager();
-    CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-    CriteriaQuery<Customer> cq = cb.createQuery(Customer.class);
-    Root<Customer> customer=cq.from(Customer.class);
-    cq.select(customer).orderBy(
-    cb.desc(customer.get("id")),
-    cb.asc(customer.get("name"))
-    );
-    List<Customer> customers = entityManager.createQuery(cq).getResultList();
-
+```java
+EntityManager entityManager = entityManager.createEntityManager();
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<Customer> cq = cb.createQuery(Customer.class);
+Root<Customer> customer = cq.from(Customer.class);
+cq.select(customer).orderBy(cb.desc(customer.get("id")), cb.asc(customer.get("name")));
+List<Customer> customers = entityManager.createQuery(cq).getResultList();
+```
 ## Pagination
 
-    EntityManager entityManager = entityManager.createEntityManager();
-    int pageNumber = 1;
-    int pageSize = 2;
-    CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-    CriteriaQuery<Customer> cq = cb.createQuery(Customer.class);
-    cq.from(Customer.class);
-    List<Customer> customers = entityManager.createQuery(cq)
-    .setFirstResult(pageSize * (pageNumber-1))
-    .setMaxResults(pageSize)
-    .getResultList();
+```java
+EntityManager entityManager = entityManager.createEntityManager();
+int pageNumber = 1;
+int pageSize = 2;
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<Customer> cq = cb.createQuery(Customer.class);
+cq.from(Customer.class);
+List<Customer> customers = entityManager.createQuery(cq)
+        .setFirstResult(pageSize * (pageNumber-1))
+        .setMaxResults(pageSize)
+        .getResultList();
+```
 
 ## Join
 
-    EntityManager em = entityManager.createEntityManager();
-    CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-    CriteriaQuery<Customer> criteria = cb.createQuery(Customer.class);
-    Root<Customer> customer = criteria.from(Customer.class);
-    Join<Customer, Address> customerJoin = customer.join("address", JoinType.INNER);
-    criteria.where(cb.equal(customerJoin.get("name"), "Ivan"));
-    List <Address> address = entityManager.createQuery(criteria).getResultList();
+```java
+EntityManager em = entityManager.createEntityManager();
+CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<Customer> criteria = cb.createQuery(Customer.class);
+Root<Customer> customer = criteria.from(Customer.class);
+Join<Customer, Address> customerJoin = customer.join("address", JoinType.INNER);
+criteria.where(cb.equal(customerJoin.get("name"), "Ivan"));
+List<Address> address = entityManager.createQuery(criteria).getResultList();
+```

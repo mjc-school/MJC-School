@@ -2,7 +2,7 @@
 
 ## Materials
 + Spring Bean Scopes
-  + The Lifecycle of Spring Beans
++ The Lifecycle of Spring Beans
 
 ## Spring Bean Scopes
 

@@ -193,13 +193,13 @@ public class Config {
 By default, configuration classes use a `@Bean` method's name as the name of the resulting bean. This functionality can
 be overridden, however, with the name attribute:
 
-```
+```java
   @Bean("myCustomName")
 ```
 
 The `name` attribute of the `@Bean` annotation also accepts a String array:
 
-```
+```java
   @Bean({"myCustomName", "myCustomName1", "myCustomName2"})
 ```
 
@@ -210,7 +210,6 @@ classes declare beans through `@Bean`-annotated methods. Calls to `@Bean` method
 be used to define inter-bean dependencies:
 
 ```java
-
 @Configuration
 public class Config {
 

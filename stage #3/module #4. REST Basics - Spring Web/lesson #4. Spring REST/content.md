@@ -10,8 +10,8 @@
 
 ## Understanding REST in Spring
 The Spring framework supports two ways of creating RESTful services:
-- using MVC with ModelAndView;
-- using HTTP message converters.<br>
+- using MVC with ModelAndView
+- using HTTP message converters<br>
 
 The **ModelAndView approach** is older and much better documented, but also more verbose and configuration heavy. 
 The new approach, based on **HttpMessageConverter and annotations**, is much more lightweight and easy to implement.
@@ -33,7 +33,9 @@ public class BookController {
     private Convertor<BookDTO, Book> convertor;
 
     @GetMapping
-    ResponseEntity<List<BookDTO>> getAll(@RequestParam(defaultValue = "10", required = false) int limit, @RequestParam(defaultValue = "5", required = false) int offset) {
+    ResponseEntity<List<BookDTO>> getAll(
+           @RequestParam(defaultValue = "10", required = false) int limit, 
+           @RequestParam(defaultValue = "5", required = false) int offset) {
         List<Book> bookList = bookService.getAllBooks(limit, offest);
         List<BookDTO> bookDTOList = convertor.convertModelListToDtoList(bookList);
         return new ResponseEntity<>(bookDTOList, HttpStatus.OK);
@@ -79,8 +81,8 @@ public class BookController {
 ## Spring REST Application Configuration
 
 Spring framework provides two ways of configuring a RESTful application:
-- using xml configuration files such as web.xml and SpringApplicationContext.xml;
-- using Java class.
+- using xml configuration files such as web.xml and SpringApplicationContext.xml
+- using Java class
 
 Let's consider the most widely used approach to configuring a spring REST application which is based on
 **Java based Web Configurations**.
@@ -114,8 +116,7 @@ If we want to customize this configuration, you should implement the **WebMvcCon
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.epam.mjc.school"})
-public class WebConfig implements WebMvcConfigurer 
-{
+public class WebConfig implements WebMvcConfigurer {
 // Here, you configure beans related to web application context
 }
 ```
@@ -137,12 +138,14 @@ public void onStartup(final ServletContext servletContext) throws ServletExcepti
     
     //register and map the dispatcher servlet
     //note Dispatcher servlet with constructor arguments
-    ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",  new DispatcherServlet(servletAppContext));
+    ServletRegistration.Dynamic dispatcher = 
+            servletContext.addServlet("dispatcher",  new DispatcherServlet(servletAppContext));
     dispatcher.setLoadOnStartup(1);
     dispatcher.addMapping("/");
 
     //add specific encoding (e.g. UTF-8) via CharacterEncodingFilter 
-    FilterRegistration.Dynamic encodingFilter = servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
+    FilterRegistration.Dynamic encodingFilter = 
+            servletContext.addFilter("encoding-filter", new CharacterEncodingFilter());
     encodingFilter.setInitParameter("encoding", "UTF-8");
     encodingFilter.setInitParameter("forceEncoding", "true");
     encodingFilter.addMappingForUrlPatterns(null, true, "/*");
@@ -220,10 +223,10 @@ local to a given Servlet instance. See the picture below:
 ## Versioning a REST API
 
 There are some ways of versioning REST API. Let's consider the high level approaches to versioning the REST API:
-- URI Versioning – version the URI space using version indicators.
-- Using Accept Header – version REST API using Media Type.
-- Using Custom Header - version REST API using custom http header.
-- Using URI parameter - version REST API using URI query parameter.
+- URI Versioning – version the URI space using version indicators
+- Using Accept Header – version REST API using Media Type
+- Using Custom Header - version REST API using custom http header
+- Using URI parameter - version REST API using URI query parameter
 
 **1. URI Versioning**
 
@@ -299,18 +302,18 @@ Providing a fluent and efficient pagination for REST API could increase user exp
 **Resource vs Representation**
 
 Before you start designing pagination API, you need to have a clear understanding of page as a resource or a representation of the resource.
-1. If you consider that the page is not a resource in REST but its a property of the request.
-   The example
-```
-http://domainname/products?page=1
-```
+1. If you consider that the page is not a resource in REST but its a property of the request.<br>
+   The example:
+   ```
+   http://domainname/products?page=1
+   ```
 2. If you consider that the page as a resource then:
-```
-http://domainname/products/page/1?sort_by=date
-
-//URL part for sorting by date 
-http://domainname/products/date/page/1
-```
+   ```
+   http://domainname/products/page/1?sort_by=date
+   
+   //URL part for sorting by date 
+   http://domainname/products/date/page/1
+   ```
 **Discoverability**
 
 Discoverability helps to make RESTful API more useful and elegant.

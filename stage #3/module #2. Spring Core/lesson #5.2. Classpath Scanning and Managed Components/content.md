@@ -82,9 +82,9 @@ public class MusicRatesFinderImpl implements MusicRatesFinder {
 ```
 
 To autodetect these classes and register the corresponding beans, you need to add `@ComponentScan` to
-your `@Configuration` class, where the `basePackages` attribute is a common parent package for the two classes.
-(Alternatively, you can specify a comma- or semicolon- or space-separated list that includes the parent package of each
-class.)
+your `@Configuration` class, where the `basePackages` attribute is a common parent package for the two classes. 
+Alternatively, you can specify a comma- or semicolon- or space-separated list that includes the parent package of each
+class.
 
 ```java
 

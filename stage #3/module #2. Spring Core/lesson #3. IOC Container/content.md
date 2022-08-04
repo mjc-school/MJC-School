@@ -196,7 +196,7 @@ public class Main {
 
 ```
 
-You can use `getBean` to retrieve instances of your beans. The `ApplicationContext` interface has a few other methods
+You can use `getBean()` to retrieve instances of your beans. The `ApplicationContext` interface has a few other methods
 for retrieving beans, but, ideally, your application code should never use them. Indeed, your application code should
 have no calls to the `getBean()` method at all and thus have no dependency on Spring APIs at all. For example, Spring's
 integration with web frameworks provides dependency injection for various web framework components such as controllers
