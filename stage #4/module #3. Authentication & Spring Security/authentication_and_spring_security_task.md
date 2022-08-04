@@ -38,8 +38,8 @@ User Permissions:
         * Signup.
         * Login.
      - User:
-        * Make an order on main entity.
         * All read operations.
+        * Addition of news, comments.
      - Administrator (can be added only via database call):
         * All operations, including addition and modification of entities.
 
@@ -56,7 +56,7 @@ User Permissions:
     a. 1000 users
     b. 1000 tags
     c. 10’000 gift certificates (should be linked with tags and users)
-All values should look like more -or-less meaningful: random words, but not random letters 
+All values should look like more-or-less meaningful: random words, but not random letters 
 2. Demonstrate API using Postman tool (prepare for demo Postman collection with APIs)  
 3. (Optional) Build & run application using command line
 
