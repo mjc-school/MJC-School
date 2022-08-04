@@ -201,7 +201,7 @@ relationship with Customer and the Customer entity would define a @OneToMany rel
     @GeneratedValue
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "customer")
     private List<Order> orders = new ArrayList<>();
     ...
     }
@@ -233,6 +233,7 @@ Order entity has multiple Items and Item can be included in different orders:
     private Date date;
     Decimal amount;
     @ManyToMany
+
     @JoinTable(name="ORDER_ITEM",
     joinColumns=@JoinColumn(name="ORDER_ID"),
     inverseJoinColumns=@JoinColumn(name="ITEM_ID"))
@@ -246,7 +247,7 @@ Order entity has multiple Items and Item can be included in different orders:
     @GeneratedValue
     private Long id;
     private String name;
-    @ManyToMany(mappedBy = "order")
+    @ManyToMany(mappedBy = "orders")
     private Set<Order> orders = new HashSet<>();
     ...
     }
