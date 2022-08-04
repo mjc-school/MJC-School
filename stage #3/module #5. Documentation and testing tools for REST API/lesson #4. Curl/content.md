@@ -66,3 +66,5 @@ Use DELETE with the -X option:
 > curl -X DELETE http://localhost:8082/
 
 The main disadvantage and at the same time the main advantage of curl is the lack of a GUI.
+
+More information here https://www.baeldung.com/curl-rest.

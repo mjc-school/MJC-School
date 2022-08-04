@@ -45,7 +45,7 @@ The following diagram shows a high-level view of how Spring works. Your applicat
 configuration metadata so that, after the `ApplicationContext` is created and initialized, you have a fully configured
 and executable system or application.
 
-![Spring IoC Container](./media/spring-container.png)
+![Spring IoC Container](media/spring-container.png)
 
 ## Configuration Metadata
 

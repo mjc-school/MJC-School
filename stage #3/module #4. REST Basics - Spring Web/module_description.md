@@ -9,4 +9,3 @@ This module provides basic patterns, principles and approaches that can be appli
 * Spring MVC
 * Spring REST
 * Exception Handling
-* REST API Tools for Testing, Design, and Development

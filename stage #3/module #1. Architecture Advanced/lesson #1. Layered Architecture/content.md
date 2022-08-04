@@ -8,14 +8,14 @@ Although the layered architecture pattern does not specify the number and types 
 
 In some cases, the business layer and persistence layer are combined into a single business layer, particularly when the persistence logic (e.g. SQL or HSQL) is embedded within the business layer components. Thus, smaller applications may have only three layers, whereas larger and more complex business applications may contain five or more layers.
 
-![](./media/layered_architecture.png "Layered Architecture")
+![](media/layered_architecture.png "Layered Architecture")
 
 One of the powerful features of the layered architecture pattern is the separation of concerns among components. Components within a specific layer deal only with logic that pertains to that layer. For example, components in the presentation layer deal only with presentation logic, whereas components residing in the business layer deal only with business logic. This type of component classification makes it easy to build effective roles and responsibility models into architecture, and also makes it easy to develop, test and maintain applications.
 
 ## Key Concepts
 Each level in the architecture marked as closed. This is a very important concept in the layered architecture pattern. A closed layer means that as a request moves from layer to layer, it must go through the layer right below it to get to the next layer below that one. For example, a request originating from the presentation layer must first go through the business layer and then to the persistence layer before finally hitting the database layer. 
 
-![](./media/layered_architecture_isolation.png "Isolation layered Architecture")
+![](media/layered_architecture_isolation.png "Isolation layered Architecture")
 
 So why not allow the presentation layer direct access to either the persistence layer or database layer? After all, direct database access from the presentation layer is much faster than going through a bunch of unnecessary layers just to retrieve or save database information. The answer to this question lies in a key concept known as **_layers of isolation_**.
 
@@ -27,7 +27,7 @@ Sometimes there are cases when layers can be opened and called directly, but we 
 ## Pattern Example
 Consider a request from a business user to get customer information for a specific person.
 
-![](./media/pattern_example.png "Pattern example")
+![](media/pattern_example.png "Pattern example")
 
 The customer screen is responsible for accepting the request and displaying the customer information. It does not know where the data is, how it is retrieved, or how many database tables must be queries to get the data. 
 

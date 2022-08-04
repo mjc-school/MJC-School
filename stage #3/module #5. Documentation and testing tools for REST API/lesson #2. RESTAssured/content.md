@@ -184,3 +184,5 @@ public class RestAssuredAPITest {
     }
 }
 ```
+
+More information here https://www.toolsqa.com/rest-assured/rest-assured-library/.

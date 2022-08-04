@@ -24,7 +24,7 @@ The major Swagger tools include:
 
 Here is a sample OpenAPI document in the Swagger Editor:
 
-![](./media/a_sample_open_api_document_in_the_swagger_editor.png "A sample OpenAPI document in the Swagger Editor")
+![](media/a_sample_open_api_document_in_the_swagger_editor.png "A sample OpenAPI document in the Swagger Editor")
 
 ## Swagger in Action
 
@@ -66,7 +66,7 @@ Since we have enabled Swagger, let us see the documentation of our API endpoints
 
 http://localhost:8080/swagger-ui.html#/news-controller
 
-![](./media/swagger_default_documentation.png "Swagger default documentation")
+![](media/swagger_default_documentation.png "Swagger default documentation")
 
 Here, Swagger has put together the following information:
 
@@ -168,7 +168,7 @@ http://localhost:8080/swagger-ui.html#/news-controller
 
 Here, you can see the same REST API documentation as above, so you can find here the information about response with HTTP response codes:
 
-![](./media/api_documentation_with_http_response_code.png "API documentation with HTTP response code")
+![](media/api_documentation_with_http_response_code.png "API documentation with HTTP response code")
 
 ## Swagger Editor
 Swagger generates the documentation in the JSON file format adhering to the OpenAPI specification. We can share this JSON file with the consumers and they can read the endpoint information, generate client and server stubs.
@@ -179,7 +179,7 @@ http://localhost:8080/v2/api-docs
 
 This JSON document conforms OpenAPI specification and can be accessed through Swagger Editor as shown below:
 
-![](./media/api_document_in_swagger_editor.png "API Document in Swagger Editor")
+![](media/api_document_in_swagger_editor.png "API Document in Swagger Editor")
 
 Here, you can view the description of your application API endpoints and all other related metadata such as model structure, data types and so on.
 
