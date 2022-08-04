@@ -1,8 +1,8 @@
-<H1 style="color: green">JMeter for testing REST API</h1>
+# JMeter for testing REST API
 
 Apache JMeter is one of the most popular, open-source software for REST API and performance testing. In order to Perform API Testing in JMeter, you have to download and install the tool in your system.
 
-**Steps to Perform API Testing in JMeter**
+## Steps to Perform API Testing in JMeter
 * Firstly, you have to start your JMeter and select the **Test Plan**.
 * Next, Right click on the Test Plan and add a **Thread Group**.
 

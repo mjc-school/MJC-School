@@ -3,7 +3,6 @@
 This module provides basic concepts of the Spring framework.
 
 ## Contents
-
 * Spring pros and cons
 * Spring Architecture
 * IOC Container

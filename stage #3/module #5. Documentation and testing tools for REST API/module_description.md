@@ -5,8 +5,7 @@ These REST API documentation and testing tools will help you to test your APIs a
 You can also use these tools to interact with your REST API during the development phase for quick tests.
 
 ## Contents
-
-* Swagger
+* Swagger and OpenAPI
 * RESTAssured
 * Postman
 * Curl

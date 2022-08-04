@@ -1,4 +1,12 @@
-<H1 style="color: green">MVC (Model–view–controller)</h1>
+# MVC (Model–view–controller)
+
+## Materials
++ Pattern Description
++ Key Concepts
++ Pattern Example
++ Advantages
++ Disadvantages
++ Summary
 
 ## Pattern Description
 
@@ -17,7 +25,7 @@ MVC stands for model-view-controller. Here's what each of those components mean:
 
 The concept of MVCs was first introduced by Trygve Reenskaug, who proposed it as a way to develop desktop application [GUIs](https://folk.universitetetioslo.no/trygver/themes/mvc/mvc-index.html).
 
-## Basic concepts
+## Key concepts
 ### Separation of Concerns
 
 MVC design allows for Separation of Concerns - dividing the logic up between the 3 buckets, so that each bucket can act independently.

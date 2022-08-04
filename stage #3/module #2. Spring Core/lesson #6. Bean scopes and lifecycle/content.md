@@ -1,4 +1,8 @@
-<h1 style="color: green">Bean scopes and lifecycle</h1>
+# Bean scopes and lifecycle
+
+## Materials
++ Spring Bean Scopes
+  + The Lifecycle of Spring Beans
 
 ## Spring Bean Scopes
 
@@ -374,14 +378,14 @@ public class MyBean implements ApplicationContextAware {
 }
 ```
 
-#### Custom `init` and `destroy` methods
+#### Custom init and destroy methods
 
 We can add the default `init` and `destroy` methods in two ways:
 
 * Local definitions applicable to a single bean
 * Global definitions applicable to all beans defined in whole beans context
 
-##### Local definitions
+**Local definitions**
 
 The local `init` and `destroy` methods are configured as in the given example:
 
@@ -392,7 +396,7 @@ The local `init` and `destroy` methods are configured as in the given example:
 </beans>
 ```
 
-##### Global definitions
+**Global definitions**
 
 The container will invoke the global methods for all bean definitions given under <beans> tag. Global overrides are
 helpful when we have a pattern of defining common method names such as `init` and `destroy` for all the beans

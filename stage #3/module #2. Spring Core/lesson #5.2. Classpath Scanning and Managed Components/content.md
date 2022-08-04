@@ -1,5 +1,17 @@
-<h1 style="color: green">Classpath Scanning and Managed Components</h1>
+# Classpath Scanning and Managed Components
 
+## Materials
++ Overview
++ @Component and Further Stereotype Annotations
++ Using Meta-annotations and Composed Annotations
++ Automatically Detecting Classes and Registering Bean Definitions
++ Using Filters to Customize Scanning
++ Naming Autodetected Components
++ Providing a Scope for Autodetected Components
++ Providing Qualifier Metadata with Annotations
+
+
+## Overview
 Annotation-based Container Configuration demonstrates how to provide a lot of the configuration metadata through
 source-level annotations, however, the "base" bean definitions are explicitly defined in the XML file, while the
 annotations drive only the dependency injection. Here we describe an option for implicitly detecting the candidate
@@ -8,7 +20,7 @@ corresponding bean definition registered with the container. This removes the ne
 registration. Instead, you can use annotations (for example, `@Component`), AspectJ type expressions, or your own custom
 filter criteria to select which classes have bean definitions registered with the container.
 
-## `@Component` and Further Stereotype Annotations
+## @Component and Further Stereotype Annotations
 
 Spring provides further stereotype annotations: `@Component`, `@Service`, and `@Controller`. `@Component` is a generic
 stereotype for any Spring-managed component. `@Repository`, `@Service`, and `@Controller` are specializations

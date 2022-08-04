@@ -1,5 +1,14 @@
-<H1 style="color: green">Swagger and OpenAPI</h1>
+# Swagger and OpenAPI
 
+## Materials
++ Overview
++ OpenAPI Specification
++ Swagger
++ Swagger in Action
++ Swagger Editor
++ Stubbing with Swagger Codegen
+
+## Overview
 **Swagger and OpenAPI specification** lets you design and develop REST APIs in an effortless and seamless manner. These specifications allow describing the structure of an entire REST API so that machines can read and mock them.
 
 ## OpenAPI Specification

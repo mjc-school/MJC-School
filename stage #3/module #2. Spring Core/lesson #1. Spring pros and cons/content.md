@@ -1,4 +1,4 @@
-<h1 style="color: green">Spring proc and cons</h1>
+# Spring proc and cons
 
 The Spring framework makes Java programming quicker, easier, and safer for everybody. Its simplicity, speed, and
 productivity made it the most popular framework in the world. There are a lot of tools that come with the Spring

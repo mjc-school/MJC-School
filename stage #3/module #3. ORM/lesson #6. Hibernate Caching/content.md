@@ -1,11 +1,12 @@
-# 6. Hibernate Caching
-## Materials
-* 6.1. Overview
-* 6.2. First Level Cache
-* 6.3. Second Level Cache
-* 6.4. Query Level Cache
+# Hibernate Caching
 
-### 6.1. Overview
+## Materials
++ Overview
++ First Level Cache
++ Second Level Cache
++ Query Level Cache
+
+## Overview
 
 Caching is a feature that is being used in applications to improve the performance. Cache is positioned between the
 database and the application and usually the data of database queries gets cached (local copy) in disk or memory so that
@@ -17,13 +18,14 @@ Hibernate cache is 3 levels of caching:
 * Second-level cache (Second-level cache);
 * Query cache;
 
-### 6.2. First Level Cache
+## First Level Cache
 Hibernate first level cache is associated with the **Session object**. Hibernate first level cache is enabled by default
 and there is no way to disable it. However hibernate provides methods through which we can delete selected objects from
 the cache or clear the cache completely.
 Any object cached in a session will not be visible to other sessions and when the session is closed, all the cached 
 objects will also be lost.
-### 6.3. Second Level Cache
+
+## Second Level Cache
 Second level cache can be enabled for a process or cluster scope. In this cache the state of a persistent object is 
 stored (in a disassembled) form and not as a complete instance. Second level cache is optional and can be configured
 to cache at a class, collection level.
@@ -88,7 +90,8 @@ returning the response it will store that object/data into first-level also so n
 session-level. When data is not found in the second level then it will go to the database to fetch data. Before 
 returning a response to the user it will store that object/data into both levels of cache so next time it will be 
 available at cache stages only.
-### 6.4. Query Level Cache
+
+## Query Level Cache
 By default the data of  HQL queries are not cached. If application fires HQL statement in the same or different session,
 multiple times, then data of the query can be cached.
 

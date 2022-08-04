@@ -1,5 +1,13 @@
-<h1 style="color: green">Java-based Container Configuration</h1>
+# Java-based Container Configuration
 
+## Materials
++ Overview
++ Instantiating the Spring Container by Using AnnotationConfigApplicationContext
++ @Bean
++ @Configuration
++ Composing Java-based Configurations
+
+## Overview
 The central artifacts in Spring's Java-configuration support are `@Configuration`-annotated classes and
 `@Bean`-annotated methods.
 
@@ -12,7 +20,7 @@ Annotating a class with `@Configuration` indicates that its primary purpose is a
 Furthermore, `@Configuration` classes let inter-bean dependencies be defined by calling other `@Bean` methods in the
 same class.
 
-## Instantiating the Spring Container by Using `AnnotationConfigApplicationContext`
+## Instantiating the Spring Container by Using AnnotationConfigApplicationContext
 
 When `@Configuration` classes are provided as input, the `@Configuration` class itself is registered as a bean
 definition and all declared `@Bean` methods within the class are also registered as bean definitions.

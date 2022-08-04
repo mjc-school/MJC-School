@@ -1,4 +1,4 @@
-<H1 style="color: green">REST Assured</h1>
+# REST Assured
 
 This is a series of Rest Assured Tutorial which is one of the most used library for REST API Automation Testing. Rest-Assured is a Java-based library that is used to test RESTful Web Services. This library behaves like a headless Client to access REST web services. You can create highly customize-able HTTP Requests to send to the Restful server. This enables you to test a wide variety of Request combinations and in turn test different combinations of core business logic.
 

@@ -1,11 +1,12 @@
-# 7. N+1 problem in Hibernate
-## Materials
-* 7.1. Overview
-* 7.2. FetchType.LAZY as a solution
-* 7.3. Solution 
-* 7.4. Why you should avoid N+1 problems?
+# N+1 problem in Hibernate
 
-### 7.1. Overview
+## Materials
++ Overview
++ FetchType.LAZY as a solution
++ Solution 
++ Why you should avoid N+1 problems?
+
+## Overview
 
 N+1 problem is a performance issue in Object Relational Mapping that fires multiple select queries (N+1 to be exact,
 where N = number of records in table) in database for a single select query at application layer. 
@@ -78,7 +79,7 @@ table and the records of the matched ORDERS table in a select statement.
 2) When the application logic only needs to access the Customer object without accessing the Order object,
 loading the Order object is completely redundant operation. These redundant Order objects waste a lot of memory space.
 
-### 7.2.FetchType.LAZY as a solution
+## FetchType.LAZY as a solution
 At initial thought, you can lazy load the child. So to do this set the annotation as @ManyToOne(fetch = FetchType.LAZY).
 Under the hood, lazy loading creates proxy objects for child objects. As and when we access the child objects, hibernate
 will fire the queries and load them. With that being said, this may look like a good idea, but lazy loading is not 
@@ -100,14 +101,14 @@ This is due to the underlying logic behind lazy loading. When lazy loading is en
 for the orders fields. When the order field is accessed, hibernate will fill the proxy with values from the 
 database. Yes, a query will still happen for each Customer object.
 
-### 7.3. Solution
+## Solution
 So how do we solve the N+1 problem? For this, we need to get back to some basics of SQL. When we have to load data from
 two separate tables, we can use joins. So instead of using multiple queries, we can write a single query like below.
 
     select * from CUSTOMERS left outer join ORDERS
     on CUSTOMERS.ID=ORDERS.CUSTOMER_ID
 
-### 7.4. Why you should avoid N+1 problems?
+## Why you should avoid N+1 problems?
 The reasons:
 
 1) N+1 problems create more queries to database. This means database will be overloaded.

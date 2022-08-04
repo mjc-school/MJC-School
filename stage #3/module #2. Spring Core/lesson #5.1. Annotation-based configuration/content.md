@@ -1,5 +1,15 @@
-<h1 style="color: green">Annotation-based Container Configuration</h1>
+# Annotation-based Container Configuration
 
+## Materials
++ Overview
++ @Required
++ @Autowired
++ Annotation-based Autowiring with Qualifiers
++ @Resource
++ @Value
++ @PostConstruct and @PreDestroy
+
+## Overview
 Annotation-based configuration relies on the bytecode metadata for wiring up components. Instead of using XML to
 describe a bean wiring, developer moves the configuration into the component class itself by using annotations on the
 relevant class, method, or field declaration. Using a BeanPostProcessor in conjunction with annotations is a common
