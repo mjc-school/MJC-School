@@ -1,7 +1,7 @@
 # String (java.lang.String)
 
 ## Overview
-The String class represents sequences of characters.
+The String class represents character strings.
 
 **For example:**
 ```
@@ -12,14 +12,14 @@ The String class represents sequences of characters.
 
 **Creation**
 
-Strings could be created in two ways:
+**Strings could be created in two ways:**
 
-Declaring String variable and assigning a value to it (value in double quotes is called string literal):
+1. Declaring String variable and assigning a value to it (value in double quotes is called string literal):
 ```
   String str1 = "Autumn";
 ```
 
-With new keyword (i.e. calling a constructor):
+2. With new keyword (i.e. calling a constructor):
 ```
   String str2 = new String("Winter");
   
