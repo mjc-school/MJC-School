@@ -38,13 +38,14 @@ User Permissions:
         * Signup.
         * Login.
      - User:
-        * All read operations.
+        * All operations for guest.
         * Addition of news, comments.
      - Administrator (can be added only via database call):
-        * All operations, including addition and modification of entities.
+        * All operations for users.
+        * Addition and modification of entities.
 
-4. Get acquainted with the concepts Oauth2 and OpenId Connect
-5. (Optional task) Use Oauth2 as an authorization protocol.
+4. Get acquainted with the concepts OAuth2 and OpenId Connect
+5. (Optional task) Use OAuth2 as an authorization protocol.
     a. OAuth2 scopes should be used to restrict data.
     b. Implicit grant and Resource owner credentials grant should be implemented.
 6. (Optional task) It's allowed to use Spring Data. Requirement for this task - all repository (and existing ones) should be migrated to Spring Data.
