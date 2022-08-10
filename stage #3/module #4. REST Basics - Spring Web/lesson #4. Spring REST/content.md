@@ -104,8 +104,9 @@ A class annotated with @Configuration annotation shows that this can be used by 
 The new **@EnableWebMvc annotation** does some useful things – specifically, in the case of REST,
 it detects the existence of Jackson and JAXB 2 on the classpath and automatically creates and registers default JSON and XML converters.
 The functionality of the annotation is equivalent to the XML version:
-> <mvc:annotation-driven />
-
+````xml
+<mvc:annotation-driven />
+````
 **@ComponentScan annotation** with **@Configuration classes** enables Spring to scan all classes through the package and will register all beans and controller for our application.
 
 `The WebConfig class` shown above will set up the basic support you need for a spring web project, such as registering controllers and mappings, type converters, validation support,
@@ -255,7 +256,7 @@ Accept: application/vnd.javadevjournal+json;version=1.0
 It is important to understand here is that the client makes no assumptions about the structure of the response
 beyond what it define in the media type.
 The response:
-```
+```json
 ############## GET Request for Products ##############
 GET /products/228781 HTTP/1.1
 Accept: application/vnd.javadevjournal.v1+json
@@ -264,11 +265,11 @@ Accept: application/vnd.javadevjournal.v1+json
 HTTP/1.1 200 OK
 Content-Type: application/vnd.javadevjournal.v1+json
 {
-"product": {
-"code": "228781",
-"name": "Running shoes",
-"description": "one of the best running shoes"
-}
+   "product": {
+      "code": "228781",
+      "name": "Running shoes",
+      "description": "one of the best running shoes"
+   }
 }
 ```
 
@@ -336,35 +337,43 @@ The example of REST controller with pagination and sorting:
 @RequestMapper("/books")
 public class BookController {
 
- @Autowired
- private BookService bookService;
+   @Autowired
+   private BookService bookService;
+   
+   @Autowired
+   private BookMapper bookMapper;
+   
+   @Autowired 
+   private EntityLinks links;
 
- @Autowired
- private BookMapper bookMapper;
+   @GetMapping
+   public ResponseEntity<PagedResources<BookDTO>> getAllBooks(
+            @Min(1) @RequestParam int page, 
+            @RequestParam(required = false, defaultValue = "10") int size, 
+            @RequestParam(name = "sort_by", required = false, defaultValue = "title::asc") String sortBy, 
+            PagedResourcesAssembler assembler) {
+      Page<BookDTO> bookDTOPage = bookMapper.mapToBookDTOPage(bookService.findAllBooks(page, size, sortBy));
+      PagedResources<BookDTO> bookDTOResources = 
+              assembler.toResource(bookDTOPage, linkTo(BookController.class).slash("/books").withSelfRel());
+      HttpHeaders responseHeaders = new HttpHeaders();
+      responseHeaders.add("Link", createLinkHeader(bookDTOResources));
+      return new ResponseEntity<>(
+              assembler.toResource(products, linkTo(BookController.class).slash("/books").withSelfRel()), 
+              responseHeaders, 
+              HttpStatus.OK);
+   }
 
- @Autowired 
- private EntityLinks links;
+   private String createLinkHeader(PagedResources<BookDTO> bookDTOResources) {
+      final StringBuilder linkHeader = new StringBuilder();
+      linkHeader.append(buildLinkHeader(bookDTOResources.getLinks("first").get(0).getHref(), "first"));
+      linkHeader.append(", ");
+      linkHeader.append(buildLinkHeader(bookDTOResources.getLinks("next").get(0).getHref(), "next"));
+      return linkHeader.toString();
+   }
 
- @GetMapping
- public ResponseEntity<PagedResources<BookDTO>> getAllBooks(@Min(1) @RequestParam int page, @RequestParam(required = false, defaultValue = "10") int size, @RequestParam(name = "sort_by", required = false, defaultValue = "title::asc") String sortBy, PagedResourcesAssembler assembler) {
-  Page<BookDTO> bookDTOPage = bookMapper.mapToBookDTOPage(bookService.findAllBooks(page, size, sortBy));
-  PagedResources<BookDTO> bookDTOResources = assembler.toResource(bookDTOPage, linkTo(BookController.class).slash("/books").withSelfRel());
-  HttpHeaders responseHeaders = new HttpHeaders();
-  responseHeaders.add("Link", createLinkHeader(bookDTOResources));
-  return new ResponseEntity<>(assembler.toResource(products, linkTo(BookController.class).slash("/books").withSelfRel()), responseHeaders, HttpStatus.OK);
- }
-
- private String createLinkHeader(PagedResources < BookDTO > bookDTOResources) {
-  final StringBuilder linkHeader = new StringBuilder();
-  linkHeader.append(buildLinkHeader(bookDTOResources.getLinks("first").get(0).getHref(), "first"));
-  linkHeader.append(", ");
-  linkHeader.append(buildLinkHeader(bookDTOResources.getLinks("next").get(0).getHref(), "next"));
-  return linkHeader.toString();
- }
-
- public static String buildLinkHeader(final String uri, final String rel) {
-  return "<" + uri + ">; rel=\"" + rel + "\"";
- }
+   public static String buildLinkHeader(final String uri, final String rel) {
+      return "<" + uri + ">; rel=\"" + rel + "\"";
+   }
 }
 ```
 Each paged response will return links to the `previous and next pages` of results based on the current page using the IANA defined link relations `prev and next`.
@@ -374,7 +383,7 @@ Let’s look at the following uri example:
 http://host:port/books?page=1&size=20&sort_by=title::asc
 ```
 The response example:
-```
+```json
 {
     "_embedded": {
         "bookDTO": [

@@ -16,7 +16,7 @@ Postman-level automation allows you to perform the following test steps:
 * Download test data from file
 * Create a lot of data with unique values
 
-![](./media/Postman1.png "Sending Get request using Postman")
+![](./media/Postman1.jpg "Sending Get request using Postman")
 
 It is also very easy and understandable to use the menu to select the type of request.
 

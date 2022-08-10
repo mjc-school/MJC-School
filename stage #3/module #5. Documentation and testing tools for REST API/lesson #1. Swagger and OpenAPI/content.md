@@ -38,12 +38,12 @@ Here is a sample OpenAPI document in the Swagger Editor:
 ## Swagger in Action
 
 To enable Swagger in a RESTful application you should add the following dependencies:
-
-> implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
+```groovy
+implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
 implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+```
 
 Add Swagger configuration in a separate configuration class:
-
 ```Java
 @Configuration
 @EnableSwagger2

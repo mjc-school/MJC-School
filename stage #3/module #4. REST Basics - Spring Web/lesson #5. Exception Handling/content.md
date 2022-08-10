@@ -2,7 +2,7 @@
 
 ## Materials
 + Solution 1: Controller-Level @ExceptionHandler
-+ Solution 2: the HandlerExceptionResolver
++ Solution 2: HandlerExceptionResolver
 + Solution 3: @ControllerAdvice
 + Solution 4: ResponseStatusException
 
@@ -30,7 +30,7 @@ We can work around this limitation by having all Controllers extend a Base Contr
 However, this solution can be a problem for applications where, for whatever reason, that isn't possible. 
 For example, the Controllers may already extend from another base class, which may be in another jar or not directly modifiable, or may themselves not be directly modifiable.
 
-## Solution 2: the HandlerExceptionResolver
+## Solution 2: HandlerExceptionResolver
 This solution is to define an HandlerExceptionResolver. This will resolve any exception thrown by the application. It will also allow us to implement _**a uniform exception handling mechanism**_ in our REST API.
 Let's consider the existing implementations of ExceptionResolvers.
 
@@ -64,16 +64,14 @@ This enables a mechanism that breaks away from the older MVC model and makes use
 with the type safety and flexibility of @ExceptionHandler:
 ```Java
 @ControllerAdvice
-public class RestResponseEntityExceptionHandler 
-  extends ResponseEntityExceptionHandler {
-    @ExceptionHandler(value 
-      = { IllegalArgumentException.class, IllegalStateException.class })
-    protected ResponseEntity<Object> handleConflict(
-      RuntimeException ex, WebRequest request) {
-        String bodyOfErrorResponse = "Argument or State of resource hase a illegal value.";
-        return handleExceptionInternal(ex, bodyOfErrorResponse, 
-          new HttpHeaders(), HttpStatus.CONFLICT, request);
-    }
+public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+  
+  @ExceptionHandler(value = {IllegalArgumentException.class, IllegalStateException.class})
+  protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
+    String bodyOfErrorResponse = "Argument or State of resource hase a illegal value.";
+    return handleExceptionInternal(ex, bodyOfErrorResponse,
+            new HttpHeaders(), HttpStatus.CONFLICT, request);
+  }
 }
 ```
 The @ControllerAdvice annotation allows us to _**consolidate our multiple, scattered @ExceptionHandlers from before into a single, global error handling component**_.
@@ -95,12 +93,9 @@ We can create an instance of it providing an HttpStatus and optionally a reason 
 @GetMapping(value = "/{id}")
 public Book findById(@PathVariable("id") Long id, HttpServletResponse response) {
     try {
-        Book book = RestPreconditions.checkFound(service.findOne(id));
-        return book;
-     }
-    catch (CustomResourceNotFoundException exc) {
-         throw new ResponseStatusException(
-           HttpStatus.NOT_FOUND, "Book Not Found", exc);
+        return RestPreconditions.checkFound(service.findOne(id));
+    } catch (CustomResourceNotFoundException exc) {
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Book Not Found", exc);
     }
 }
 ```

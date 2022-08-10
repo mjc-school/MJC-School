@@ -56,10 +56,10 @@ It would not matter if the method is called only once, or ten times over.
 NOTE: POST is neither safe nor idempotent.
 <br>Example:<br>
     
-    ```
-    a = 5 // It is Idempotence, as final value(a = 5) would not change after executing it multiple times.
+    ```java
+    a = 5; // It is Idempotence, as final value(a = 5) would not change after executing it multiple times.
      
-    a++ // It is not Idempotence because the final value will depend upon the number of times the statement is executed.
+    a++; // It is not Idempotence because the final value will depend upon the number of times the statement is executed.
     
     ```
 
@@ -68,7 +68,7 @@ A safe method does not change the value that is returned, it reads – but it ne
 For instance, using GET or HEAD on a resource URI, should NEVER change the resource.
 <br>Example:<br>
 
-    ```
+    ```java
     x + 0; //it is idempotent and also safe, as final value x would not change after executing it multiple times.
     
     x = 5; //it is idempotent but is not safe, as original value x could be changed to 5
@@ -93,7 +93,7 @@ REST architectural style let us use the hypermedia links in the API response con
 Navigating hypermedia links is conceptually the same as browsing through web pages by clicking the relevant hyperlinks to achieve a final goal.
 For example, the given below JSON response may be from an API like HTTP GET _http://api.domain.com/management/departments/10_
 
-    ```
+    ```json
     {
         "departmentId": 10,
         "departmentName": "Administration",
@@ -360,7 +360,7 @@ In this case, embed would be a comma separated list of fields to be embedded. Do
     GET /tickets/12?embed=customer.name,assigned_user
     ```
     This would return a ticket with additional details embedded, like:
-    ```
+    ```json
     {
       "id" : 12,
       "subject" : "I have a question!",
@@ -368,9 +368,9 @@ In this case, embed would be a comma separated list of fields to be embedded. Do
       "customer" : {
         "name" : "Bob"
       },
-      assigned_user: {
+      "assigned_user": {
        "id" : 42,
-       "name" : "Jim",
+       "name" : "Jim"
       }
     }
     ```
@@ -394,7 +394,7 @@ but it was unable to process the contained instructions.The Status code is used 
 
  We should be throwing errors that correspond to the problem that our app has encountered. Error codes need to have messages accompanied with them so that the maintainers have enough information to troubleshoot the issue.
  A response error body should provide a few things for the developer - a useful error message, a unique error code (that can be looked up for more details in the docs) and possibly a detailed description. Some examples:
-```
+```json
 {
   "code" : 1234,
   "message" : "Something bad happened :(",
@@ -402,7 +402,7 @@ but it was unable to process the contained instructions.The Status code is used 
 }
  ```
 Validation errors for **PUT, PATCH and POST** requests will _**need a field breakdown**_. This is best modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:
-```
+```json
 {
   "code" : 1024,
   "message" : "Validation Failed",
