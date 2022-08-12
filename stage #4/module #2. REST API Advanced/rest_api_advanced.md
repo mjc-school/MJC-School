@@ -11,6 +11,7 @@
 7. [Java persistence API](https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html)
 8. [Spring transaction management](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/transaction.html)
 9. [Auditing with JPA](https://www.baeldung.com/database-auditing-jpa#auditing)
+10. [Documenting a Spring REST API Using OpenAPI 3.0](https://www.baeldung.com/spring-rest-openapi-documentation)
 
 ## Practice
 
@@ -30,7 +31,7 @@ The recommended timeline for the whole module is 2 weeks.
    * Created, Modified – have ISO 8601 format [wiki: ISO_8601](https://en.wikipedia.org/wiki/ISO_8601). Example: 2018-08-29T06:12:15.156. More discussion here: [stackoverflow: how to get iso 8601](https://stackoverflow.com/questions/3914404/how-to-get-current-moment-in-iso-8601-format-with-date-hour-and-minute).
      
 2. The system should expose REST APIs to perform the following operations:
-   * CUD operations ([what is CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) for News and Comment. If new tags and authors are passed during creation/modification – they should be created in the DB. For update operation – update only fields, that pass in request, others should not be updated. Batch insert is out of scope.
+   * CRUD operations ([what is CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) for News and Comment. If new tags and authors are passed during creation/modification – they should be created in the DB. For update operation – update only fields, that pass in request, others should not be updated. Batch insert is out of scope.
    * Get News:
      * get all
      * by Id
