@@ -206,7 +206,7 @@ Finally, you should be able to see project structure:
 
 It is a typical structure for a Java project using Maven. Let's discuss key points here:
 - `readme.md `- This file usually contains task description, where you can find some details of what should be done and how.
-- `FirstApplication.java` - This file (or similar, but with different naming) contains some basic logic to help you start implementing the task. In this task, you will need to make this file printing `Hello, World!` into the console.
+- `FirstApplication.java` - This file (or similar, but with different naming) contains some basic logic to help you start implementing the task. In this task you will need to make this file printing `Hello, World!` into the console.
 
 After carefully reading all the files and doing needed changes - you will need to publish your solution to GitHub.
 This can be done using IntelliJ IDEA or via Command Prompt.
