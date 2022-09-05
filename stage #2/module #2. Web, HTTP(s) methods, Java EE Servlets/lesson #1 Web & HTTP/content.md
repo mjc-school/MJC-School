@@ -1,4 +1,4 @@
-# Web & HTTP(S)
+    # Web & HTTP(S)
 
 ## Materials
 + Introduction in Web
@@ -63,6 +63,8 @@ Web developers rarely craft these textual HTTP messages themselves: software, we
 
 ## HTTP Request structure
 
+HTTP request consists of three main parts: **start line** (also called **request line**), **header** and **body**, (body is optional).
+
 The start-line of HTTP request contains three elements:
 1. An HTTP method, a verb that describes the action to be performed (like `GET`, `POST`). We'll discuss HTTP methods later.
 2. The request target, usually a URL, or the absolute path of the protocol, port, and domain, that are usually characterized by the request context.
@@ -80,6 +82,8 @@ Many different headers can appear in requests. They can be divided in several gr
 The final part of the request is its body. Not all requests have one:  `GET`, `HEAD`, `DELETE`, or `OPTIONS` requests usually don't need one.
 
 ## HTTP Response structure
+
+HTTP response consists of three main parts: **start line**(also called **status line**), **header** and **body**, (body is optional).
 
 The start line of an HTTP response, called the status line, contains the following information:
 1. Protocol version, usually HTTP/1.1.
