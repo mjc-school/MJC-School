@@ -1,4 +1,14 @@
 # GIT & Build Tools
 
-## Timeline
-The recommended timeline for the whole module is 3 days.
+## Contents
++ Git
+  + Intro
+  + Version Control System
+  + Git Basics
+  + Practise
+    
++ Build Tools
+  + Intro
+  + Maven Basics
+  + Gradle Basics
+  + Practise

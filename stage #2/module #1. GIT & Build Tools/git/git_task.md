@@ -3,18 +3,16 @@
 ## Materials
 1. [The most useful git commands](https://orga.cat/posts/most-useful-git-commands)
 2. [Vim](https://docs.oracle.com/cd/E19683-01/806-7612/editorvi-5/index.html)
-3. [Official resource to learn git](https://git-scm.com/doc)
-4. [Git online sandbox](https://learngitbranching.js.org/)
 
 ## Practice
 
 ### Task 1
-We are going to set up simple git branching strategy.
+We are going to set up a simple git branching strategy.
 
-1. Create empty git repository with *<span class="underline">git init</span>* command. Also read up about --bare option and bare repositories themselves.
+1. Create an empty git repository with *<span class="underline">git init</span>* command. Also read up about --bare option and [bare repositories](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) themselves.
 ![](media/image1.png)
 
-2. Let us create new file with *<span class="underline">touch README.md</span>* command.
+2. Let us create a new file with *<span class="underline">touch [README.md](https://www.geeksforgeeks.org/what-is-readme-md-file/) </span>* command.
 ![](media/image2.png)
 
 3. To modify the existing file, we will use VIM text editor. This editor is widely used for rebasing and other git activities so every developer should get used to it. Type vim README.md command to open vim text editor. Press letter *<span class="underline">i</span>* to enter the insert mode. Type in “Hello World” or something you like. Press *<span class="underline">escape</span>* on the keyboard to exit from insert mode and go to the command mode. In the command mode press *<span class="underline">shift + ZZ</span>* to save current file and exit.
@@ -55,7 +53,7 @@ From this picture you can see that the HEAD is currently looking at the master�
 ### Task 2
 
 #### Part 1
-We are going to practice some skills obtained in the previous task. If you come across something you still don’t know, please use links provided in the descriptions, internet search, other mentees and you mentor as sources of knowledge and help.
+We are going to practice some skills obtained in the previous task. If you come across something you still don’t know, please use links provided in the descriptions, internet search, other students as sources of knowledge and help.
 For this task you will create two separate branches ***git\_1*** and ***git\_2*** in your remote repository and local <span class="underline">tracked</span> branches with same names. Both these branches should be made of the ***git\_task*** branch.
 1. ***git\_1***: Add and commit *firstFile.txt* file with 10 lines.
 2. ***git\_1***: Add and commit *secondFile.txt* file with 10 lines.
@@ -88,17 +86,9 @@ For this task you should learn how to use **interactive rebase**, thus other way
 2. Add new empty file *doubtingFile.txt* and commit it.
 3. Add a line to a file and commit changes. Do it 5 times. You should end up with 5 lines in a file and 6 commits: 1 for creating an empty file and 5 for adding a line.
 4. Check you log and copy it somewhere.
-5. Launch interactive rebase for 5 last commits, squash all the latest commits into the first one. Reword first commit. You should end up with 2 commits: 1 for creating an empty file and second for adding 5 lines. Second commit should have new commit message.
+5. Launch interactive rebase for 5 last commits, squash all the latest commits into the first one. Reword first commit. You should end up with 2 commits: 1 for creating an empty file and second for adding 5 lines. Second commit should have a new commit message.
 6. Check you log and compare it with the previous one. Look at the hash, date, commit message. Explain what changed and why.
-7. Check you reflog. Explain to you mentor what you can see and why.
-
-## Demo
-
-### Practical Part
-Mentee should be able to demonstrate Task 2 on demo session.
-
-### Theoretical Part
-Mentee should be able to answer questions during demo session.
+7. Check you reflog. Explain to what you can see and why.
 
 ## Extra Materials
 
@@ -106,8 +96,4 @@ Mentee should be able to answer questions during demo session.
 2. [Vim commands cheat sheet](https://www.fprintf.net/vimCheatSheet.html)
 3. [Basic Vim commands - For getting started](https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started)
 4. [vim adventures](https://vim-adventures.com/)
-5. [Version Control with Git](https://swcarpentry.github.io/git-novice/)
-6. [Git optional](https://try.github.io/)
-7. [Git videos](https://youtu.be/jUlT-zQ-mbk)
-8. [10-minutes git concepts video](https://youtu.be/8KCQe9Pm1kg)
-9. [Mastering git](https://youtu.be/ZgCCnv9LxzA)
+5. [Introduction to Git - Branching and Merging](https://www.youtube.com/watch?v=FyAAIHHClqI)
