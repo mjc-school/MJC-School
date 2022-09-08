@@ -58,31 +58,51 @@ Let's create a simple application with a servlet.
             }
         }
 
-3. To run the application, create a Tomcat configuration:
+3. Deploy your application within Tomcat. We only describe two specific cases, but all different situations are covered [here](https://www.baeldung.com/tomcat-deploy-war). 
+        
+    ### Setup deployment within IntelliJ IDEA Ultimate
 
-![add configuration](media/add_config.png)
+    1. To run the application, create a Tomcat configuration:
 
-![add configuration 2](media/add_config_2.png)
+     ![add configuration](media/add_config.png)
 
-4. Next, specify which version of Tomcat you will use, the URL where you can access the server and the port. You should end up with something like this:
+     ![add configuration 2](media/add_config_2.png)
 
-![configuration](media/config.png)
+    2. Next, specify which version of Tomcat you will use, the URL where you can access the server and the port. You should end up with something like this:
 
-5. It remains to specify the artifact (the assembled project in the jar archive), which will be deployed in the container. You can click the Fix button and select war exploded: this means that after rebuilding the project, the artifact will be automatically placed in the servlet container.
+    ![configuration](media/config.png)
 
-![configuration 2](media/artifact.png)   
+    3. It remains to specify the artifact (the assembled project in the jar archive), which will be deployed in the container. You can click the Fix button and select war exploded: this means that after rebuilding the project, the artifact will be automatically placed in the servlet container.
 
-The application context is servlets_war_exploded by default, which means that the application must be accessed at: http://localhost:8080/servlets_war_exploded.
+    ![configuration 2](media/artifact.png)   
 
-You may change application context in Development tab.
+    The application context is servlets_war_exploded by default, which means that the application must be accessed at: http://localhost:8080/servlets_war_exploded.
 
-![app context.png](media/app_context.png)
+    You may change application context in Development tab.
 
-6. Then click OK and see that now you have the ability to launch the application:
+    ![app context.png](media/app_context.png)
 
-![launch btn.png](media/launch_btn.png)
 
-7. Add /hello to the opened url and get the expected response - the string “Hello”!
+    4. Then click OK and see that now you have the ability to launch the application:
+
+    ![launch btn.png](media/launch_btn.png)
+    
+    ### Manual deployment to Tomcat
+
+    1. Build your war by running `mvn clean package`. It will be saved in `target` folder.
+   
+    2. Start Tomcat using `.bat` or `.sh` file from `bin` directory inside your Tomcat installation.
+   
+    3. Go to `localhost:8080/manager`. You should see Application Manager GUI.
+
+    ![tomcat.png](media/tomcat.png)
+
+    4. Click "Choose file" and select your `.war` file, then click "Deploy".
+
+    5. Click "Start" in the table near your deployed war.
+    <br>
+
+4. Add /hello to the url and get the expected response - the string “Hello”!
 
 Then try to improve your servlet to work with sessions, cookies, filters and listeners.
 
