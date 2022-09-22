@@ -86,7 +86,7 @@ Constructors of **String**:
 String is Immutable class: It means, that String object cannot be changed after creation. However, a new value can be assigned to the String reference
 
 ```
-  String a = "a';
+  String a = "a";
   Stirng b = "b";
   
   a = b; // references a and b now both point to String object with value "b". 
@@ -104,7 +104,7 @@ Concatenation operator '+': In Java, plus operator support String operands. If o
     String text2 = text1 + ": ";      
                                       // text2 is "Message: "
     
-    String text3 = text1 + 12         // 12 is converted to "12"         
+    String text3 = text2 + 12         // 12 is converted to "12"         
                                       // text3 is "Message: 12"
 ```
 
