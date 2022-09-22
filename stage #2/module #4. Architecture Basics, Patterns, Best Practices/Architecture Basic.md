@@ -1,4 +1,4 @@
-# Architecture Basics, Creational Design Patterns
+# Architecture Basics
 
 ## Architecture Principles
 
