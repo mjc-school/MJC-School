@@ -17,7 +17,7 @@ increase the performance of code, making it significantly efficient.
 
 ### **1. Use Proper Naming Conventions**
 
-First thing first, before start writing code, 
+First thing, before start writing code, 
 set a proper naming convention for your Java project. Pre-decide names
 for every class, interfaces, methods and variables etc. 
 If other developers are also working with you on the same
@@ -120,9 +120,9 @@ public class Student {
 The problem with this poor design is that anyone can change the values of the fields inappropriately.
 
 ```java
-Student student=new Student();
-        student.name="";
-        student.age=2005;
+Student student = new Student();
+student.name = "";
+student.age = 2005;
 ```
 
 #### _Pattern example:_
