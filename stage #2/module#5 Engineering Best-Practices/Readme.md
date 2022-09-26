@@ -803,18 +803,26 @@ Scanner scanner = null;
         if (scanner != null) {
         scanner.close();
         }
-        }
+}
 ```
 - The code (even in the finally block) that closes the resources shouldn't have any exceptions itself.
 When using Java 7+, we can make use of the try-with-resources block.
-
-#### _Pattern example:_
 ```java
-try (Scanner scanner = new Scanner(new File("test.txt"))) {
+            try(Scanner scanner = new Scanner(new File("test.txt"))) {
         while (scanner.hasNext()) {
         System.out.println(scanner.nextLine());
         }
-        } catch (FileNotFoundException fnfe) {
+        } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        }
+```
+#### _Pattern example:_
+```java
+try(Scanner scanner=new Scanner(new File("test.txt"))){
+        while(scanner.hasNext()){
+        System.out.println(scanner.nextLine());
+        }
+        catch(FileNotFoundException fnfe){
         fnfe.printStackTrace();
         }
 ```
