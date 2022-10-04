@@ -14,7 +14,7 @@
 ### Intro
 
 Software development is a complex process. A lot of people can work on it.
-Before we can see the application it needs to be packaged into a binary executable.The application itself may (and always will) have dependencies (e.g. external JAR files from
+Before we can see the application it needs to be packaged into a binary executable. The application itself may (and always will) have dependencies (e.g. external JAR files from
 other projects to support some features with database and ect.).
 To package an application, we first need to ensure that all dependencies are available, then we need to compile the source files against the dependencies, then run our test cases (
 your code should always be tested), and finally we can package our application.
@@ -248,7 +248,7 @@ Explanation:
 ### Gradle Basics
 
 Gradle is a build automation system that is fully open source and uses the concepts you see on Apache Maven and Apache Ant. It uses domain-specific language based on the
-programming language Groovy,
+programming languages Groovy or Koltin,
 differentiating it from Apache Maven, which uses XML for its project configuration. It also determines the order of tasks run by using
 a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph),
 while Maven is based on a fixed and linear model of phases.
