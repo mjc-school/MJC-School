@@ -34,7 +34,7 @@ responsibility.
 
 Software entities should be open for extension, but closed for modification.
 
-1. **open for extension** - Entity behavior can be extended by creating new entity types
+1. **open for extension** - Entity behavior can be extended by creating new entity types.
 2. **closed for modification** - As a result of extending the behavior of an entity, no changes should be made to the
    code that these entities use.
 
@@ -55,7 +55,7 @@ important to follow this principle when designing new types using inheritance.
 ### Interface segregation principle
 
 1. Variant 1: Many client-specific interfaces are better than one general-purpose interface
-2. Variant 2: clients shouldn't depend on methods they don't use
+2. Variant 2: Clients shouldn't depend on methods they don't use
 
 As with other principles of class design, we try to get rid of unnecessary dependencies in the code, make the code easy
 to read and easily changeable.
@@ -120,7 +120,7 @@ without fear of disrupting the work of others.
 
 - Rigidity - changing one part of the code affects too many other parts;
 - Fragility - even a minor change in the code can lead to completely unexpected problems;
-- Immobility - No part of the application can be easily isolated and reused.
+- Immobility - no part of the application can be easily isolated and reused.
 
 ## KISS, DRY, YAGNI Principles
 
