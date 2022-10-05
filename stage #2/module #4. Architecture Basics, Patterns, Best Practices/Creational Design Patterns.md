@@ -242,30 +242,30 @@ To create a singleton class, a class must implement the following properties:
 ```java
 //Note: This is not thread safe!!!
 public class SingletonObject {
-    private static SingletonObject uniqueInstance;
+    private static SingletonObject instance;
 
     //other useful variables here
     private SingletonObject() {
     }
 
     public static SingletonObject getInstance() {
-        if (uniqueInstance == null) {
-            uniqueInstance = new SingletonObject();
+        if (instance == null) {
+            instance = new SingletonObject();
         }
-        return uniqueInstance;
+        return instance;
     }
     // other useful methods here
 }
 
 //or
 public class SingletonObject {
-    private static SingletonObject uniqueInstance = new SingletonObject();
+    private static SingletonObject instance = new SingletonObject();
 
     private SingletonObject() {
     }
 
     public static SingletonObject getInstance() {
-        return uniqueInstance;
+        return instance;
     }
 }
 
