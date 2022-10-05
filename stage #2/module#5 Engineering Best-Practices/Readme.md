@@ -21,7 +21,7 @@ First thing, before start writing code,
 set a proper naming convention for your Java project. Pre-decide names
 for every class, interfaces, methods and variables etc. 
 If other developers are also working with you on the same
-project, they should also follow it to maintai the uniformity. 
+project, they should also follow it to maintain the uniformity. 
 A meaningful naming convention is extremely important as
 everything, from classes to interfaces are identified from 
 their names in the code.
@@ -53,8 +53,8 @@ public class Мойкласс implements hieih47hfb {
 }
 ```
 
-Code in this class not readable, it's not impossible to understand 
-from variables and method names what it's response for.
+The code in this class is unreadable, it is impossible to understand
+from variables and method names, what they are responsible for.
 
 #### _Pattern example_
 
@@ -568,7 +568,7 @@ the most frequent places where can occur NullPointerException.
  - Using synchronized on an object which is null
  - Chained statements i.e. multiple method calls in a single statement
 
- There are present best ways to Avoid NullPointerException
+ The ways to avoid NullPointerException:
 
  1. Use Ternary Operator
 Ternary operator results in the value on the 
@@ -664,7 +664,7 @@ Users of the above method, even if they missed the null check,
 will not see the ugly NPE.
 
 8. Discourage Passing of null as Method Arguments
-I have seen some method declarations where the method expects 
+We have seen some method declarations where the method expects 
 two or more parameters. If one parameter is passed as null, 
 then also method works in a different manner. Avoid this.
 
@@ -676,7 +676,7 @@ writing application logic inside methods because you are sure that
 method parameters will not be null; so you don’t put unnecessary
 assumptions and assertions.
 
- 9. Call equals() on ‘Safe’ Non-null Stringd
+ 9. Call equals() on ‘Safe’ Non-null Strings
 Instead of writing the below code for string comparison
 
 if (param.equals("check me")) {
@@ -731,7 +731,7 @@ present in the heap that are no longer used, but the garbage
 collector is unable to remove them from memory, and therefore, 
 they're unnecessarily maintained.
  A memory leak is bad because it blocks memory resources and degrades 
-\system performance over time. If not dealt with, the application will 
+system performance over time. If not dealt with, the application will 
 eventually exhaust its resources, finally terminating with a 
 fatal java.lang.OutOfMemoryError.
 There are two different types of objects that reside in Heap memory,
@@ -783,7 +783,7 @@ that lazily loads the object, instead of eagerly loading.
 
 Whenever we make a new connection or open a stream, the JVM allocates memory for these resources. A few examples of this include database connections, input streams, and session objects.
 Forgetting to close these resources can block the memory, thus keeping them out of the reach of the GC. This can even happen in case of an exception that prevents the program execution from reaching the statement that's handling the code to close these resources.
-In either case, the open connection left from the resources consumes memory, and if we don't deal with them, they can deteriorate performance, and even result in an OutOfMemoryError.
+Either way, open connections left over from resources consume memory, and if we don't deal with them, they can degrade performance and even result in an OutOfMemoryError.
 
 >How to Prevent It?
 
