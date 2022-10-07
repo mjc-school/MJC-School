@@ -5,7 +5,7 @@ as a result of interaction of objects, each of which is an instance of a particu
 an entity, which defines its initial state and behaviour. _**Object**_ is an existing instance of an entity,
 which possesses certain state and behaviour.
 
-## Objects
+## <div id="objects">Objects</div>
 Object is a core concept to understand OOP. A good example of object from real-world is a dog. All real-life
 objects have two main features: state and behaviour. Dogs have the following state: nickname, breed, color, character;
 and the following behaviour: barking, eating, guarding, wagging tail. Software objects are conceptually similar to
@@ -26,7 +26,7 @@ Example
 class Smartphone {
 
     public Smartphone() {
-        // it is a constructor, which a special method  
+        // it is a constructor, which is a special method  
     }
 
     boolean isScreenTurnedOn = false; // an initial state of every smartphone is a turned-off screen;
@@ -44,7 +44,7 @@ class Smartphone {
 ### Declaration of Classes and its Members
 
 #### Class Declaration
-The simplest way to declare class is the following.
+The simplest way to declare class is the following:
 ```
 public class Bicycle {
 
@@ -69,7 +69,7 @@ public class Bicycle {
     // This class still has no behaviour (methods).
 }
 ```
-Modifiers allow us to control, what other classes can have access to a field (this topic will be discussed further).
+Modifiers allow us to control, what other classes can have access to the field (this topic will be discussed further).
 Type is a parameter, which describes a structure of a class state. Fields can be of primitive type (int, float, boolean,
 etc.) and reference type (arrays and other objects). Names should follow the same naming rules and conventions
 (this topic will be discussed further).
@@ -86,7 +86,7 @@ Method declarations contain components in the following order:
 A special case of return types is "void", which means that a method doesn't return anything and just performs actions
 within a method body. Keyword "return" is obligatory in case of return type is not "void", and it is placed aside with a
 returning value. Anyway, "return" always terminates an execution of a method. In parentheses there can be a list of
-parameters, which is input of a method. Such parameters are separated from each other by commas, the parameters consist
+parameters, which is an input data of a method. Such parameters are separated from each other by commas, the parameters consist
 of two components: type and name.
 
 ```
@@ -165,12 +165,12 @@ default value will be `null`. A common scenario of using constructors is to defi
 state of an object.
 ```
 public Bicycle() {
-    speed = 5; // initilizes a bicycle object with a initial state of speed as "5".
+    speed = 5; // initilizes a bicycle object with an initial state of speed of "5"
 }
 ```
 
-Constructors can have input parameters as well as in methods. These constructors are called "parameterized". In this
-case while object creation we may specify values for these parameters.
+Constructors can have input parameters as well as methods. These constructors are called "parameterized". In this
+case during object creation we may specify values for these parameters.
 ```
 // An example of the "parameterized" constructor
 public Bicycle(int speed){
@@ -197,12 +197,12 @@ public class Bicycle {
     }
 
     public Bicycle() {
-        this(5); // when a default no-argument constructor is called, a new "bicycle" object is created with a state of speed "5"
+        this(5); // when a default no-argument constructor is called, a new "bicycle" object is created with a state of speed of "5"
     }
 }
 ```
 
-### Overloading
+### <div id="overloading">Overloading</div>
 Process of specifying several constructors in one class is called as "overloading", the same refers to methods.
 "Overloading" is a definition of methods with the same name, but different signatures. Actually such methods are
 completely different methods, which have only the same name in common. A signature of methods is defined by a name of 
@@ -269,7 +269,7 @@ line 4:     // empty class
 line 5: }
 line 6:
 ```
-A name of a package corresponds to organization of directories (folders), which source code files are located in:
+A name of a package corresponds to the organization of directories (folders), which source code files are located in:
 a package name of a class is composed of directories separated by dots ".", where a class-file is located.
 
 For example, if a class `RandomClass` has a package name `com.example.app`, then a project will contain a folder named
@@ -382,12 +382,13 @@ public class ExampleClass {
 current class is located, and by class, which inherits a current class (a topic "inheritance" is covered [here](#inheritance));
 - public: both fields and methods of a class can be accessed by classes from any package (in all cases).
 
-### Getters and setters
+### <div id="getters-and-setters">Getters and setters</div>
 While creating a class, it is extremely recommended to enclose its state and organize work with field by the means of
 functions. It means that fields of a class must have a "private" modifier. For the purposes of accessing such fields,
 "public" methods are created. Such methods are called getters and setters: a `getter` method just returns a value of a
 class field without modification, a `setter` methods changes completely a value of fields with a new value.
-A getter/setter name must be the following: `get`/`set` + `fieldName`.
+A getter/setter name must be the following: `get`/`set` + `fieldName`. This practice is called `Encapsulation` and its 
+meaning will be discussed later.
 ```
 package com.example.app;
 
@@ -415,7 +416,7 @@ public class AppClass {
 ```
 
 ### Static class members
-If it is required that all objects of a class were using the same field or method, it may be marked with a keyword `static`.
+If it is required for all objects of a class to use the same field or method, such class may be marked with a keyword `static`.
 ```
 package com.example.app;
 
@@ -439,7 +440,7 @@ public class ExampleClass {
     }
 }
 ```
-It is necessary to remember that a static methods can be called without of creating an object with the help of a class
+It is necessary to remember that static methods can be called without of creating an object with the help of a class
 name. But such static methods can not access a non-static fields and methods.
 ```
 package com.example;
@@ -459,14 +460,14 @@ public class ExampleClass {
     }
 }
 ```
-Sometimes when it is necessary to perform many complex actions in order to initialize a static field, special language
+Sometimes, when it is necessary to perform many complex actions in order to initialize a static field, special language
 constructions are used. They are called as "static initialization blocks", which are similar to [initialization blocks](#initializers)
 ```
 package com.example;
 
 public class ExampleClass {
     
-    private int version;
+    private static int version;
     
     // Static initialization block start
     static {
@@ -488,7 +489,7 @@ public class ExampleClass {
 
 ### Static Import
 In Java there is one more way to [connect classes from other packages](#packages): static import. For these purposes it
-is necessary to use along with a keyword `import` a keyword `static`. With the help of static import we can use static
+is necessary to use a keyword `static` along with an `import` keyword. With the help of static import we can use static
 members of a class without specifying a name of the class.
 ```
 package com.example.app;
@@ -727,9 +728,9 @@ A child class may alter methods, which are received from a parent class, with it
 
 #### <div id="overriding">Overriding</div>
 Java allows us to create a method in a child class with same signature (name, input parameters) and same return type as
-in a parent class. Such a process is called as "overriding". By the means of overriding we may alter a behaviour of a
-parent method completely or partially. It is a good practice to place before an overridden method an annotation
-`@Override`, which is optional.
+in a parent class. Such process is called as "overriding". By the means of overriding we may alter a behaviour of a
+parent method completely or partially. It is a good practice to place an `@Override` annotation before an overridden method,
+but that is optional.
 
 ```
 package com.example;
@@ -830,13 +831,51 @@ class Scratch {
 }
 ```
 
+### <div id="encapsulation">Encapsulation</div>
+Encapsulation is referred to encapsulating or enclosing class's state. This principle is mostly about closing access to 
+the fields of a class to external users (other developers in our case). 
+
+Let's consider a simple example: a class `Dog` with `age` integer field. If it'll be allowed for anyone to change value
+of that field for a `Dog` class object, someone will definitely use such values as `-10` or `666`. It's obvious that such values 
+are not correct, but these are already set. If someone notices that and wants to change the values, field have to be 
+reassigned with new ones. 
+
+Obviously, this is not the best choice. It'll be much smarter to prevent such situations, and
+that is why an **Encapsulation** principle is so important. It helps to avoid unauthorized access to the class's fields
+by making them `private` and creating `getter` and `setter` methods pair for manipulating this field. Such mechanism was
+already described [here](#getters-and-setters).
+
+### <div id="polymorphism">Polymorphism</div>
+This OOP pillar is mostly related to the [overloading](#overloading) and [overriding](#overriding) of methods. From
+Ancient Greek "poly-" means "many" and "-morph" is "shape", just like a magic spell :)
+
+And it is called so because single method name may refer to different methods (as it was
+described in **Overloading**, these are actually treated as different, because they are compiled to Java bytecode as different
+methods).
+
+While overloading is a static form of polymorphism, overriding is dynamic. Such separation is introduced because
+with the overriding it is not decided by the compiler, which method will be executed at runtime. This is the subtleties 
+of an **Inheritance** process, so if you want to dive deeper, it is recommended to read about **Early** and **Late 
+Binding** in Java.
+
+### <div id="abstraction">Abstraction</div>
+And the last one is the Abstraction principle. Some people throw this one out and recognize only 3 OOP pillars, as 
+Abstraction is more about way of thinking rather than coding. But it's mostly decided to be the rightful 4th pillar.
+
+Abstraction is referred to the way of describing the real-world objects in form of Java classes. The example of this 
+process was already described here in the **[Objects](#objects)** topic. The real-world dog has lots of state attributes,
+like the tone of its skin under the coat, form of its nose and so on. But for veterinary hospital site the most valuable
+are name, breed and health state. The same goes for behaviour. 
+
+So when coding the `Dog` class, programmer creates a model or an abstraction, which has only those attributes that are
+valuable for the task. This helps to get read of unnecessary coding and lessens the amount of stored data. Or even makes
+possible to describe the real object with innumerable possible characteristics using code.
+
 ### Additional topics to read about
-- #### <div id="encapsulation">Encapsulation</div>
-- #### <div id="polymorphism">Polymorphism</div>
-- #### <div id="abstraction">Abstraction</div>
 - #### Order of Initialization ([useful link](https://www.baeldung.com/java-initialization))
 - #### Abstract classes
 - #### Interfaces
+- #### Enumerations
 - #### Exceptions
 - #### Java Beans
 - #### JavaDoc
