@@ -1,27 +1,39 @@
 # ORDER BY
-ORDER BY is a key word which provides an opportunity to sort the data returned in a specific order. 
+
+ORDER BY is a key word which provides an opportunity to sort the data returned in a specific order.
+The SQL ORDER BY clause is used to sort the data in ascending or descending order, based on one or more columns. Some
+databases sort the query results in ascending order by default.  
+You can use more than one column in the ORDER BY clause. Make sure whatever column you are using to sort that column
+should be in the column-list.
+
+```text
+SELECT column-list 
+FROM table_name 
+[WHERE condition] 
+[ORDER BY column1, column2, .. columnN] [ASC | DESC];
+```
 
 ## Tasks
-1) Select marks which is more than 6 and filter in descending order; 
 
-2) Select payments which is less than 300 and filter in ascending order; 
+1) Select marks which is more than 6 and filter in descending order;
 
-3) Select payment types filtered alphabetically; 
+2) Select payments which is less than 300 and filter in ascending order;
 
-4) Select students filtered in reverse alphabetical order; 
+3) Select payment types filtered alphabetically;
 
-5) Select students who have at least one payment more than 1000 and filter them by birthday date ASC. 
+4) Select students filtered in reverse alphabetical order;
+
+5) Select students who have at least one payment more than 1000 and filter them by birthday date ASC.
 
 ## Materials
-- https://www.w3schools.com/sql/sql_orderby.asp 
 
-- http://2sql.ru/novosti/sql-order-by/ 
-
-- https://www.tutorialspoint.com/sql/sql-order-by.htm 
+- https://www.w3schools.com/sql/sql_orderby.asp
+- http://2sql.ru/novosti/sql-order-by/
+- https://www.tutorialspoint.com/sql/sql-order-by.htm
 
 ## Questions
+
 1. What is ORDER BY used for?
 2. In which operations is ORDER BY used?
-3. Is it possible to use several ORDER BY key works within one script? 
+3. Is it possible to use several ORDER BY key works within one script?
 4. Based on what would ORDER BY order the data?
-
