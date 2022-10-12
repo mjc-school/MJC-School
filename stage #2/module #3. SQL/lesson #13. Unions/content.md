@@ -11,7 +11,7 @@ To use this UNION clause, each SELECT statement must have
 - Have them in the same order
  
 -
-But they need not have to be in the same length.
+But they don't have to be the same length.
 
 Syntax:
 ````
