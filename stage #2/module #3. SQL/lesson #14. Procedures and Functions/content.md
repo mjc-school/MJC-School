@@ -7,9 +7,9 @@ Function, in computer programming language context, a set of instructions which 
 ###Procedure
 
 Procedure, as well, is a set of instructions which takes input and performs certain task. In SQL, procedure does not return a value. In java, procedure and functions are same and also called sub-routines.
-A procudure  is a named PL/SQL block which performs one or more specific task. This is similar to a procedure in other programming languages. A procedure has a header and a body.
+A procedure  is a named PL/SQL block which performs one or more specific task. This is similar to a procedure in other programming languages. A procedure has a header and a body.
 The header consists of the name of the procedure and the parameters or variables passed to the procedure.
-The body consists or declaration section, execution section and exception section similar to a general PL/SQL Block. A procedure is similar to an anonymous PL/SQL Block but it is named for repeated usage.
+The body consists of declaration section, execution section and exception section similar to a general PL/SQL Block. A procedure is similar to an anonymous PL/SQL Block but it is named for repeated usage.
 We can pass parameters to procedures in three ways :
 
 | Parameters | Description  |
