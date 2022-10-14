@@ -318,10 +318,10 @@ class ProfileCondition implements Condition {
 
 ```
 
-[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-initializingbean
+[1] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-initializingbean
 
-[2]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-disposablebean
+[2] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-disposablebean
 
-[3]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-autowire
+[3] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-autowire
 
-[4]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/Conditional.html
+[4] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/Conditional.html
