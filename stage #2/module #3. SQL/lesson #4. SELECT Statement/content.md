@@ -1,4 +1,4 @@
-# Select statement 
+# SELECT statement 
 The **SELECT** statement is used to retrieve data from the database. 
 
 ## Syntax
