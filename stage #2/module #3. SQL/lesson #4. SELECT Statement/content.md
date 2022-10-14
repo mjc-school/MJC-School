@@ -1,7 +1,16 @@
 # Select statement 
-Select is the way to retrieve data from the database. 
-The Select script can be combined with other scripts. You will learn how to do so in the next modules.
-Here you have to learn just how to get the data in a certain format. 
+The **SELECT** statement is used to retrieve data from the database. 
+
+## Syntax
+```
+SELECT column1, column2, ...
+FROM table_name;
+```
+
+If you want to select all the fields available in the table, use the following syntax:
+```
+SELECT * FROM table_name;
+```
 
 ## Tasks:
 1.	Select all students with all the available fields
