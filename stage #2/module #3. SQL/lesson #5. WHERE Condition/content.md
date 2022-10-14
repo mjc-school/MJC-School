@@ -1,4 +1,4 @@
-# Where condition
+# WHERE condition
 **WHERE** is a key word to specify a condition for an operation.
 It is possible to use a set of conditions while selecting, modifying, inserting and deleting data to extract only those records that fulfill specified conditions.
 
