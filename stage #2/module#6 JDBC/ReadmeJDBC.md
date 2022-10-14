@@ -238,7 +238,7 @@ try (CallableStatement cstmt = con.prepareCall(preparedSql)) {
 Setting input parameter values for the stored procedure is done like in the PreparedStatement interface, using setX() methods.
 If the stored procedure has output parameters, we need to add them using the registerOutParameter() method.
 
-####4.Execute queries
+#### 4.Execute queries
 
 The executeQuery() method of Statement interface is used to execute queries to the database. This method returns the object of ResultSet that can be used to get all the records of a table.
 
@@ -318,7 +318,7 @@ try (Statement updatableStmt = con.createStatement(
 }
 ```
 
-####5.Close the connection object
+#### 5.Close the connection object
 
 By closing connection object statement and ResultSet will be closed automatically. The close() method of Connection interface is used to close the connection.
 
