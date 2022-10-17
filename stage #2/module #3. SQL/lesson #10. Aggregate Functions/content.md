@@ -1,7 +1,18 @@
 # Aggregate Functions
 Aggregate functions are the functions provided in sql to perform calculations. 
-As usual, it is used with GROUP BY, HAVING clauses in SELECT statements. 
-There are different types of aggregate functions which are widely used, 
+As usual, it is used with **GROUP BY**, **HAVING** clauses in **SELECT** statements. 
+There are different types of aggregate functions which are widely used.
+Most popular aggregate functions are: **Count(), Sum(), Avg(), Min(), Max()**
+
+## Syntax
+
+    #Count all students
+    SELECT count(*) FROM Student;
+    #Find max mark for specific student
+    SELECT max(Mark) FROM Mark WHERE StudentId = 1;
+    #Calculate average mark for specific student
+    SELECT avg(Mark) FROM Mark WHERE StudentId = 1;
+    ...
 
 ## Tasks:
 1) Select the youngest student's birthday; 
