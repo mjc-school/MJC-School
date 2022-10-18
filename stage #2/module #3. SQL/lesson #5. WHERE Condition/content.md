@@ -1,7 +1,21 @@
-# Where condition
-Where is a key word to specify a condition for an operation.
-It is possible to use a set of conditions while selecting, modifying, inserting and deleting data.
-It is highly important to know how to use WHERE clause in order to be sure that returned data is correct.
+# WHERE condition
+**WHERE** is a key word to specify a condition for an operation.
+It is possible to use a set of conditions while selecting, modifying, inserting and deleting data to extract only those records that fulfill specified conditions.
+
+## Syntax
+```
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+```
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+```
+DELETE FROM table_name WHERE condition;
+```
 
 ## Tasks
 1)	Select all Payments with amount more or equal 500 

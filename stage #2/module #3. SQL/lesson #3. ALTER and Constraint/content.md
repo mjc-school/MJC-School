@@ -1,6 +1,47 @@
 # ALTER and Constraint
-This module is about constraints, and the way we work with it. 
-We are able to specify not only the type of the filed in the table, but also the rules according to which the data will be checked while performing different kinds of actions. 
+
+The SQL **ALTER TABLE** command is used to add, delete or modify columns in an existing table. 
+
+## Syntax
+```
+ALTER TABLE table_name ADD column_name datatype;
+```
+```
+ALTER TABLE table_name DROP COLUMN column_name;
+```
+```
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+```
+
+We are able to specify not only the type of the filed in the table, but also the rules according to which the data will be checked while performing different kinds of actions. We can add this rules using SQL **constraints**.
+
+Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+
+## Syntax: 
+```
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+```
+```
+ALTER TABLE table_name 
+ADD CONSTRAINT constraint_name constraint (columns/condition);
+```
+
+The following constraints are commonly used in SQL:
+
+| Constraint                                      | Description                                |
+| ------------------------------------------------|:------------------------------------------:|
+| NOT NULL                                        | Values cannot be null                      |
+| UNIQUE                                          | Values cannot match any older value        |
+| PRIMARY KEY                                     | Used to uniquely identify a row            |
+| FOREIGN KEY                                     |	References a row in another table          |
+| CHECK                                           | Validates condition for new value          |
+| DEFAULT                                         | Set default value if not passed            |
+| CREATE INDEX                                    | Used to speedup the read process           |
 
 ## Tasks: 
 1)	Change table ‘Student’. 
