@@ -83,7 +83,7 @@ limitations on the amount of repetitions, which can save much time for us if the
 
 "while" loop looks much better than just copy-pasting the same code lines required amount of times (and you are less likely
 to make mistakes), but using it we had to take some additional space to **define**, **check** and **increase** the
-variable that will give us the control, there's a way to make this even shorter, which is basically the "for" loop, which
+variable that will give us the control. There's a way to make this even shorter, which is basically the "for" loop, which
 looks like this:
 
     for (int counter = 1; counter <= 20; counter++) {
@@ -144,7 +144,7 @@ Here we go from -5 to 17 inclusive, and each time the number is even, we increas
 
 ***
 ## Do-while
-"do-while" loop is a bit different from "while" and "for" as this loop literally says "before checking the condition 
+"do-while" loop is a bit different than "while" and "for" as this loop literally says "before checking the condition 
 execute the code block":
 
 ![img_3.png](img/img_3.png)
@@ -187,8 +187,8 @@ But here we have to execute the same action twice, which is not that efficient.
 # Loop keywords
 
 ## Continue
-Sometimes it's necessary to skip some loop iterations if a specific condition is met, like, if we have numbers from zero to 
-nine and want to print all numbers except 5, we can do the following:
+Sometimes it's necessary to skip some loop iterations if a specific condition is met, like, if we have numbers from 0 to 
+9 and want to print all numbers except 5, we can do the following:
 
     for (int i = 0; i < 10; i++) {
         if (i == 5) {
@@ -287,12 +287,12 @@ iterator, not to let your code get stuck at any point.
 ***
 # Nested loops
 We've already got acquainted with basics of loops, those were just 1 dimensioned loops, but there can be situations when we 
-need to take a "step" in depth of a loop. As if we had 2 dimensioned square on the coordinate plane, and if you want 
-to get to the middle of it, you have to shift the X coordinate to the middle, and after that the same with Y coordinate:
+need to take a "step" in depth of a loop. Imagine we have a two-dimensional square on the coordinate plane, and if you want 
+to get to the middle of it, you have to shift the X coordinate to the middle, and after that do the same with Y coordinate:
 
 ![img_4.png](img/img_4.png)
 
-In this case we were moving the Y coordinate ONLY WHEN X = 4, but to be able to do so we have the coordinate plane which 
+In this case we would be moving the Y coordinate ONLY WHEN X = 4, but to be able to do so we have the coordinate plane which 
 consists of 7 X points and 7 Y points. In real world we don't create these fields manually, but it can be achieved by
 the following code:
 
@@ -305,8 +305,8 @@ What actually happens is:
 
 ![img_5.png](img/img_5.png)
 
-On each X step it does 8 steps on Y coordinate and then goes to the next X step. By doing so we can achieve deeper 
-dimensions and have overall control over them (this will be super useful later, when you will be dealing with things
+On each X step it does 8 steps on Y coordinate and then goes to the next X step. By doing so we can have control over
+n-dimensional spaces, where n is any positive number (this will be super useful later, when you will be dealing with things
 like arrays of arrays).
 
 It's necessary to understand that those 2 loops are independent, the example above is just an illustration  of how it 
@@ -327,7 +327,7 @@ In procedural programming there was a "go to" operator (which made program go to
 proceed execution there), but later programmers decided to get rid of it, because it made the code less readable and 
 maintainable. Many leaps from one line of code to another aren't very helpful for understanding the logics of that code.
 
-Java doesn't have this operator, but it has something similar called "labels". We will not study them in
-this course, as they are not used in modern programming at all, and their usage is harmful for common programming principles.
-You should avoid using labels when writing code and creating your architecture. If you desperately want to know about them 
-more, do some research on your own.
+Java doesn't have this operator, but it has something similar called "labels". These won't be studied in this course,
+as they are not used in modern programming at all, and their usage is harmful for common programming principles. You 
+should avoid using labels when writing code and creating your architecture. If you desperately want to know more about
+them, do some research on your own.
