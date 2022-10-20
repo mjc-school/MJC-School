@@ -726,7 +726,7 @@ public class Child extends Parent {
 
 A child class may alter methods, which are received from a parent class, with its own ones ([overriding](#overriding))
 
-#### <div id="overriding">Overriding</div>
+### <div id="overriding">Overriding</div>
 Java allows us to create a method in a child class with same signature (name, input parameters) and same return type as
 in a parent class. Such process is called as "overriding". By the means of overriding we may alter a behaviour of a
 parent method completely or partially. It is a good practice to place an `@Override` annotation before an overridden method,
