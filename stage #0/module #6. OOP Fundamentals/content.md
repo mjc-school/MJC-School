@@ -614,7 +614,7 @@ public class Scratch {
     }
 }
 ```
-### OOP Pillars
+## OOP Pillars
 Object-oriented programming is based on the following pillars:
 - [Inheritance](#inheritance)
 - [Encapsulation](#encapsulation)
