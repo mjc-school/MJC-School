@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.epam.mjc'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.6.1'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.6.1'
+}
+
+test {
+    useJUnitPlatform()
+}
