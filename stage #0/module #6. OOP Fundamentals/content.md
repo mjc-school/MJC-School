@@ -461,7 +461,7 @@ public class ExampleClass {
 }
 ```
 Sometimes, when it is necessary to perform many complex actions in order to initialize a static field, special language
-constructions are used. They are called as "static initialization blocks", which are similar to [initialization blocks](#initializers)
+constructions are used. They are called as "static initialization blocks", which are similar to [initialization blocks](#initializers).
 ```
 package com.example;
 
