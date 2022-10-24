@@ -11,16 +11,6 @@ DELETE FROM table_name
 WHERE [condition];
 ```
 
-## Tasks
-
-1) Delete all students with grade more than 4 and all relationships with this student;
-
-2) Delete students who have at least one mark less than 4;
-
-3) Delete “Daily” payment type and all relationships with this type.
-
-4) Delete All marks less than 4
-
 ## Materials
 
 - https://www.w3schools.com/sql/sql_delete.asp

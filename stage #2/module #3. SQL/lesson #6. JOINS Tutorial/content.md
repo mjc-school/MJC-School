@@ -29,16 +29,6 @@ matching_column: Column common to both the tables.
 6. **CROSS JOIN** - returns the Cartesian product of rows from the tables in the join. In other words, t combines each
    row from the first table with each row from the second table.
 
-## Tasks
-
-1) Select Payments with “Monthly” type;
-
-2) Select all marks by Art
-
-3) Select all students who have “Weekly” payments;
-
-4) Select all students who has marks by Math.
-
 ## Materials
 
 - https://www.sqlshack.com/sql-multiple-joins-for-beginners-with-examples/

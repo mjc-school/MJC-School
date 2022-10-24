@@ -18,7 +18,7 @@ their scope:
 - https://www.sqlshack.com/overview-and-performance-tips-of-temp-tables-in-sql-server/
 - https://stackoverflow.com/questions/11491240/how-to-create-temp-table-with-select-into-temptable-from-cte-query
 
-##Questions
+## Questions
 
 1. What is a temporary table?
 2. What are temporary tables used for?

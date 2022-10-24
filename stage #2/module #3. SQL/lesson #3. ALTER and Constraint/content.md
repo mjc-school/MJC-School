@@ -43,19 +43,6 @@ The following constraints are commonly used in SQL:
 | DEFAULT                                         | Set default value if not passed            |
 | CREATE INDEX                                    | Used to speedup the read process           |
 
-## Tasks: 
-1)	Change table ‘Student’. 
- ‘Birthday’ field cannot be null
-2)	Change table ‘Mark’
-‘Mark’ should be in range from 1 to 10
-‘Student_Id’ and ‘Subject_Id’ cannot be null
-3)	Change table ‘Subject’
-‘Grade’ should be in range from 1 to 5 
-4)	Change table ‘PaymentType’
-‘Name’ should be a unique value
-5)	Change table ‘Payment’
-‘Type’, ‘Amount’ and ‘Date’ cannot be null
-
 ## Materials
 -	https://www.w3schools.com/sql/sql_constraints.asp
 -	https://www.w3schools.com/sql/sql_notnull.asp

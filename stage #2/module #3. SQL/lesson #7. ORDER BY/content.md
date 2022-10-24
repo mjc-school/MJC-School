@@ -13,18 +13,6 @@ FROM table_name
 [ORDER BY column1, column2, .. columnN] [ASC | DESC];
 ```
 
-## Tasks
-
-1) Select marks which is more than 6 and filter in descending order;
-
-2) Select payments which is less than 300 and filter in ascending order;
-
-3) Select payment types filtered alphabetically;
-
-4) Select students filtered in reverse alphabetical order;
-
-5) Select students who have at least one payment more than 1000 and filter them by birthday date ASC.
-
 ## Materials
 
 - https://www.w3schools.com/sql/sql_orderby.asp

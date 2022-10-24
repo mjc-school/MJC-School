@@ -14,12 +14,6 @@ Most popular aggregate functions are: **Count(), Sum(), Avg(), Min(), Max()**
     SELECT avg(Mark) FROM Mark WHERE StudentId = 1;
     ...
 
-## Tasks:
-1) Select the youngest student's birthday; 
-2) Find the earliest made payment's date; 
-3) Find average mark by Math; 
-4) Find min amount of payment for payment type “Weekly”. 
-
 ## Materials: 
 - https://www.geeksforgeeks.org/aggregate-functions-in-sql/ 
 
