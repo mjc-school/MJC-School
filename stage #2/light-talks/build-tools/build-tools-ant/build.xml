@@ -1,0 +1,46 @@
+<project name="ant-sample" basedir="." default="build">
+
+    <!-- properties -->
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="${build.dir}/jar"/>
+    <property name="doc.dir"     value="doc"/>
+    <property name="lib.dir"     value="lib"/>
+    <property name="main-class"  value="school.mjc.build.tools.ant.Main"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <!-- targets -->
+    <target name="compile" description="compile project">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" classpathref="classpath"/>
+    </target>
+
+    <target name="jar" depends="compile" description="generate the distribution jar">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="school.mjc.build.tools.ant.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar" description="run application">
+        <java classname="${main-class}" fork="true">
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${jar.dir}/${ant.project.name}.jar"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="build" depends="jar" description="build application"/>
+
+    <target name="clean" description="clean up build files">
+        <delete dir="${build.dir}"/>
+        <delete dir="${doc.dir}" />
+    </target>
+</project>
