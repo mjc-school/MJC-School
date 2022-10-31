@@ -1,0 +1,10 @@
+Part,Name
+VPC,MJC-<Your_Name>-VPC
+Internet Gateway,MJC-<Your_Name>-Internet-Gateway
+Public subnet A,MJC-<Your_Name>-Public-Subnet-A
+Public subnet B,MJC-<Your_Name>-Public-Subnet-B
+Private subnet A,MJC-<Your_Name>-Private-Subnet-A
+Private subnet B,MJC-<Your_Name>-Private-Subnet-B
+Route table for public subnets,MJC-<Your_Name>-Public-Route-Table
+Route table for private subnet A,MJC-<Your_Name>-Private-Route-Table-A
+Route table for private subnet B,MJC-<Your_Name>-Private-Route-Table-B
