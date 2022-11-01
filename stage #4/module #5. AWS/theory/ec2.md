@@ -1,9 +1,5 @@
 # Amazon EC2
 
-## Recommended timeline
-
-The recommended timeline for the whole EC2 module is approximately 6 hours.
-
 ## Theory
 
 Amazon Elastic Compute Cloud (EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. It means that you can launch as many(or as few) virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down(increase or decrease the number of running virtual servers) to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.

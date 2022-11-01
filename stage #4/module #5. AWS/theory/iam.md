@@ -1,9 +1,5 @@
 # AWS IAM
 
-## Recommended timeline
-
-The recommended timeline for the whole IAM module is approximately 6 hours.
-
 ## Theory
 
 AWS Identity and Access Management (IAM) is an AWS service that helps you securely control access to your account and your AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
