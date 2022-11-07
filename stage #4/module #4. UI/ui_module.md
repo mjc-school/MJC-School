@@ -8,7 +8,7 @@
 4. [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 5. [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 6. [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
-7. [React Bootstrap tutorial](educative.io/blog/react-bootstrap-tutorial)
+7. [React Bootstrap tutorial](https://www.educative.io/blog/react-bootstrap-tutorial)
 8. [Redux tutorial](https://daveceddia.com/redux-tutorial/)
 
 ## Practice
