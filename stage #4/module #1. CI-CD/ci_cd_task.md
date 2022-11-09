@@ -3,7 +3,7 @@
 ## Materials
 
 1. [Continuous Integration with Jenkins](https://learn.epam.com/detailsPage?id=59bdf234-6664-4f38-a9c5-6689edd6f8d4)
-2. [SonarQube](https://learn.epam.com/detailsPage?id=1ba43583-1c71-4545-8233-a4620807dce6)
+2. [SonarQube](https://videoportal.epam.com/video/LoBwb5R9)
 
 ## Practice
 
@@ -37,7 +37,7 @@ The recommended timeline for the whole module is 1 week.
 ## Demo
 ### Practical part
 
-[upd]
+Mentee should be able to demonstrate his test project.
 
 ### Theoretical part
 
@@ -49,13 +49,13 @@ Mentee should be able to answer questions during demo session.
 2. [What is Continuous Integration](https://aws.amazon.com/en/devops/continuous-integration/)
 3. [Introduction to CI/CD with GitLab](https://docs.gitlab.com/ee/ci/introduction/#introduction-to-cicd-methodologies)
 4. [A Brief Introduction to CI/CD](https://dzone.com/articles/the-complete-introduction-to-cicd-1)
-4. [Jenkins Tutorial for Beginners: Learn in 3 Day](https://www.guru99.com/jenkins-tutorial.html)
-5. [Jenkins - Quick Guide](https://www.tutorialspoint.com/jenkins/jenkins_quick_guide.htm)
+5. [Jenkins Tutorial for Beginners: Learn in 3 Day](https://www.guru99.com/jenkins-tutorial.html)
+6. [Jenkins - Quick Guide](https://www.tutorialspoint.com/jenkins/jenkins_quick_guide.htm)
 7. [Jenkins Tips & Tricks](https://automationstepbystep.com/jenkins-tips-tricks/)
 8. [Jenkins. Documentation.](https://www.jenkins.io/doc/tutorials/)
 9. [JaCoCo](https://plugins.jenkins.io/jacoco/)
-11. [Code Analysis with SonarQube](https://www.baeldung.com/sonar-qube)
-12. [Generate Codecoverage Report with Jacoco and Sonarqube](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
-14. [SonarQube Integration with Jenkins for Code analysis](https://www.youtube.com/watch?v=jh7utASgKj4&list=PL6Q8rpu0AhEVFkU0JM6i935Q5LM8LSG-n)
-14. [Pipeline](https://www.jenkins.io/doc/book/pipeline/)
-15. [Blue Ocean Plugin](https://www.jenkins.io/doc/book/blueocean/)
+10. [Code Analysis with SonarQube](https://www.baeldung.com/sonar-qube)
+11. [Generate Codecoverage Report with Jacoco and Sonarqube](https://medium.com/backend-habit/generate-codecoverage-report-with-jacoco-and-sonarqube-ed15c4045885)
+12. [SonarQube Integration with Jenkins for Code analysis](https://www.youtube.com/watch?v=jh7utASgKj4&list=PL6Q8rpu0AhEVFkU0JM6i935Q5LM8LSG-n)
+13. [Pipeline](https://www.jenkins.io/doc/book/pipeline/)
+14. [Blue Ocean Plugin](https://www.jenkins.io/doc/book/blueocean/)

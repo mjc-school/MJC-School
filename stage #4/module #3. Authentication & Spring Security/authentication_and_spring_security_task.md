@@ -53,12 +53,13 @@ User Permissions:
 ## Demo
 ### Practical part
 
-1. Generate for demo at least 
-    a. 1000 users
-    b. 1000 tags
-    c. 10’000 gift certificates (should be linked with tags and users)
-All values should look like more-or-less meaningful: random words, but not random letters 
-2. Demonstrate API using Postman tool (prepare for demo Postman collection with APIs)  
+1. Generate for demo at least
+    - 1000 authors
+    - 1000 tags
+    - 1000 comments
+    - 10’000 news (should be linked with tags, authors, comments)
+      All values should look like more -or-less meaningful: random words, but not random letters
+2. Demonstrate API using Postman tool (prepare for demo Postman collection with APIs)
 3. (Optional) Build & run application using command line
 
 ### Theoretical part
