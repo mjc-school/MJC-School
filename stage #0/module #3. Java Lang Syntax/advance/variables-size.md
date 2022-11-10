@@ -1,6 +1,6 @@
 ## Explanation why integer types have different size
 
-As it was mentioned above each type in java has its size. The smallest size value for any programming language is a bit.
+As it was mentioned above, each type in Java has its size. The smallest size value for any programming language is a bit.
 Bit is a binary digit. It's the smallest unit in computer memory that can have 2 states: 0 and 1 (this is why it is called
 binary). So that simply means that everything in computer is just a combination of zeros and ones. But frankly speaking,
 when someone wants to work with huge amount of data, like with videos or video games etc., nobody uses bites to determine
@@ -10,11 +10,11 @@ describe amount of memory that is required for something.
 ![img_16.png](../img/img_16.png)
 
 And as you can see from picture above each byte consists of 8 bites. As this kind of storing data in computer memory is
-the most widely spread, it is used in programming. Another important thing here to mention is that this representation of
+the most widely spread, it is used in programming. Another important thing to mention is that this representation of
 storage is just a binary numeric system, using which we can easily determine maximum and minimum value for each data type.  
 The smallest numeric data type in java is  _byte_, which means that it contains 8 bits:
 
-    0 0 0 0 0 0 0 0//eight zeroes is minimum value, which equals to "0" in decimal system
+    0 0 0 0 0 0 0 0 //eight zeroes is minimum value, which equals to "0" in decimal system
 
 The example above demonstrates minimal value for a byte. Respectively you may think that max value for a byte will be:
 
@@ -30,8 +30,9 @@ negative. This all leads us to the point where maximum value is actually (2^7) -
 
     0 1 1 1 1 1 1 1 //2^7 - 1 = 127
 
-//If you want to know how to convert binary to decimal, you can surf the internet to find the answer.  
-As it is mentioned above maximum value here is 127, whereas the minimum one is -128. Byte range is from -128 up to 127.
+// If you want to know how to convert binary to decimal, you can surf the internet to find the answer.  
+
+As it is mentioned above, maximum value here is 127, whereas the minimum one is -128. Byte range is from -128 up to 127.
 Each data type has its size in bytes, which leads us to the point of determining maximum and minimum values for them:
 
 1) Byte: from -2^7 to 2^7 -1
