@@ -163,7 +163,8 @@ arr = {12, 14, 1, 3, 16, 27};  // creates and initializes an array of integers
 
 In this case, during array creation, its elements will be initialized with desired values.
 
-3) the special creation way has an optional extension: before the aforementioned set of elements in curly braces we can write an operator "new" followed by a desired type and empty square-brackets
+3) the special creation way has an optional extension: before the aforementioned set of elements in curly braces we can
+write an operator "new" followed by a desired type and empty square-brackets
 
 ```
 int[] arr;                              // declares an array of integers
@@ -194,7 +195,9 @@ System.out.println(a);
 ### Accessing Array's Elements
 In order to access an element of an array, we should write an array's variable and an element's index encapsulated in
 square braces.
+
 ![Array Initialization](img/array_initialization_curly_braces.png)
+
 ```
 int element = arr[5];
 System.out.println(element);
@@ -210,8 +213,8 @@ an assignment operator "=" and define a compatible value.
 int[] arr = new int[6];
 arr[5] = 27;
 ```
-![Assigning a value](img/array_assigning_value.png)
 
+![Assigning a value](img/array_assigning_value.png)
 
 ### Iterating Through an Array
 We can iterate through an array with the help of an array's "length" property and "for", "while", "do-while" statements.
@@ -257,6 +260,7 @@ int[] src = {798, 33, 21, 79, 12, 987};
 int[] dest = new int[9];
 System.arraycopy(src, 0, dest, 2, 5)
 ```
+
 ![System.arraycopy(..)](img/arraycopy.png)
 
 ### Multidimensional Arrays
@@ -270,13 +274,16 @@ one-dimensional arrays. it is stored in the form of rows and columns.
 int[][] arr;                 // defines a two-dimensional array
 arr = new int[2][5];         // creates a two-dimensional array definition with "2" rows and "5" columns
 ```
+
 ![Two-dimensional array №1](img/two_dimensional_array.png)
+
 ```
 int[][] arr = new int[][] {  // creates a two-dimensional array definition with "2" rows and "5" columns and initializes it with values
   {1, 2, 3, 4, 5},     // the first row 
   {11, 12, 13, 14, 15} // the second row
 }                                  
 ```
+
 ![Two-dimensional array №2](img/two_dimensional_array_2.png)
 
 ### Ragged Arrays
@@ -289,6 +296,7 @@ arr[0] = new int[3];        // initializes the first row
 arr[1] = new int[2];        // initializes the second row
 arr[2] = new int[1];        // initializes the third row
 ```
+
 ![Ragged two-dimensional array №1](img/ragged_two_dimensional_array.png)
 
 ```
@@ -297,6 +305,7 @@ arr[0] = new int[]{1};       // initializes the first row
 arr[1] = new int[]{1, 2};    // initializes the second row
 arr[2] = new int[]{1, 2, 3}; // initializes the third row
 ```
+
 ![Ragged two-dimensional array №2](img/ragged_two_dimensional_array_2.png)
 
 ## Linked List
@@ -554,6 +563,7 @@ value hash function determines an exact index of an associative array where data
 provide only valid indices.
 
 ### Hash Table Activity Diagram
+
 ![Hash Table Activity Diagram](img/hash_tables_diagram.png)
 
 ### Hash Table Operations
