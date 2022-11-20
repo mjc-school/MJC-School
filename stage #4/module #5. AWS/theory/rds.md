@@ -2,13 +2,13 @@
 
 ## Theory
 
-Amazon Relational Database Service (RDS) is a fully managed service that provides the ability to create, configure and operate different relational databases. In this definition fully managed means that you don't have to think about the server management tasks(i.e., OS configuration and patching, software patching, backup creation). Instead, Amazon RDS takes care of these tasks for you allowing you to focus on using the database itself.
+Amazon Relational Database Service (RDS) is a fully managed service that provides the ability to create, configure and operate different relational databases. In this definition fully managed means that you don't have to think about the server management tasks(i.e., OS configuration and patching, software patching, backup creation). Instead, Amazon RDS takes care of these tasks allowing you to focus on using the database itself.
 
-Apart from that, there are lots of other features that come out-of-the-box when you start using RDS. Here are some of those features:
-• Amazon RDS allows you to choose how much memory, storage, IOPS and CPU resources your RDS instance will have with the ability to scale each of those independently.
-• To deliver a managed service experience, Amazon RDS doesn't provide shell access to DB instances. It also restricts access to certain system procedures and tables that require advanced privileges.
-• You can have automated backups performed on a particular schedule(which are turned on by default), or manually create your own backup snapshot.
-• You can control who can access your RDS databases by using AWS Identity and Access Management (IAM) to define users and permissions.
+Apart from that, there are lots of other features that come out-of-the-box when you start using RDS. Here are some of those features: <br />
+• Amazon RDS allows you to choose how much memory, storage, IOPS and CPU resources your RDS instance will have with the ability to scale each of those independently. <br />
+• To deliver a managed service experience, Amazon RDS doesn't provide shell access to DB instances. It also restricts access to certain system procedures and tables that require advanced privileges. <br />
+• You can have automated backups performed on a particular schedule(which are turned on by default), or manually create your own backup snapshot. <br />
+• You can control who can access your RDS databases by using AWS Identity and Access Management (IAM) to define users and permissions. <br />
 
 As with EC2 instances, RDS instances are created inside a VPC, they can have a VPC security group and a public IP address assigned to them. Although there is a slight difference between EC2 and RDS instances - the latter are created inside *DB subnet groups* instead of ordinary VPC subnets.
 
@@ -40,10 +40,10 @@ Amazon RDS replication is the option which allows you to have replicas(copies) o
 
 ### RDS backup options
 
-Amazon RDS creates and saves automated backups of your DB instance during the backup window of your DB instance. Here's it works: 
-• If a DB instance is available and a DB snapshot copy isn't being created for this DB instance, then DB instance can be backed up.
-• RDS creates a storage volume snapshot of your DB instance(backing up the entire DB instance, not just individual databases). 
-• RDS saves the automated backups of your DB instance according to the backup retention period that you specify.
+Amazon RDS creates and saves automated backups of your DB instance during the backup window of your DB instance. Here's it works: <br />
+• If a DB instance is available and a DB snapshot copy isn't being created for this DB instance, then DB instance can be backed up. <br />
+• RDS creates a storage volume snapshot of your DB instance(backing up the entire DB instance, not just individual databases). <br />
+• RDS saves the automated backups of your DB instance according to the backup retention period that you specify. <br />
 
 If you need to, you can also create your backups manually.
 
