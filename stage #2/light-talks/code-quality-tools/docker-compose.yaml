@@ -1,0 +1,11 @@
+version: "3"
+services:
+  sonarqube:
+    image: sonarqube:8-community
+    volumes:
+      - /tmp/opt/sonarqube/conf:/opt/sonarqube/conf \
+      - /tmp/opt/sonarqube/logs:/opt/sonarqube/data \
+      - /tmp/opt/sonarqube/data:/opt/sonarqube/logs \
+      - /tmp/opt/sonarqube/extensions:/opt/sonarqube/extensions \
+    ports:
+      - "9000:9000"
