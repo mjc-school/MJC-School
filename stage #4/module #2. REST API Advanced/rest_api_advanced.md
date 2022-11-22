@@ -2,8 +2,8 @@
 
 ## Materials
 
-1. [Spring Boot intro](https://videoportal.epam.com/video/6Rn164or)
-2. [Spring Boot Init](https://start.spring.io/)
+1. [Spring Boot Init](https://start.spring.io/)
+2. [Spring Boot tutorial](https://spring.io/guides/gs/rest-service/)
 3. [REST API Design: Filtering, Sorting, and Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/)
 4. [REST Pagination in Spring](https://www.baeldung.com/rest-api-pagination-in-spring/)
 5. [HATEOAS with Spring](https://spring.io/guides/gs/rest-hateoas/)
@@ -94,7 +94,7 @@ The recommended timeline for the whole module is 2 weeks.
 
 #### Part 2
 
-This sub-module covers following topics:
+This submodule covers following topics:
 1. ORM
 2. JPA & Hibernate
 3. Transactions
@@ -118,10 +118,11 @@ A **transaction** usually means a sequence of information exchange and related w
 
 1. Application should be deployed before demo.
 2. Generate for a demo at least
-   - 1000 users
-   - 1000 tags
-   - 10’000 gift certificates (should be linked with tags and users)
-     All values should look like more -or-less meaningful: random words, but not random letters
+    - 1000 authors
+    - 1000 tags
+    - 1000 comments
+    - 10’000 news (should be linked with tags, authors, comments)
+      All values should look like more -or-less meaningful: random words, but not random letters
 3. Demonstrate API using Postman tool. Prepare for demo Postman collection with APIs.
 4. (Optional) Build & run application using command line
 
@@ -132,11 +133,10 @@ Mentee should be able to answer theoretical and practical questions during demo 
 ## Extra Materials
 
 1. [Spring Boot reference](https://spring.io/projects/spring-boot/)
-2. [Spring Boot tutorial](https://spring.io/guides/gs/rest-service/)
-3. [Building a spring-boot based application from scratch](https://medium.com/@lastbyte/building-a-spring-boot-based-application-from-scratch-41a4f6c9e2a9)
-4. [REST API — What Is HATEOAS?](https://dzone.com/articles/rest-api-what-is-hateoas)
-5. [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
-6. [What Is the Difference Between SQL and Object-Relational Mapping (ORM)?](https://www.kdnuggets.com/2022/02/difference-sql-object-relational-mapping-orm.html)
-8. [JPA vs Hibernate](https://www.javatpoint.com/jpa-vs-hibernate)
-9. [ACID Properties of transactions](https://www.geeksforgeeks.org/acid-properties-in-dbms/)
-10. [Transaction Isolation Levels](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
+2. [Building a spring-boot based application from scratch](https://medium.com/@lastbyte/building-a-spring-boot-based-application-from-scratch-41a4f6c9e2a9)
+3. [REST API — What Is HATEOAS?](https://dzone.com/articles/rest-api-what-is-hateoas)
+4. [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html)
+5. [What Is the Difference Between SQL and Object-Relational Mapping (ORM)?](https://www.kdnuggets.com/2022/02/difference-sql-object-relational-mapping-orm.html)
+6. [JPA vs Hibernate](https://www.javatpoint.com/jpa-vs-hibernate)
+7. [ACID Properties of transactions](https://www.geeksforgeeks.org/acid-properties-in-dbms/)
+8. [Transaction Isolation Levels](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
