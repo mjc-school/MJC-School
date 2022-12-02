@@ -14,6 +14,8 @@ As with EC2 instances, RDS instances are created inside a VPC, they can have a V
 
 ### Key concepts
 
+![RDS Engines](./resources/rds/engine_options.png)
+
 In order to get familiar with the service some key concepts should be described:
 1. *Instance* - an isolated database environment running in the cloud. Think of it as a virtual server with a database installed on it.
 2. *Engine* - a specific database software that runs on your DB instance(e.g., MySQL, PostgreSQL, Oracle, etc.).
@@ -29,6 +31,8 @@ Amazon RDS supports several ways to authenticate database users:
 [Read more](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/database-authentication.html)
 
 ### RDS replication options
+
+![Read and standby replicas](./resources/rds/read_and_standby_replica.png)
 
 Amazon RDS replication is the option which allows you to have replicas(copies) of your DB instance. You can create 2 kinds of these replicas:
 1. Standby replica - data is synchronously replicated between it and the original DB instance, cannot accept connections for reading data.

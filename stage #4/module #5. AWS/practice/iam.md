@@ -45,8 +45,8 @@ Create one user in every IAM user group configured so far.
 
 ### LocalStack
 
-Unfortunately, there are no tasks to do in Localstack in this module.
+Unfortunately, there are no tasks to do in LocalStack in this module.
 
 ## Solution
 
-In case you face any issues while doing the task please peek into the [solution](./task_solution.md)
+In case you face any issues while doing the task please peek into the [AWS solution](./solution/iam/iam_solution_console.md)

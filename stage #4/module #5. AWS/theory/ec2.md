@@ -15,6 +15,7 @@ In order to get familiar with the service some key concepts should be described:
 
 ### EC2 instance types
 
+![Instance types](./resources/ec2/instance_types.png)
 There are several types of EC2 instances:
 1. General purpose(T, M) - standard instances with the balance of CPU, RAM and storage
 2. Compute optimized(C) - more powerful CPUs
@@ -66,6 +67,8 @@ To migrate it to a different AZ (or Region):
 [Read more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 
 ### EC2 Auto Scaling
+
+![Auto Scaling](./resources/ec2/auto_scaling.png)
 
 EC2 Auto Scaling is used as a tool for automatic horizontal scaling of your EC2 instances.
 

@@ -20,6 +20,8 @@ Anyone who has root user credentials for your AWS account has unrestricted acces
 
 ### Key concepts
 
+![AWS identities and permissions](./resources/iam/iam.png)
+
 In order to get familiar with the service some key concepts should be described:
 1. *IAM User*(different from root users!) - an entity that you can create in AWS. The IAM user represents the person or service who uses this entity to interact with AWS. A primary use for IAM users is to give people the ability to sign in to the AWS Management Console for interactive tasks and to make programmatic requests to AWS services using the API or CLI.
 2. *IAM User group* - an entity that represents a collection of IAM users. A user group is a way to attach permissions to multiple users at one time. For example, you could have a user group called Admins and give that user group the types of permissions that administrators typically need. Any user that will be assigned to this user group automatically gets all the permissions that the users in this group are given.
