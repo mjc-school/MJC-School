@@ -101,19 +101,6 @@ When using EC2 with EBS volumes, you also have to pay for the volume depending o
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.
 
-## Keys
-
-1. c
-2. b
-3. a
-4. a
-5. b
-6. a, c, d
-7. a, b, c, d
-8. b, c, d
-9. a
-10. a, b, c, d
-
 ## Extra Materials
 
 1. [Amazon EC2 Official Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/)

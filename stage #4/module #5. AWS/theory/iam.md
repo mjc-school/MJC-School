@@ -39,19 +39,6 @@ There is no charge for IAM usage, it's free.
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.
 
-## Keys
-
-1. b, d
-2. a
-3. d
-4. b
-5. d
-6. b
-7. c
-8. a, d
-9. d
-10. a
-
 ## Extra Materials
 
 1. [AWS IAM Official Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/)

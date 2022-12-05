@@ -67,19 +67,6 @@ Apart from that, similar to EC2, Amazon RDS offers 2 types of pricing:
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.
 
-## Keys
-
-1. a
-2. b
-3. c
-4. d
-5. a
-6. a, c
-7. a, b
-8. b
-9. a
-10. a
-
 ## Extra Materials
 
 1. [Amazon RDS Official Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/)
