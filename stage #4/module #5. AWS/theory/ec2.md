@@ -97,54 +97,6 @@ When using EC2 with EBS volumes, you also have to pay for the volume depending o
 
 [Read more](https://aws.amazon.com/ebs/pricing/)
 
-## Quiz
-
-1. Which of the following is the AWS service that is used for providing scalable virtual servers(computing capacity)?
-- a) Elastic Cloud Computing
-- b) Elastic Computer Cloud
-- c) Elastic Compute Cloud
-- d) Elastic Calculator Cloud
-2. Can you detach an EBS volume that isn't used as the root device from a running EC2 instance without stopping it?
-- a) No
-- b) Yes
-3. Can you delete a snapshot of an EBS volume that is used as the root device of a registered AMI?
-- a) No
-- b) Yes
-4. Can you restart an instance after its termination?
-- a) No
-- b) Yes
-5. Which EBS volume types DO exist?
-- a) ssd, gp2, io1, Throughtput Optimized HDD
-- b) gp2, gp3, io1, Cold HDD
-- c) gp2, gp3, sata1, magnetic storage
-- d) ssd, hdd, magnetic storage
-6. Which IP addresses can you use to connect to the EC2 instance from the Internet?
-- a) Public IPv4 address
-- b) Private IPv4 address
-- c) IPv6 address
-- d) Elastic IP address
-7. When you REBOOT an instance, which of the following instance attributes DO NOT change?
-- a) Public IPv4 address
-- b) Private IPv4 address
-- c) IPv6 address
-- d) Elastic IP address
-8. When you STOP and START an instance, which of the following instance attributes DO NOT change?
-- a) Public IPv4 address
-- b) Private IPv4 address
-- c) IPv6 address
-- d) Elastic IP address
-9. If you need to attach an EBS volume to an EC2 instance, which statement is correct?
-- a) EC2 should be in the same Availability Zone as the volume
-- b) EC2 should be in the same Region as the volume
-- c) EC2 should be in the same Datacenter as the volume
-- d) EC2 and EBS volume could be in any Region or Availability Zone
-10. Which of the following are instance purchasing options?
-- a) On-demand
-- b) Reserved Instances
-- c) Dedicated Hosts
-- d) Spot Instances
-
-
 ## General requirements
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.

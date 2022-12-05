@@ -63,52 +63,6 @@ Apart from that, similar to EC2, Amazon RDS offers 2 types of pricing:
 
 [Read more](https://aws.amazon.com/rds/pricing/)
 
-## Quiz
-
-1. Which of the following features are you responsible for when working with RDS instances?
-- a) Database configuration & operation
-- b) Creating backups
-- c) Software patching
-- d) All of the above
-2. Can you connect directly to the DB instance(for example, to install some additional software on it)?
-- a) Yes
-- b) No
-- c) No by default, but can be configured to yes
-3. Will you be billed if you stop your RDS instance?
-- a) No
-- b) Yes, only for provisioned storage
-- c) Yes, for backup storage and provisioned storage
-- d) Yes, only for backup storage
-4. Which database engine is not supported by Amazon RDS?
-- a) MySQL
-- b) Microsoft SQL Server
-- c) MariaDB
-- d) SQLite
-5. Which DB instance storage is the most optimized for fast and consistent throughput of input and output operations?
-- a) Provisioned IOPS
-- b) General Purpose SSD
-- c) Magnetic Storage
-6. Which purchasing options are supported in Amazon RDS?
-- a) On-demand instances
-- b) Dedicated instances
-- c) Reserved instances
-- d) Spot instances
-7. What are the basic conditions which has to be followed in order to create a DB instance backup?
-- a) DB instance should be in the "Available" state
-- b) DB backup window and DB maintenance window cannot overlap
-- c) DB instance cannot have any active connections
-- d) All of the above
-8. Can a standby replica accept connections for read queries in a Multi-AZ DB deployment?
-- a) Yes
-- b) No
-9. Can you connect directly to the database on a DB instance(for example, from an EC2 instance inside the same VPC)?
-- a) Yes
-- b) No
-10. What type of replication is used when working with read replicas?
-- a) Asynchronous replication
-- b) Synchronous replication
-- c) All of the above
-
 ## General requirements
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.

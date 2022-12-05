@@ -35,59 +35,6 @@ The first three items in the list above are generally referred to as *IAM identi
 
 There is no charge for IAM usage, it's free.
 
-## Quiz
-
-1. Which tasks are available ONLY for the root user?
-- a) Change IAM users settings (name, password, access keys, MFA etc.)
-- b) Delete an AWS account
-- c) Set up budget and free tier usage alerts
-- d) Activate IAM access to the Billing and Cost Management console
-2. By default a new IAM user has permissions to...
-- a) Do nothing(i.e. has no permissions at all)
-- b) Manage any of AWS services
-- c) Change their own password
-- d) Access any of AWS services in the read-only mode
-3. Which of the following IS NOT a policy type in AWS IAM?
-- a) Organizations SCP
-- b) Identity-based policies
-- c) Resource-based policies
-- d) Service-based policies
-4. Which of the following IS NOT present in the list of IAM Security best practices?
-- a) Grant least privilege
-- b) Use a root user to manage essential AWS resources
-- c) Do not share access keys
-- d) Use user groups to assign permissions to IAM users
-5. Which identities exist in IAM?
-- a) User
-- b) User groups
-- c) Roles
-- d) All of the above
-6. Does every request to AWS API gets authenticated by IAM by default?
-- a) No
-- b) Yes
-- c) Yes, if it uses access keys
-- d) Yes, if it uses access keys or temporary credentials
-7. Which of the following IS NOT an IAM policy element?
-- a) Effect
-- b) Action
-- c) Exclusion
-- d) Condition
-8. Which of the following statements are correct about IAM policies?
-- a) Resource-based policies are attached to a resource and control what actions and by whom are allowed to be performed on this resource
-- b) IAM policies can be resource-based and identity-based at the same time
-- c) IAM policies that allow access to all resources of a particular service are considered to be a best practice
-- d) Identity-based policies are attached to an identity and control what actions(on what services) this identity is allowed to perform
-9. Which of the following identities CAN assume an IAM role in your account?
-- a) AWS service(EC2, Lambda, etc.)
-- b) Another AWS account
-- c) External(non-AWS) web identity
-- d) All of the above
-10. Which statement is correct about root users?
-- a) You can only use Organizations SCPs to limit the permissions of the root user
-- b) You can attach an identity-based policy to the root user
-- c) Root user permissions cannot be limited
-- d) Root user cannot limit the permissions of IAM users
-
 ## General requirements
 1. A mentee should be able to explain the general purpose of the service
 2. A mentee should be able to answer all the questions during a demo session.
