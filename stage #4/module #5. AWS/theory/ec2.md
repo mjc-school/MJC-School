@@ -11,7 +11,7 @@ In order to get familiar with the service some key concepts should be described:
 2. *Volume* - a virtual server's storage device, i.e. the device that is used for storing the virtual server's data.
 3. *AMI*(Amazon Machine Image) - an image of the instance itself, a copy of its configurations. It also includes snapshots of all EBS volumes of the instance. It it used to launch new instances.
 4. *Snapshot* - a point-in-time copy of the instance's volume.
-5. *Security Group* - a virtual firewall that controlls the instance's incoming and outgoing traffic.
+5. *Security Group* - a virtual firewall that controls the instance's incoming and outgoing traffic.
 
 ### EC2 instance types
 

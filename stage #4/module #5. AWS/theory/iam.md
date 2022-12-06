@@ -28,7 +28,7 @@ In order to get familiar with the service some key concepts should be described:
 3. *IAM Role* - an identity with permissions that determine what the identity can and cannot do in AWS. It is very similar to an IAM User. However, a role does not have any credentials (password or access keys) associated with it. Instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it. For example, any IAM User(or even multiple IAM Users at the same time) can assume a role to temporarily take on different permissions for a specific task.
 4. *IAM Policy* - an entity that defines permissions to perform tasks in AWS services. It can be assigned to an IAM User, IAM User group, IAM Role. IAM Policies can be divided into 2 groups - identity-based policies and resource-based policies. Identity-based policies are assigned to an identity and specify what they can and cannot do. Resource-based policies are assigned to a resource and specify WHO can work with this resource and what actions they can do. AWS evaluates these policies when a principal, such as a user, makes a request to AWS. [Read more](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
 
-The first three items in the list above are generally referred to as *IAM identites*.
+The first three items in the list above are generally referred to as *IAM identities*.
 [Read more](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html)
 
 ## Pricing considerations

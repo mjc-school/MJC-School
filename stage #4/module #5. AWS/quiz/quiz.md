@@ -85,7 +85,7 @@
 - b) Access Points
 - c) Presigned URLs
 - d) All of the above
-7. Which S3 replication type DO NOT exist?
+7. Which S3 replication type DOES NOT exist?
 - a) Cross-Region Replication
 - b) Cross-Account Replication
 - c) Transitive Replication
@@ -123,7 +123,7 @@
 - a) No
 - b) Yes
 5. Which EBS volume types DO exist?
-- a) ssd, gp2, io1, Throughtput Optimized HDD
+- a) ssd, gp2, io1, Throughput Optimized HDD
 - b) gp2, gp3, io1, Cold HDD
 - c) gp2, gp3, sata1, magnetic storage
 - d) ssd, hdd, magnetic storage
