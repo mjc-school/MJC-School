@@ -198,3 +198,164 @@
 - a) Asynchronous replication
 - b) Synchronous replication
 - c) All of the above
+
+## DynamoDB
+
+1. Is DynamoDB a serverless solution?
+- a) Yes
+- b) No
+- c) Yes, but DAX which is a part of the service requires instances
+- d) Yes, but instances are used when replication is enabled
+2. There are several storage types available in DynamoDB. They are ...
+- a) Yes, several ones. HDD, SSD
+- b) Yes, several ones. HDD, cold HDD, SSD
+- c) No, HDD only
+- d) No, SSD only
+3. Each item should follow a particular schema while being stored in DynamoDB?
+- a) Yes
+- b) Only if SSD is used for storing
+- c) Only if DAX enabled needed
+- d) No
+4. Suppose you have an item with a concrete partition key. How will DynamoDB resolve the situation putting this item in the same partition?
+- a) An existing item will be replaced with a new one
+- b) An existing item will be overwritten with a new one
+- c) There will be two item within the same partition but with different sort keys
+- d) There will be two item within the same hash key and sort key
+5. Suppose you have to access an item, and you know its partition key and other attributes' values. What will be faster to run?
+- a) Scan since you know all the attributes' values
+- b) Query since you know its partition key
+- c) Query since you know all the attributes' values
+- d) Scan since you know its partition key
+6. Is it possible to modify an LSI after its creation?
+- a) No
+- b) Yes
+- c) Yes, if it has only one item added
+- d) Yes, if there is only on LSI within the table
+7. AWS DynamoDB calls can be throttled if ...
+- a) No items found with specified parameters
+- b) RCU or WCU not configured
+- c) RCU or WCU exceeded
+- d) They never be throttled
+8. Use DAX in case you want to improve ...
+- a) Read performance
+- b) Write performance
+- c) Read and write performance
+- d) ElastiCache is a better approach
+9. Consider you want to ger rid of outdated items in order to reduce cost. You'd better ...
+- a) Use TTL feature
+- b) Manually delete them
+- c) Read a table, detect outdated items, create a new table without outdated items and delete the old one
+- d) Use scan features to filter old items
+10. What is the best approach to handle occasionally overloaded errors?
+- a) ElastiCache to read cached data
+- b) DAX to read cached data
+- c) Exponential backoff
+- d) If an error happen then no need to try it again because DynamoDB provides ultimate resources, so no errors possible if data exists
+
+## Lambda
+
+1. What service does AWS use to store a Lambda function's code?
+- a) S3
+- b) DynamoDB
+- c) EFS
+- d) EBS
+2. What should be used to give permissions to a function to use other services?
+- a) Event mapping descriptors
+- b) Resource policy
+- c) Execution role
+- d) Execution permissions
+3. In what style must you write Lambda code?
+- a) Stateful
+- b) MVC
+- c) Stateless
+- d) Virtual
+4. How can a developer provide Lambda code?
+- a) By uploading a .zip file
+- b) All of these answers
+- c) By editing inline
+- d) From an S3 bucket
+5. How are computing resources allocated to Lambdas?
+- a) Equally
+- b) Periodically
+- c) Daily
+- d) Proportionally
+6. How can additional code or content be provided for your Lambda?
+- a) Blocks
+- b) Layers
+- c) Aliases
+- d) Handlers
+7. How is CPU power configured in lambda?
+- a) Allocated in proportion to the specified memory
+- b) It's not required
+- c) It's can be dissembled
+- d) Allocated in doubled proportion to the specified memory
+8. How are environment variables stored?
+- a) Via DynamoDB tables
+- b) Key-value pairs
+- c) None of these answers
+- d) S3 buckets
+9. Is there any way to code a function with a language not listed as a natively supported?
+- a) No, in this case you shouldn't use the service
+- b) Yes, create a Lambda layer with a custom runtime and reference the layer in your lambda
+- c) Yes, create a Lambda function with a custom runtime
+- d) Yes, create a Lambda function with a custom runtime and reference the function in your Lambda
+10. What should be used to give permissions to other AWS entities to invoke a Lambda function?
+- a) Event mapping descriptors
+- b) Resource policy
+- c) Execution role
+- d) Execution permissions
+
+## VPC
+
+*Pay attention here multiple right answers can be right per a question*
+
+1. What is the maximum size of the CIDR block you can have for a VPC?
+- a) 16
+- b) 32
+- c) 28
+- d) 10
+2. How many IP addresses are reserved by AWS for its internal purposes in a CIDR block that you can't use?
+- a) 15
+- b) 5
+- c) 1
+- d) 4
+3. What is the key difference of ACL (Access Control List) from Security Group?
+- a) Statelessness
+- b) It's attached to an EC2 instance
+- c) Statefullness
+- d) It's attached to a subnet
+4. To connect your corporate data center to AWS, you need at least which of the following components?
+- a) Internet gateway
+- b) Virtual private gateway
+- c) Customer gateway
+- d) NAT gateway
+5. In case you want to explicitly "deny" certain traffic to the instance running in your VPC. You'll reach this via ...
+- a) Security group
+- b) Route table entry
+- c) Putting a new instance in a private subnet
+- d) ACL
+6. An application load balancer must be deployed into at least ... subnet(s)?
+- a) 1
+- b) 2
+- c) 4
+- d) 5
+7. A VPN connection consists of which of the following components?
+- a) Cross connect gateway
+- b) Customer gateway
+- c) Direct connect gateway
+- d) Virtual private gateway
+8. By default, how many VPCs am I allowed in each AWS region?
+- a) 1
+- b) 2
+- c) 5
+- d) 6
+9. Which of the following allows you to SSH or RDP into an EC2 instance located in a private subnet?
+- a) NAT instance
+- b) NAT gateway
+- c) Bastion host
+- d) API gateway
+10. Consider having 4 VPCs. You decided to enable peering between them. How many direct connections there will be?
+- a) 6
+- b) 3
+- c) 4
+- d) 8
