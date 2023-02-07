@@ -510,7 +510,7 @@ The result of expression is boolean, as we expect to get some kind of comparison
 see if our statement is true or not.
 
 There are 2 operators which look different from math signs: equals operator (==) and not equals (!=). The reason why
-equals in ava Jconsists of 2 equal signs is because a single one in Java is an **assignment operator**, which, as you've
+equals in Java consists of 2 equal signs is because a single one in Java is an **assignment operator**, which, as you've
 already seen, is used to associate literal with identifier.
 
 Advanced topics:
