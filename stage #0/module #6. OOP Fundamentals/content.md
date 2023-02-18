@@ -5,7 +5,7 @@ as a result of interaction of objects, each of which is an instance of a particu
 an entity, which defines its initial state and behaviour. _**Object**_ is an existing instance of an entity,
 which possesses certain state and behaviour.
 
-## <div id="objects">Objects</div>
+## Objects
 Object is a core concept to understand OOP. A good example of object from real-world is a dog. All real-life
 objects have two main features: state and behaviour. Dogs have the following state: nickname, breed, color, character;
 and the following behaviour: barking, eating, guarding, wagging tail. Software objects are conceptually similar to
@@ -202,7 +202,7 @@ public class Bicycle {
 }
 ```
 
-### <div id="overloading">Overloading</div>
+### Overloading
 Process of specifying several constructors in one class is called as "overloading", the same refers to methods.
 "Overloading" is a definition of methods with the same name, but different signatures. Actually such methods are
 completely different methods, which have only the same name in common. A signature of methods is defined by a name of 
@@ -229,7 +229,7 @@ bicycle.speed = 10;
 System.out.println(bicycle.speed); // Output: 10
 ```
 
-### <div id="initializers">Initializers</div>
+### Initializers
 In addition to constructors an initialization of an object can be carried out with the help of initializer block.
 Initializer blocks are called before any constructors. We can place common code for all constructors.
 
@@ -255,7 +255,7 @@ public class Bicycle {
 }
 ```
 
-### <div id="packages">Packages</div>
+### Packages
 Java classes are combined into packages. Such combination allows avoiding conflicts, when developers may give classes
 same names. Packages ensure uniqueness of each class. Package in Java is included as the first operator in a class by
 the means of a keyword "package": ```package name_of_package```.
@@ -382,7 +382,7 @@ public class ExampleClass {
 current class is located, and by class, which inherits a current class (a topic "inheritance" is covered [here](#inheritance));
 - public: both fields and methods of a class can be accessed by classes from any package (in all cases).
 
-### <div id="getters-and-setters">Getters and setters</div>
+### Getters and setters
 While creating a class, it is extremely recommended to enclose its state and organize work with field by the means of
 functions. It means that fields of a class must have a "private" modifier. For the purposes of accessing such fields,
 "public" methods are created. Such methods are called getters and setters: a `getter` method just returns a value of a
@@ -621,7 +621,7 @@ Object-oriented programming is based on the following pillars:
 - [Polymorphism](#polymorphism)
 - [Abstraction](#abstraction)
 
-### <div id="inheritance">Inheritance</div>
+### Inheritance
 As well as most of object-oriented languages, Java allows using Inheritance. Inheritance is a process, when a class
 (a child class) can be created on the basis of another class (a parent class).
 
@@ -724,9 +724,9 @@ public class Child extends Parent {
 }
 ```
 
-A child class may alter methods, which are received from a parent class, with its own ones ([overriding](#overriding))
+A child class may alter methods, which are received from a parent class, with its own ones ([overriding](#overriding)).
 
-### <div id="overriding">Overriding</div>
+#### Overriding
 Java allows us to create a method in a child class with same signature (name, input parameters) and same return type as
 in a parent class. Such process is called as "overriding". By the means of overriding we may alter a behaviour of a
 parent method completely or partially. It is a good practice to place an `@Override` annotation before an overridden method,
@@ -831,7 +831,7 @@ class Scratch {
 }
 ```
 
-### <div id="encapsulation">Encapsulation</div>
+### Encapsulation
 Encapsulation is referred to encapsulating or enclosing class's state. This principle is mostly about closing access to 
 the fields of a class to external users (other developers in our case). 
 
@@ -845,7 +845,7 @@ that is why an **Encapsulation** principle is so important. It helps to avoid un
 by making them `private` and creating `getter` and `setter` methods pair for manipulating this field. Such mechanism was
 already described [here](#getters-and-setters).
 
-### <div id="polymorphism">Polymorphism</div>
+### Polymorphism
 This OOP pillar is mostly related to the [overloading](#overloading) and [overriding](#overriding) of methods. From
 Ancient Greek "poly-" means "many" and "-morph" is "shape", just like a magic spell :)
 
@@ -858,7 +858,7 @@ with the overriding it is not decided by the compiler, which method will be exec
 of an **Inheritance** process, so if you want to dive deeper, it is recommended to read about **Early** and **Late 
 Binding** in Java.
 
-### <div id="abstraction">Abstraction</div>
+### Abstraction
 And the last one is the Abstraction principle. Some people throw this one out and recognize only 3 OOP pillars, as 
 Abstraction is more about way of thinking rather than coding. But it's mostly decided to be the rightful 4th pillar.
 

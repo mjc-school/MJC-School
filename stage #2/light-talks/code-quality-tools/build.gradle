@@ -1,0 +1,148 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'checkstyle'
+    id "com.diffplug.spotless" version "6.11.0"
+    id "com.github.spotbugs" version "5.0.13"
+    id("org.sonarqube") version "3.3"
+    id("jacoco")
+    id("org.owasp.dependencycheck") version "7.3.0"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+//https://docs.sonarqube.org/latest/
+// ./gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=xxx
+sonarqube {
+    properties {
+        property "sonar.projectKey", "demo"
+        property "sonar.qualitygate.wait", true
+        property 'sonar.organization', 'org.example'
+//		property 'sonar.host.url', 'http://localhost:9000'
+//		property 'sonar.login', '...'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+checkstyle {
+    project.ext.checkstyleVersion = '10'
+}
+
+spotless {
+    java {
+        removeUnusedImports()
+        //googleJavaFormat()
+        eclipse().configFile("config/spotless/formatter.xml")
+        //importOrder()
+        importOrderFile("config/spotless/.importorder")
+    }
+}
+
+def excludedFromTestCoverage = [
+        "com/example/**/SpotlessDemo.class",
+        "com/example/**/QualityGatesApplication.class",
+        "com/example/qualitygates/dto/*"
+]
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('reports/jacoco')
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: excludedFromTestCoverage)
+        }))
+    }
+
+}
+
+    
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.7 //Test coverage should be >= 70%
+            }
+        }
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: excludedFromTestCoverage)
+        }))
+    }
+
+    dependsOn test
+}
+
+build {
+    dependsOn(spotlessApply)
+    finalizedBy jacocoTestCoverageVerification
+}
+
+//https://buildmedia.readthedocs.org/media/pdf/spotbugs/latest/spotbugs.pdf
+//https://github.com/spotbugs/spotbugs-gradle-plugin
+spotbugs {
+    ignoreFailures = false
+    showProgress = true
+    reportsDir = file("$buildDir/reports/spotbugs")
+    excludeFilter.set(file("config/spotbugs/spotbugs-exclude.xml"))
+
+//https://spotbugs.readthedocs.io/en/stable/effort.html
+    effort = "max" // min/default/max
+
+//https://spotbugs.readthedocs.io/en/stable/ant.html?highlight=reportLevel#parameters 
+    reportLevel = "medium" // low/medium/high
+}
+
+spotbugsMain {
+    reports {
+        xml.required.set(false)
+        html {
+            required.set(true)
+//   default.xsl/fancy.xsl/fancy-hist.xsl/plain.xsl/summary.xsl
+            stylesheet = 'fancy-hist.xsl'
+            outputLocation = file("$buildDir/reports/spotbugs/spotbugs.html")
+        }
+    }
+}
+
+//./gradlew dependencyCheckAggregate
+dependencyCheck {
+    suppressionFile = "config/owasp/owasp-suppressions.xml"
+}
+
+dependencies {
+
+    checkstyle 'com.puppycrawl.tools:checkstyle:10.4'
+    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}

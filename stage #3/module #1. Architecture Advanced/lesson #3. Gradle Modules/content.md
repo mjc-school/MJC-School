@@ -24,7 +24,7 @@ When projects become bigger, however, we might want to split our codebase into m
 ## Downside
 * Multiple modules can be more difficult to maintain. If they exist in large numbers and are not well documented, tracking dependencies can also be challenging. 
 
-For a better understanding of the multi modules in gradle, consider the following example (*Note that the application is written using the Spring Boot Framework, which is not necessary to understand at this stage*). The [project example](https://github.com/mjc-school/multi-module-gradle-project-example) you can see at the following link.
+For a better understanding of the multi modules in gradle let's create a gradle project that will be the parent for all modules and contain the main configuration of the project.
 
 This simple application consists of three modules:
 1. project-parent - Root of the project. Includes all modules. Used for general configuration of the project.
@@ -33,10 +33,6 @@ This simple application consists of three modules:
 4. Module3. Model - The main component for getting data from the database. By analogy, you can use a repository module that returns a model.
 
 ![](media/project-structure.png "project structure")
-
-As we can see project-parent contains only *build.gradle* and *settings.gradle* files (except modules and wrapper config) which are needed for the general configuration of the project.
-
-Let's create a gradle project that will be the parent for all modules and contain the main configuration of the project.
 
 Go to File -> New -> Project
 

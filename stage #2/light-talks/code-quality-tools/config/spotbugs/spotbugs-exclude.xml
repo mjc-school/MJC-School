@@ -1,0 +1,11 @@
+<FindBugsFilter>
+    <Match>
+        <Class name="com.example.qualitygates.demo.SpotlessDemo"></Class>
+    </Match>
+    <Match>
+        <Class name="com.example.qualitygates.dto.UserDTO"></Class>
+    </Match>
+    <Match>
+        <Class name="com.example.qualitygates.demo.SpotBugsDemoTest"></Class>
+    </Match>
+</FindBugsFilter>
