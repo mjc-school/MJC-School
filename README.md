@@ -49,6 +49,6 @@ After the course you will be able to pass an interview for Junior Java Developer
 
 [e-Mail](OrgMJCSchool@epam.com)
 
-[Slack](https://join.slack.com/t/mjc-school/shared_invite/zt-1eobum1d2-lun8~xPjLwP2i24eJWTjTQ)
+[Slack](https://mjc.school/#about-join-form)
 
 [AutoCode](https://autocode-next.lab.epam.com/courses/189)

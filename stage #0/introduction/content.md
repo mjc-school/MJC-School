@@ -22,7 +22,9 @@ community support. Following topics are covered:
 
 If you have questions, regarding mistakes or bugs - please contact us in [email](OrgMJCSchoolDrivers@epam.com). For
 another question please join to
-our [Slack](https://join.slack.com/t/mjc-school/shared_invite/zt-1lt45a4j7-fRHcs_jOHh8vNFtYsNCrrg) channel.
+our Slack channel. Use our
+lending [Join the course](https://mjc.school/#about-join-form). On
+this input your email in the box and you will have invite link to **Slack** on your email.
 
 ### Our community:
 
@@ -32,6 +34,6 @@ our [Slack](https://join.slack.com/t/mjc-school/shared_invite/zt-1lt45a4j7-fRHcs
 
 [GitHub](https://github.com/mjc-school/MJC-School)
 
-[Slack](https://join.slack.com/t/mjc-school/shared_invite/zt-1lt45a4j7-fRHcs_jOHh8vNFtYsNCrrg)
+[Slack](https://mjc.school/#about-join-form)
 
 [AutoCode](https://autocode-next.lab.epam.com/courses/189)
