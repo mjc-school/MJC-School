@@ -1,0 +1,6 @@
+rootProject.name = 'serialization'
+include 'shared'
+include 'schemaless'
+include 'proto'
+include 'benchmarks'
+
