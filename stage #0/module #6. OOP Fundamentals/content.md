@@ -401,7 +401,7 @@ public class AppClass {
         return version;         // returns a current value of the field 'version'
     }
     
-    public void setVersion(int version) {
+    public void setVersion(String version) {
         this.version = version; // overrides a value of the field 'version' with a new one
     }
     
@@ -409,7 +409,7 @@ public class AppClass {
         return name;            // returns a current value of the field 'name'
     }
     
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;       // overrides a value of the field 'name' with a new one
     }
 }
