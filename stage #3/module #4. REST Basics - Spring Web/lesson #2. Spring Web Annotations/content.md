@@ -33,7 +33,7 @@ public class BookController {
 }
 ```
 ## @RestController
-The @RestController combines @Controller and @RestController. By annotating the controller class with @RestController annotation, 
+The @RestController combines @Controller and @ResponseBody. By annotating the controller class with @RestController annotation, 
 you no longer need to add @ResponseBody to all the request mapping methods. The @ResponseBody annotation is active by default.
 Therefore, the following declarations are equivalent:
 ```Java
