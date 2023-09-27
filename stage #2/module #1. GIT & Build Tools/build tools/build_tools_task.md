@@ -2,7 +2,7 @@
 
 ## Materials
 
-1. [Gradle Getting Started](https://docs.gradle.org/current/userguide/getting_started.html)
+1. [Gradle Getting Started](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## Practice
 
