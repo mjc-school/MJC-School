@@ -456,14 +456,14 @@ public class MyBean {
 }
 ```
 
-[1] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-singleton
+[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-singleton
 
-[2] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-prototype
+[2]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-prototype
 
-[3] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-request
+[3]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-request
 
-[4] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-session
+[4]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-session
 
-[5] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-application
+[5]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-scopes-application
 
-[6] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/web.html#websocket-stomp-websocket-scope
+[6]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/web.html#websocket-stomp-websocket-scope
