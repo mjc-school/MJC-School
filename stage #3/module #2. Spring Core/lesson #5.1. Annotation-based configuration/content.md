@@ -460,26 +460,26 @@ public class MusicRatingService {
 > eventually removed in JDK 11. If needed, the `javax.annotation-api` artifact needs to be obtained via Maven Central
 > now, simply to be added to the application's classpath like any other library.
 
-[1] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-autowire
+[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-autowire
 
-[2] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-standard-annotations
+[2]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-standard-annotations
 
-[3] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/ConfigurationClassPostProcessor.html
+[3]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/ConfigurationClassPostProcessor.html
 
-[4] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html
+[4]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html
 
-[5] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.html
+[5]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.html
 
-[6] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.html
+[6]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.html
 
-[7] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/event/EventListenerMethodProcessor.html
+[7]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/context/event/EventListenerMethodProcessor.html
 
-[8] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html
+[8]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html
 
-[9] https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/core/Ordered.html
+[9]: https://docs.spring.io/spring-framework/docs/5.3.x/javadoc-api/org/springframework/core/Ordered.html
 
-[10] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#expressions
+[10]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#expressions
 
-[11] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-initializingbean
+[11]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-initializingbean
 
-[12] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-disposablebean
+[12]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-factory-lifecycle-disposablebean
