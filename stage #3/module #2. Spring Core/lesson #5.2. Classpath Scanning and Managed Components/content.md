@@ -208,6 +208,6 @@ public class MusicMagazineImpl implements MusicMagazine {
 }
 ```
 
-[1] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#orm-exception-translation
+[1]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/data-access.html#orm-exception-translation
 
-[2] https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-scanning-filters
+[2]: https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-scanning-filters
