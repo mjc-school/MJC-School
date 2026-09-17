@@ -187,7 +187,7 @@ public class Customer {
     @Enumerated(EnumType.STRING)
     private Gender gender;
     
-    @OneToOne(mappedBy="customerId")
+    @OneToOne(mappedBy="customer")
     private Address address;
     // ...
 }
@@ -275,7 +275,7 @@ public class Item {
     
     private String name;
     
-    @ManyToMany(mappedBy = "orders")
+    @ManyToMany(mappedBy = "items")
     private Set<Order> orders = new HashSet<>();
     // ...
 }
@@ -303,7 +303,7 @@ public class Customer {
     
     private String name;
     
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "customer")
     private List<Order> orders = new ArrayList<>();
     // ...
 }
